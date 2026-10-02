@@ -88,10 +88,10 @@
   "socialProof": {
     "heading": "Sneak Peek of Culinary Academy's Kitchen",
     "partnerLogos": [
-      { "src": "/images/student-practice-5-1920w.webp", "alt": "Student Practice" },
-      { "src": "/images/practical_class_1-1920w.webp", "alt": "Kitchen Action" },
-      { "src": "/images/practical_class_2-1920w.webp", "alt": "Culinary Session" },
-      { "src": "/images/baking-pastry-class.jpg", "alt": "Mentorship" }
+      { "src": "/images/kitchen-flame-saute.jpg", "alt": "Live Sauté & Flambé Lab" },
+      { "src": "/images/kitchen-precision-plating.jpg", "alt": "Gourmet Precision Plating" },
+      { "src": "/images/kitchen-pastry-artisan.jpg", "alt": "Artisan Pastry & Bakery" },
+      { "src": "/images/kitchen-prep-knifework.jpg", "alt": "Master Knife Skills & Prep" }
     ],
     "testimonialsHeading": "What Our Students Say",
     "testimonials": [

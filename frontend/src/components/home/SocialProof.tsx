@@ -53,17 +53,26 @@ const SocialProof = ({ data }: SocialProofProps) => {
               {[...data.partnerLogos, ...data.partnerLogos].map((logo, i) => (
                 <div key={i} className="flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0 pl-6 group">
                   <div className="glass-card relative h-[350px] md:h-[450px] rounded-[2rem] overflow-hidden border border-white/10 transition-all duration-700 hover:border-power-red/50 shadow-2xl">
-                    <picture>
-                      <source media="(max-width: 480px)" srcSet={logo.src.replace('-1920w.webp', '-480w.webp')} />
-                      <source media="(max-width: 768px)" srcSet={logo.src.replace('-1920w.webp', '-768w.webp')} />
-                      <source media="(max-width: 1280px)" srcSet={logo.src.replace('-1920w.webp', '-1280w.webp')} />
+                    {logo.src.includes('-1920w.webp') ? (
+                      <picture>
+                        <source media="(max-width: 480px)" srcSet={logo.src.replace('-1920w.webp', '-480w.webp')} />
+                        <source media="(max-width: 768px)" srcSet={logo.src.replace('-1920w.webp', '-768w.webp')} />
+                        <source media="(max-width: 1280px)" srcSet={logo.src.replace('-1920w.webp', '-1280w.webp')} />
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          loading="lazy"
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        />
+                      </picture>
+                    ) : (
                       <img
                         src={logo.src}
                         alt={logo.alt}
                         loading="lazy"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                       />
-                    </picture>
+                    )}
                     {/* Glass Overlay on Hover */}
                     <div className="absolute inset-0 bg-obsidian/20 group-hover:bg-transparent transition-colors duration-700"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
