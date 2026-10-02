@@ -13,6 +13,8 @@ import { adminRouter as blogRoutes, publicRouter as publicBlogRoutes } from "../
 import { adminRouter as marketingRoutes, publicRouter as publicMarketingRoutes } from "../modules/marketingPages/marketingPage.routes.js";
 import { adminRouter as cmsRoutes, publicRouter as publicCmsRoutes } from "../modules/cms/cms.routes.js";
 import auditRoutes from "../modules/audit/audit.routes.js";
+import attendanceRoutes from "../modules/attendance/attendance.routes.js";
+import paymentRoutes from "../modules/payments/payment.routes.js";
 
 const ROUTES = [
   ["/auth", authRoutes],
@@ -24,8 +26,10 @@ const ROUTES = [
   ["/students", studentRoutes],
   ["/batches", batchRoutes],
   ["/classes", classRoutes],
+  ["/attendance", attendanceRoutes],
   ["/dashboard", dashboardRoutes],
   ["/finance", financeRoutes],
+  ["/payments", paymentRoutes],
   ["/generate-certificate", certificateRoutes],
   ["/blogs", blogRoutes],
   ["/public/blogs", publicBlogRoutes],

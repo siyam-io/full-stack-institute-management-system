@@ -92,13 +92,16 @@ export const processPayment = async (paymentData, userId, branchFilter) => {
     if (payAmt > remaining) throw new AppError(`Overpayment error. Max due: ${remaining}`, 400);
     const receiptNumber = `RCPT-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
 
-    await tx.$executeRaw`
+    const paymentRows = await tx.$queryRaw`
       INSERT INTO "payments" (id, amount, payment_method, transaction_id,
         receipt_number, remarks, invoice_id, collected_by, updated_at)
       VALUES (gen_random_uuid(), ${payAmt}, ${paymentData.payment_method},
         ${paymentData.transaction_id || null}, ${receiptNumber}, ${paymentData.remarks || ""},
         CAST(${feeId} AS uuid), CAST(${userId} AS uuid), NOW())
+      RETURNING *
     `;
+    const insertedPayment = paymentRows[0];
+
     const newPaidAmount = Number(fee.paid_amount) + payAmt;
     const newStatus = newPaidAmount >= Number(fee.net_payable) ? "PAID" : "PARTIALLY_PAID";
     await tx.$executeRaw`
@@ -118,7 +121,20 @@ export const processPayment = async (paymentData, userId, branchFilter) => {
       WHERE f.id = CAST(${feeId} AS uuid) LIMIT 1
     `;
 
-    return { payment: null, fee_summary: serializeFee(updatedFeeRows[0]) };
+    const refreshed = updatedFeeRows[0];
+    if (refreshed?.student?.contact_number) {
+      import("../../core/notifications/sms.service.js").then(({ sendPaymentReceiptSMS }) => {
+        sendPaymentReceiptSMS({
+          studentName: refreshed.student.student_name,
+          amount: payAmt,
+          receiptNumber,
+          phone: refreshed.student.contact_number,
+          dueAmount: Math.max(0, Number(fee.net_payable) - newPaidAmount),
+        }).catch((err) => console.error("Payment Receipt SMS error:", err.message));
+      });
+    }
+
+    return { payment: serializePayment(insertedPayment), fee_summary: serializeFee(refreshed) };
   });
 };
 

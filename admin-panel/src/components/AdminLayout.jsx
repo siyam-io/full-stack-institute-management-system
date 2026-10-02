@@ -187,6 +187,12 @@ const AdminLayout = () => {
             icon: CalendarDays,
             permission: PERMISSIONS.VIEW_BATCH_WORKSPACE,
           },
+          {
+            name: "Attendance & QR",
+            href: "/admin/attendance",
+            icon: ClipboardCheck,
+            permission: PERMISSIONS.VIEW_ALL_BATCHES,
+          },
         ],
       },
       {

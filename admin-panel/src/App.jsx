@@ -54,6 +54,7 @@ import AllBlogs from "./pages/blog/AllBlogs";
 import AddBlog from "./pages/blog/AddBlog";
 import EditBlog from "./pages/blog/EditBlog";
 import MainPageEdit from "./pages/cms/MainPageEdit";
+import AttendancePage from "./pages/attendance/AttendancePage";
 
 const queryClient = new QueryClient();
 
@@ -207,6 +208,12 @@ function App() {
             </Route>
             <Route element={<RoleGuard requiredPermission={PERMISSIONS.BATCH_EDIT} />}>
               <Route path="edit-batch/:id" element={<AddBatch />} />
+            </Route>
+
+            {/* Attendance & QR Scanner */}
+            <Route element={<RoleGuard requiredPermission={PERMISSIONS.VIEW_ALL_BATCHES} />}>
+              <Route path="attendance" element={<AttendancePage />} />
+              <Route path="attendance-book" element={<AttendancePage />} />
             </Route>
 
             {/* Financials */}

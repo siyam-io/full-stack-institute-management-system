@@ -62,6 +62,19 @@ export const createStudent = async (studentData, file, isMaster, adminBranch, us
     });
     // Find complete student with relations for serialization
     const freshStudent = await repo.findByIdWithRelations(result.id);
+
+    // Send Admission Welcome SMS asynchronously without blocking the response
+    if (freshStudent?.contact_number) {
+      import("../../core/notifications/sms.service.js").then(({ sendAdmissionSMS }) => {
+        sendAdmissionSMS({
+          studentName: freshStudent.student_name,
+          studentId: freshStudent.student_id,
+          courseName: course.course_name_en,
+          phone: freshStudent.contact_number,
+        }).catch((err) => console.error("Admission Welcome SMS error:", err.message));
+      });
+    }
+
     return serializeStudent(freshStudent);
   } catch (error) {
     if (uploadedFilePath) deleteLocalFile(uploadedFilePath);

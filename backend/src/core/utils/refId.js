@@ -81,7 +81,9 @@ export const mapStudentInput = (body, file) => {
     batch_id: body.batchId || refId(body.batch),
     branch_id: body.branchId || refId(body.branch),
   };
-  if (file) data.photo_url = `/uploads/students/${file.filename}`;
+  if (file) {
+    data.photo_url = file.url || (file.path?.startsWith("http") ? file.path : `/uploads/students/${file.filename}`);
+  }
   return data;
 };
 

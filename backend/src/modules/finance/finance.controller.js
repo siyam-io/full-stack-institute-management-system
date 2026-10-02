@@ -25,5 +25,20 @@ export const downloadPaymentReceipt = catchAsync(async (req, res) => {
   res.send(pdfBuffer);
 });
 
-export const sendSMSReminder = catchAsync(async (req, res) =>
-  res.json(new ApiResponse(200, "SMS sent")));
+export const sendSMSReminder = catchAsync(async (req, res) => {
+  const { studentName, phone, contactNumber, amount, dueAmount, dueDate, customMessage } = req.body;
+  const { sendFeeDueReminderSMS, sendSMS } = await import("../../core/notifications/sms.service.js");
+  const targetPhone = phone || contactNumber;
+  let result;
+  if (customMessage) {
+    result = await sendSMS(targetPhone, customMessage);
+  } else {
+    result = await sendFeeDueReminderSMS({
+      studentName: studentName || "Student",
+      dueAmount: amount || dueAmount || 0,
+      dueDate: dueDate || "",
+      phone: targetPhone,
+    });
+  }
+  res.json(new ApiResponse(200, "SMS reminder processed successfully", result));
+});

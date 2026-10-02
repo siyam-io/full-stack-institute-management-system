@@ -1,21 +1,16 @@
 import { API } from "./axios";
 
-export const getCampusFees = async (filters) => {
-  const { data } = await API.get("/finance/fees", { params: filters });
-  return data.data;
+export const initBkashPaymentAPI = async (payload) => {
+  const { data } = await API.post("/payments/bkash/create", payload);
+  return data.data || data;
 };
 
-export const getStudentFinance = async (studentId) => {
-  const { data } = await API.get(`/finance/student/${studentId}`);
-  return data.data;
+export const executeBkashPaymentAPI = async (payload) => {
+  const { data } = await API.post("/payments/bkash/execute", payload);
+  return data.data || data;
 };
 
-export const collectPayment = async (payload) => {
-  const { data } = await API.post("/finance/pay", payload);
-  return data;
-};
-
-export const updateFeeDiscount = async ({ feeId, discount }) => {
-  const { data } = await API.patch(`/finance/fee/${feeId}/discount`, { discount });
-  return data;
+export const manualVerifyPaymentAPI = async (payload) => {
+  const { data } = await API.post("/payments/manual-verify", payload);
+  return data.data || data;
 };

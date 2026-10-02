@@ -80,6 +80,7 @@ model User {
   strategicTeamMembers StrategicTeamMember[]
   auditLogs            AuditLog[]
   achievements         Achievement[]
+  recordedAttendances  Attendance[]
 
   @@index([branch_id, role_id, status])
   @@map("users")
@@ -163,6 +164,7 @@ model Batch {
 
   students      Student[]
   classContents ClassContent[]
+  attendances   Attendance[]
 
   @@unique([branch_id, batch_name])
   @@index([branch_id, status])
@@ -200,6 +202,7 @@ model Student {
 
   invoices       Invoice[]
   comments       Comment[]
+  attendances    Attendance[]
 
   @@index([batch_id, status])
   @@index([student_name])
@@ -292,9 +295,33 @@ model ClassContent {
   batch         Batch   @relation(fields: [batch_id], references: [id], onDelete: Cascade)
   instructor_id String? @db.Uuid @map("instructor_id")
   instructor    User?   @relation(fields: [instructor_id], references: [id], onDelete: SetNull)
+  attendances   Attendance[]
 
   @@unique([batch_id, class_number])
   @@map("class_contents")
+}
+
+model Attendance {
+  id               String        @id @default(uuid()) @db.Uuid
+  date             DateTime      @db.Date
+  status           String        @default("present") // present, absent, late
+  remarks          String?
+  created_at       DateTime      @default(now()) @map("created_at")
+  updated_at       DateTime      @updatedAt @map("updated_at")
+
+  student_id       String        @db.Uuid @map("student_id")
+  student          Student       @relation(fields: [student_id], references: [id], onDelete: Cascade)
+  batch_id         String        @db.Uuid @map("batch_id")
+  batch            Batch         @relation(fields: [batch_id], references: [id], onDelete: Cascade)
+  class_content_id String?       @db.Uuid @map("class_content_id")
+  class_content    ClassContent? @relation(fields: [class_content_id], references: [id], onDelete: SetNull)
+  recorded_by      String?       @db.Uuid @map("recorded_by")
+  recorder         User?         @relation(fields: [recorded_by], references: [id], onDelete: SetNull)
+
+  @@unique([student_id, batch_id, date])
+  @@index([batch_id, date])
+  @@index([student_id])
+  @@map("attendances")
 }
 
 model Comment {

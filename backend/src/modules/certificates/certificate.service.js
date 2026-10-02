@@ -358,7 +358,7 @@ export const generateCertificatePDF = async (studentId, awardedOn) => {
 };
 
 export const generateReceiptPDF = async (payment) => {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     try {
       const doc = new PDFDocument({
         size: "A5",
@@ -396,6 +396,9 @@ export const generateReceiptPDF = async (payment) => {
       doc.rect(10, 10, 420 - 20, 595 - 20).lineWidth(1).stroke("#e2e8f0");
       doc.rect(12, 12, 420 - 24, 595 - 24).lineWidth(1.5).stroke("#1e1b4b");
 
+      // Brand Top Banner
+      doc.rect(14, 14, 420 - 28, 6).fill("#d97706");
+
       doc.fillColor("#1e1b4b")
          .fontSize(16)
          .font("Helvetica-Bold")
@@ -411,43 +414,70 @@ export const generateReceiptPDF = async (payment) => {
       doc.fillColor("#4b5563")
          .fontSize(9)
          .font("Helvetica")
-         .text(`Receipt No: ${receiptNumber}`, 40, 100)
-         .text(`Date: ${formattedDate}`, 40, 115);
+         .text(`Receipt No: ${receiptNumber}`, 40, 98)
+         .text(`Date: ${formattedDate}`, 40, 114)
+         .text(`Status: COMPLETED / VERIFIED`, 40, 130);
+
+      // --- Scannable Verification QR Code ---
+      try {
+        const qrPayload = JSON.stringify({
+          receipt: receiptNumber,
+          student: studentName,
+          id: studentIdVal,
+          amount: `BDT ${amount.toLocaleString()}`,
+          date: formattedDate,
+          verify: `https://cibdhk.com/verify/receipt/${receiptNumber}`,
+        });
+        const qrBuffer = await QRCode.toBuffer(qrPayload, {
+          margin: 1,
+          width: 70,
+          color: { dark: "#1e1b4b", light: "#ffffff" },
+        });
+        doc.image(qrBuffer, 305, 90, { width: 65, height: 65 });
+        doc.fillColor("#94a3b8")
+           .fontSize(6)
+           .font("Helvetica-Bold")
+           .text("SCAN TO VERIFY", 305, 158, { width: 65, align: "center" });
+      } catch (err) {
+        console.warn("QR code generation error for receipt:", err.message);
+      }
+
+      doc.moveTo(40, 175).lineTo(380, 175).lineWidth(1).stroke("#e2e8f0");
 
       doc.fillColor("#1e1b4b")
          .font("Helvetica-Bold")
          .fontSize(10)
-         .text("BILL TO / STUDENT INFO", 40, 150);
+         .text("BILL TO / STUDENT INFO", 40, 190);
 
       doc.fillColor("#1f2937")
          .font("Helvetica")
          .fontSize(9)
-         .text(`Student Name: ${studentName}`, 40, 168)
-         .text(`Student ID: ${studentIdVal}`, 40, 183)
-         .text(`Branch/Campus: ${branchName}`, 40, 198);
+         .text(`Student Name: ${studentName}`, 40, 208)
+         .text(`Student ID: ${studentIdVal}`, 40, 223)
+         .text(`Branch/Campus: ${branchName}`, 40, 238);
 
-      doc.moveTo(40, 220).lineTo(380, 220).lineWidth(1).stroke("#e2e8f0");
+      doc.moveTo(40, 258).lineTo(380, 258).lineWidth(1).stroke("#e2e8f0");
 
       doc.fillColor("#1e1b4b")
          .font("Helvetica-Bold")
          .fontSize(10)
-         .text("PAYMENT DETAILS", 40, 240);
+         .text("PAYMENT DETAILS", 40, 272);
 
       doc.fillColor("#1f2937")
          .font("Helvetica")
          .fontSize(9)
-         .text(`Amount Paid: Tk. ${amount.toLocaleString()}`, 40, 260)
-         .text(`Payment Method: ${paymentMethod}`, 40, 275)
-         .text(`Transaction ID: ${transactionId}`, 40, 290)
-         .text(`Collected By: ${collectorName}`, 40, 305);
+         .text(`Amount Paid: Tk. ${amount.toLocaleString()}`, 40, 292)
+         .text(`Payment Method: ${paymentMethod}`, 40, 307)
+         .text(`Transaction ID: ${transactionId}`, 40, 322)
+         .text(`Collected By: ${collectorName}`, 40, 337);
 
-      doc.moveTo(40, 330).lineTo(380, 330).lineWidth(1).stroke("#e2e8f0");
+      doc.moveTo(40, 355).lineTo(380, 355).lineWidth(1).stroke("#e2e8f0");
 
       if (feeRecord) {
         doc.fillColor("#1e1b4b")
            .font("Helvetica-Bold")
            .fontSize(10)
-           .text("LEDGER ACCOUNT SUMMARY", 40, 350);
+           .text("LEDGER ACCOUNT SUMMARY", 40, 372);
 
         const netPayable = Number(feeRecord.netPayable || feeRecord.net_payable || 0);
         const paidAmount = Number(feeRecord.paidAmount || feeRecord.paid_amount || 0);
@@ -456,18 +486,18 @@ export const generateReceiptPDF = async (payment) => {
         doc.fillColor("#1f2937")
            .font("Helvetica")
            .fontSize(9)
-           .text(`Net Course Fee Payable: Tk. ${netPayable.toLocaleString()}`, 40, 370)
-           .text(`Total Amount Received: Tk. ${paidAmount.toLocaleString()}`, 40, 385)
+           .text(`Net Course Fee Payable: Tk. ${netPayable.toLocaleString()}`, 40, 392)
+           .text(`Total Amount Received: Tk. ${paidAmount.toLocaleString()}`, 40, 407)
            .fillColor(dueAmount > 0 ? "#b91c1c" : "#15803d")
            .font("Helvetica-Bold")
-           .text(`Remaining Balance Due: Tk. ${dueAmount.toLocaleString()}`, 40, 400);
+           .text(`Remaining Balance Due: Tk. ${dueAmount.toLocaleString()}`, 40, 422);
       }
 
-      doc.moveTo(40, 450).lineTo(380, 450).lineWidth(1).stroke("#e2e8f0");
+      doc.moveTo(40, 460).lineTo(380, 460).lineWidth(1).stroke("#e2e8f0");
       doc.fillColor("#9ca3af")
          .fontSize(7)
          .font("Helvetica-Oblique")
-         .text("This is an electronically generated receipt. No signature is required.", 30, 470, { align: "center", width: 360 });
+         .text("This is an electronically generated official receipt. No signature is required.", 30, 480, { align: "center", width: 360 });
 
       doc.end();
     } catch (e) {

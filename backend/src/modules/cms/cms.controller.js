@@ -93,6 +93,22 @@ export const uploadFile = catchAsync(async (req, res) => {
   if (!req.file) {
     return res.status(400).json(new ApiResponse(400, "No file uploaded"));
   }
-  const fileUrl = `/uploads/cms/${req.file.filename}`;
+
+  let fileUrl = `/uploads/cms/${req.file.filename}`;
+
+  try {
+    const { isCloudinaryConfigured, uploadToCloudinary } = await import("../../core/storage/cloudinary.js");
+    if (isCloudinaryConfigured()) {
+      const result = await uploadToCloudinary(req.file.path, { folder: "culinary_academy/cms" });
+      fileUrl = result.secure_url;
+      try {
+        const fs = await import("fs");
+        if (fs.existsSync(req.file.path)) fs.unlinkSync(req.file.path);
+      } catch (e) {}
+    }
+  } catch (err) {
+    console.warn("⚠️ Cloudinary upload skipped/failed:", err.message);
+  }
+
   res.json(new ApiResponse(200, "File uploaded successfully", { url: fileUrl }));
 });
