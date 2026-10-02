@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Manrope } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import "../globals.css";
@@ -10,6 +11,7 @@ import QuickContactPanel from '@/components/global/QuickContactPanel';
 import Breadcrumb from '@/components/global/Breadcrumb';
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
+import NoirBackground from "@/components/global/NoirBackground";
 import WebVitals from "@/components/global/WebVitals";
 import fs from 'fs';
 import path from 'path';
@@ -60,6 +62,14 @@ const anekBangla = localFont({
   src: "../../../public/fonts/Anek_Bangla/AnekBangla-VariableFont_wdth,wght.ttf",
   variable: "--font-anek-bangla",
   weight: "100 800",
+});
+
+// Reference display face for the red-noir system.
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["200", "400", "600", "700", "800"],
+  display: "swap",
 });
 
 export default async function LocaleLayout({
@@ -202,22 +212,24 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://static.cloudflareinsights.com" />
         
         <style dangerouslySetInnerHTML={{ __html: `
-          :root { --obsidian: #000A1A; --prestige-gold: #D4AF37; --power-red: #E31837; }
+          :root { --obsidian: #050506; --prestige-gold: #FFD700; --power-red: #EF233C; }
           body { background-color: var(--obsidian); color: white; margin: 0; }
           .pt-24 { padding-top: 6rem; }
           @media (min-width: 768px) { .md\\:pt-28 { padding-top: 7rem; } }
-          header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: 100px; background: rgba(0, 10, 26, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+          header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
         `}} />
       </head>
       <body 
-        className={`${inter.variable} ${anekBangla.variable} antialiased overflow-x-hidden`}
+        className={`${inter.variable} ${anekBangla.variable} ${manrope.variable} antialiased overflow-x-hidden`}
         suppressHydrationWarning
       >
+        <NoirBackground />
+        <div className="gradient-blur" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LanguageProvider initialLanguage={locale === 'bn' ? 'bn' : 'en'}>
           <SkipToContent />
           <Header navData={navigationData} locale={locale} />
-          <main id="main-content" className="min-h-screen pt-24 md:pt-28 relative">
+          <main id="main-content" className="min-h-screen pt-24 md:pt-28 relative z-10">
             <Breadcrumb locale={locale} />
             <ErrorBoundary locale={locale}>
               {children}

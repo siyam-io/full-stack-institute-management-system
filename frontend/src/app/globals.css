@@ -4,6 +4,20 @@
 
 @import "../styles/components.css";
 
+/* ------------------------------------------------------------------ */
+/*  Red-Noir design tokens (reference: Superdesign noir)               */
+/* ------------------------------------------------------------------ */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  from { --gradient-angle: 0deg; }
+  to { --gradient-angle: 360deg; }
+}
+
 /* Font Faces */
 @font-face {
   font-family: 'Inter';
@@ -22,12 +36,15 @@
 }
 
 :root {
-  --obsidian: #000A1A;
-  --power-red: #EC1B23;
+  /* Noir surface: near-black, faintly warmed toward red */
+  --obsidian: #050506;
+  --power-red: #EF233C;
+  --accent-red: #EF233C;
+  --accent-red-glow: rgba(239, 35, 60, 0.5);
   --prestige-gold: #FFD700;
   --titanium-white: #FFFFFF;
   --ice-gray: #F8FAFC;
-  
+
   /* Next.js default variables mapping to CIB tokens */
   --background: var(--obsidian);
   --foreground: var(--titanium-white);
@@ -40,12 +57,18 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-black tracking-tighter leading-[1.1];
+    @apply font-manrope font-black tracking-tighter leading-[1.1];
   }
 
   h1 { @apply text-5xl md:text-7xl; }
   h2 { @apply text-4xl md:text-6xl; }
   h3 { @apply text-2xl md:text-3xl; }
+
+  /* Red-noir text selection */
+  ::selection {
+    background: var(--accent-red);
+    color: #fff;
+  }
 }
 
 /* Language specific font overriding */
@@ -53,7 +76,135 @@
   font-family: 'Anek Bangla', serif;
 }
 
-/* Scrollbar styling for Obsidian theme */
+/* Bengali keeps its own display face even on headings */
+[lang="bn"] h1,
+[lang="bn"] h2,
+[lang="bn"] h3,
+[lang="bn"] h4 {
+  font-family: 'Anek Bangla', serif;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Noir effects & utilities                                           */
+/* ------------------------------------------------------------------ */
+.font-manrope { font-family: 'Manrope', 'Inter', sans-serif; }
+
+/* Animated conic border "shiny" CTA */
+.shiny-cta {
+  --gradient-angle: 0deg;
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 1rem 2.5rem;
+  background:
+    linear-gradient(#000000, #000000) padding-box,
+    conic-gradient(
+      from var(--gradient-angle),
+      transparent 0%,
+      var(--accent-red) 5%,
+      var(--accent-red) 15%,
+      var(--accent-red) 30%,
+      transparent 40%,
+      transparent 100%
+    ) border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+  isolation: isolate;
+  animation: border-spin 2.5s linear infinite;
+}
+
+.shiny-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, white 0.5px, transparent 0);
+  background-size: 4px 4px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Secondary pill CTA with a red conic sweep on hover */
+.pill-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.pill-cta::after {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  z-index: 0;
+  background: conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 75%, var(--accent-red) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.pill-cta:hover::after { opacity: 1; }
+
+/* Noir glass card */
+.noir-card {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.04), rgba(0,0,0,0.35));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.5s ease, background 0.5s ease, transform 0.5s ease;
+}
+
+.noir-card:hover {
+  border-color: rgba(239, 35, 60, 0.35);
+}
+
+/* Eyebrow / kicker chips */
+.noir-chip {
+  @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 text-[10px] md:text-xs font-bold tracking-widest uppercase;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+.noir-chip-red {
+  @apply border-power-red/25 text-power-red;
+  background: rgba(239, 35, 60, 0.08);
+}
+
+/* Parallax star fields */
+.stars-1 {
+  box-shadow:
+    234px 124px #fff, 654px 345px #fff, 876px 12px #fff, 1200px 800px #fff,
+    400px 1500px #fff, 1800px 200px #fff, 100px 1000px #fff, 900px 1900px #fff,
+    500px 600px #fff, 1400px 100px #fff, 300px 400px #fff, 1600px 1200px #fff;
+}
+
+.stars-2 {
+  box-shadow:
+    123px 456px #fff, 789px 234px #fff, 456px 890px #fff, 1100px 300px #fff,
+    200px 1200px #fff, 1500px 500px #fff, 600px 1700px #fff, 1300px 900px #fff;
+}
+
+/* Fixed top blur fade (reference .gradient-blur) */
+.gradient-blur {
+  position: fixed;
+  z-index: 40;
+  inset: 0 0 auto 0;
+  height: 120px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+/* Outlined display text (huge footer wordmark) */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+  color: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Scrollbar styling for the noir theme                               */
+/* ------------------------------------------------------------------ */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -63,10 +214,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: #1c1c1e;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333;
+  background: #2a2a2d;
 }

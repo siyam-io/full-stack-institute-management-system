@@ -86,7 +86,7 @@ const Hero = ({ data }: HeroProps) => {
               <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
                 <div className="max-w-4xl mx-auto flex flex-col items-center">
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 md:mb-12">
-                    <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-prestige-gold text-[10px] md:text-xs font-bold tracking-widest uppercase">
+                    <span className="noir-chip text-white/70">
                       Premium Culinary Education
                     </span>
                     {formattedBatchInfo && (
@@ -98,11 +98,11 @@ const Hero = ({ data }: HeroProps) => {
                   </div>
                   
                   {index === 0 ? (
-                    <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[1.1] animate-slide-up">
+                    <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50">
                       {slide.headline}
                     </h1>
                   ) : (
-                    <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[1.1] animate-slide-up">
+                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50">
                       {slide.headline}
                     </h2>
                   )}
@@ -114,7 +114,7 @@ const Hero = ({ data }: HeroProps) => {
                   <div className="mt-8 md:mt-10 animate-slide-up [animation-delay:400ms] flex justify-center gap-4 flex-wrap">
                     <Link 
                       href={slide.ctaLink} 
-                      className="btn-primary hover:scale-105 transition-all duration-500 inline-block group"
+                      className="shiny-cta group hover:scale-105 transition-all duration-500 inline-flex items-center justify-center text-white"
                     >
                       <span className="flex items-center gap-3">
                         {slide.ctaText}
@@ -123,7 +123,7 @@ const Hero = ({ data }: HeroProps) => {
                     </Link>
                     <Link 
                       href="/admission#apply" 
-                      className="btn-gold hover:scale-105 transition-all duration-500 inline-block group"
+                      className="group px-8 py-4 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:text-white hover:bg-zinc-800 transition-all duration-500 inline-flex items-center gap-3"
                     >
                       <span className="flex items-center gap-3">
                         Book Your Visit

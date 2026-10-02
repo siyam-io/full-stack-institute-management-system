@@ -69,7 +69,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
 
             <div className="inline-flex flex-col mb-12 p-5 rounded-[1.5rem] bg-white/[0.03] border border-white/5 backdrop-blur-3xl shadow-2xl relative overflow-hidden group/price">
               {/* Price Accent */}
-              <div className="absolute top-0 left-0 w-1 h-full bg-prestige-gold scale-y-0 group-hover/price:scale-y-100 transition-transform duration-700"></div>
+              <div className="absolute top-0 left-0 w-1 h-full bg-accent-red scale-y-0 group-hover/price:scale-y-100 transition-transform duration-700"></div>
               <span className="text-gray-500 text-[10px] md:text-xs font-bold tracking-widest mb-2 uppercase">Investment Capital</span>
               <div className="text-2xl md:text-4xl font-black text-white tracking-tighter flex items-baseline gap-2">
                 {data.price}
@@ -118,7 +118,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
 
               {/* Badge Overlay */}
               <div className="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-[1.5rem] border border-white/10 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 backdrop-blur-2xl">
-                <p className="text-prestige-gold font-bold tracking-widest text-[10px] mb-1">Campus Protocol</p>
+                <p className="text-accent-red font-bold tracking-widest text-[10px] mb-1">Campus Protocol</p>
                 <h3 className="text-lg font-bold text-white tracking-tight">Active Practical Session</h3>
               </div>
             </div>
@@ -128,7 +128,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
         {/* Comparison Section */}
         <div className="mt-40">
           <div className="text-center mb-16">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-bold tracking-widest mb-8">
+            <div className="noir-chip noir-chip-red mb-8">
               Institutional Parity
             </div>
             <h3 className="text-3xl md:text-4xl font-black mb-6 tracking-tighter leading-tight">

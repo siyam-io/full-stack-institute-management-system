@@ -33,7 +33,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-power-red/5 blur-[150px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10 animate-fade-in">
-        <div className="inline-block px-6 py-2 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-bold tracking-widest mb-10">
+        <div className="noir-chip noir-chip-red mb-10">
           The Final Protocol
         </div>
         
@@ -49,7 +49,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
           <Link 
             href={data.buttonLink} 
             onClick={() => pushToDataLayer('begin_application', { source: 'final_cta' })}
-            className="btn-primary flex items-center gap-4 group uppercase"
+            className="shiny-cta group flex items-center gap-4 text-white uppercase"
           >
             {data.buttonText}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-700" strokeWidth={2.5} />

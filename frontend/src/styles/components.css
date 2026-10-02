@@ -1,14 +1,42 @@
 /* Buttons */
+
+/* Primary CTA — reference red with a soft noir glow */
 .btn-primary {
-  @apply bg-[#EC1B23] hover:bg-[#c81018] text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 text-lg;
+  @apply bg-accent-red hover:bg-accent-red-deep text-white font-bold py-4 px-8 rounded-full transition-all duration-300 text-lg;
+  box-shadow: 0 18px 45px rgba(239, 35, 60, 0.32);
 }
 
+.btn-primary:hover {
+  box-shadow: 0 22px 60px rgba(239, 35, 60, 0.45);
+}
+
+/* Outline CTA — glassy noir ghost button */
 .btn-outline {
-  @apply border-2 border-white text-white font-bold py-4 px-8 rounded-full transition-all duration-300 text-lg hover:bg-white hover:text-obsidian;
+  @apply border-2 border-white/15 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 text-lg;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
 }
 
+.btn-outline:hover {
+  @apply border-white/30;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Brand secondary CTA (kept for status/accent use) */
 .btn-gold {
-  @apply bg-[#FFD700] text-obsidian font-bold py-4 px-8 rounded-full shadow-md hover:bg-yellow-400 transition-all duration-300 text-lg;
+  @apply bg-prestige-gold text-obsidian font-bold py-4 px-8 rounded-full shadow-md hover:bg-yellow-400 transition-all duration-300 text-lg;
+}
+
+/* Red-noir pill button matching the reference nav CTA */
+.btn-noir {
+  @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-transform;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-noir:hover {
+  border-color: rgba(239, 35, 60, 0.5);
+  background: rgba(239, 35, 60, 0.12);
 }
 
 /* Layout Utilities */
@@ -17,9 +45,18 @@
 }
 
 /* Effects */
+
+/* Noir glass surface (alias of .noir-card for legacy class names) */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.35));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-noir {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.35));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }

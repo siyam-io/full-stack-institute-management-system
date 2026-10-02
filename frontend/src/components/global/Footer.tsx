@@ -65,7 +65,7 @@ const Footer = ({ data, locale }: FooterProps) => {
   const linkStyle = "text-sm text-gray-400 hover:text-white transition-colors block";
 
   return (
-    <footer className="bg-[#000A1A] border-t border-white/5 pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-black/80 backdrop-blur-xl border-t border-white/5 pt-24 pb-10 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* 5-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
@@ -161,6 +161,11 @@ const Footer = ({ data, locale }: FooterProps) => {
               <Image src="/images/iso-logo.png" alt="ISO" width={32} height={32} className="opacity-30 grayscale" />
             </div>
           </div>
+        </div>
+
+        {/* Oversized outlined wordmark (reference footer treatment) */}
+        <div className="flex justify-center items-center py-10 opacity-20 pointer-events-none select-none">
+          <h1 className="text-[15vw] leading-none font-black font-manrope tracking-tighter text-stroke">CIB</h1>
         </div>
 
         {/* Bottom Bar Redesign */}

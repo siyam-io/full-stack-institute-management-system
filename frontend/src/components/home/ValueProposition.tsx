@@ -70,9 +70,9 @@ import { UtensilsCrossed, GraduationCap, ChefHat } from 'lucide-react';
 
 const IconWrapper = ({ name }: { name: string }) => {
   switch (name) {
-    case 'UtensilsCrossed': return <UtensilsCrossed className="w-10 h-10 text-prestige-gold" />;
-    case 'GraduationCap': return <GraduationCap className="w-10 h-10 text-prestige-gold" />;
-    case 'ChefHat': return <ChefHat className="w-10 h-10 text-prestige-gold" />;
+    case 'UtensilsCrossed': return <UtensilsCrossed className="w-10 h-10 text-accent-red" />;
+    case 'GraduationCap': return <GraduationCap className="w-10 h-10 text-accent-red" />;
+    case 'ChefHat': return <ChefHat className="w-10 h-10 text-accent-red" />;
     default: return null;
   }
 };
@@ -98,7 +98,7 @@ const ValueProposition = ({ data }: ValuePropositionProps) => {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-bold tracking-widest mb-8">
+          <div className="noir-chip noir-chip-red mb-8">
             Institutional Dominance
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-[1.1]">
@@ -119,14 +119,14 @@ const ValueProposition = ({ data }: ValuePropositionProps) => {
               {/* Shimmer Effect */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms] pointer-events-none"></div>
 
-              <div className="mb-6 p-4 bg-white/5 rounded-2xl group-hover:bg-prestige-gold/10 group-hover:scale-110 transition-all duration-700 shadow-2xl border border-white/5 relative">
-                <div className="absolute -inset-4 bg-prestige-gold/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="mb-6 p-4 bg-white/5 rounded-2xl group-hover:bg-accent-red/10 group-hover:scale-110 transition-all duration-700 shadow-2xl border border-white/5 relative">
+                <div className="absolute -inset-4 bg-accent-red/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="relative z-10">
                   <IconWrapper name={card.icon} />
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-black text-white mb-4 group-hover:text-prestige-gold transition-colors duration-500 tracking-tighter">
+              <h3 className="text-xl md:text-2xl font-black text-white mb-4 group-hover:text-accent-red transition-colors duration-500 tracking-tighter">
                 {card.title}
               </h3>
               
@@ -162,7 +162,7 @@ const ValueProposition = ({ data }: ValuePropositionProps) => {
           
           {data.stats.map((stat, i) => (
             <div key={i} className="flex flex-col items-center group relative z-10">
-              <div className="text-4xl md:text-5xl font-black text-white mb-4 flex items-baseline group-hover:text-prestige-gold transition-colors duration-700 tracking-tighter">
+              <div className="text-4xl md:text-5xl font-black text-white mb-4 flex items-baseline group-hover:text-accent-red transition-colors duration-700 tracking-tighter">
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </div>
               <div className="flex flex-col items-center">

@@ -49,27 +49,27 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
-        isScrolled ? 'bg-obsidian/95 backdrop-blur-2xl py-3 shadow-[0_20px_50px_rgba(0,0,0,0.5)]  border-white/5' : 'bg-transparent py-8'
+        isScrolled ? 'bg-transparent py-3' : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Desktop Header */}
-        <div className="hidden lg:flex justify-between items-center">
+        <div className="hidden lg:flex justify-between items-center gap-6 max-w-6xl mx-auto bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 shadow-2xl">
           {/* Logo */}
           <Link href="/" className="relative z-10 hover:scale-105 transition-transform duration-500">
             <Image 
               src="/images/logo_cib.png" 
               alt="CIB Logo" 
-              width={160} 
-              height={70} 
-              className="w-auto h-16 object-contain"
+              width={120} 
+              height={50} 
+              className="w-auto h-10 object-contain"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="flex items-center gap-10">
-            <Link href="/" className="text-white hover:text-prestige-gold font-bold tracking-widest text-[11px] transition-all duration-500 relative group uppercase">
+          <nav className="flex items-center gap-7">
+            <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.home}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
@@ -80,9 +80,9 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
               onMouseEnter={() => setIsAboutOpen(true)}
               onMouseLeave={() => setIsAboutOpen(false)}
             >
-              <Link href="/about" className="text-white group-hover/about:text-prestige-gold font-bold tracking-widest text-[11px] flex items-center gap-2 transition-all duration-500 uppercase">
+              <Link href="/about" className="text-sm font-medium text-zinc-400 group-hover/about:text-white flex items-center gap-2 transition-colors">
                 {navData.about}
-                <svg className={`w-3 h-3 transition-transform duration-500 ${isAboutOpen ? 'rotate-180 text-prestige-gold' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-3 h-3 transition-transform duration-500 ${isAboutOpen ? 'rotate-180 text-accent-red' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
@@ -110,28 +110,28 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
               </div>
             </div>
 
-            <Link href="/courses" className="text-white hover:text-prestige-gold font-bold tracking-widest text-[11px] transition-all duration-500 relative group uppercase">
+            <Link href="/courses" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.courses}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
 
 
-            <Link href="/admission" className="text-white hover:text-prestige-gold font-bold tracking-widest text-[11px] transition-all duration-500 relative group uppercase">
+            <Link href="/admission" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.admission}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
-            <Link href="/contact" className="text-white hover:text-prestige-gold font-bold tracking-widest text-[11px] transition-all duration-500 relative group uppercase">
+            <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.contact}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
-            <Link href="/blog" className="text-white hover:text-prestige-gold font-bold tracking-widest text-[11px] transition-all duration-500 relative group uppercase">
+            <Link href="/blog" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.blog}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 pr-6 border-r border-white/10">
               <a 
                 href="tel:+8801338958997" 
