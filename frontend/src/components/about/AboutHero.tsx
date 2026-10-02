@@ -17,7 +17,7 @@ const AboutHero = ({ data }: AboutHeroProps) => {
     <section className="relative h-[80vh] min-h-[700px] flex items-center justify-center overflow-hidden bg-obsidian">
       <div className="absolute inset-0 z-0">
         <Image
-          src={data.image}
+          src={data.image || '/images/practical_class_1-1920w.webp'}
           alt="CIB Professional Environment"
           fill
           priority
@@ -27,7 +27,7 @@ const AboutHero = ({ data }: AboutHeroProps) => {
         <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center animate-fade-in pt-32">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center animate-fade-in pt-36 md:pt-44 pb-20">
         <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-black tracking-widest mb-10 uppercase">
           The Culinary Manifesto
         </div>

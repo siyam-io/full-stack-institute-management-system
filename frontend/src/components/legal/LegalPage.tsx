@@ -14,7 +14,7 @@ const LegalPage = ({ title, lastUpdated, content }: LegalPageProps) => {
   return (
     <main className="min-h-screen bg-obsidian relative overflow-hidden">
 
-      <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10 pt-40 pb-32 animate-fade-in">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10 pt-36 md:pt-44 pb-32 animate-fade-in">
         <header className="mb-24 text-center relative">
           {/* Institutional Seal Decoration */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-20 opacity-5 pointer-events-none">
