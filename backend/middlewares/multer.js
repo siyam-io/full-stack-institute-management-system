@@ -1,31 +1,49 @@
 import fs from "fs";
 import path from "path";
+import os from "os";
 import multer from "multer";
 
-// Safe Path Resolution for ES Modules
-const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
-const STUDENT_DIR = path.join(UPLOADS_DIR, "students");
-const EMPLOYEE_DIR = path.join(UPLOADS_DIR, "employees");
-const BLOG_DIR = path.join(UPLOADS_DIR, "blogs");
-const COURSE_DIR = path.join(UPLOADS_DIR, "courses");
+const isVercel = Boolean(process.env.VERCEL);
 
-// Ensure directories exist
-[STUDENT_DIR, EMPLOYEE_DIR, BLOG_DIR, COURSE_DIR].forEach((dir) => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-});
+// Safe Path Resolution for ES Modules and Serverless
+const BASE_UPLOADS_DIR = isVercel
+  ? path.join(os.tmpdir(), "uploads")
+  : path.join(process.cwd(), "public", "uploads");
+
+const STUDENT_DIR = path.join(BASE_UPLOADS_DIR, "students");
+const EMPLOYEE_DIR = path.join(BASE_UPLOADS_DIR, "employees");
+const BLOG_DIR = path.join(BASE_UPLOADS_DIR, "blogs");
+const COURSE_DIR = path.join(BASE_UPLOADS_DIR, "courses");
+
+// Ensure directories exist safely (never throw on serverless read-only paths)
+try {
+  [STUDENT_DIR, EMPLOYEE_DIR, BLOG_DIR, COURSE_DIR].forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  });
+} catch (err) {
+  console.warn("⚠️ Could not create upload directories at startup:", err.message);
+}
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
+    let targetDir = STUDENT_DIR;
     if (req.originalUrl.includes("/blogs")) {
-      cb(null, BLOG_DIR);
+      targetDir = BLOG_DIR;
     } else if (req.originalUrl.includes("/courses")) {
-      cb(null, COURSE_DIR);
+      targetDir = COURSE_DIR;
     } else if (req.originalUrl.includes("/employees/") || req.originalUrl.includes("/user")) {
-      cb(null, EMPLOYEE_DIR);
-    } else {
-      cb(null, STUDENT_DIR); 
+      targetDir = EMPLOYEE_DIR;
+    }
+
+    try {
+      if (!fs.existsSync(targetDir)) {
+        fs.mkdirSync(targetDir, { recursive: true });
+      }
+      cb(null, targetDir);
+    } catch (err) {
+      cb(err);
     }
   },
   filename: (req, file, cb) => {
@@ -58,7 +76,9 @@ export const deleteLocalFile = (relativePath) => {
     // Prevent directory traversal attacks
     if (!relativePath.startsWith("/uploads/")) return;
     
-    const absolutePath = path.join(process.cwd(), "public", relativePath);
+    const absolutePath = isVercel
+      ? path.join(BASE_UPLOADS_DIR, relativePath.replace(/^\/uploads\/?/, ""))
+      : path.join(process.cwd(), "public", relativePath);
     
     if (fs.existsSync(absolutePath)) {
       fs.unlinkSync(absolutePath);

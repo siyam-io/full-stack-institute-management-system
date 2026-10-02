@@ -12,6 +12,10 @@ import { auditLogger } from "./middlewares/audit.js";
 const app = express();
 const __dirname = path.resolve();
 
+// CORS preflight must run first
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
+
 // Request logger middleware
 app.use((req, res, next) => {
   const start = Date.now();
@@ -25,8 +29,6 @@ app.use((req, res, next) => {
 // Global middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
 app.use(auditLogger);
 
 // Static files

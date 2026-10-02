@@ -1,110 +1,171 @@
 <div align="center">
 
-# 🎓 Culinary Academy
+# 👨‍🍳 Culinary Academy
+### Enterprise Full-Stack Institute Management System & Multilingual Public Portal
 
-### Enterprise-Grade Full-Stack Institute Management System & Multilingual Public Portal
+A high-performance, production-grade management and public portal platform built specifically for culinary arts academies, vocational institutes, and professional culinary institutes.
 
-[![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18%20%7C%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Express](https://img.shields.io/badge/Express.js-4.18-000000?style=for-the-badge&logo=express)](https://expressjs.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Prisma](https://img.shields.io/badge/Prisma-6.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deploy%20Ready-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Live Frontend](https://img.shields.io/badge/Live_Portal-Next.js_14-black?style=for-the-badge&logo=vercel&logoColor=white)](https://frontend-alpha-one-4xdf3qqzp0.vercel.app)
+[![Live Admin](https://img.shields.io/badge/Live_Admin-React_19_Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://admin-panel-green-chi.vercel.app)
+[![Live Backend](https://img.shields.io/badge/Live_API-Express_REST-000000?style=for-the-badge&logo=express)](https://backend-jade-three-35.vercel.app)
+[![Database](https://img.shields.io/badge/Database-Neon_PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://neon.tech)
+[![ORM](https://img.shields.io/badge/ORM-Prisma_6.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 <p align="center">
-  A state-of-the-art educational management system designed for culinary institutes, vocational academies, and professional training centers. Features a high-converting bilingual public website, real-time dynamic CMS controls, student lifecycle management, and enterprise-grade role-based access control.
+  <b>Bilingual Next.js Public Portal</b> • <b>Real-time Admin CMS Studio</b> • <b>Student Lifecycle & Attendance Engine</b> • <b>PostgreSQL + Prisma ORM</b>
 </p>
 
 </div>
 
 ---
 
-## 📑 Table of Contents
+## 🌐 Live Production Deployments
 
-- [System Architecture](#-system-architecture)
-- [Project Structure](#-project-structure)
-- [Key Features](#-key-features)
-  - [1. Public Website & Student Portal (`frontend/`)](#1-public-website--student-portal-frontend)
-  - [2. Institute Admin Dashboard (`admin-panel/`)](#2-institute-admin-dashboard-admin-panel)
-  - [3. Backend RESTful API (`backend/`)](#3-backend-restful-api-backend)
-- [🚀 Quick Start (Local Development)](#-quick-start-local-development)
-- [☁️ Deploying to Vercel (Step-by-Step)](#️-deploying-to-vercel-step-by-step)
-  - [Option A: Deploying Frontend (Next.js)](#option-a-deploying-frontend-nextjs)
-  - [Option B: Deploying Admin Panel (Vite SPA)](#option-b-deploying-admin-panel-vite-spa)
-- [🗄️ Backend & Database Deployment](#️-backend--database-deployment)
-- [🔐 Environment Variables](#-environment-variables)
-- [📄 License](#-license)
+The entire system is deployed and fully operational on **Vercel** with a serverless **Neon Cloud PostgreSQL** database.
+
+| Service | Technology | Live URL |
+| :--- | :--- | :--- |
+| **Public Portal & Website** | Next.js 14 (App Router) | [frontend-alpha-one-4xdf3qqzp0.vercel.app](https://frontend-alpha-one-4xdf3qqzp0.vercel.app) |
+| **Institute Admin Dashboard** | Vite + React 19 (SPA) | [admin-panel-green-chi.vercel.app](https://admin-panel-green-chi.vercel.app) |
+| **RESTful Core API** | Node.js + Express.js | [backend-jade-three-35.vercel.app](https://backend-jade-three-35.vercel.app) |
+| **Cloud Database** | PostgreSQL 16 | [Neon Cloud Serverless PostgreSQL](https://neon.tech) |
+
+### 🔐 Demo Superadmin Credentials
+To test the live Admin Dashboard, navigate to [admin-panel-green-chi.vercel.app](https://admin-panel-green-chi.vercel.app) and log in with:
+
+- **Email:** `ssiyam563@gmail.com`
+- **Password:** `123456`
+- **Role:** `SUPERADMIN` (Full administrative privileges)
 
 ---
 
 ## 🏛 System Architecture
 
 ```mermaid
-graph TD
-    Client[Visitors & Prospective Students] -->|HTTPS| Frontend[Next.js 14 Public Portal]
-    Admin[Institute Administrators & Instructors] -->|HTTPS| AdminPanel[Vite + React 19 Dashboard]
-    
-    Frontend -->|Server/Client Fetch| Backend[Express.js REST API :3043]
-    AdminPanel -->|REST API / JWT| Backend
-    
-    Backend -->|Prisma ORM| Postgres[(PostgreSQL Database)]
-    Backend -->|Static / Uploads| Storage[Local / Cloud Media Storage]
+flowchart TD
+    subgraph Visitors & Students
+        User["🌐 Students & Visitors"]
+    end
+
+    subgraph Administration
+        Staff["👔 Institute Administrators & Mentors"]
+    end
+
+    subgraph Frontend Applications
+        NextApp["🚀 Next.js 14 App Router\n(Public Multilingual Portal)"]
+        ViteApp["⚡ React 19 + Vite SPA\n(Admin Management Studio)"]
+    end
+
+    subgraph Backend Core
+        ExpressAPI["🛡️ Express.js REST API\n(Vercel Serverless Function)"]
+        PrismaORM["⚡ Prisma ORM (v6.19)"]
+    end
+
+    subgraph Cloud Persistence
+        NeonDB[("🐘 Neon PostgreSQL\n(Cloud Serverless DB)")]
+        MediaStorage["📁 Cloud / Serverless Storage"]
+    end
+
+    User -->|Browse / Inquire / Register| NextApp
+    Staff -->|Manage Institute & CMS| ViteApp
+
+    NextApp -->|SSR & Client API Requests| ExpressAPI
+    ViteApp -->|REST API with JWT & Cookies| ExpressAPI
+
+    ExpressAPI --> PrismaORM
+    PrismaORM --> NeonDB
+    ExpressAPI --> MediaStorage
 ```
 
 ---
 
-## 📁 Project Structure
+## 🌟 Key Modules & Capabilities
 
-```bash
+### 1. 🎓 Public Student & Visitor Portal (`frontend/`)
+- **Next.js 14 App Router**: Server-side rendering (SSR), static generation (SSG), and streaming for maximum performance and lightning-fast load times.
+- **Bilingual Internationalization (`next-intl`)**: Instant, seamless switching between **English (`/en`)** and **Bengali (`/bn`)** with automatic locale routing and cookie persistence.
+- **Culinary Academy Showcase**: High-resolution interactive gallery displaying kitchen training, masterchef workshops, pastry arts, and flame sauté stations.
+- **Dynamic Course Catalog**: Live syllabus display, pricing tiers, duration, instructor profiles, and prerequisite tracking.
+- **Lead Capture & Verification**: Cloudflare Turnstile bot protection with Google Sheets integration and automated student inquiry routing.
+- **SEO & Social Architecture**: Dynamic OpenGraph images, Twitter cards, JSON-LD structured schemas, dynamic `sitemap.xml`, and IndexNow indexing.
+
+### 2. ⚡ Institute Admin Management Dashboard (`admin-panel/`)
+- **Visual CMS Studio**: Live in-dashboard content editor for Hero banners, Mentors, Course highlights, Testimonials, and FAQs without touching code.
+- **Student Lifecycle Management**: Registration, profile photo upload, course enrollment, batch assignment, and student status tracking.
+- **Printable ID Cards & QR Badges**: Dynamic SVG/Canvas printable ID cards with embedded student verification QR codes.
+- **Attendance & Batch Scheduler**: Real-time batch-wise attendance marking, session logs, and class rosters.
+- **Academic Course Architect**: Module builder, syllabus outlines, instructor allocation, and seat limits.
+- **Financial Accounting**: Tuition fee invoices, payment receipts, ledger records, and outstanding balance alerts.
+- **Role-Based Access Control (RBAC)**: Fine-grained permissions for Superadmin, Admin, Instructor, and Accountant.
+
+### 3. 🛡️ Robust Backend RESTful API (`backend/`)
+- **Layered Architecture**: Strict industrial patterns (`Route → Controller → Service → Repository → Prisma Client`).
+- **PostgreSQL Database**: Relational schemas with JSONB support for flexible bilingual course and CMS attributes.
+- **Enterprise Security**:
+  - JWT Authentication via HTTP-only, secure cookies & bearer headers.
+  - BCrypt password hashing.
+  - Zod validation pipelines on all inputs.
+  - Safe serverless file uploads with dynamic CORS white-listing.
+  - Audit logging middleware for compliance.
+
+---
+
+## 📁 Repository Directory Structure
+
+```
 full-stack-institute-management-system/
-├── frontend/             # Next.js 14 App Router (Public web portal & CMS client)
-│   ├── src/app/          # Multilingual routes ([locale]: /en, /bn, /courses, /about, /faq)
-│   ├── src/components/   # Reusable UI modules (Hero, CourseShowcase, Footer, Header)
-│   ├── content/          # Static fallback JSON & localized content
-│   └── public/           # Logos, favicons, and high-res imagery
+├── frontend/                     # Next.js 14 Public Application
+│   ├── src/
+│   │   ├── app/                  # App router with [locale] bilingual routing
+│   │   │   └── [locale]/         # /en and /bn page trees
+│   │   ├── components/           # Reusable UI widgets & sections
+│   │   ├── content/              # Static fallback data for zero-downtime
+│   │   └── lib/                  # Utilities, API client, internationalization
+│   ├── public/                   # Academy imagery, chefs, and favicons
+│   └── vercel.json               # Vercel deployment routing configuration
 │
-├── admin-panel/          # Vite + React 19 Single Page Application
-│   ├── src/pages/        # Dashboard, Students, Courses, CMS Editors, Finance
-│   ├── src/components/   # Admin UI components, layout shell, QR code modals
-│   └── public/           # Admin branding assets and favicons
+├── admin-panel/                  # Vite + React 19 Admin SPA
+│   ├── src/
+│   │   ├── pages/                # Dashboard, Students, Courses, CMS, Finance
+│   │   ├── components/           # Admin layout shell, tables, QR modals
+│   │   ├── context/              # AuthContext and global state
+│   │   └── api/                  # Axios configured HTTP client
+│   ├── public/                   # Admin branding assets
+│   └── vercel.json               # SPA client-side rewrite configurations
 │
-└── backend/              # Node.js + Express.js API
-    ├── src/modules/      # Feature modules (auth, students, courses, cms, finance)
-    ├── src/core/db/      # Prisma client and raw SQL helpers
-    └── prisma/           # PostgreSQL schema definitions & migrations
+├── backend/                      # Node.js + Express.js API
+│   ├── api/                      # Vercel Serverless Function entrypoint
+│   ├── src/
+│   │   ├── modules/              # auth, students, courses, cms, finance, users
+│   │   ├── core/                 # Error handling, database connectors, audit
+│   │   ├── middlewares/          # JWT auth, role validation, multer upload
+│   │   └── config/               # Dynamic CORS, environment configuration
+│   ├── prisma/                   # schema.prisma & database seed scripts
+│   └── vercel.json               # Serverless runtime configuration
+│
+└── README.md                     # Project documentation
 ```
 
 ---
 
-## ✨ Key Features
+## 🛠️ Tech Stack & Technologies
 
-### 1. Public Website & Student Portal (`frontend/`)
-- **Modern Spatial UI / UX**: Built with responsive layouts, dark aesthetics, smooth gradients, and micro-interactions.
-- **Full Bilingual Localization (`next-intl`)**: Instant toggle between English (`/en`) and Bengali (`/bn`) with automated cookie and header persistence.
-- **Dynamic CMS Integration**: Content seamlessly syncs from the backend PostgreSQL database (with zero-downtime static JSON fallbacks).
-- **SEO & Social Optimization**: Dynamic sitemap (`sitemap.xml`), OpenGraph metadata, IndexNow protocol, and structured schema markup.
-- **Enterprise Lead Engine**: Cloudflare Turnstile CAPTCHA protected admission forms with direct Google Sheets webhook integration.
-
-### 2. Institute Admin Dashboard (`admin-panel/`)
-- **Student Lifecycle Management**: Comprehensive records, batch allocations, attendance tracking, and printable ID cards with dynamic QR codes.
-- **Visual CMS Control Center**: In-browser editors for Home Hero banners, Course Highlights, Mentors, FAQ items, and Testimonials without modifying code.
-- **Academic & Course Architect**: Configurable courses, syllabus modules, fee structures, and batch schedules.
-- **Financial Accounting**: Tuition fee management, automated payment receipt generation, and ledger tracking.
-- **Role-Based Access Control (RBAC/PBAC)**: Granular permissions for Superadmins, Campus Managers, Instructors, and Accounts Executives.
-
-### 3. Backend RESTful API (`backend/`)
-- **Clean Layered Architecture**: Strict separation of concerns (`Route → Controller → Service → Repository → Prisma ORM`).
-- **PostgreSQL Database**: Relational integrity with JSONB support for multilingual page schemas.
-- **Security First**: JWT authentication with HTTP-only cookies, password hashing with bcrypt, input sanitization with Zod, and CORS whitelist protections.
+| Layer | Technology | Key Libraries |
+| :--- | :--- | :--- |
+| **Public Frontend** | Next.js 14, React 18/19 | `next-intl`, Tailwind CSS, Lucide Icons, Framer Motion |
+| **Admin Panel** | React 19, Vite | Tailwind CSS, React Router v6, Axios, Lucide React, QRCode |
+| **Backend API** | Node.js, Express.js | Prisma ORM, JWT, Bcryptjs, Multer, Zod, Cookie-Parser |
+| **Database** | PostgreSQL 16 (Neon) | Prisma Engine, Full-text Search, Relational Integrity |
+| **Hosting & CI/CD** | Vercel Serverless | Edge CDN, Automatic SSL, Serverless Functions |
 
 ---
 
-## 🚀 Quick Start (Local Development)
+## 🚀 Local Development Setup
 
 ### Prerequisites
-- **Node.js**: `v18.18.0` or higher (`v20+` recommended)
-- **PostgreSQL**: Local instance or remote cloud database (Neon, Supabase, Railway)
+- **Node.js**: `v18.18.0` or higher (`v20+` LTS recommended)
+- **PostgreSQL**: Local database or free [Neon](https://neon.tech) cloud database
 - **Git**
 
 ### 1. Clone the Repository
@@ -113,93 +174,56 @@ git clone https://github.com/siyam-io/full-stack-institute-management-system.git
 cd full-stack-institute-management-system
 ```
 
-### 2. Backend Setup
+### 2. Setup Backend
 ```bash
 cd backend
 npm install
-cp .env.example .env     # Configure your PostgreSQL DATABASE_URL
+cp .env.example .env
+
+# Set your DATABASE_URL in .env
 npx prisma generate
-npm run dev              # Runs on http://localhost:3043
+npx prisma db push
+
+# Start backend server
+npm run dev
+# Server runs on: http://localhost:3043
 ```
 
-### 3. Admin Panel Setup
+### 3. Setup Admin Panel
 ```bash
 cd ../admin-panel
 npm install
-cp .env.example .env     # Points to http://localhost:3043/api
-npm run dev              # Runs on http://localhost:5174
+cp .env.example .env
+
+# Start admin panel
+npm run dev
+# Dashboard runs on: http://localhost:5174
 ```
 
-### 4. Frontend Setup
+### 4. Setup Public Frontend
 ```bash
 cd ../frontend
 npm install
-cp .env.example .env     # Configure your site URL and keys
-npm run dev              # Runs on http://localhost:3000
+cp .env.example .env
+
+# Start frontend portal
+npm run dev
+# Portal runs on: http://localhost:3000
 ```
 
 ---
 
-## ☁️ Deploying to Vercel (Step-by-Step)
+## ⚙️ Environment Variables Reference
 
-Both the **Frontend (Next.js)** and **Admin Panel (Vite)** are fully pre-configured for one-click deployment on [Vercel](https://vercel.com).
-
-### Option A: Deploying Frontend (Next.js)
-
-1. Log in to your [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New Project"**.
-2. Import this GitHub repository.
-3. In the project configuration:
-   - **Framework Preset**: `Next.js`
-   - **Root Directory**: Click *Edit* and select **`frontend`**
-   - **Build Command**: `next build` (Default)
-   - **Output Directory**: `.next` (Default)
-4. Add Environment Variables:
-   | Variable | Value | Description |
-   | :--- | :--- | :--- |
-   | `NEXT_PUBLIC_SITE_URL` | `https://your-domain.vercel.app` | Production domain |
-   | `NEXT_PUBLIC_BACKEND_URL` | `https://your-backend-api.com` | Deployed backend URL |
-5. Click **Deploy**. Vercel will automatically build and deploy your site with edge CDN routing.
-
----
-
-### Option B: Deploying Admin Panel (Vite SPA)
-
-1. In Vercel, create another project from the same repository.
-2. In the project configuration:
-   - **Framework Preset**: `Vite`
-   - **Root Directory**: Click *Edit* and select **`admin-panel`**
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-3. Add Environment Variables:
-   | Variable | Value | Description |
-   | :--- | :--- | :--- |
-   | `VITE_API_URL` | `https://your-backend-api.com/api` | Backend API URL |
-   | `VITE_FONTEND_URL` | `https://your-frontend.vercel.app` | Live frontend URL |
-4. The included `admin-panel/vercel.json` automatically manages client-side SPA routing rewrites so deep links work seamlessly on page refresh.
-5. Click **Deploy**.
-
----
-
-## 🗄️ Backend & Database Deployment
-
-Because the backend is a persistent Express server, it can be deployed to:
-- **[Railway](https://railway.app)** *(Recommended)*: Connect repository, set root directory to `backend`, attach a free PostgreSQL plugin.
-- **[Render](https://render.com)**: Create a Web Service with Root Directory `backend`, build command `npm install && npx prisma generate`, start command `npm start`.
-- **Database Providers**: Works out of the box with [Neon](https://neon.tech), [Supabase](https://supabase.com), or standard VPS PostgreSQL.
-
----
-
-## 🔐 Environment Variables
-
-### Frontend (`frontend/.env`)
+### Backend (`backend/.env`)
 ```ini
-NEXT_PUBLIC_SITE_URL=https://culinaryacademy.com
-NEXT_PUBLIC_BACKEND_URL=http://localhost:3043
-NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_cloudflare_turnstile_site_key
-TURNSTILE_SECRET_KEY=your_cloudflare_turnstile_secret_key
-GOOGLE_SERVICE_ACCOUNT_EMAIL=your-sa@project.iam.gserviceaccount.com
-GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n..."
-GOOGLE_SHEET_ID=your_google_sheet_id
+NODE_ENV=development
+PORT=3043
+DATABASE_URL="postgresql://user:password@host:5432/dbname?sslmode=require"
+JWT_SECRET="your-super-secure-production-jwt-secret-key"
+JWT_EXPIRES_IN="7d"
+JWT_COOKIE_EXPIRES_IN=7
+FRONTEND_URL="http://localhost:5174"
 ```
 
 ### Admin Panel (`admin-panel/.env`)
@@ -208,23 +232,29 @@ VITE_API_URL=http://localhost:3043/api
 VITE_FONTEND_URL=http://localhost:3000
 ```
 
-### Backend (`backend/.env`)
+### Frontend (`frontend/.env`)
 ```ini
-NODE_ENV=production
-PORT=3043
-DATABASE_URL="postgresql://user:pass@host:5432/culinary_academy?schema=public"
-JWT_SECRET="your-super-secure-production-jwt-secret-key"
-JWT_EXPIRES_IN="7d"
-JWT_COOKIE_EXPIRES_IN=7
-FRONTEND_URL="http://localhost:5174"
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_BACKEND_URL=http://localhost:3043
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_cloudflare_turnstile_site_key
+TURNSTILE_SECRET_KEY=your_cloudflare_turnstile_secret_key
+GOOGLE_SERVICE_ACCOUNT_EMAIL=your-sa@project.iam.gserviceaccount.com
+GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n..."
+GOOGLE_SHEET_ID=your_google_sheet_id
 ```
 
 ---
 
-## 📄 License
+## 🤝 Contributing
 
-This project is licensed under the [MIT License](LICENSE).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/siyam-io/full-stack-institute-management-system/issues).
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
 
 <div align="center">
-  <b>Built with excellence for Culinary Academy</b>
+  <sub>Crafted with passion for Culinary Academy & Modern Institute Management</sub>
 </div>
