@@ -21,7 +21,7 @@ const uploadImageFile = async (file) => {
 const resolveImageUrl = (url) => {
   if (!url) return "";
   if (url.startsWith("http")) return url;
-  if (url.startsWith("/images/")) return `https://cibdhk.com${url}`;
+  if (url.startsWith("/images/")) return `http://localhost:3000${url}`;
   return `${apiURL.image_url}${url}`;
 };
 
@@ -209,7 +209,7 @@ const HomeHeroEditor = () => {
     image: "",
     titleEn: "Master Your Culinary Passion",
     titleBn: "আপনার রান্নার শৈলীকে পেশাদার স্তরে নিয়ে যান",
-    subtitleEn: "Culinary Institute of Bangladesh offers top-tier chef courses.",
+    subtitleEn: "Culinary Academy offers top-tier chef courses.",
     subtitleBn: "ক্লিনারি ইনস্টিটিউট অব বাংলাদেশ দিচ্ছে বিশ্বমানের শেফ প্রশিক্ষণ কোর্স।",
     primaryButtonTextEn: "Explore Courses",
     primaryButtonTextBn: "কোর্সসমূহ দেখুন",

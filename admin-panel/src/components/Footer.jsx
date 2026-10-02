@@ -110,8 +110,8 @@ const Footer = () => {
               </p>
               <p className="contact-item">
                 <span className="contact-icon">✉️</span>
-                <a href="mailto:cib.dhk@gmail.com" className="glass-link">
-                  cib.dhk@gmail.com
+                <a href="mailto:contact@culinaryacademy.com" className="glass-link">
+                  contact@culinaryacademy.com
                 </a>
               </p>
             </div>
@@ -123,14 +123,14 @@ const Footer = () => {
               <span className="footer-icon-wrapper">🔗</span>Quick Links
             </h4>
             <div className="quick-links">
-              <a href="https://cibdhk.com/faq/" className="glass-link-item">
+              <a href="http://localhost:3000/faq/" className="glass-link-item">
                 <span className="link-icon">❓</span> FAQ
               </a>
-              <a href="https://cibdhk.com/gallery/" className="glass-link-item">
+              <a href="http://localhost:3000/gallery/" className="glass-link-item">
                 <span className="link-icon">🖼️</span> Gallery
               </a>
               <a
-                href="https://cibdhk.com/verification/"
+                href="http://localhost:3000/verification/"
                 className="glass-link-item"
               >
                 <span className="link-icon">✅</span> Certificate Verification
@@ -154,20 +154,20 @@ const Footer = () => {
             <ul className="important-links">
               <li>
                 <a
-                  href="https://cibdhk.com/companyprofile/"
+                  href="http://localhost:3000/companyprofile/"
                   className="glass-link-nav highlight"
                 >
                   ★ Company Profile
                 </a>
               </li>
               <li>
-                <a href="https://cibdhk.com/about/" className="glass-link-nav">
+                <a href="http://localhost:3000/about/" className="glass-link-nav">
                   About Us
                 </a>
               </li>
               <li>
                 <a
-                  href="https://cibdhk.com/admission/"
+                  href="http://localhost:3000/admission/"
                   className="glass-link-nav"
                 >
                   Admission
@@ -175,20 +175,20 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://cibdhk.com/courses/"
+                  href="http://localhost:3000/courses/"
                   className="glass-link-nav"
                 >
                   Courses
                 </a>
               </li>
               <li>
-                <a href="https://cibdhk.com/blog/" className="glass-link-nav">
+                <a href="http://localhost:3000/blog/" className="glass-link-nav">
                   Blog
                 </a>
               </li>
               <li>
                 <a
-                  href="https://cibdhk.com/contact/"
+                  href="http://localhost:3000/contact/"
                   className="glass-link-nav"
                 >
                   Contact
@@ -196,7 +196,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://cibdhk.com/privacy-policy/"
+                  href="http://localhost:3000/privacy-policy/"
                   className="glass-link-nav privacy"
                 >
                   Privacy Policy
@@ -212,8 +212,8 @@ const Footer = () => {
         <div className="footer-bottom-container">
           <div className="footer-logo">
             <img
-              src="http://cibdhk.com/wp-content/uploads/2020/02/White-Modern-Fashion-Instagram-Profile-Picture-2.png"
-              alt="CIB Logo"
+              src="http://culinaryacademy.com/wp-content/uploads/2020/02/White-Modern-Fashion-Instagram-Profile-Picture-2.png"
+              alt="Culinary Academy Logo"
               className="logo-image"
             />
           </div>
@@ -221,7 +221,7 @@ const Footer = () => {
           <div className="footer-copyright">
             <p className="copyright-text">
               © <span id="currentYear"></span>
-              <strong>The Culinary Institute of Bangladesh</strong>. All rights
+              <strong>Culinary Academy</strong>. All rights
               reserved.
             </p>
             <p className="developer-credit">

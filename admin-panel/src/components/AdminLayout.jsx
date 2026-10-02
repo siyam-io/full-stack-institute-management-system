@@ -307,10 +307,10 @@ const AdminLayout = () => {
             className={`bg-[#ffffff] rounded-2xl flex justify-center items-center transition-all ${isCollapsed ? "p-1.5" : "px-4 py-2"}`}
           >
             <img
-              src="/logo.png"
-              alt="Logo"
-              style={{ width: isCollapsed ? "35px" : "85px" }}
-              className="transition-transform group-hover:scale-110"
+              src="/logo.svg"
+              alt="Culinary Academy"
+              style={{ width: isCollapsed ? "35px" : "120px" }}
+              className="transition-transform group-hover:scale-105"
             />
           </div>
         </div>

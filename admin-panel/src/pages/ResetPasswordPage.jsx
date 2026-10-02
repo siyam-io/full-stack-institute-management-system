@@ -133,7 +133,7 @@ const ResetPasswordPage = () => {
         {/* Footer */}
         <div className="mt-8 text-center">
           <p className="text-[10px] font-bold text-zinc-500">
-            Powered by <span className="text-power-red">CIB Tech</span>
+            Powered by <span className="text-power-red">Culinary Academy Tech</span>
           </p>
         </div>
       </div>

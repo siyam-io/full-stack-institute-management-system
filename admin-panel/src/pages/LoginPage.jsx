@@ -77,7 +77,7 @@ const LoginPage = () => {
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 group-focus-within:text-power-red transition-colors" size={20} />
                 <input
                   type="email"
-                  placeholder="admin@cib.com"
+                  placeholder="admin@culinaryacademy.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -127,7 +127,7 @@ const LoginPage = () => {
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 group-focus-within:text-power-red transition-colors" size={20} />
                 <input
                   type="email"
-                  placeholder="admin@cib.com"
+                  placeholder="admin@culinaryacademy.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -194,7 +194,7 @@ const LoginPage = () => {
         {/* Footer */}
         <div className="mt-8 text-center">
           <p className="text-[10px] font-bold text-zinc-500">
-            Powered by <span className="text-power-red">CIB Tech</span>
+            Powered by <span className="text-power-red">Culinary Academy Tech</span>
           </p>
         </div>
       </div>

@@ -65,11 +65,11 @@ const Header = () => {
               </a>
               <div className="h-4 w-px bg-white/20"></div>
               <a
-                href="mailto:cib.dhk@gmail.com"
+                href="mailto:contact@culinaryacademy.com"
                 className="flex items-center space-x-2 text-sm text-zinc-500 hover:text-white transition-colors"
               >
                 <LogIn className="w-3 h-3 rotate-180" />
-                <span>cib.dhk@gmail.com</span>
+                <span>contact@culinaryacademy.com</span>
               </a>
             </div>
             <div className="flex items-center space-x-4">
@@ -93,22 +93,22 @@ const Header = () => {
             <a
               href={`${baseUrl}/`}
               className="flex items-center space-x-3 group hover:opacity-90 transition-opacity duration-200"
-              aria-label="CIB - Go to homepage"
+              aria-label="Culinary Academy - Go to homepage"
             >
               <div className="w-10 h-10 flex items-center justify-center">
                 <img
-                  src="/logo.png"
-                  alt="CIB Logo"
+                  src="/logo.svg"
+                  alt="Culinary Academy Logo"
                   className="logo-image object-contain"
                   width="40"
                   height="40"
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white tracking-tight leading-tight">
-                  CIB
-                  <span className="block text-xs font-normal text-zinc-500 tracking-wider">
-                    The Culinary Institute of Bangladesh
+                <h1 className="text-xl font-bold text-white tracking-tight leading-tight">
+                  Culinary Academy
+                  <span className="block text-[10px] font-normal text-zinc-500 tracking-wider">
+                    Institute Management Portal
                   </span>
                 </h1>
               </div>

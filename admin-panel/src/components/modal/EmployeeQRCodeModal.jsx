@@ -5,7 +5,7 @@ import { apiURL } from "../../../Constant.js";
 
 // Import your background image here or use a public path
 import IDBackground from "../../assets/id-bg.png"; 
-import Logo from "/logo.png"; // Assuming you have the logo file
+import Logo from "/logo.svg";
 
 const IMAGE_URL = apiURL.image_url;
 const BASE_URL = apiURL.fontend_url;
@@ -58,10 +58,10 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
       >
         {/* Top Header Section */}
         <div className="pt-12 px-8 flex items-center gap-3">
-          <img src={Logo} alt="CIB Logo" className="w-16 h-16 object-contain" />
+          <img src={Logo} alt="Culinary Academy Logo" className="w-16 h-16 object-contain" />
           <div className="text-left">
             <h2 className="text-[17px] font-bold text-white leading-tight">
-              The Culinary Institute <br /> of Bangladesh (CIB)
+              Culinary Academy
             </h2>
           </div>
         </div>

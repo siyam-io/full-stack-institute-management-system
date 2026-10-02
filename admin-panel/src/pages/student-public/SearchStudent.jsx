@@ -120,7 +120,7 @@ const StudentSearch = () => {
           </h1>
           <p className="text-zinc-500 text-lg mb-10 max-w-2xl mx-auto">
             Official portal for verifying credentials of students registered
-            with The Culinary Institute of Bangladesh.
+            with Culinary Academy.
           </p>
 
           <form
@@ -256,7 +256,7 @@ const StudentSearch = () => {
                         </button>
                         <div className="h-4 w-px bg-white/5"></div>
                         <p className="text-sm font-mono tracking-tighter">
-                          CIB-AUTH-{student._id.slice(-8).toUpperCase()}
+                          CA-AUTH-{student._id.slice(-8).toUpperCase()}
                         </p>
                       </div>
                     </div>

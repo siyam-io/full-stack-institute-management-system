@@ -542,7 +542,7 @@ const MentorsEditor = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="john@cibdhk.com"
+                    placeholder="john@culinaryacademy.com"
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-sm placeholder-zinc-500 focus:outline-none focus:ring-4 focus:ring-power-red/40 focus:border-power-red/30 transition-all duration-200"
                   />
                 </div>

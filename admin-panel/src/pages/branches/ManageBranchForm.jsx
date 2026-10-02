@@ -59,7 +59,7 @@ const ManageBranchForm = ({ mode = "add" }) => {
     { 
       name: "branch_name", 
       label: "Branch Name (English)", 
-      placeholder: "e.g., CIB Dhaka Main Campus", 
+      placeholder: "e.g., Culinary Academy Main Campus", 
       required: true 
     },
     { 
@@ -97,7 +97,7 @@ const ManageBranchForm = ({ mode = "add" }) => {
       name: "contact_email", 
       label: "Official Email Address", 
       type: "email", 
-      placeholder: "branch@cibdhk.com" 
+      placeholder: "branch@culinaryacademy.com" 
     },
     { divider: true, name: "div-status", title: "System Status" },
     { 

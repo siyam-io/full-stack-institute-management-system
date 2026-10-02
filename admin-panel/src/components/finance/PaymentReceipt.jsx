@@ -75,9 +75,9 @@ export default function PaymentReceipt({ txn, studentName, studentId, courseName
           {/* Header */}
           <div className="header">
             <div className="brand">
-              <h1>CIBD Institute</h1>
+              <h1>Culinary Academy</h1>
               <p>123 Education Street, Dhaka, Bangladesh</p>
-              <p>Phone: +880 1234 567890 | Web: www.cibdhk.com</p>
+              <p>Phone: +880 1234 567890 | Web: www.culinaryacademy.com</p>
             </div>
             <div className="title">
               <h2>RECEIPT</h2>

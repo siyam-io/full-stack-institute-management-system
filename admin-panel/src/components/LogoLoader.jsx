@@ -40,8 +40,8 @@ const LogoLoader = ({ isLoading = true }) => {
         <div className="relative p-8 rounded-3xl bg-white/5[0.03] border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-700">
           {!imgError ? (
             <img
-              src="/logo.png"
-              alt="CIB Logo"
+              src="/logo.svg"
+              alt="Culinary Academy Logo"
               className="w-44 h-44 object-contain drop-shadow-2xl"
               onError={() => setImgError(true)}
             />

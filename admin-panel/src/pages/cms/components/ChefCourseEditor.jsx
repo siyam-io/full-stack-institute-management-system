@@ -9,7 +9,7 @@ import { apiURL } from "../../../../Constant";
 const resolveImageUrl = (url) => {
   if (!url) return "";
   if (url.startsWith("http")) return url;
-  if (url.startsWith("/images/")) return `https://cibdhk.com${url}`;
+  if (url.startsWith("/images/")) return `http://localhost:3000${url}`;
   return `${apiURL.image_url}${url}`;
 };
 
@@ -181,7 +181,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
           <span className="absolute bottom-6 left-6 text-[11px] font-black uppercase text-white/90 tracking-wider">
-            Practical Class at CIB
+            Practical Class at Culinary Academy
           </span>
         </div>
       </div>
@@ -196,7 +196,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
           <PencilLine size={14} /> Edit Public Page
         </button>
         <a
-          href={`https://cibdhk.com/courses/${pageData?.slug || course.slug || ""}`}
+          href={`http://localhost:3000/courses/${pageData?.slug || course.slug || ""}`}
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-zinc-400 hover:bg-white/5 transition"

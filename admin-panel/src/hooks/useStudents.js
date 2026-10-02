@@ -198,7 +198,7 @@ export const useDeleteComment = () => {
 //       const link = document.createElement("a");
 //       link.href = url;
 //       const safeName = student.student_name.replace(/[^a-zA-Z0-9]/g, "_");
-//       link.setAttribute("download", `CIB_Certificate_${safeName}.pdf`);
+//       link.setAttribute("download", `CA_Certificate_${safeName}.pdf`);
 //       document.body.appendChild(link);
 //       link.click();
 //       link.remove();
@@ -223,7 +223,7 @@ export const useDownloadCertificate = () => {
       const link = document.createElement("a");
       link.href = url;
       const safeName = variables.student.student_name.replace(/[^a-zA-Z0-9]/g, "_");
-      link.setAttribute("download", `CIB_Certificate_${safeName}.pdf`);
+      link.setAttribute("download", `CA_Certificate_${safeName}.pdf`);
       document.body.appendChild(link);
       link.click();
       link.remove();
