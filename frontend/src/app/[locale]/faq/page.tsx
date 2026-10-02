@@ -78,7 +78,7 @@ export default async function FAQPage({ params: { locale } }: Props) {
 
       <div className="relative z-10">
         {/* Hero */}
-        <section className="relative pt-36 md:pt-44 pb-16 text-center overflow-hidden">
+        <section className="relative pt-10 md:pt-14 pb-16 text-center overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-bold tracking-widest mb-10">
               Information Protocol

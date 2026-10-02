@@ -13,7 +13,7 @@ import Image from 'next/image';
 
 const CourseHero = ({ data }: CourseHeroProps) => {
   return (
-    <section className="relative pt-36 md:pt-44 pb-16 text-center overflow-hidden">
+    <section className="relative pt-10 md:pt-14 pb-16 text-center overflow-hidden">
 
       <div className="max-w-5xl mx-auto px-4 relative z-10 animate-fade-in">
         <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-black tracking-widest mb-8 uppercase">

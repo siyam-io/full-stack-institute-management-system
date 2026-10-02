@@ -18,9 +18,9 @@ export default function Breadcrumb({ locale = 'en' }: { locale?: string }) {
   const isBn = locale === 'bn';
 
   return (
-    <div className="absolute top-0 left-0 w-full z-40 pointer-events-none">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6 pointer-events-auto">
-        <nav className="inline-flex items-center space-x-2 text-[10px] md:text-xs text-gray-400 bg-obsidian/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/5 shadow-xl uppercase tracking-wider font-bold">
+    <div className="relative w-full z-30 pt-4 pb-2">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <nav className="inline-flex items-center space-x-2 text-[10px] md:text-xs text-gray-400 bg-obsidian/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-xl uppercase tracking-wider font-bold">
           <Link href={`/${locale}`} className="hover:text-prestige-gold transition-colors flex items-center gap-1.5">
             <Home className="w-3 h-3 md:w-4 md:h-4" />
             <span>{isBn ? 'হোম' : 'Home'}</span>

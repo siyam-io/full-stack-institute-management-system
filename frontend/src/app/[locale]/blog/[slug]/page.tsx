@@ -212,7 +212,7 @@ export default async function BlogPostPage({ params: { locale, slug } }: BlogPos
       <article className="min-h-screen bg-obsidian text-white">
         <SchemaInjector schemas={schemas} />
         {/* Article Hero */}
-        <header className="pt-36 md:pt-44 pb-16 section-padding relative overflow-hidden">
+        <header className="pt-10 md:pt-14 pb-16 section-padding relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top,rgba(236,27,35,0.05),transparent)]"></div>
           <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
             <Link 

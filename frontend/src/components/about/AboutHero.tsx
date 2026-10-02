@@ -27,7 +27,7 @@ const AboutHero = ({ data }: AboutHeroProps) => {
         <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center animate-fade-in pt-36 md:pt-44 pb-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center animate-fade-in pt-14 md:pt-20 pb-20">
         <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-black tracking-widest mb-10 uppercase">
           The Culinary Manifesto
         </div>
