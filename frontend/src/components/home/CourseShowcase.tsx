@@ -36,11 +36,11 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
       {/* Background Decor */}
       <div className="absolute inset-0 z-0">
         <picture>
-          <source media="(max-width: 480px)" srcSet="/images/principal-dewan-ismail-inspecting-student-practice-session-480w.webp" />
-          <source media="(max-width: 768px)" srcSet="/images/principal-dewan-ismail-inspecting-student-practice-session-768w.webp" />
-          <source media="(max-width: 1280px)" srcSet="/images/principal-dewan-ismail-inspecting-student-practice-session-1280w.webp" />
+          <source media="(max-width: 480px)" srcSet="/images/hero-culinary-academy.jpg" />
+          <source media="(max-width: 768px)" srcSet="/images/hero-culinary-academy.jpg" />
+          <source media="(max-width: 1280px)" srcSet="/images/hero-culinary-academy.jpg" />
           <img
-            src="/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp"
+            src="/images/hero-culinary-academy.jpg"
             alt="Culinary Academy"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-5 grayscale"

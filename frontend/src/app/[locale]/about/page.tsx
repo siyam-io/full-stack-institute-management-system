@@ -195,8 +195,8 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             <div className="glass-card overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 shadow-2xl relative group">
               <div className="aspect-[21/9] relative">
                 <Image
-                  src="/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp"
-                  alt="Principal Dewan Ismail inspecting students' culinary work at Culinary Academy lab"
+                  src="/images/hero-culinary-academy.jpg"
+                  alt="Master Chef Mentor instructing students' culinary work at Culinary Academy lab"
                   fill
                   loading="lazy"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -207,7 +207,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                     {locale === 'bn' ? 'ব্যবহারিক মেন্টরশিপ' : 'Culinary Mentorship'}
                   </span>
                   <p className="text-white text-lg md:text-xl font-black uppercase tracking-tight">
-                    {locale === 'bn' ? 'প্রিন্সিপাল লিড মেন্টর কর্তৃক ব্যবহারিক ক্লাস পরিদর্শন' : 'Principal Dewan Ismail Inspecting Student Practice'}
+                    {locale === 'bn' ? 'প্রিন্সিপাল লিড মেন্টর কর্তৃক ব্যবহারিক ক্লাস পরিদর্শন' : 'Principal Executive Chef Mentor Inspecting Student Practice'}
                   </p>
                 </div>
               </div>
@@ -263,7 +263,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Link 
-                href={`/${locale}/expert-culinary-mentors/dewan-ismail`}
+                href={`/${locale}/courses`}
                 className="group p-8 md:p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-prestige-gold/50 hover:bg-white/[0.05] hover:shadow-[0_30px_70px_rgba(0,0,0,0.5)] transition-all duration-700 flex flex-col justify-between"
               >
                 <div>
@@ -271,7 +271,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                     <User className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-black text-white uppercase mb-4 group-hover:text-prestige-gold transition-colors">
-                    {locale === 'bn' ? 'লিড মেন্টর' : 'Meet Dewan Ismail'}
+                    {locale === 'bn' ? 'আমাদের কোর্সসমূহ' : 'Explore Courses'}
                   </h3>
                   <p className="text-sm md:text-base text-white/60 mb-10 leading-relaxed">
                     {locale === 'bn' 
@@ -376,7 +376,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-bold text-white">{locale === 'bn' ? 'প্রতিষ্ঠাতা ও প্রিন্সিপাল' : 'Founder & Principal'}</td>
-                    <td className="py-3 px-4">Dewan Ismail</td>
+                    <td className="py-3 px-4">Executive Chef Mentor</td>
                     <td className="py-3 px-4 text-prestige-gold font-bold">{locale === 'bn' ? '৫-তারকা এক্সিকিউティブ শেফ' : '5-Star Executive Chef'}</td>
                   </tr>
                   <tr>
@@ -411,10 +411,10 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       <section className="py-12 bg-black/10 border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto px-4">
           <AuthorBox 
-            name="Dewan Ismail"
-            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, কালিনারি একাডেমি' : 'Principal & Founder, Culinary Academy'}
-            photo="/images/dewan-ismail-portrait.jpg"
-            profileUrl="/expert-culinary-mentors/dewan-ismail"
+            name="Executive Chef Mentor"
+            title={locale === 'bn' ? 'প্রিন্সিপাল ও লিড প্রশিক্ষক, কালিনারি একাডেমি' : 'Principal & Lead Instructor, Culinary Academy'}
+            photo="/images/chef-mentor-portrait.jpg"
+            profileUrl=""
             lastReviewed={locale === 'bn' ? 'জুন ২০২৬' : 'June 2026'}
             locale={locale}
           />

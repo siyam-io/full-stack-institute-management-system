@@ -79,12 +79,12 @@ function getAuthorDetails(authorName: string, locale: string) {
   const isBn = locale === 'bn';
   const cleanAuthor = authorName ? authorName.trim() : '';
 
-  if (cleanAuthor === 'Dewan Ismail' || cleanAuthor === 'লিড মেন্টর') {
+  if (cleanAuthor === 'Executive Chef Mentor' || cleanAuthor === 'লিড মেন্টর') {
     return {
-      name: isBn ? 'লিড মেন্টর' : 'Dewan Ismail',
-      title: isBn ? 'অধ্যক্ষ ও ক্যারিয়ার পরিকল্পনা পরিচালক' : 'Principal & Director',
-      photo: '/images/dewan-ismail-portrait.jpg',
-      profileUrl: '/expert-culinary-mentors/dewan-ismail'
+      name: isBn ? 'লিড মেন্টর' : 'Executive Chef Mentor',
+      title: isBn ? 'অধ্যক্ষ ও প্রধান প্রশিক্ষক' : 'Principal & Lead Instructor',
+      photo: '/images/chef-mentor-portrait.jpg',
+      profileUrl: ''
     };
   } else if (cleanAuthor === 'Hasan Rizvee' || cleanAuthor === 'হাসান রিজভী') {
     return {
@@ -97,7 +97,7 @@ function getAuthorDetails(authorName: string, locale: string) {
     return {
       name: isBn ? 'সালমান ইকবাল' : 'Salman Iqbal',
       title: isBn ? 'ব্র্যান্ড ম্যানেজার' : 'Brand Manager',
-      photo: '/images/salman-iqbal.jpg',
+      photo: '/images/chef-mentor-portrait.jpg',
       profileUrl: ''
     };
   } else {
@@ -386,11 +386,11 @@ export default async function BlogPostPage({ params: { locale, slug } }: BlogPos
                 </Link>
                 {post.category === 'Chef Career Path' && (
                   <Link 
-                    href={`/${locale}/expert-culinary-mentors/dewan-ismail`}
+                    href={`/${locale}/about`}
                     className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-prestige-gold/50 hover:bg-white/[0.05] transition-all duration-300 flex items-center justify-between group sm:col-span-2"
                   >
                     <span className="text-sm font-bold text-white group-hover:text-prestige-gold transition-colors">
-                      {locale === 'bn' ? 'আমাদের মেন্টর লিড মেন্টর সম্পর্কে জানুন' : 'Meet Principal Dewan Ismail'}
+                      {locale === 'bn' ? 'আমাদের ফ্যাকাল্টি ও মেন্টরদের সম্পর্কে জানুন' : 'Learn About Our Expert Chef Mentors'}
                     </span>
                     <ArrowRight className="w-4 h-4 text-prestige-gold group-hover:translate-x-1 transition-transform shrink-0" />
                   </Link>

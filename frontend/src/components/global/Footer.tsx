@@ -173,11 +173,11 @@ const Footer = ({ data, locale }: FooterProps) => {
           {/* Logo Section */}
           <div className="flex-1 flex justify-start">
             <Image 
-              src="/images/academy-logo-accredited.png" 
-              alt="Culinary Academy Accredited Logo" 
-              width={280} 
-              height={80} 
-              className="h-auto w-[280px] object-contain opacity-90"
+              src="/images/logo.svg" 
+              alt="Culinary Academy Logo" 
+              width={220} 
+              height={50} 
+              className="h-10 w-auto object-contain opacity-90"
             />
           </div>
 

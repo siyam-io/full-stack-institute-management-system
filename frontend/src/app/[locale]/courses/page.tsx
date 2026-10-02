@@ -472,10 +472,10 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
       <section className="py-12 bg-black/10 border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto px-4">
           <AuthorBox 
-            name="Dewan Ismail"
-            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, কালিনারি একাডেমি' : 'Principal & Founder, Culinary Academy'}
-            photo="/images/dewan-ismail-portrait.jpg"
-            profileUrl="/expert-culinary-mentors/dewan-ismail"
+            name="Executive Chef Mentor"
+            title={locale === 'bn' ? 'প্রিন্সিপাল ও লিড প্রশিক্ষক, কালিনারি একাডেমি' : 'Principal & Lead Instructor, Culinary Academy'}
+            photo="/images/chef-mentor-portrait.jpg"
+            profileUrl=""
             lastReviewed={locale === 'bn' ? 'জুন ২০২৬' : 'June 2026'}
             locale={locale}
           />

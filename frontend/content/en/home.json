@@ -10,14 +10,14 @@
         "ctaLink": "/courses"
       },
       {
-        "image": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp",
+        "image": "/images/baking-pastry-class.jpg",
         "headline": "Skip Labor Jobs. Become a Certified Chef.",
         "subheadline": "Stop surviving on low-wage odd jobs abroad. Our 3-month intensive course gives you the skills and passport to work in the global 5-star hospitality market.",
         "ctaText": "Explore Courses",
         "ctaLink": "/courses"
       },
       {
-        "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
+        "image": "/images/hero-culinary-academy.jpg",
         "headline": "Learn from 5-Star Mentors",
         "subheadline": "Train directly under our certified 5-star Executive Chef mentors, veterans of global 5-star hotel chains.",
         "ctaText": "Start Your Career",
@@ -91,7 +91,7 @@
       { "src": "/images/student-practice-5-1920w.webp", "alt": "Student Practice" },
       { "src": "/images/practical_class_1-1920w.webp", "alt": "Kitchen Action" },
       { "src": "/images/practical_class_2-1920w.webp", "alt": "Culinary Session" },
-      { "src": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp", "alt": "Mentorship" }
+      { "src": "/images/baking-pastry-class.jpg", "alt": "Mentorship" }
     ],
     "testimonialsHeading": "What Our Students Say",
     "testimonials": [

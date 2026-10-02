@@ -114,8 +114,8 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
               <div className="absolute -inset-10 bg-power-red/10 rounded-[2rem] blur-[80px] opacity-30 group-hover:opacity-60 transition-opacity duration-1000"></div>
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 aspect-[4/5] bg-white/5">
                 <Image 
-                  src="/images/chef-rafeya-chowdhury-conducting-practical-class-1280w.webp" 
-                  alt="Chef Rafeya Chowdhury" 
+                  src="/images/baking-pastry-class.jpg" 
+                  alt="Executive Pastry Chef" 
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-[2s]"
                 />

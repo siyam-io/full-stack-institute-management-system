@@ -7,7 +7,7 @@
   "story": {
     "heading": "আমাদের গল্প",
     "content": "ঐতিহ্যগত শিক্ষা এবং গ্লোবাল কালিনারি চাহিদার মধ্যে ব্যবধান ঘুচাতে কালিনারি একাডেমি প্রতিষ্ঠিত হয়েছিল। আমরা এনএসডিএ (জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ, প্রধানমন্ত্রীর কার্যালয়) অনুমোদিত স্কিল ট্রেনিং প্রোভাইডার (STP) যা ফুড অ্যান্ড বেভারেজ প্রোডাকশন (লেভেল-২ ও ৩) প্রশিক্ষণ প্রদান করে। আমরা শুধু রেসিপি শেখাই না; আমরা ৫-স্টার কিচেনে প্রয়োজনীয় প্রফেশনাল স্পিড, হাইজিন এবং ওয়ার্কফ্লো শেখাই।",
-    "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
+    "image": "/images/hero-culinary-academy.jpg",
     "image2": "/images/student_practice_session_1-1920w.webp"
   },
   "philosophy": {
@@ -107,7 +107,7 @@
       {
         "name": "লিড মেন্টর",
         "role": "প্রিন্সিপাল এবং ডিরেক্টর অফ ক্যারিয়ার প্ল্যানিং অ্যান্ড ডেভেলপমেন্ট",
-        "photo": "/images/dewan-ismail-portrait.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": [
           "বিটিইবি লেভেল ৪",
           "এনএসডিএ লেভেল ৩",
@@ -127,7 +127,7 @@
       {
         "name": "সিনিয়র শেফ ইন্সট্রাক্টর",
         "role": "লিড ট্রেইনার",
-        "photo": "/images/rafeya-chowdhury.jpg",
+        "photo": "/images/pastry-chef-portrait.jpg",
         "credentials": [
           "শেফ ডি পার্টী (দ্য ওয়েস্টিন)",
           "বিটিভি এবং যমুনা টিভি হোস্ট",
@@ -138,7 +138,7 @@
       {
         "name": "রেহানা আক্তার পলি",
         "role": "অ্যাসোসিয়েট এক্সিকিউটিভ ট্রেইনার",
-        "photo": "/images/rehana-akhter-poly.jpg",
+        "photo": "/images/pastry-chef-portrait.jpg",
         "credentials": [
           "মার্কেটিংয়ে এমবিএস",
           "বি.এড (নায়েম)",
@@ -155,7 +155,7 @@
       {
         "name": "আসিফা রশিদ রাইতা",
         "role": "থিওরিটিক্যাল ইন্সট্রাক্টর এবং হেড অফ অপারেশনস",
-        "photo": "/images/asifa-rashid-rayta.png",
+        "photo": "/images/pastry-chef-portrait.jpg",
         "credentials": [
           "বিবিএ ডিগ্রি",
           "এনএসডিএ লেভেল ৩",
@@ -165,7 +165,7 @@
       {
         "name": "সালমান ইকবাল",
         "role": "ব্র্যান্ড ম্যানেজার",
-        "photo": "/images/salman-iqbal.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": [
           "এনএসডিএ ফুড অ্যান্ড বেভারেজ প্রোডাকশন লেভেল-৩",
           "HACCP, হাইজিন এবং GMP-২২০০০",
@@ -175,7 +175,7 @@
       {
         "name": "আবু বাকর সিদ্দিক",
         "role": "সহকারী প্রশিক্ষক",
-        "photo": "/images/abu-baqur-siddik.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": [
           "এনএসডিএ লেভেল ৩ সার্টিফাইড",
           "বিটিইবি লেভেল ১ এবং ২",
@@ -186,13 +186,13 @@
       {
         "name": "রেজাউল করিম",
         "role": "কিচেন অ্যাসিস্ট্যান্ট",
-        "photo": "/images/rezaul-karim.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": []
       },
       {
         "name": "নাইম",
         "role": "অ্যাকাউন্টস এক্সিকিউটিভ",
-        "photo": "/images/naim_accounts_executive.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": []
       }
     ]

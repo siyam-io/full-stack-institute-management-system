@@ -7,7 +7,7 @@
   "story": {
     "heading": "Our Story",
     "content": "Founded to bridge the gap between traditional education and global culinary demand, Culinary Academy was established by industry veterans. We are an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We don't just teach recipes; we teach the professional speed, hygiene, and workflow required in 5-star kitchens across the globe.",
-    "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
+    "image": "/images/hero-culinary-academy.jpg",
     "image2": "/images/student_practice_session_1-1920w.webp"
   },
   "philosophy": {
@@ -60,7 +60,7 @@
     ]
   },
   "btvFeature": {
-    "heading": "Featured on BTV: Principal Dewan Ismail",
+    "heading": "Featured on BTV: Principal Executive Chef Mentor",
     "subheading": "Institutional Vision and the Future of Culinary Education in Bangladesh.",
     "embedUrl": "https://www.youtube.com/embed/ayKFD3Nzqag?si=9DNEXiFU74gpBgPg&start=100"
   },
@@ -69,9 +69,9 @@
     "subheading": "The administrative and technical leadership driving Culinary Academy's mission.",
     "members": [
       {
-        "name": "Dewan Ismail",
+        "name": "Executive Chef Mentor",
         "role": "Principal & Director of Career Planning & Development",
-        "photo": "/images/dewan-ismail-portrait.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": [
           "BTEB Level 4",
           "NSDA Level 3",
@@ -89,9 +89,9 @@
         "credentials": []
       },
       {
-        "name": "Rafeya Chowdhury",
+        "name": "Pastry Chef Instructor",
         "role": "Lead Trainer",
-        "photo": "/images/rafeya-chowdhury.jpg",
+        "photo": "/images/pastry-chef-portrait.jpg",
         "credentials": [
           "Chef de Partie (The Westin)",
           "BTV & Jamuna TV Host",
@@ -102,7 +102,7 @@
       {
         "name": "Rehana Akhter Poly",
         "role": "Associate Executive Trainer",
-        "photo": "/images/rehana-akhter-poly.jpg",
+        "photo": "/images/pastry-chef-portrait.jpg",
         "credentials": [
           "MBS in Marketing",
           "B.Ed (NAEM)",
@@ -119,7 +119,7 @@
       {
         "name": "Asifa Rashid Rayta",
         "role": "Theoretical Instructor & Head of Operations",
-        "photo": "/images/asifa-rashid-rayta.png",
+        "photo": "/images/pastry-chef-portrait.jpg",
         "credentials": [
           "BBA Degree",
           "BTEB Level 4",
@@ -129,7 +129,7 @@
       {
         "name": "Salman Iqbal",
         "role": "Brand Manager",
-        "photo": "/images/salman-iqbal.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": [
           "NSDA Food & Beverage Production Level-3",
           "HACCP, Hygiene & GMP-22000",
@@ -139,7 +139,7 @@
       {
         "name": "Abu Baqur Siddik",
         "role": "Assistant Trainer",
-        "photo": "/images/abu-baqur-siddik.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": [
           "BTEB Level 1 & 2",
           "NSDA Level 3 Certified",
@@ -150,13 +150,13 @@
       {
         "name": "Rezaul Karim",
         "role": "Kitchen Assistant",
-        "photo": "/images/rezaul-karim.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": []
       },
       {
         "name": "Naim",
         "role": "Accounts Executive",
-        "photo": "/images/naim_accounts_executive.jpg",
+        "photo": "/images/chef-mentor-portrait.jpg",
         "credentials": []
       }
     ]

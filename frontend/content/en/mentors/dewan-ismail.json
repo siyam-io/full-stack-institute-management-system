@@ -1,8 +1,8 @@
 {
-  "name": "Dewan Ismail",
+  "name": "Executive Chef Mentor",
   "title": "Principal & Director of Career Planning & Development",
-  "photo": "/images/dewan-ismail-portrait.jpg",
-  "bio": "Dewan Ismail is the visionary founder and Principal of the Culinary Academy. With over a decade of experience in culinary education and food safety, he has transformed Culinary Academy into Bangladesh's premier NSDA-accredited culinary training institute. His expertise spans Culinary Science & Arts, Food Science, HACCP & Industrial Hygiene, and Entrepreneurship Development. He holds a BBA and MBA from Jagannath University and a PGD in Tourism & Hospitality Management from DIU. His IELTS score of 7.5 and certifications from SGS Switzerland and ISO UK demonstrate his commitment to international standards. Under his leadership, Culinary Academy has trained thousands of students who now work in 5-star hotels across the Gulf, Europe, and Asia. He is a regular guest on BTV and a recognized voice in Bangladesh's culinary industry.",
+  "photo": "/images/chef-mentor-portrait.jpg",
+  "bio": "Executive Chef Mentor is the visionary founder and Principal of the Culinary Academy. With over a decade of experience in culinary education and food safety, he has transformed Culinary Academy into Bangladesh's premier NSDA-accredited culinary training institute. His expertise spans Culinary Science & Arts, Food Science, HACCP & Industrial Hygiene, and Entrepreneurship Development. He holds a BBA and MBA from Jagannath University and a PGD in Tourism & Hospitality Management from DIU. His IELTS score of 7.5 and certifications from SGS Switzerland and ISO UK demonstrate his commitment to international standards. Under his leadership, Culinary Academy has trained thousands of students who now work in 5-star hotels across the Gulf, Europe, and Asia. He is a regular guest on BTV and a recognized voice in Bangladesh's culinary industry.",
   "credentials": [
     "NSDA Level 3 Certified",
     "BTEB Level 4 (Food & Beverage Production)",
@@ -18,10 +18,10 @@
       "url": "https://youtu.be/ayKFD3Nzqag?si=5QPzoyOh5rNc6V7P&t=100",
       "thumbnail": "/images/btv-feature-thumb.jpg",
       "platform": "BTV",
-      "description": "Principal Dewan Ismail discusses how Culinary Academy is transforming vocational culinary training in Bangladesh with international standards."
+      "description": "Principal Executive Chef Mentor discusses how Culinary Academy is transforming vocational culinary training in Bangladesh with international standards."
     },
     {
-      "title": "Dewan Ismail on Professional Chef Training",
+      "title": "Executive Chef Mentor on Professional Chef Training",
       "url": "https://www.youtube.com/watch?v=HXocks9iyuc",
       "platform": "YouTube",
       "description": "An in-depth discussion on the importance of professional chef certification for global career opportunities."
@@ -33,13 +33,13 @@
       "description": "Exploring career opportunities for certified chefs in the Middle East and Europe."
     },
     {
-      "title": "Dewan Ismail: Food Safety & HACCP Standards",
+      "title": "Executive Chef Mentor: Food Safety & HACCP Standards",
       "url": "https://youtu.be/dx_0ckTV9Eo?si=On4x1BH5LV1itDqH",
       "platform": "YouTube",
       "description": "Understanding HACCP certification and its importance for professional chefs in Bangladesh."
     },
     {
-      "title": "Dewan Ismail on NSDA Accreditation",
+      "title": "Executive Chef Mentor on NSDA Accreditation",
       "url": "https://youtu.be/CPPKYbWESsI?si=PIXu8_ma-Nlo8NGd",
       "platform": "YouTube",
       "description": "Explaining the value of NSDA (National Skill Development Authority) certification for culinary professionals."
@@ -51,18 +51,18 @@
       "description": "Setting the standard for professional culinary education in Bangladesh."
     },
     {
-      "title": "Dewan Ismail: Building a Career in Culinary Arts",
+      "title": "Executive Chef Mentor: Building a Career in Culinary Arts",
       "url": "https://youtu.be/4iuE5fdQyAo?si=Z8l9deHxDGPgyhNx",
       "platform": "YouTube",
       "description": "A comprehensive guide to building a successful career as a professional chef."
     },
     {
-      "title": "Dewan Ismail on Professional Kitchen Management",
+      "title": "Executive Chef Mentor on Professional Kitchen Management",
       "url": "https://youtu.be/s5amXK8P25k?si=TKO-pKz5r1suu3WZ",
       "platform": "YouTube",
       "description": "Key insights into managing a professional kitchen at 5-star standards."
     }
   ],
-  "cta": "Learn Under Principal Dewan Ismail",
+  "cta": "Learn Under Principal Executive Chef Mentor",
   "ctaLink": "/admission"
 }

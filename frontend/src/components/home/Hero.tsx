@@ -81,7 +81,7 @@ const Hero = ({ data }: HeroProps) => {
                   </picture>
                 ) : (
                   <img
-                    src={slide.image || '/images/practical_class_1-1920w.webp'}
+                    src={slide.image || '/images/hero-culinary-academy.jpg'}
                     alt={slide.headline || 'Culinary Academy Hero'}
                     loading={index === 0 ? "eager" : "lazy"}
                     className="absolute inset-0 w-full h-full object-cover"

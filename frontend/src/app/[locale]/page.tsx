@@ -121,7 +121,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
     if (d.slides && Array.isArray(d.slides)) {
       homeData.hero = {
         slides: d.slides.map((slide: any) => ({
-          image: resolveImageUrl(slide.image) || "/images/principal-dewan-ismail-preparing-fish-for-turkish-cuisine-2-1920w.webp",
+          image: resolveImageUrl(slide.image) || "/images/hero-culinary-academy.jpg",
           headline: slide.headline || slide.title || "",
           subheadline: slide.subheadline || slide.subtitle || "",
           ctaText: slide.ctaText || slide.primaryButtonText || "View Courses",
@@ -131,7 +131,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
     } else {
       homeData.hero = {
         slides: [{
-          image: resolveImageUrl(d.heroImageUrl) || homeData.hero?.slides?.[0]?.image || "/images/principal-dewan-ismail-preparing-fish-for-turkish-cuisine-2-1920w.webp",
+          image: resolveImageUrl(d.heroImageUrl) || homeData.hero?.slides?.[0]?.image || "/images/hero-culinary-academy.jpg",
           headline: d.title || homeData.hero?.slides?.[0]?.headline || "Your Dream Chef Career Starts in Dhaka",
           subheadline: d.subtitle || homeData.hero?.slides?.[0]?.subheadline || "",
           ctaText: d.primaryButtonText || homeData.hero?.slides?.[0]?.ctaText || "View Courses",
@@ -433,10 +433,10 @@ export default async function HomePage({ params: { locale } }: { params: { local
       <section className="py-12 bg-black/10 border-t border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto px-4">
           <AuthorBox
-            name="Dewan Ismail"
-            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, কালিনারি একাডেমি' : 'Principal & Founder, Culinary Academy'}
-            photo="/images/dewan-ismail-portrait.jpg"
-            profileUrl="/expert-culinary-mentors/dewan-ismail"
+            name="Executive Chef Mentor"
+            title={locale === 'bn' ? 'প্রিন্সিপাল ও লিড প্রশিক্ষক, কালিনারি একাডেমি' : 'Principal & Lead Instructor, Culinary Academy'}
+            photo="/images/chef-mentor-portrait.jpg"
+            profileUrl=""
             lastReviewed={locale === 'bn' ? 'জুন ২০২৬' : 'June 2026'}
             locale={locale}
           />
