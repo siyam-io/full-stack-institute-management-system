@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 const PublicLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#000c1d] to-[#00112c]">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#1a0505] via-[#050506] to-black">
       <Header />
       <main className="flex-grow">
         <Outlet />

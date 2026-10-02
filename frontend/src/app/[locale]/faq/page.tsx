@@ -75,16 +75,6 @@ export default async function FAQPage({ params: { locale } }: Props) {
         ]} 
       />
 
-      {/* Background Decor */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_2-1920w.webp"
-          alt="FAQ Background"
-          fill
-          className="object-cover opacity-5 grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-      </div>
 
       <div className="relative z-10">
         {/* Hero */}
@@ -105,15 +95,6 @@ export default async function FAQPage({ params: { locale } }: Props) {
 
         {/* FAQ Categories */}
         <section className="py-16 md:py-24 section-padding relative">
-          {/* Subtle Decorative Image */}
-          <div className="absolute top-1/2 left-0 w-full h-96 -translate-y-1/2 pointer-events-none opacity-[0.03] grayscale overflow-hidden">
-            <Image 
-              src="/images/practical_class_3-1920w.webp" 
-              alt="Decorative Background" 
-              fill
-              className="object-cover"
-            />
-          </div>
 
           <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10">
             <FAQSearchFilter categories={data.categories} locale={locale} />
@@ -207,15 +188,6 @@ export default async function FAQPage({ params: { locale } }: Props) {
         {/* Final CTA */}
         <section className="py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-power-red/5 backdrop-blur-2xl border-t border-white/5"></div>
-          {/* Final CTA Background Image */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/student-practice-6-1920w.webp"
-              alt="CIB Training"
-              fill
-              className="object-cover opacity-[0.03] grayscale"
-            />
-          </div>
           
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
             <div className="inline-block px-4 py-1.5 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[10px] font-bold tracking-widest mb-10 uppercase">

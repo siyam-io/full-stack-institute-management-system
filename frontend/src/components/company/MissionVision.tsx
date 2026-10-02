@@ -15,16 +15,6 @@ import Image from 'next/image';
 const MissionVision = ({ mission, vision }: MissionVisionProps) => {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_2-1920w.webp"
-          alt="Mission Background"
-          fill
-          className="object-cover opacity-5"
-        />
-        <div className="absolute inset-0 bg-obsidian"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">

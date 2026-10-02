@@ -13,16 +13,6 @@ import Image from 'next/image';
 const LegalPage = ({ title, lastUpdated, content }: LegalPageProps) => {
   return (
     <main className="min-h-screen bg-obsidian relative overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_2-1920w.webp"
-          alt="Legal Background"
-          fill
-          className="object-cover opacity-5 grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-      </div>
 
       <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10 pt-40 pb-32 animate-fade-in">
         <header className="mb-24 text-center relative">

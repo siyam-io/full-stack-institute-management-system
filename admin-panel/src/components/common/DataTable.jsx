@@ -18,16 +18,16 @@ const DataTable = ({
 }) => {
   if (isLoading && (!data || data.length === 0)) {
     return (
-      <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-96 flex items-center justify-center">
+      <div className="noir-card h-96 flex items-center justify-center">
         <Loader />
       </div>
     );
   }
 
   return (
-    <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col relative overflow-hidden p-2">
+    <div className="noir-card flex flex-col relative overflow-hidden p-2">
       {isLoading && data?.length > 0 && (
-        <div className="absolute inset-0 bg-white/60 z-10 flex items-center justify-center backdrop-blur-sm rounded-3xl">
+        <div className="absolute inset-0 bg-black/60 z-10 flex items-center justify-center backdrop-blur-sm rounded-3xl">
           <Loader />
         </div>
       )}
@@ -49,18 +49,18 @@ const DataTable = ({
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-50">
+          <tbody className="divide-y divide-white/5">
             {data?.length > 0 ? (
               data.map((item, index) => renderRow(item, index))
             ) : (
               <tr>
                 <td colSpan={columns.length} className="px-6 py-20 text-center">
                   <div className="flex flex-col items-center justify-center">
-                    <div className="h-16 w-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-4">
-                      <EmptyIcon size={28} className="text-slate-300" />
+                    <div className="h-16 w-16 bg-white/5 rounded-2xl flex items-center justify-center mb-4">
+                      <EmptyIcon size={28} className="text-zinc-600" />
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-700">{emptyStateTitle}</h3>
-                    <p className="text-slate-400 mt-1 max-w-sm mx-auto text-sm">{emptyStateSubtitle}</p>
+                    <h3 className="text-lg font-semibold text-white">{emptyStateTitle}</h3>
+                    <p className="text-zinc-500 mt-1 max-w-sm mx-auto text-sm">{emptyStateSubtitle}</p>
                   </div>
                 </td>
               </tr>

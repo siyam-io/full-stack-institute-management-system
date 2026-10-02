@@ -269,9 +269,11 @@ const AdminLayout = () => {
   }, [navigationGroups, hasPermission]);
 
   return (
-    <div className="min-h-screen bg-slate-50 relative flex overflow-x-hidden">
+    <div className="min-h-screen bg-background relative flex overflow-x-hidden">
+      {/* Ambient red bloom (red-noir) */}
+      <div className="pointer-events-none fixed top-[-280px] right-[-160px] w-[520px] h-[520px] bg-power-red/5 rounded-full blur-[140px]" />
       {/* MOBILE HEADER */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-obsidian shadow-md">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-obsidian/95 backdrop-blur-xl border-b border-white/5">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
             <Avatar
@@ -302,7 +304,7 @@ const AdminLayout = () => {
           className="p-6 shrink-0 flex justify-center items-center cursor-pointer group"
         >
           <div
-            className={`bg-white rounded-2xl flex justify-center items-center transition-all ${isCollapsed ? "p-1.5" : "px-4 py-2"}`}
+            className={`bg-[#ffffff] rounded-2xl flex justify-center items-center transition-all ${isCollapsed ? "p-1.5" : "px-4 py-2"}`}
           >
             <img
               src="/logo.png"
@@ -331,8 +333,8 @@ const AdminLayout = () => {
                   {authUser?.full_name || "User"}
                 </p>
                 <div className="mt-1 flex items-center gap-1.5">
-                  <ShieldCheck size={10} className="text-indigo-400 shrink-0" />
-                  <p className="text-[9px] font-black uppercase text-indigo-300 truncate tracking-widest leading-none">
+                  <ShieldCheck size={10} className="text-power-red shrink-0" />
+                  <p className="text-[9px] font-black uppercase text-power-red truncate tracking-widest leading-none">
                     {typeof authUser?.role === "string"
                       ? authUser.role
                       : authUser?.role?.name || "Role"}
@@ -362,11 +364,11 @@ const AdminLayout = () => {
                     key={item.name}
                     to={item.href}
                     onClick={() => setSidebarOpen(false)}
-                    className={`flex items-center rounded-xl transition-all group ${isCollapsed ? "justify-center py-3" : "space-x-3 px-4 py-3"} ${isActive ? "bg-white/10 text-white shadow-sm ring-1 ring-white/5" : "text-slate-400 hover:bg-white/5 hover:text-slate-200"}`}
+                    className={`flex items-center rounded-xl transition-all group ${isCollapsed ? "justify-center py-3" : "space-x-3 px-4 py-3"} ${isActive ? "bg-power-red/10 text-white shadow-sm ring-1 ring-power-red/20" : "text-slate-400 hover:bg-white/5 hover:text-slate-200"}`}
                   >
                     <item.icon
                       size={20}
-                      className={`${isActive ? "text-prestige-gold" : "text-slate-500 group-hover:text-slate-300"}`}
+                      className={`${isActive ? "text-power-red" : "text-slate-500 group-hover:text-slate-300"}`}
                     />
                     {!isCollapsed && (
                       <span
@@ -397,7 +399,7 @@ const AdminLayout = () => {
       {/* MOBILE OVERLAY */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 z-30 bg-slate-900/60 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-30 bg-black/70 backdrop-blur-sm lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}

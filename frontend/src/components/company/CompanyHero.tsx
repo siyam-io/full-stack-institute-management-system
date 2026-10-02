@@ -11,16 +11,6 @@ import Image from 'next/image';
 const CompanyHero = ({ heading, subheading, tagline }: CompanyHeroProps) => {
   return (
     <section className="relative pt-40 pb-24 text-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_1-1920w.webp"
-          alt="CIB Institutional Profile"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-obsidian/90 backdrop-blur-[3px]"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 animate-fade-in">
         <div className="flex flex-col items-center">

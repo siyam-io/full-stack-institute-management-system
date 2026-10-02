@@ -14,16 +14,6 @@ import Image from 'next/image';
 const CourseHero = ({ data }: CourseHeroProps) => {
   return (
     <section className="relative pt-24 pb-16 text-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_1-1920w.webp"
-          alt="CIB Professional Courses"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-obsidian/85 backdrop-blur-[2px]"></div>
-      </div>
 
       <div className="max-w-5xl mx-auto px-4 relative z-10 animate-fade-in">
         <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-black tracking-widest mb-8 uppercase">

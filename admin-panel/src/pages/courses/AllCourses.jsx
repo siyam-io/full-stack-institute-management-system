@@ -75,15 +75,15 @@ const AllCourses = () => {
   ];
 
   const renderCourseRow = (course) => (
-    <tr key={course._id} className="group hover:bg-gray-50 transition-colors">
+    <tr key={course._id} className="group border-b border-white/5 hover:bg-white/5 transition-colors">
       <td className="px-5 py-4">
-        <div className="font-medium text-gray-900 flex items-center">
-          <BookOpen size={16} className="mr-2 text-blue-500" /> {course.course_name}
+        <div className="font-medium text-white flex items-center">
+          <BookOpen size={16} className="mr-2 text-power-red" /> {course.course_name}
         </div>
         {course.additional_info?.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-1.5 ml-6">
             {course.additional_info.map((info, idx) => (
-              <span key={idx} className="px-2 py-0.5 text-[10px] bg-gray-100 text-gray-600 rounded-md font-medium uppercase tracking-wider">
+              <span key={idx} className="px-2 py-0.5 text-[10px] bg-white/10 text-zinc-300 rounded-md font-medium uppercase tracking-wider">
                 {info}
               </span>
             ))}
@@ -92,15 +92,15 @@ const AllCourses = () => {
       </td>
 
       <td className="px-5 py-4">
-        <div className="flex items-center text-sm text-gray-900">
-          <Hash size={16} className="mr-1 text-gray-400" /> 
+        <div className="flex items-center text-sm text-zinc-200">
+          <Hash size={16} className="mr-1 text-zinc-500" /> 
           <span className="font-mono">{course.course_code}</span>
         </div>
       </td>
 
       <td className="px-5 py-4">
-        <div className="flex items-center text-sm text-gray-900">
-          <Clock size={16} className="mr-1.5 text-gray-400" /> 
+        <div className="flex items-center text-sm text-zinc-200">
+          <Clock size={16} className="mr-1.5 text-zinc-500" /> 
           {course.duration?.value} {course.duration?.unit}
         </div>
       </td>
@@ -108,21 +108,21 @@ const AllCourses = () => {
       <td className="px-5 py-4">
         {course.publicPageStatus ? (
           <span className={`text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full ${
-            course.publicPageStatus === "published" ? "bg-green-50 text-green-700" :
-            course.publicPageStatus === "draft" ? "bg-yellow-50 text-yellow-700" :
-            "bg-red-50 text-red-700"
+            course.publicPageStatus === "published" ? "bg-emerald-500/10 text-emerald-400" :
+            course.publicPageStatus === "draft" ? "bg-amber-500/10 text-amber-400" :
+            "bg-power-red/10 text-power-red"
           }`}>
             {course.publicPageStatus}
           </span>
         ) : (
-          <span className="text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full bg-gray-50 text-gray-400">
+          <span className="text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full bg-white/5 text-zinc-500">
             Unconfigured
           </span>
         )}
       </td>
 
       <td className="px-5 py-4">
-        <span className={`text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full ${course.is_active ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"}`}>
+        <span className={`text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full ${course.is_active ? "bg-emerald-500/10 text-emerald-400" : "bg-power-red/10 text-power-red"}`}>
           {course.is_active ? "Active" : "Inactive"}
         </span>
       </td>

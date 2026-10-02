@@ -80,13 +80,13 @@ const AllBlogs = () => {
   };
 
   const renderBlogRow = (blog) => (
-    <tr key={blog.id} className="group hover:bg-gray-50 transition-colors">
+    <tr key={blog.id} className="group border-b border-white/5 hover:bg-white/5 transition-colors">
       <td className="px-5 py-4">
-        <div className="font-medium text-gray-900 flex items-center">
-          <FileText size={16} className="mr-2 text-red-500 shrink-0" />
+        <div className="font-medium text-white flex items-center">
+          <FileText size={16} className="mr-2 text-power-red shrink-0" />
           <span className="truncate max-w-[320px]">{blog.titleEn || blog.title}</span>
         </div>
-        <div className="text-[11px] text-gray-500 ml-6 font-mono truncate max-w-[320px]">{blog.slug}</div>
+        <div className="text-[11px] text-zinc-500 ml-6 font-mono truncate max-w-[320px]">{blog.slug}</div>
       </td>
 
       <td className="px-5 py-4">
@@ -103,31 +103,31 @@ const AllBlogs = () => {
         >
           <Star
             size={18}
-            className={blog.isFeatured ? "fill-amber-400 text-amber-500" : "text-gray-300 hover:text-amber-400"}
+            className={blog.isFeatured ? "fill-amber-400 text-amber-500" : "text-zinc-600 hover:text-amber-400"}
           />
         </button>
       </td>
 
       <td className="px-5 py-4">
-        <span className="px-2 py-0.5 text-xs bg-gray-100 text-gray-700 rounded-md font-mono font-bold uppercase">
+        <span className="px-2 py-0.5 text-xs bg-white/10 text-zinc-300 rounded-md font-mono font-bold uppercase">
           {blog.titleBn ? "EN + BN" : "EN"}
         </span>
       </td>
 
       <td className="px-5 py-4">
         <span className={`text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full ${
-          blog.status === "published" ? "bg-green-50 text-green-700" :
-          blog.status === "archived" ? "bg-yellow-50 text-yellow-700" : "bg-gray-100 text-gray-600"
+          blog.status === "published" ? "bg-emerald-500/10 text-emerald-400" :
+          blog.status === "archived" ? "bg-amber-500/10 text-amber-400" : "bg-white/10 text-zinc-400"
         }`}>
           {blog.status}
         </span>
       </td>
 
-      <td className="px-5 py-4 text-sm text-gray-500">
+      <td className="px-5 py-4 text-sm text-zinc-500">
         {blog.publishedAt ? new Date(blog.publishedAt).toLocaleDateString() : "—"}
       </td>
 
-      <td className="px-5 py-4 text-sm text-gray-500">
+      <td className="px-5 py-4 text-sm text-zinc-500">
         {blog.updatedAt ? new Date(blog.updatedAt).toLocaleDateString() : "—"}
       </td>
 
@@ -184,21 +184,21 @@ const AllBlogs = () => {
         addPermission={PERMISSIONS.BLOG_CREATE} 
       />
 
-      <div className="mb-6 bg-white p-4 rounded-[1.5rem] border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center gap-4">
+      <div className="mb-6 bg-white/5 p-4 rounded-[1.5rem] border border-white/10 shadow-sm flex flex-col md:flex-row md:items-center gap-4">
         <div className="flex-1">
           <input
             type="text"
             placeholder="Search by title or slug..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 text-zinc-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-power-red/40 focus:border-transparent transition-all placeholder:text-zinc-500"
           />
         </div>
         <div className="flex gap-4">
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
+            className="px-4 py-2.5 text-sm bg-white/5 border border-white/10 text-zinc-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-power-red/40 transition-all cursor-pointer"
           >
             <option value="all">All Status</option>
             <option value="draft">Draft</option>

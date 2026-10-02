@@ -270,16 +270,6 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
       )}
       
       <section className="py-24 md:py-32 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/student-practice-5-1920w.webp"
-            alt="CIB Training Lab"
-            fill
-            className="object-cover opacity-5"
-          />
-          <div className="absolute inset-0 bg-obsidian"></div>
-        </div>
  
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

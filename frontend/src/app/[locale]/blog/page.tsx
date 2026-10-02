@@ -49,16 +49,6 @@ export default async function BlogListingPage({ params: { locale } }: { params: 
 
   return (
     <main className="min-h-screen bg-obsidian relative overflow-hidden">
-      {/* Immersive Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_3-1920w.webp"
-          alt="Culinary Blog Background"
-          fill
-          className="object-cover opacity-10"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-obsidian/95 to-obsidian"></div>
-      </div>
 
       <div className="relative z-10">
         <section className="relative pt-24 pb-16 text-center overflow-hidden">

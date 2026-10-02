@@ -58,21 +58,6 @@ const RecentBlogPosts = ({ posts, data }: RecentBlogPostsProps) => {
 
   return (
     <section className="relative py-16 md:py-24 bg-obsidian overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <picture>
-          <source media="(max-width: 480px)" srcSet="/images/student-practice-5-480w.webp" />
-          <source media="(max-width: 768px)" srcSet="/images/student-practice-5-768w.webp" />
-          <source media="(max-width: 1280px)" srcSet="/images/student-practice-5-1280w.webp" />
-          <img
-            src="/images/student-practice-5-1920w.webp"
-            alt="CIB Kitchen"
-            loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale"
-          />
-        </picture>
-        <div className="absolute inset-0 bg-obsidian/80"></div>
-      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
@@ -113,7 +98,7 @@ const RecentBlogPosts = ({ posts, data }: RecentBlogPostsProps) => {
                         
                         {/* Category Badge */}
                         <div className="absolute top-4 left-4">
-                          <span className="bg-prestige-gold text-obsidian text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                          <span className="bg-accent-red text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             {post.category}
                           </span>
                         </div>
@@ -145,7 +130,7 @@ const RecentBlogPosts = ({ posts, data }: RecentBlogPostsProps) => {
                 aria-label={`Go to slide ${index + 1}`}
               >
                 <div className={`h-1.5 rounded-full transition-all duration-300 ${
-                  selectedIndex === index ? 'w-8 bg-prestige-gold' : 'w-2 bg-white/20 group-hover:bg-white/40'
+                  selectedIndex === index ? 'w-8 bg-accent-red' : 'w-2 bg-white/20 group-hover:bg-white/40'
                 }`} />
               </button>
             ))}

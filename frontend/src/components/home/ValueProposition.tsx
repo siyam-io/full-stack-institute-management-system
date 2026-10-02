@@ -141,21 +141,6 @@ const ValueProposition = ({ data }: ValuePropositionProps) => {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-12 rounded-[2rem] bg-obsidian border border-white/5 shadow-[0_40px_100px_rgba(0,0,0,0.5)] animate-fade-in [animation-delay:600ms] relative overflow-hidden group/stats">
-          {/* Stats Background Image */}
-          <div className="absolute inset-0 z-0">
-            <picture>
-              <source media="(max-width: 480px)" srcSet="/images/practical_class_3-480w.webp" />
-              <source media="(max-width: 768px)" srcSet="/images/practical_class_3-768w.webp" />
-              <source media="(max-width: 1280px)" srcSet="/images/practical_class_3-1280w.webp" />
-              <img
-                src="/images/practical_class_3-1280w.webp"
-                alt="CIB Students"
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover opacity-[0.03] grayscale group-hover/stats:scale-110 transition-transform duration-[5s] ease-linear"
-              />
-            </picture>
-            <div className="absolute inset-0 bg-gradient-to-tr from-obsidian via-transparent to-obsidian opacity-60"></div>
-          </div>
           
           {/* Decorative Stat Background */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-power-red/5 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
@@ -166,7 +151,7 @@ const ValueProposition = ({ data }: ValuePropositionProps) => {
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </div>
               <div className="flex flex-col items-center">
-                <div className="h-1 w-12 bg-power-red mb-4 shadow-[0_0_20px_rgba(236,27,35,0.6)] group-hover:w-16 transition-all duration-700"></div>
+                <div className="h-1 w-12 bg-power-red mb-4 shadow-[0_0_20px_rgba(239,35,60,0.6)] group-hover:w-16 transition-all duration-700"></div>
                 <p className="text-gray-400 font-bold tracking-widest text-[10px] md:text-xs uppercase">
                   {stat.label}
                 </p>

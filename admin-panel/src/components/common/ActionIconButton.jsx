@@ -13,14 +13,14 @@ const ActionIconButton = ({
   const baseClasses = "p-2 rounded-md transition disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center";
   
   const variants = {
-    primary: "hover:bg-prestige-gold/10 text-prestige-gold",
-    success: "hover:bg-emerald-50 text-emerald-600",
+    primary: "hover:bg-power-red/10 text-power-red",
+    success: "hover:bg-emerald-500/10 text-emerald-400",
     danger: "hover:bg-power-red/10 text-power-red",
-    warning: "hover:bg-amber-50 text-amber-600",
-    purple: "hover:bg-indigo-50 text-indigo-600",
-    neutral: "hover:bg-slate-100 text-slate-600",
-    activeToggle: "hover:bg-green-50 text-green-600", 
-    inactiveToggle: "bg-slate-100 text-slate-500 hover:bg-green-50"
+    warning: "hover:bg-amber-500/10 text-amber-400",
+    purple: "hover:bg-indigo-500/10 text-indigo-400",
+    neutral: "hover:bg-white/10 text-zinc-400",
+    activeToggle: "hover:bg-green-500/10 text-green-400", 
+    inactiveToggle: "bg-white/10 text-zinc-500 hover:bg-green-500/10 hover:text-green-400"
   };
 
   return (

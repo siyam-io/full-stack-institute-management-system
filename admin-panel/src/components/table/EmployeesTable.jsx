@@ -99,8 +99,8 @@ const EmployeesTable = ({
     const StaticRoleBadge = () => (
       <div className={`px-2.5 py-1 text-[10px] font-black uppercase tracking-widest rounded-md border flex items-center gap-1.5 ${
         isTargetSuperAdmin
-          ? "bg-amber-50 border-amber-200 text-amber-600" 
-          : "bg-indigo-50 border-indigo-100 text-indigo-600"
+          ? "bg-amber-500/10 border-amber-500/20 text-amber-400" 
+          : "bg-power-red/10 border-power-red/20 text-power-red"
       }`}>
         {isTargetSuperAdmin && <Shield size={10} />}
         {employeeRoleName}
@@ -108,37 +108,37 @@ const EmployeesTable = ({
     );
 
     return (
-      <tr key={id} className={`group transition-colors border-b border-slate-50 last:border-none hover:bg-slate-50/50 ${isInactive ? "opacity-60" : ""}`}>
+      <tr key={id} className={`group transition-colors border-b border-white/5 last:border-none hover:bg-white/5 ${isInactive ? "opacity-60" : ""}`}>
         <td className="px-6 py-4">
           <div className="flex items-center gap-4">
             <Avatar src={employee.photoUrl || employee.photo_url} alt={employee.username} fallbackText={employee.fullName || employee.full_name} isInactive={isInactive} sizeClass="h-10 w-10" />
             <div className="flex flex-col">
-              <span className="text-[14px] font-bold text-slate-800">{employee.fullName || employee.full_name}</span>
-              <span className="text-[11px] text-slate-400 font-medium">ID: {employee.employee_id} • <span className="text-blue-500">@{employee.username}</span></span>
+              <span className="text-[14px] font-bold text-white">{employee.fullName || employee.full_name}</span>
+              <span className="text-[11px] text-zinc-500 font-medium">ID: {employee.employee_id} • <span className="text-power-red">@{employee.username}</span></span>
             </div>
           </div>
         </td>
 
         <td className="px-6 py-4 hidden sm:table-cell">
-          <span className="text-[13px] font-bold text-slate-700">{employee.branch?.branch_name || "Global HQ"}</span>
+          <span className="text-[13px] font-bold text-zinc-200">{employee.branch?.branch_name || "Global HQ"}</span>
         </td>
 
         <td className="px-6 py-4 hidden md:table-cell">
           <div className="flex flex-col">
-            <span className="text-[13px] font-medium text-slate-600">{employee.designation || "N/A"}</span>
-            <span className="text-[10px] font-bold uppercase text-slate-400">{employee.department || "General"}</span>
+            <span className="text-[13px] font-medium text-zinc-300">{employee.designation || "N/A"}</span>
+            <span className="text-[10px] font-bold uppercase text-zinc-500">{employee.department || "General"}</span>
           </div>
         </td>
 
         <td className="px-6 py-4 hidden lg:table-cell">
-          <div className="flex flex-col text-[12px] text-slate-500">
+          <div className="flex flex-col text-[12px] text-zinc-400">
             <span>{employee.phone}</span>
             <span className="truncate max-w-[140px]">{employee.email}</span>
           </div>
         </td>
 
         <td className="px-6 py-4 hidden sm:table-cell text-center">
-          <span className={`text-[10px] font-black uppercase px-2 py-1 rounded-md ${employee.status === "Active" ? "bg-teal-50 text-teal-600" : "bg-amber-50 text-amber-500"}`}>
+          <span className={`text-[10px] font-black uppercase px-2 py-1 rounded-md ${employee.status === "Active" ? "bg-emerald-500/10 text-emerald-400" : "bg-amber-500/10 text-amber-400"}`}>
             {employee.status}
           </span>
         </td>
@@ -148,13 +148,13 @@ const EmployeesTable = ({
             
             {/* 🚀 রোল আপডেট ড্রপডাউন - এখন কাজ করবে */}
             <div className="flex items-center gap-2">
-              {roleLoadingId === id && <Loader2 size={12} className="animate-spin text-indigo-500" />}
+              {roleLoadingId === id && <Loader2 size={12} className="animate-spin text-power-red" />}
               {canChangeRole ? (
                 <select
                   value={employee.role?.id || employee.role?._id || ""}
                   onChange={(e) => onUpdateRole(id, e.target.value)}
                   disabled={roleLoadingId === id}
-                  className="cursor-pointer px-2.5 py-1 text-[10px] font-black uppercase bg-white border border-slate-200 rounded-md outline-none hover:border-indigo-400 transition-all"
+                  className="cursor-pointer px-2.5 py-1 text-[10px] font-black uppercase bg-white/5 text-zinc-200 border border-white/10 rounded-md outline-none hover:border-power-red/50 transition-all"
                 >
                   <option value="" disabled>Select Role</option>
                   {roles.map((r) => (

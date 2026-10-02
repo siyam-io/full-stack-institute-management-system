@@ -43,16 +43,6 @@ export default async function MentorsPage({ params: { locale } }: { params: { lo
 
   return (
     <main className="bg-obsidian relative overflow-hidden">
-      {/* Immersive Background for the Grid Section */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_2-1920w.webp"
-          alt="CIB Training Lab"
-          fill
-          className="object-cover opacity-5 grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-      </div>
 
       <div className="relative z-10">
         <MentorsHero data={mentorsData.hero} />

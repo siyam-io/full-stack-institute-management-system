@@ -87,8 +87,6 @@
 /* ------------------------------------------------------------------ */
 /*  Noir effects & utilities                                           */
 /* ------------------------------------------------------------------ */
-.font-manrope { font-family: 'Manrope', 'Inter', sans-serif; }
-
 /* Animated conic border "shiny" CTA */
 .shiny-cta {
   --gradient-angle: 0deg;
@@ -159,7 +157,7 @@
 
 /* Eyebrow / kicker chips */
 .noir-chip {
-  @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 text-[10px] md:text-xs font-bold tracking-widest uppercase;
+  @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold tracking-widest uppercase;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(12px);
 }

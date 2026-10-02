@@ -14,16 +14,6 @@ import Image from 'next/image';
 const GalleryHero = ({ data }: GalleryHeroProps) => {
   return (
     <section className="relative pt-24 pb-16 text-center overflow-hidden bg-obsidian">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_3-1920w.webp"
-          alt="CIB Gallery"
-          fill
-          className="object-cover opacity-10 grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-      </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10 animate-fade-in">
         <div className="inline-block px-4 py-1.5 rounded-full bg-power-red/10 border border-power-red/20 text-prestige-gold text-[10px] font-black tracking-widest mb-8 uppercase">

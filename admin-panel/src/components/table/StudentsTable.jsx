@@ -50,17 +50,17 @@ const StudentsTable = ({
     const isInactive = !student.is_active;
 
     return (
-      <tr key={student._id} className={`group transition-colors duration-300 hover:bg-slate-50/50 ${isInactive ? "opacity-60 grayscale-[20%]" : ""}`}>
+      <tr key={student._id} className={`group transition-colors duration-300 border-b border-white/5 hover:bg-white/5 ${isInactive ? "opacity-60 grayscale-[20%]" : ""}`}>
         {/* 1. STUDENT NAME */}
         <td className="px-6 py-4 align-middle">
           <div className="flex items-center gap-4">
             <Avatar src={student.photo_url} alt={student.student_name} fallbackText={student.student_name} isInactive={isInactive} size="md" className="shadow-sm" />
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="text-[14px] font-bold text-slate-800">{student.student_name}</span>
-                {student.is_verified && <ShieldCheck size={14} className="text-teal-500" title="Verified" />}
+                <span className="text-[14px] font-bold text-white">{student.student_name}</span>
+                {student.is_verified && <ShieldCheck size={14} className="text-emerald-400" title="Verified" />}
               </div>
-              <span className="text-[12px] text-slate-400 font-medium mt-0.5 tracking-wide">Batch: {student.batch?.batch_name || "N/A"}</span>
+              <span className="text-[12px] text-zinc-500 font-medium mt-0.5 tracking-wide">Batch: {student.batch?.batch_name || "N/A"}</span>
             </div>
           </div>
         </td>
@@ -68,19 +68,19 @@ const StudentsTable = ({
         {/* 2. BRANCH */}
         <td className="px-6 py-4 hidden sm:table-cell align-middle">
           <div className="flex items-center gap-1.5">
-            <MapPin size={12} className="text-indigo-400" />
-            <span className="text-[13px] font-bold text-slate-700">{student.branch?.branch_name || "N/A"}</span>
+            <MapPin size={12} className="text-power-red" />
+            <span className="text-[13px] font-bold text-zinc-200">{student.branch?.branch_name || "N/A"}</span>
           </div>
         </td>
 
         {/* 3. STUDENT ID */}
         <td className="px-6 py-4 hidden md:table-cell align-middle">
-          <span className="text-[13px] font-semibold text-slate-600 tracking-wide">{student.student_id}</span>
+          <span className="text-[13px] font-semibold text-zinc-400 tracking-wide">{student.student_id}</span>
         </td>
 
         {/* 5. STATUS */}
         <td className="px-6 py-4 align-middle">
-          <span className={`text-[11px] font-black tracking-widest uppercase px-2 py-1 rounded-md ${student.is_active ? "bg-teal-50 text-teal-600" : "bg-rose-50 text-rose-500"}`}>
+          <span className={`text-[11px] font-black tracking-widest uppercase px-2 py-1 rounded-md ${student.is_active ? "bg-emerald-500/10 text-emerald-400" : "bg-power-red/10 text-power-red"}`}>
             {student.is_active ? "Active" : "Inactive"}
           </span>
         </td>

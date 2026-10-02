@@ -83,16 +83,6 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
       <ContactHero data={contactData.hero} />
       
       <section className="py-24 md:py-32 relative overflow-hidden bg-obsidian">
-        {/* Background Decor */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/student-practice-5-1920w.webp"
-            alt="Contact Background"
-            fill
-            className="object-cover opacity-5"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           <ContactInfo data={contactData.info} />

@@ -152,7 +152,7 @@ const AllStudents = () => {
         <PermissionGuard requiredPermission={PERMISSIONS.VIEW_BRANCHES}>
           {isSuper && (
             <div className="flex justify-end">
-              <div className="w-full md:w-64 bg-white rounded-xl shadow-sm border border-slate-200">
+              <div className="w-full md:w-64 bg-white/5 rounded-xl shadow-sm border border-white/10">
                 <BranchDropdown
                   isMaster={isSuper}
                   branches={branches}

@@ -84,7 +84,7 @@ export default function SocialMediaFeed({ data }: { data: { heading: string } })
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-center">
-        <div className="inline-block px-3 py-1 rounded-full bg-prestige-gold/10 border border-prestige-gold/20 text-prestige-gold text-[8px] font-black uppercase tracking-[0.3em] mb-4 animate-fade-in">
+        <div className="noir-chip noir-chip-red !text-[8px] mb-4 animate-fade-in">
           Engagement Protocol
         </div>
         <h2 className="text-xl md:text-2xl font-black text-white mb-8 tracking-tighter uppercase animate-fade-in [animation-delay:100ms]">
@@ -104,8 +104,8 @@ export default function SocialMediaFeed({ data }: { data: { heading: string } })
                 style={{ animationDelay: `${200 + idx * 100}ms` }}
                 aria-label={platform.name}
               >
-                <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/5 bg-white/[0.03] backdrop-blur-sm flex items-center justify-center transition-all duration-500 group-hover:border-prestige-gold/50 group-hover:bg-white/[0.1] group-hover:scale-110 shadow-2xl">
-                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-prestige-gold group-hover:text-white transition-colors duration-500" />
+                <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/5 bg-white/[0.03] backdrop-blur-sm flex items-center justify-center transition-all duration-500 group-hover:border-accent-red/50 group-hover:bg-accent-red/10 group-hover:scale-110 shadow-2xl">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent-red group-hover:text-white transition-colors duration-500" />
                 </div>
               </a>
             );

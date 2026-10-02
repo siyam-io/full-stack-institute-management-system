@@ -30,16 +30,6 @@ const StepIcon = ({ index }: { index: number }) => {
 const ProcessSteps = ({ data }: ProcessStepsProps) => {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-obsidian">
-      {/* Background Decor */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/practical_class_2-1280w.webp"
-          alt="Process Background"
-          fill
-          className="object-cover opacity-[0.03] grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in">

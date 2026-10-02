@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -14,40 +14,47 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   
-  --color-obsidian: #000A1A;
-  --color-prestige-gold: #D4AF37;
-  --color-power-red: #E31837;
+  --color-obsidian: #050506;
+  --color-noir-black: #000000;
+  --color-prestige-gold: #FFD700;
+  --color-power-red: #EF233C;
+  --color-accent-red: #EF233C;
+  --color-accent-red-deep: #C8102E;
   
   --radius-lg: var(--radius);
 }
 
+/* Red-noir is the default surface for the whole admin panel. */
 :root {
   --radius: 1rem;
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-  --primary: #D4AF37;
-  --primary-foreground: #000A1A;
-  --secondary: #E31837;
+  --background: #050506;
+  --foreground: #F4F4F5;
+  --card: #0B0B0D;
+  --card-foreground: #F4F4F5;
+  --primary: #EF233C;
+  --primary-foreground: #ffffff;
+  --secondary: #EF233C;
   --secondary-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #f8fafc;
-  --ring: #14b8a6;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.04);
+  --ring: #EF233C;
+  --noir-bg: #050506;
+  --accent-red: #EF233C;
+  --accent-red-glow: rgba(239, 35, 60, 0.5);
 }
 
 .dark {
-  --background: #000A1A;
-  --foreground: #f8fafc;
-  --card: #0a1128;
-  --card-foreground: #f8fafc;
-  --primary: #D4AF37;
-  --primary-foreground: #000A1A;
-  --secondary: #E31837;
+  --background: #050506;
+  --foreground: #F4F4F5;
+  --card: #0B0B0D;
+  --card-foreground: #F4F4F5;
+  --primary: #EF233C;
+  --primary-foreground: #ffffff;
+  --secondary: #EF233C;
   --secondary-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.08);
-  --input: rgba(255, 255, 255, 0.05);
-  --ring: #14b8a6;
+  --input: rgba(255, 255, 255, 0.04);
+  --ring: #EF233C;
 }
 
 @layer base {
@@ -56,7 +63,14 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Outfit', 'Inter', sans-serif !important;
+    font-family: 'Manrope', 'Outfit', 'Inter', sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Outfit', 'Inter', sans-serif;
+  }
+  ::selection {
+    background: var(--accent-red);
+    color: #ffffff;
   }
 }
 
@@ -172,8 +186,8 @@
 .react-calendar__tile--active,
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-  background: #14b8a6 !important; /* teal-500 */
-  box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.3);
+  background: #EF233C !important; /* accent red */
+  box-shadow: 0 10px 15px -3px rgba(239, 35, 60, 0.35);
 }
 
 .react-calendar__tile--active abbr {
@@ -229,7 +243,7 @@ select:focus,
 textarea:focus {
   background-color: var(--color-card) !important;
   border-color: var(--color-ring) !important;
-  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.05) !important;
+  box-shadow: 0 0 0 4px rgba(239, 35, 60, 0.12) !important;
   outline: none !important;
 }
 
@@ -260,7 +274,7 @@ input[type="radio"] {
 }
 .btn-primary:hover {
   filter: brightness(1.1) !important;
-  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.2) !important;
+  box-shadow: 0 10px 15px -3px rgba(239, 35, 60, 0.3) !important;
 }
 
 .btn-secondary {
@@ -297,7 +311,37 @@ input[type="radio"] {
 }
 .btn-danger:hover {
   filter: brightness(1.1) !important;
-  box-shadow: 0 10px 15px -3px rgba(227, 24, 55, 0.2) !important;
+  box-shadow: 0 10px 15px -3px rgba(239, 35, 60, 0.25) !important;
+}
+
+/* =========================================================
+   Red-Noir surfaces & accents
+   ========================================================= */
+.noir-card {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.35));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.noir-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.noir-glow {
+  box-shadow: 0 18px 45px rgba(239, 35, 60, 0.3);
 }
 
 /* =========================================================
@@ -380,3 +424,36 @@ input[type="radio"] {
   align-items: center !important;
   justify-content: center !important;
 }
+
+/* =========================================================
+   Red-Noir bridge (temporary)
+   -----------------------------------------------------------------
+   Many legacy pages still use the light utility palette
+   (bg-white, bg-slate-50, text-slate-800 ...). This layer maps those
+   classes onto the dark noir surface so every page reads as one
+   theme. It is intentionally additive and can be deleted as each
+   page is migrated to explicit noir classes.
+   ========================================================= */
+.bg-white { background-color: rgba(255, 255, 255, 0.05) !important; }
+.bg-white\/80, .bg-white\/90 { background-color: rgba(12, 12, 14, 0.85) !important; }
+.bg-slate-50, .bg-slate-100, .bg-gray-50, .bg-gray-100 { background-color: rgba(255, 255, 255, 0.04) !important; }
+
+.text-slate-900, .text-slate-800, .text-gray-900, .text-gray-800 { color: #F4F4F5 !important; }
+.text-slate-700, .text-gray-700 { color: #E4E4E7 !important; }
+.text-slate-600, .text-gray-600 { color: #A1A1AA !important; }
+.text-slate-500, .text-gray-500, .text-slate-400, .text-gray-400 { color: #71717A !important; }
+
+.border-slate-50, .border-slate-100, .border-slate-200, .border-gray-100, .border-gray-200 { border-color: rgba(255, 255, 255, 0.08) !important; }
+.divide-slate-50 > :not([hidden]) ~ :not([hidden]),
+.divide-gray-100 > :not([hidden]) ~ :not([hidden]) { border-color: rgba(255, 255, 255, 0.06) !important; }
+
+.hover\:bg-slate-50:hover, .hover\:bg-gray-50:hover, .hover\:bg-gray-100:hover { background-color: rgba(255, 255, 255, 0.06) !important; }
+
+/* Tinted status surfaces */
+.bg-blue-50, .bg-blue-100 { background-color: rgba(59, 130, 246, 0.12) !important; }
+.bg-emerald-50, .bg-green-50, .bg-green-100 { background-color: rgba(16, 185, 129, 0.12) !important; }
+.bg-amber-50, .bg-yellow-50, .bg-yellow-100 { background-color: rgba(245, 158, 11, 0.12) !important; }
+.bg-purple-50, .bg-purple-100 { background-color: rgba(168, 85, 247, 0.12) !important; }
+.bg-indigo-50, .bg-indigo-100 { background-color: rgba(99, 102, 241, 0.12) !important; }
+.bg-rose-50, .bg-red-50, .bg-red-100 { background-color: rgba(239, 35, 60, 0.1) !important; }
+.bg-cyan-50, .bg-teal-50 { background-color: rgba(20, 184, 166, 0.12) !important; }

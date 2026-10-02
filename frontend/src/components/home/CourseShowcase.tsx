@@ -57,7 +57,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
           {/* Left Column: Info */}
           <div className="animate-fade-in">
             <div className="flex items-center gap-4 mb-8 group">
-              <div className="w-12 h-1.5 bg-power-red shadow-[0_0_20px_rgba(236,27,35,0.6)] group-hover:w-16 transition-all duration-700"></div>
+              <div className="w-12 h-1.5 bg-power-red shadow-[0_0_20px_rgba(239,35,60,0.6)] group-hover:w-16 transition-all duration-700"></div>
               <h4 className="text-gray-400 font-bold tracking-widest text-[10px] md:text-xs">
                 {data.courseName}
               </h4>
@@ -91,7 +91,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
               <Link
                 href={data.ctaLink}
                 onClick={() => pushToDataLayer('begin_application', { course_name: data.courseName })}
-                className="btn-primary px-10 py-5 rounded-xl text-xs font-bold tracking-widest shadow-[0_20px_50px_rgba(236,27,35,0.3)] hover:scale-105 transition-all duration-700"
+                className="btn-primary px-10 py-5 rounded-xl text-xs font-bold tracking-widest shadow-[0_20px_50px_rgba(239,35,60,0.3)] hover:scale-105 transition-all duration-700"
               >
                 {data.cta}
               </Link>
@@ -134,7 +134,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
             <h3 className="text-3xl md:text-4xl font-black mb-6 tracking-tighter leading-tight">
               {data.comparison.heading}
             </h3>
-            <div className="w-24 h-1 bg-power-red mx-auto rounded-full shadow-[0_0_20px_rgba(236,27,35,0.5)]"></div>
+            <div className="w-24 h-1 bg-power-red mx-auto rounded-full shadow-[0_0_20px_rgba(239,35,60,0.5)]"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">

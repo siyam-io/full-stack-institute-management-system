@@ -178,16 +178,6 @@ export default function AdmissionPage({ params: { locale } }: { params: { locale
 
       
       <section className="py-16 md:py-24 relative overflow-hidden bg-obsidian">
-        {/* Background Decor */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/practical_class_1-1920w.webp"
-            alt="Institutional Background"
-            fill
-            className="object-cover opacity-5 grayscale"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center">
           <div className="glass-card p-8 md:p-12 rounded-[2rem] border border-white/5 text-center max-w-2xl w-full shadow-[0_40px_100px_rgba(0,0,0,0.6)] group">

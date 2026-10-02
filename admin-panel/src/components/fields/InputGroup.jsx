@@ -15,7 +15,7 @@ const InputGroup = ({
     <div className="flex flex-col">
       <label
         htmlFor={name}
-        className="block mb-1.5 text-sm font-medium text-gray-800"
+        className="block mb-1.5 text-sm font-medium text-zinc-200"
       >
         {label} {required && <span className="text-red-500 ml-0.5">*</span>}
       </label>
@@ -27,10 +27,10 @@ const InputGroup = ({
         onChange={onChange}
         placeholder={placeholder || `Enter ${label.toLowerCase()}`}
         aria-invalid={isError ? "true" : "false"}
-        className={`w-full px-4 py-3 bg-gray-50 border rounded-2xl text-sm placeholder-gray-400 focus:outline-none transition-all duration-200 ${
+        className={`w-full px-4 py-3 bg-white/5 border rounded-2xl text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none transition-all duration-200 ${
           isError
-            ? "border-red-500 bg-red-50/50 focus:border-red-500 focus:ring-4 focus:ring-red-500/5"
-            : "border-gray-200 focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-500/5 hover:bg-gray-100/50"
+            ? "border-red-500/70 bg-red-500/10 focus:border-red-500 focus:ring-4 focus:ring-red-500/10"
+            : "border-white/10 focus:bg-white/10 focus:border-power-red/60 focus:ring-4 focus:ring-power-red/10 hover:bg-white/10"
         }`}
       />
       {isError && (

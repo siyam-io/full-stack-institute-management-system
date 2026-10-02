@@ -7,7 +7,7 @@ const SelectGroup = ({
   return (
     <div className="flex flex-col w-full">
       {label && (
-        <label className="block mb-1.5 text-xs font-bold text-gray-700 uppercase tracking-wide ml-1">
+        <label className="block mb-1.5 text-xs font-bold text-zinc-300 uppercase tracking-wide ml-1">
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}
@@ -20,8 +20,8 @@ const SelectGroup = ({
           disabled={disabled} 
           className={`w-full px-4 py-3 border rounded-2xl text-sm font-medium outline-none transition-all duration-200 appearance-none
             ${disabled 
-              ? "bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed opacity-80" // Visual lock
-              : "bg-gray-50 border-gray-200 text-gray-900 focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-500/5 cursor-pointer hover:bg-gray-100/50"
+              ? "bg-white/5 border-white/10 text-zinc-500 cursor-not-allowed opacity-80" // Visual lock
+              : "bg-white/5 border-white/10 text-zinc-100 focus:bg-white/10 focus:border-power-red/60 focus:ring-4 focus:ring-power-red/10 cursor-pointer hover:bg-white/10"
             }
             ${error ? "border-red-500 focus:border-red-500 focus:ring-red-500/10" : ""}
           `}
@@ -40,7 +40,7 @@ const SelectGroup = ({
         
         {/* Custom Chevron Icon */}
         <div className={`absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none ${disabled ? 'opacity-50' : ''}`}>
-          <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-4 w-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
           </svg>
         </div>

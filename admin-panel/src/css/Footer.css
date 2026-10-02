@@ -1,9 +1,9 @@
 /* Social Media Section */
 .social-section {
   padding: 60px 20px;
-  background: #000c1d;
+  background: #050506;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', 'Inter', sans-serif;
   position: relative;
 }
 
@@ -70,9 +70,9 @@
 /* Footer Content Section */
 .footer-content-section {
   position: relative;
-  background: linear-gradient(135deg, #00112c 0%, #001c3d 100%);
+  background: linear-gradient(135deg, #140405 0%, #050506 100%);
   padding: 80px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', 'Inter', sans-serif;
   overflow: hidden;
 }
 
@@ -87,7 +87,7 @@
 .top-blur {
   top: -100px;
   right: -100px;
-  background: rgba(236, 27, 35, 0.1);
+  background: rgba(239, 35, 60, 0.1);
 }
 
 .bottom-blur {
@@ -133,7 +133,7 @@
 .footer-icon-wrapper {
   font-size: 22px;
   margin-right: 12px;
-  background: rgba(236, 27, 35, 0.1);
+  background: rgba(239, 35, 60, 0.1);
   padding: 8px;
   border-radius: 10px;
 }
@@ -155,7 +155,7 @@
 .contact-icon {
   font-size: 18px;
   margin-right: 12px;
-  color: #EC1B23;
+  color: #EF233C;
   min-width: 20px;
 }
 
@@ -166,7 +166,7 @@
 }
 
 .glass-link:hover {
-  color: #EC1B23;
+  color: #EF233C;
 }
 
 .quick-links {
@@ -191,7 +191,7 @@
 }
 
 .glass-link-item:hover {
-  background: rgba(236, 27, 35, 0.2);
+  background: rgba(239, 35, 60, 0.2);
   transform: translateX(5px);
 }
 
@@ -213,12 +213,12 @@
 }
 
 .glass-link-nav:hover {
-  color: #EC1B23;
+  color: #EF233C;
   transform: translateX(5px);
 }
 
 .glass-link-nav.highlight {
-  color: #EC1B23;
+  color: #EF233C;
   font-weight: 700;
 }
 
@@ -229,9 +229,9 @@
 
 /* Footer Bottom Section */
 .footer-bottom {
-  background: #000c1d;
+  background: #050506;
   padding: 40px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', 'Inter', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -285,7 +285,7 @@
 }
 
 .developer-link {
-  color: #EC1B23;
+  color: #EF233C;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -306,7 +306,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #EC1B23;
+  background-color: #EF233C;
   color: #fff;
   padding: 12px 24px;
   border-radius: 50px;
@@ -316,15 +316,15 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(236, 27, 35, 0.3);
-  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 15px rgba(239, 35, 60, 0.3);
+  font-family: 'Manrope', 'Inter', sans-serif;
 }
 
 .glass-top-btn:hover {
   background-color: #ffffff;
-  color: #EC1B23;
+  color: #EF233C;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(236, 27, 35, 0.4);
+  box-shadow: 0 8px 25px rgba(239, 35, 60, 0.4);
 }
 
 /* Responsive Design */
