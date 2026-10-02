@@ -6,3 +6,4 @@
 *.zip
 *.node
 deploy_cpanel.zip
+.vercel

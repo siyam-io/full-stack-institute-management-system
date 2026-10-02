@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "build": "prisma generate",
+    "postinstall": "prisma generate",
     "dev": "nodemon index.js",
     "start": "node index.js",
     "prisma:generate": "prisma generate",
