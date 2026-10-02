@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import "../css/Footer.css"; // We'll create this CSS file separately
+import "../css/Footer.css";
+import { apiURL } from "../../Constant";
 
 const Footer = () => {
   // Initialize current year
@@ -123,14 +124,16 @@ const Footer = () => {
               <span className="footer-icon-wrapper">🔗</span>Quick Links
             </h4>
             <div className="quick-links">
-              <a href="http://localhost:3000/faq/" className="glass-link-item">
+              <a href={`${apiURL.fontend_url}/faq`} target="_blank" rel="noreferrer" className="glass-link-item">
                 <span className="link-icon">❓</span> FAQ
               </a>
-              <a href="http://localhost:3000/gallery/" className="glass-link-item">
+              <a href={`${apiURL.fontend_url}/gallery`} target="_blank" rel="noreferrer" className="glass-link-item">
                 <span className="link-icon">🖼️</span> Gallery
               </a>
               <a
-                href="http://localhost:3000/verification/"
+                href={`${apiURL.fontend_url}/verification`}
+                target="_blank"
+                rel="noreferrer"
                 className="glass-link-item"
               >
                 <span className="link-icon">✅</span> Certificate Verification
@@ -154,20 +157,24 @@ const Footer = () => {
             <ul className="important-links">
               <li>
                 <a
-                  href="http://localhost:3000/companyprofile/"
+                  href={`${apiURL.fontend_url}/companyprofile`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="glass-link-nav highlight"
                 >
                   ★ Company Profile
                 </a>
               </li>
               <li>
-                <a href="http://localhost:3000/about/" className="glass-link-nav">
+                <a href={`${apiURL.fontend_url}/about`} target="_blank" rel="noreferrer" className="glass-link-nav">
                   About Us
                 </a>
               </li>
               <li>
                 <a
-                  href="http://localhost:3000/admission/"
+                  href={`${apiURL.fontend_url}/admission`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="glass-link-nav"
                 >
                   Admission
@@ -175,20 +182,24 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="http://localhost:3000/courses/"
+                  href={`${apiURL.fontend_url}/courses`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="glass-link-nav"
                 >
                   Courses
                 </a>
               </li>
               <li>
-                <a href="http://localhost:3000/blog/" className="glass-link-nav">
+                <a href={`${apiURL.fontend_url}/blog`} target="_blank" rel="noreferrer" className="glass-link-nav">
                   Blog
                 </a>
               </li>
               <li>
                 <a
-                  href="http://localhost:3000/contact/"
+                  href={`${apiURL.fontend_url}/contact`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="glass-link-nav"
                 >
                   Contact
@@ -196,7 +207,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="http://localhost:3000/privacy-policy/"
+                  href={`${apiURL.fontend_url}/privacy-policy`}
+                  target="_blank"
+                  rel="noreferrer"
                   className="glass-link-nav privacy"
                 >
                   Privacy Policy
@@ -212,9 +225,9 @@ const Footer = () => {
         <div className="footer-bottom-container">
           <div className="footer-logo">
             <img
-              src="http://culinaryacademy.com/wp-content/uploads/2020/02/White-Modern-Fashion-Instagram-Profile-Picture-2.png"
+              src="/logo.svg"
               alt="Culinary Academy Logo"
-              className="logo-image"
+              className="logo-image h-10 w-auto"
             />
           </div>
 

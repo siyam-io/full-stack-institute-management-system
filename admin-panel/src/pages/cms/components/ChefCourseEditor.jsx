@@ -8,8 +8,10 @@ import { apiURL } from "../../../../Constant";
 
 const resolveImageUrl = (url) => {
   if (!url) return "";
-  if (url.startsWith("http")) return url;
-  if (url.startsWith("/images/")) return `http://localhost:3000${url}`;
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return url.replace(/^http:\/\/localhost:3000/, apiURL.fontend_url);
+  }
+  if (url.startsWith("/images/")) return `${apiURL.fontend_url}${url}`;
   return `${apiURL.image_url}${url}`;
 };
 
@@ -196,7 +198,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
           <PencilLine size={14} /> Edit Public Page
         </button>
         <a
-          href={`http://localhost:3000/courses/${pageData?.slug || course.slug || ""}`}
+          href={`${apiURL.fontend_url}/courses/${pageData?.slug || course.slug || ""}`}
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-zinc-400 hover:bg-white/5 transition"

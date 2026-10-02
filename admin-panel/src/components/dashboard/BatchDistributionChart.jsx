@@ -19,7 +19,7 @@ const BatchDistributionChart = ({ batchDistribution, height = 256 }) => {
         style={{ height: `${height}px`, width: "100%", position: "relative" }}
       >
         {batchDistribution && batchDistribution.length > 0 ? (
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
             <BarChart data={batchDistribution}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis

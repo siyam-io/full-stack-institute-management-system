@@ -10,7 +10,7 @@ const MonthlyEnrollmentChart = ({ monthlyData, height = 256 }) => {
       <h2 className="text-lg font-semibold mb-4">Monthly Enrollment</h2>
       <div style={{ height: `${height}px`, width: '100%', position: 'relative' }}>
         {monthlyData?.length > 0 ? (
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
             <LineChart data={monthlyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis dataKey="month" />

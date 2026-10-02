@@ -32,7 +32,7 @@ const StatusDistributionChart = ({ statusDistribution, height = 256 }) => {
       <h2 className="text-lg font-semibold mb-4">Students by Status</h2>
       <div style={{ height: `${height}px`, width: '100%', position: 'relative' }}>
         {statusDistribution?.length > 0 ? (
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
             <PieChart>
               <Pie
                 data={statusDistribution?.map(item => ({

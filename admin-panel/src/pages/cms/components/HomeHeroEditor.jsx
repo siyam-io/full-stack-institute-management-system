@@ -20,8 +20,10 @@ const uploadImageFile = async (file) => {
 
 const resolveImageUrl = (url) => {
   if (!url) return "";
-  if (url.startsWith("http")) return url;
-  if (url.startsWith("/images/")) return `http://localhost:3000${url}`;
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return url.replace(/^http:\/\/localhost:3000/, apiURL.fontend_url);
+  }
+  if (url.startsWith("/images/")) return `${apiURL.fontend_url}${url}`;
   return `${apiURL.image_url}${url}`;
 };
 

@@ -4,6 +4,7 @@ import { useBlogs, useDeleteBlog, useUpdateBlogStatus, useUpdateBlog } from "../
 import useAuth from "../../store/useAuth";
 import { confirmDelete } from "../../utils/swalUtils";
 import { PERMISSIONS } from "../../config/permissionConfig";
+import { apiURL } from "../../../Constant";
 
 // Components
 import PageHeader from "../../components/common/PageHeader";
@@ -76,7 +77,7 @@ const AllBlogs = () => {
   ];
 
   const getPreviewUrl = (slug) => {
-    return `http://localhost:3000/blog/${slug}`;
+    return `${apiURL.fontend_url}/blog/${slug}`;
   };
 
   const renderBlogRow = (blog) => (
