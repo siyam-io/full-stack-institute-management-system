@@ -102,7 +102,7 @@ const MobileMenu = ({
           </Link>
 
           <a 
-            href="https://verification.cibdhk.com" 
+            href={process.env.NEXT_PUBLIC_VERIFICATION_URL || "#"} 
             target="_blank" 
             rel="noopener noreferrer"
             onClick={onClose} 
@@ -116,7 +116,7 @@ const MobileMenu = ({
         {/* Quick Contact Footer */}
         <div className="p-6 border-t border-white/5 grid grid-cols-2 gap-4">
           <a 
-            href="https://wa.me/8801338958997" 
+            href="https://wa.me/8801700000000" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 p-3 bg-whatsapp/10 border border-whatsapp/20 rounded-xl text-whatsapp text-xs font-black uppercase tracking-widest transition-all"
@@ -125,7 +125,7 @@ const MobileMenu = ({
             WhatsApp
           </a>
           <a 
-            href="tel:+8801338958997" 
+            href="tel:+8801700000000" 
             className="flex items-center justify-center gap-2 p-3 bg-power-red/10 border border-power-red/20 rounded-xl text-white text-xs font-black uppercase tracking-widest transition-all"
           >
             <Phone className="w-4 h-4" />

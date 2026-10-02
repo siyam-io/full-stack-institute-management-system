@@ -33,7 +33,7 @@ const BtvFeature = ({ data }: BtvFeatureProps) => {
           <div className="relative aspect-video rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(196,160,82,0.1)] border border-white/10 group">
             <iframe
               src={data.embedUrl}
-              title="CIB BTV Feature"
+              title="Culinary Academy BTV Feature"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="absolute inset-0 w-full h-full grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"

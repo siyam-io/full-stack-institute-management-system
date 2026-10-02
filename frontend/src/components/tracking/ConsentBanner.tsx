@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 /**
- * CIB Privacy & Consent Orchestrator
+ * Culinary Academy Privacy & Consent Orchestrator
  * Implements GTM Consent Mode V2 (EU/Global standards) for the 2026 launch.
  */
 export default function ConsentBanner() {

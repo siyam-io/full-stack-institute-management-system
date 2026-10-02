@@ -48,7 +48,7 @@ interface FooterProps {
 
 const Footer = ({ data, locale }: FooterProps) => {
   const currentYear = new Date().getFullYear();
-  const copyright = data?.copyright?.replace('{year}', currentYear.toString()) || `© ${currentYear} Culinary Institute of Bangladesh.`;
+  const copyright = data?.copyright?.replace('{year}', currentYear.toString()) || `© ${currentYear} Culinary Academy.`;
 
   // Safely access columns with fallbacks
   const getColumn = (index: number) => {
@@ -131,7 +131,7 @@ const Footer = ({ data, locale }: FooterProps) => {
               </li>
               <li className="flex gap-4 items-center">
                 <MailIcon className="w-4 h-4 text-power-red shrink-0" />
-                <span className="text-gray-400 text-sm">{col4.email || "info@cibdhk.com"}</span>
+                <span className="text-gray-400 text-sm">{col4.email || "info@culinaryacademy.com"}</span>
               </li>
             </ul>
           </div>
@@ -165,7 +165,7 @@ const Footer = ({ data, locale }: FooterProps) => {
 
         {/* Oversized outlined wordmark (reference footer treatment) */}
         <div className="flex justify-center items-center py-10 opacity-20 pointer-events-none select-none">
-          <h1 className="text-[15vw] leading-none font-black font-manrope tracking-tighter text-stroke">CIB</h1>
+          <h1 className="text-[15vw] leading-none font-black font-manrope tracking-tighter text-stroke">Culinary Academy</h1>
         </div>
 
         {/* Bottom Bar Redesign */}
@@ -173,8 +173,8 @@ const Footer = ({ data, locale }: FooterProps) => {
           {/* Logo Section */}
           <div className="flex-1 flex justify-start">
             <Image 
-              src="/images/cib-logo-accredited.png" 
-              alt="CIB Accredited Logo" 
+              src="/images/academy-logo-accredited.png" 
+              alt="Culinary Academy Accredited Logo" 
               width={280} 
               height={80} 
               className="h-auto w-[280px] object-contain opacity-90"
@@ -183,22 +183,22 @@ const Footer = ({ data, locale }: FooterProps) => {
 
           {/* Social Section */}
           <div className="flex items-center gap-6">
-            <a href={col4.socials?.facebook || "https://www.facebook.com/cibdhaka"} aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
+            <a href={col4.socials?.facebook || "#"} aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
               <FacebookIcon className="w-5 h-5" />
             </a>
-            <a href={col4.socials?.youtube || "https://www.youtube.com/@cibdhaka"} aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
+            <a href={col4.socials?.youtube || "#"} aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
               <YoutubeIcon className="w-5 h-5" />
             </a>
-            <a href={col4.socials?.instagram || "https://www.instagram.com/cib.dhk/"} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
+            <a href={col4.socials?.instagram || "https://www.instagram.com/academy.dhk/"} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
               <InstagramIcon className="w-5 h-5" />
             </a>
-            <a href={col4.socials?.tiktok || "https://www.tiktok.com/@cibdhaka"} aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
+            <a href={col4.socials?.tiktok || "#"} aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
               <TikTokIcon className="w-5 h-5" />
             </a>
-            <a href={col4.socials?.linkedin || "https://www.linkedin.com/company/cib-the-culinary-institute-of-bangladesh/"} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
+            <a href={col4.socials?.linkedin || "https://www.linkedin.com/company/academy-the-culinary-institute-of-bangladesh/"} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
               <LinkedInIcon className="w-5 h-5" />
             </a>
-            <a href={col4.socials?.whatsapp || "https://wa.me/8801338958997"} aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
+            <a href={col4.socials?.whatsapp || "https://wa.me/8801700000000"} aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:scale-110">
               <PhoneIcon className="w-5 h-5" />
             </a>
           </div>

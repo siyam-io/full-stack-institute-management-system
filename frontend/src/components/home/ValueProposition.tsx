@@ -88,7 +88,7 @@ const ValueProposition = ({ data }: ValuePropositionProps) => {
           <source media="(max-width: 1280px)" srcSet="/images/student-practice-5-1280w.webp" />
           <img
             src="/images/student-practice-5-1920w.webp"
-            alt="CIB Campus Kitchen"
+            alt="Culinary Academy Campus Kitchen"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-[0.08] grayscale"
           />

@@ -22,7 +22,7 @@ export default function RootNotFound() {
   return (
     <html lang={locale}>
       <head>
-        <title>{isBn ? 'পৃষ্ঠা পাওয়া যায়নি | CIB' : 'Page Not Found | CIB'}</title>
+        <title>{isBn ? 'পৃষ্ঠা পাওয়া যায়নি | Culinary Academy' : 'Page Not Found | Culinary Academy'}</title>
       </head>
       <body className="bg-[#000A1A] text-white min-h-screen flex flex-col items-center justify-center p-4 antialiased selection:bg-prestige-gold/30 selection:text-white overflow-hidden font-inter">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center">

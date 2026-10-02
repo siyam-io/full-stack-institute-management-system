@@ -47,7 +47,7 @@ const StoryBlock = ({ data }: StoryBlockProps) => {
                   </div>
                   <h4 className="text-prestige-gold font-bold tracking-widest text-[10px] mb-4 uppercase">Sovereign Commitment</h4>
                   <p className="text-white text-xl md:text-2xl font-black leading-tight tracking-tighter">
-                    "At CIB, we don't just teach recipes; we architect careers that dominate the global culinary landscape."
+                    "At Culinary Academy, we don't just teach recipes; we architect careers that dominate the global culinary landscape."
                   </p>
                   <div className="mt-6 flex items-center gap-4">
                     <div className="w-6 h-[1px] bg-power-red"></div>
@@ -80,7 +80,7 @@ const StoryBlock = ({ data }: StoryBlockProps) => {
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 aspect-[4/3] md:aspect-video transform hover:-rotate-1 transition-transform duration-1000 bg-white/5">
                   <Image 
                     src={(data as any).image2} 
-                    alt="CIB Student Practice" 
+                    alt="Culinary Academy Student Practice" 
                     fill
                     loading="lazy"
                     className="object-cover"
@@ -98,7 +98,7 @@ const StoryBlock = ({ data }: StoryBlockProps) => {
                   Engineering the next generation of global culinary leaders.
                 </p>
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  Every workstation at CIB is a launchpad. Our mission is to ensure every graduate carries the weight of professional excellence, technical speed, and unwavering discipline into the world's most demanding kitchens.
+                  Every workstation at Culinary Academy is a launchpad. Our mission is to ensure every graduate carries the weight of professional excellence, technical speed, and unwavering discipline into the world's most demanding kitchens.
                 </p>
               </div>
             </div>

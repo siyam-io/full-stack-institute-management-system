@@ -90,7 +90,7 @@ export default function QuickContactPanel({ locale = 'en' }: { locale?: string }
           {/* Quick Links Section */}
           <div className="space-y-4">
             <Link
-              href="https://wa.me/8801338958997"
+              href="https://wa.me/8801700000000"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 text-white hover:bg-[#25D366]/20 transition-colors group"
@@ -100,13 +100,13 @@ export default function QuickContactPanel({ locale = 'en' }: { locale?: string }
               </div>
               <div>
                 <div className="font-bold">WhatsApp</div>
-                <div className="text-xs text-gray-400">+880 1338-958997</div>
+                <div className="text-xs text-gray-400">+880 1700-000000</div>
               </div>
             </Link>
 
             <div className="grid grid-cols-2 gap-4">
               <Link
-                href="tel:+8801338958997"
+                href="tel:+8801700000000"
                 className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors group"
               >
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
@@ -116,7 +116,7 @@ export default function QuickContactPanel({ locale = 'en' }: { locale?: string }
               </Link>
 
               <Link
-                href="mailto:info@cibdhk.com"
+                href="mailto:info@culinaryacademy.com"
                 className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors group"
               >
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">

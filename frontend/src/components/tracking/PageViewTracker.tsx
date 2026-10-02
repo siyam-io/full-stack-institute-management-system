@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { pushToDataLayer } from '@/lib/tracking/datalayer';
 
 /**
- * CIB Route Change Tracker
+ * Culinary Academy Route Change Tracker
  * Ensures SPA navigation events are captured in the data layer for GA4 and marketing pixels.
  */
 export default function PageViewTracker() {

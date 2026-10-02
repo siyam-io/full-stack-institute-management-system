@@ -11,7 +11,7 @@ interface VerificationLinkProps {
 const VerificationLink = ({ label = "Certificate Verification", className = "" }: VerificationLinkProps) => {
   return (
     <a
-      href="https://verification.cibdhk.com"
+      href={process.env.NEXT_PUBLIC_VERIFICATION_URL || "#"}
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center gap-2 text-sm font-bold text-prestige-gold hover:text-yellow-400 transition-all duration-300 group ${className}`}

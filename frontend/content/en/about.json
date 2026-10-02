@@ -1,21 +1,21 @@
 {
   "hero": {
     "heading": "The Blueprint for Your Professional Culinary Career",
-    "subheading": "CIB is a vocational powerhouse. We replace amateur habits with discipline, speed, and precision.",
+    "subheading": "Culinary Academy is a vocational powerhouse. We replace amateur habits with discipline, speed, and precision.",
     "image": "/images/theoretical-class.jpg"
   },
   "story": {
     "heading": "Our Story",
-    "content": "Founded to bridge the gap between traditional education and global culinary demand, CIB was established by industry veterans. We are an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We don't just teach recipes; we teach the professional speed, hygiene, and workflow required in 5-star kitchens across the globe.",
+    "content": "Founded to bridge the gap between traditional education and global culinary demand, Culinary Academy was established by industry veterans. We are an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We don't just teach recipes; we teach the professional speed, hygiene, and workflow required in 5-star kitchens across the globe.",
     "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
     "image2": "/images/student_practice_session_1-1920w.webp"
   },
   "philosophy": {
     "heading": "Our Philosophy",
-    "content": "At CIB, we believe that 'Degrees hang on walls, but skills put money in your pocket.' Our training focuses on three keys to success: Technical Mastery, Professional Discipline, and Creative Plating. We treat every student as a future Executive Chef."
+    "content": "At Culinary Academy, we believe that 'Degrees hang on walls, but skills put money in your pocket.' Our training focuses on three keys to success: Technical Mastery, Professional Discipline, and Creative Plating. We treat every student as a future Executive Chef."
   },
   "advantage": {
-    "heading": "The CIB Advantage",
+    "heading": "The Culinary Academy Advantage",
     "points": [
       { "title": "National Accreditation", "desc": "NSDA (National Skill Development Authority, Prime Minister's Office) approved STP providing Food and Beverage Production (Level-2 & 3) training." },
       { "title": "100% Practical Classes", "desc": "No long lectures. Every session is held in a professional training kitchen with real professional equipment. 100% practical classes." },
@@ -35,7 +35,7 @@
   },
   "accreditation": {
     "heading": "Industry Accreditation & Global Recognition",
-    "content": "CIB is an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We provide certification upon Assessment. Our curriculum also includes ISO-HACCP, HYGIENE & GMP training.",
+    "content": "Culinary Academy is an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We provide certification upon Assessment. Our curriculum also includes ISO-HACCP, HYGIENE & GMP training.",
     "logos": [
       "/images/nsda-logo.png",
       "/images/iso-logo.png",
@@ -66,7 +66,7 @@
   },
   "ourTeam": {
     "heading": "Our Strategic Team",
-    "subheading": "The administrative and technical leadership driving CIB's mission.",
+    "subheading": "The administrative and technical leadership driving Culinary Academy's mission.",
     "members": [
       {
         "name": "Dewan Ismail",

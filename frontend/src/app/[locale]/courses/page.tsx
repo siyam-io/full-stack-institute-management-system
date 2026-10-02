@@ -24,11 +24,11 @@ import { UserCheck, Award, ArrowRight } from 'lucide-react';
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const isBn = locale === 'bn';
   const title = isBn
-    ? 'ঢাকায় শেফ কোর্সের ফি ২০২৬ | প্রফেশনাল শেফ, বারিস্তা, ফাস্ট ফুড এবং ডিপ্লোমা | সিআইবি'
-    : 'Chef Course in Dhaka Fees 2026 | Professional Chef, Barista, Fast Food & Diploma | CIB';
+    ? 'ঢাকায় শেফ কোর্সের ফি ২০২৬ | প্রফেশনাল শেফ, বারিস্তা, ফাস্ট ফুড এবং ডিপ্লোমা | কালিনারি একাডেমি'
+    : 'Chef Course in Dhaka Fees 2026 | Professional Chef, Barista, Fast Food & Diploma | Culinary Academy';
   const description = isBn
-    ? 'সিআইবি (CIB) শেফ কোর্সসমূহ, ফি, মেয়াদ, সার্টিফিকেট এবং ক্যারিয়ার গাইডলাইন তুলনা করুন। প্রফেশনাল শেফ, শেফ + বারিস্তা, ফাস্ট ফুড শর্ট কোর্স এবং ৬ মাসের ডিপ্লোমা।'
-    : 'Compare CIB chef courses, fees, duration, certifications, and career paths. Professional Chef, Chef + Barista, Fast Food Short Course, and 6-Month Diploma.';
+    ? 'কালিনারি একাডেমি শেফ কোর্সসমূহ, ফি, মেয়াদ, সার্টিফিকেট এবং ক্যারিয়ার গাইডলাইন তুলনা করুন। প্রফেশনাল শেফ, শেফ + বারিস্তা, ফাস্ট ফুড শর্ট কোর্স এবং ৬ মাসের ডিপ্লোমা।'
+    : 'Compare Culinary Academy chef courses, fees, duration, certifications, and career paths. Professional Chef, Chef + Barista, Fast Food Short Course, and 6-Month Diploma.';
 
   return {
     title,
@@ -36,21 +36,21 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       title,
       description,
-      url: `https://cibdhk.com/${locale}/courses`,
+      url: `https://culinaryacademy.com/${locale}/courses`,
       type: 'website',
-      siteName: 'Culinary Institute of Bangladesh',
-      images: [{ url: 'https://cibdhk.com/images/og-default.png', width: 1200, height: 630 }],
+      siteName: 'Culinary Academy',
+      images: [{ url: 'https://culinaryacademy.com/images/og-default.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      images: ['https://cibdhk.com/images/og-default.png'],
+      images: ['https://culinaryacademy.com/images/og-default.png'],
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/courses`,
+      canonical: `https://culinaryacademy.com/${locale}/courses`,
       languages: {
-        'en': `https://cibdhk.com/en/courses`,
-        'bn': `https://cibdhk.com/bn/courses`,
-        'x-default': `https://cibdhk.com/en/courses`,
+        'en': `https://culinaryacademy.com/en/courses`,
+        'bn': `https://culinaryacademy.com/bn/courses`,
+        'x-default': `https://culinaryacademy.com/en/courses`,
       }
     }
   };
@@ -231,15 +231,15 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
       <SchemaInjector 
         schemas={[
           generateWebPageSchema({
-            title: `Courses | ${coursesData?.hero?.heading || 'Culinary Institute of Bangladesh'}`,
+            title: `Courses | ${coursesData?.hero?.heading || 'Culinary Academy'}`,
             description: coursesData?.hero?.subheading || '',
-            url: `https://cibdhk.com/${locale}/courses`
+            url: `https://culinaryacademy.com/${locale}/courses`
           }),
           ...(coursesData?.courses || []).map((course: any) => 
             generateCourseSchema({
               name: course.name,
               description: course.tagline,
-              provider: "The Culinary Institute of Bangladesh",
+              provider: "Culinary Academy",
               location: "House-160, Dhanmondi, Dhaka"
             })
           ),
@@ -289,7 +289,7 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
             <div className="aspect-[21/9] relative">
               <Image
                 src="/images/practical_class_1-1920w.webp"
-                alt="Students practicing hands-on culinary skills at CIB commercial kitchen lab"
+                alt="Students practicing hands-on culinary skills at Culinary Academy commercial kitchen lab"
                 fill
                 loading="lazy"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -300,7 +300,7 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
                   {locale === 'bn' ? 'ব্যবহারিক ল্যাব' : 'Culinary Kitchen Lab'}
                 </span>
                 <p className="text-white text-lg md:text-xl font-black uppercase tracking-tight">
-                  {locale === 'bn' ? 'সিআইবি স্টেট-অফ-দ্য-আর্ট বাণিজ্যিক রান্নাঘর' : 'CIB State-of-the-Art Commercial Kitchen Lab'}
+                  {locale === 'bn' ? 'কালিনারি একাডেমি স্টেট-অফ-দ্য-আর্ট বাণিজ্যিক রান্নাঘর' : 'Culinary Academy State-of-the-Art Commercial Kitchen Lab'}
                 </p>
               </div>
             </div>
@@ -399,8 +399,8 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
           </span>
           <p className="text-xl md:text-2xl text-white font-medium leading-relaxed tracking-tight">
             {locale === 'bn'
-              ? 'সিআইবি (CIB) ঢাকায় পেশাদার কালিনারি প্রশিক্ষণ কোর্সসমূহ অফার করে। আমাদের প্রোগ্রামগুলোর মধ্যে রয়েছে ৬ মাসের প্রফেশনাল শেফ কোর্স, কাস্টম বেকিং, বারিস্তা, এবং কমার্শিয়াল ফাস্ট ফুড শর্ট কোর্স। আন্তর্জাতিক ৫-স্টার শেফদের তত্ত্বাবধানে ১০০% প্র্যাকটিক্যাল ল্যাব, এনএসডিএ সরকারি অনুমোদন ও বিশ্বমানের আইএসও-এইচএসিসিপি খাদ্য নিরাপত্তা মানদণ্ডে আমাদের শিক্ষার্থীরা বিশ্বজুড়ে ক্যারিয়ার গড়তে সক্ষম।'
-              : 'CIB (Culinary Institute of Bangladesh) offers specialized professional culinary training in Dhaka. Our programs span the flagship 6-Month Professional Chef Course, Barista, Baking, Fast Food operations, and Diploma courses. Guided by 5-star mentors, we ensure 100% practical lab experience, official NSDA & BTEB vocational state credentials, ISO-HACCP standards, and global placement support.'
+              ? 'কালিনারি একাডেমি ঢাকায় পেশাদার কালিনারি প্রশিক্ষণ কোর্সসমূহ অফার করে। আমাদের প্রোগ্রামগুলোর মধ্যে রয়েছে ৬ মাসের প্রফেশনাল শেফ কোর্স, কাস্টম বেকিং, বারিস্তা, এবং কমার্শিয়াল ফাস্ট ফুড শর্ট কোর্স। আন্তর্জাতিক ৫-স্টার শেফদের তত্ত্বাবধানে ১০০% প্র্যাকটিক্যাল ল্যাব, এনএসডিএ সরকারি অনুমোদন ও বিশ্বমানের আইএসও-এইচএসিসিপি খাদ্য নিরাপত্তা মানদণ্ডে আমাদের শিক্ষার্থীরা বিশ্বজুড়ে ক্যারিয়ার গড়তে সক্ষম।'
+              : 'Culinary Academy (Culinary Academy) offers specialized professional culinary training in Dhaka. Our programs span the flagship 6-Month Professional Chef Course, Barista, Baking, Fast Food operations, and Diploma courses. Guided by 5-star mentors, we ensure 100% practical lab experience, official NSDA & BTEB vocational state credentials, ISO-HACCP standards, and global placement support.'
             }
           </p>
         </div>
@@ -436,21 +436,21 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
                     <td className="py-3 px-4 font-bold text-white">Barista & Cafe Operations</td>
                     <td className="py-3 px-4">৳২৫,০০০</td>
                     <td className="py-3 px-4">1 Month (30 Hours)</td>
-                    <td className="py-3 px-4">CIB Institutional Cert</td>
+                    <td className="py-3 px-4">Culinary Academy Institutional Cert</td>
                     <td className="py-3 px-4">{locale === 'bn' ? 'বারিস্তা ও ক্যাফে এন্টারপ্রেনার' : 'Professional Barista & Cafe Owner'}</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-bold text-white">Fast Food & Catering Management</td>
                     <td className="py-3 px-4">৳৩০,০০০</td>
                     <td className="py-3 px-4">1.5 Months (45 Hours)</td>
-                    <td className="py-3 px-4">CIB & ISO Standards</td>
+                    <td className="py-3 px-4">Culinary Academy & ISO Standards</td>
                     <td className="py-3 px-4">{locale === 'bn' ? 'রেস্তোরাঁ ও ক্লাউড কিচেন উদ্যোক্তা' : 'Restaurant & Cloud Kitchen Owner'}</td>
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-bold text-white">Professional Baking & Pastry</td>
                     <td className="py-3 px-4">৳২৮,০০০</td>
                     <td className="py-3 px-4">1 Month (30 Hours)</td>
-                    <td className="py-3 px-4 text-prestige-gold font-bold">CIB & HACCP Standards</td>
+                    <td className="py-3 px-4 text-prestige-gold font-bold">Culinary Academy & HACCP Standards</td>
                     <td className="py-3 px-4 text-green-400 font-bold">{locale === 'bn' ? 'হোম বেকিং ও পেস্ট্রি শেফ' : 'Home Bakery Owner & Pastry Chef'}</td>
                   </tr>
                   <tr>
@@ -473,7 +473,7 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
         <div className="max-w-7xl mx-auto px-4">
           <AuthorBox 
             name="Dewan Ismail"
-            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, সিআইবি' : 'Principal & Founder, CIB'}
+            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, কালিনারি একাডেমি' : 'Principal & Founder, Culinary Academy'}
             photo="/images/dewan-ismail-portrait.jpg"
             profileUrl="/expert-culinary-mentors/dewan-ismail"
             lastReviewed={locale === 'bn' ? 'জুন ২০২৬' : 'June 2026'}

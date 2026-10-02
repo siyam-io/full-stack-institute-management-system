@@ -8,14 +8,14 @@ import { Metadata } from 'next';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   return {
-    title: `Culinary Blog | Industry Insights & Career Guides | CIB`,
-    description: `Stay updated with the latest culinary trends, career advice, and recipes from The Culinary Institute of Bangladesh.`,
+    title: `Culinary Blog | Industry Insights & Career Guides | Culinary Academy`,
+    description: `Stay updated with the latest culinary trends, career advice, and recipes from Culinary Academy.`,
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/blog`,
+      canonical: `https://culinaryacademy.com/${locale}/blog`,
       languages: {
-        'en': 'https://cibdhk.com/en/blog',
-        'bn': 'https://cibdhk.com/bn/blog',
-        'x-default': 'https://cibdhk.com/en/blog',
+        'en': 'https://culinaryacademy.com/en/blog',
+        'bn': 'https://culinaryacademy.com/bn/blog',
+        'x-default': 'https://culinaryacademy.com/en/blog',
       }
     }
   };
@@ -31,7 +31,7 @@ export default async function BlogListingPage({ params: { locale } }: { params: 
   // Load hero data
   let heroData = {
     badge: "Intellectual Gastronomy",
-    title: "The CIB Blog",
+    title: "The Culinary Academy Blog",
     description: "\"Career guides, market intelligence, and culinary philosophies from the nexus of excellence.\""
   };
 

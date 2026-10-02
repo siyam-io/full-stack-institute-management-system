@@ -44,11 +44,11 @@ const normalizeFeatureList = (value: unknown, locale: string): string[] => {
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const isBn = locale === 'bn';
   const title = isBn
-    ? 'বাংলাদেশে শেফ কোর্স | ঢাকায় প্রফেশনাল কালিনারি ইনস্টিটিউট | সিআইবি'
-    : 'Chef Course in Bangladesh | Professional Culinary Institute in Dhaka | CIB';
+    ? 'বাংলাদেশে শেফ কোর্স | ঢাকায় প্রফেশনাল কালিনারি ইনস্টিটিউট | কালিনারি একাডেমি'
+    : 'Chef Course in Bangladesh | Professional Culinary Institute in Dhaka | Culinary Academy';
   const description = isBn
-    ? '১৬+ দেশের ১২০+ রেসিপি শিখুন, এনএসডিএ লেভেল-২ ও ৩ ট্রেনিং, আইএসও-এইচএসিসিপি মান, জব প্লেসমেন্ট সহায়তা এবং সহজ কিস্তির সুবিধা। ধানমন্ডিতে সিআইবি (CIB) ক্যাম্পাস ভিজিট করুন।'
-    : 'Learn 120+ recipes from 16+ cuisines, NSDA Level-2 & 3 training, ISO-HACCP standards, job placement support, and easy installments. Visit CIB in Dhanmondi.';
+    ? '১৬+ দেশের ১২০+ রেসিপি শিখুন, এনএসডিএ লেভেল-২ ও ৩ ট্রেনিং, আইএসও-এইচএসিসিপি মান, জব প্লেসমেন্ট সহায়তা এবং সহজ কিস্তির সুবিধা। ধানমন্ডিতে কালিনারি একাডেমি ক্যাম্পাস ভিজিট করুন।'
+    : 'Learn 120+ recipes from 16+ cuisines, NSDA Level-2 & 3 training, ISO-HACCP standards, job placement support, and easy installments. Visit Culinary Academy in Dhanmondi.';
 
   return {
     title,
@@ -56,23 +56,23 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       title,
       description,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://cibdhk.com'}/${locale}`,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://culinaryacademy.com'}/${locale}`,
       type: 'website',
-      siteName: 'CIB - Culinary Institute of Bangladesh',
-      images: [{ url: 'https://cibdhk.com/images/og-default.png', width: 1200, height: 630 }],
+      siteName: 'Culinary Academy - Culinary Academy',
+      images: [{ url: 'https://culinaryacademy.com/images/og-default.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://cibdhk.com/images/og-default.png'],
+      images: ['https://culinaryacademy.com/images/og-default.png'],
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}`,
+      canonical: `https://culinaryacademy.com/${locale}`,
       languages: {
-        'en': 'https://cibdhk.com/en',
-        'bn': 'https://cibdhk.com/bn',
-        'x-default': 'https://cibdhk.com/en',
+        'en': 'https://culinaryacademy.com/en',
+        'bn': 'https://culinaryacademy.com/bn',
+        'x-default': 'https://culinaryacademy.com/en',
       }
     }
   };
@@ -187,7 +187,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
     // For now, let's show a minimal fallback to prevent 404
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <h1 className="text-2xl font-bold">Welcome to CIB ({locale})</h1>
+        <h1 className="text-2xl font-bold">Welcome to Culinary Academy ({locale})</h1>
       </div>
     );
   }
@@ -217,28 +217,28 @@ export default async function HomePage({ params: { locale } }: { params: { local
     quickAnswersData = locale === 'bn' ? [
       {
         question: "বাংলাদেশে প্রফেশনাল শেফ কোর্সের খরচ কত টাকা?",
-        answer: "সিআইবি (CIB)-তে প্রফেশনাল শেফ কোর্সের মোট খরচ মাত্র ৪৪,০০০ টাকা। এটি ৩টি সহজ কিস্তিতে পরিশোধ করা যায়: ভর্তি ফি ১৬,০০০ টাকা এবং পরবর্তী দুটি কিস্তি ১৪,০০০ টাকা করে। কোনো অতিরিক্ত বা গোপন চার্জ নেই। এই ফি-র মধ্যে সব ধরনের প্রিমিয়াম কাঁচামাল, পরীক্ষার উপকরণ, শেফ ইউনিফর্ম এবং প্রয়োজনীয় টুলকিটের খরচ অন্তর্ভুক্ত রয়েছে, যা আন্তর্জাতিক মানের ক্যারিয়ার গড়তে সাহায্য করে।"
+        answer: "কালিনারি একাডেমি-তে প্রফেশনাল শেফ কোর্সের মোট খরচ মাত্র ৪৪,০০০ টাকা। এটি ৩টি সহজ কিস্তিতে পরিশোধ করা যায়: ভর্তি ফি ১৬,০০০ টাকা এবং পরবর্তী দুটি কিস্তি ১৪,০০০ টাকা করে। কোনো অতিরিক্ত বা গোপন চার্জ নেই। এই ফি-র মধ্যে সব ধরনের প্রিমিয়াম কাঁচামাল, পরীক্ষার উপকরণ, শেফ ইউনিফর্ম এবং প্রয়োজনীয় টুলকিটের খরচ অন্তর্ভুক্ত রয়েছে, যা আন্তর্জাতিক মানের ক্যারিয়ার গড়তে সাহায্য করে।"
       },
       {
         question: "ঢাকার সেরা রান্নার স্কুল কোনটা?",
-        answer: "সিআইবি (কালিনারি ইনস্টিটিউট অফ বাংলাদেশ) হচ্ছে ঢাকার মধ্যে সেরা এনএসডিএ (NSDA) অনুমোদিত কুকিং ট্রেনিং সেন্টার। এখানে আন্তর্জাতিক মানের শেফ মেন্টরদের অধীনে ১৬টিরও বেশি দেশের ১২০টিরও বেশি রেসিপি হাতে-কলমে শেখানো হয়। সেই সাথে রয়েছে ৫-স্টার হোটেল ইন্টার্নশিপ ও চাকরি পাওয়ার সুবিধা এবং আইএসও-এইচএসিসিপি (ISO-HACCP) সার্টিফিকেশন, যা আপনার ক্যারিয়ারকে একধাপ এগিয়ে নিয়ে যাবে।"
+        answer: "কালিনারি একাডেমি (কালিনারি একাডেমি) হচ্ছে ঢাকার মধ্যে সেরা এনএসডিএ (NSDA) অনুমোদিত কুকিং ট্রেনিং সেন্টার। এখানে আন্তর্জাতিক মানের শেফ মেন্টরদের অধীনে ১৬টিরও বেশি দেশের ১২০টিরও বেশি রেসিপি হাতে-কলমে শেখানো হয়। সেই সাথে রয়েছে ৫-স্টার হোটেল ইন্টার্নশিপ ও চাকরি পাওয়ার সুবিধা এবং আইএসও-এইচএসিসিপি (ISO-HACCP) সার্টিফিকেশন, যা আপনার ক্যারিয়ারকে একধাপ এগিয়ে নিয়ে যাবে।"
       },
       {
         question: "শেফ কোর্স করে কি বিদেশে চাকরি পাওয়া সম্ভব?",
-        answer: "হ্যাঁ, সম্ভব। সিআইবি থেকে সফলভাবে কোর্স সম্পন্ন করার পর শিক্ষার্থীরা সরাসরি আন্তর্জাতিক প্লেসমেন্ট ও ফাইভ-স্টার হোটেলগুলোতে ইন্টার্নশিপের সুযোগ পান। এছাড়াও আমাদের শিক্ষার্থীদের জন্য মালয়েশিয়া, অস্ট্রেলিয়া এবং কানাডার স্বনামধন্য বিশ্ববিদ্যালয়গুলোতে সরাসরি ক্রেডিট ট্রান্সফারের পথ সুগম রয়েছে। আমাদের গ্লোবাল কারিকুলাম ও সার্টিফিকেট বিশ্বজুড়ে অত্যন্ত সমাদৃত ও স্বনামধন্য বিলাসবহুল ক্রুজলাইন ও রিসোর্টে হাই-স্যালারি চাকরির জন্য দারুণ কার্যকর।"
+        answer: "হ্যাঁ, সম্ভব। কালিনারি একাডেমি থেকে সফলভাবে কোর্স সম্পন্ন করার পর শিক্ষার্থীরা সরাসরি আন্তর্জাতিক প্লেসমেন্ট ও ফাইভ-স্টার হোটেলগুলোতে ইন্টার্নশিপের সুযোগ পান। এছাড়াও আমাদের শিক্ষার্থীদের জন্য মালয়েশিয়া, অস্ট্রেলিয়া এবং কানাডার স্বনামধন্য বিশ্ববিদ্যালয়গুলোতে সরাসরি ক্রেডিট ট্রান্সফারের পথ সুগম রয়েছে। আমাদের গ্লোবাল কারিকুলাম ও সার্টিফিকেট বিশ্বজুড়ে অত্যন্ত সমাদৃত ও স্বনামধন্য বিলাসবহুল ক্রুজলাইন ও রিসোর্টে হাই-স্যালারি চাকরির জন্য দারুণ কার্যকর।"
       }
     ] : [
       {
         question: "How much does a professional chef course cost in Bangladesh?",
-        answer: "The Professional Chef Course at CIB costs 44,000 BDT total, payable in 3 installments: 16,000 BDT admission fee + two 14,000 BDT installments. No hidden charges. This comprehensive fee structure covers all premium raw ingredients, exam materials, chef uniforms, and toolkit costs, making CIB the most affordable high-fidelity culinary institute in Dhaka for aspiring professional chefs seeking career-ready training."
+        answer: "The Professional Chef Course at Culinary Academy costs 44,000 BDT total, payable in 3 installments: 16,000 BDT admission fee + two 14,000 BDT installments. No hidden charges. This comprehensive fee structure covers all premium raw ingredients, exam materials, chef uniforms, and toolkit costs, making Culinary Academy the most affordable high-fidelity culinary institute in Dhaka for aspiring professional chefs seeking career-ready training."
       },
       {
         question: "Which is the best culinary institute in Dhaka?",
-        answer: "CIB (Culinary Institute of Bangladesh) is the top NSDA-accredited culinary training institute in Dhaka, offering 120+ recipes from 16+ cuisines with ISO-HACCP certification and 5-star hotel placement support. With a state-of-the-art commercial kitchen facility and internationally trained executive chef mentors, CIB provides hands-on practical training that matches international standards, ensuring graduates are immediately ready for prestigious jobs worldwide."
+        answer: "Culinary Academy (Culinary Academy) is the top NSDA-accredited culinary training institute in Dhaka, offering 120+ recipes from 16+ cuisines with ISO-HACCP certification and 5-star hotel placement support. With a state-of-the-art commercial kitchen facility and internationally trained executive chef mentors, Culinary Academy provides hands-on practical training that matches international standards, ensuring graduates are immediately ready for prestigious jobs worldwide."
       },
       {
         question: "Can I get a chef job abroad after completing a course in Bangladesh?",
-        answer: "Yes. CIB graduates receive international placements and credit transfer pathways to top universities in Malaysia, Australia, and Canada, backed by five-star hotel internships. CIB's curriculum is globally recognized and fully aligned with international standards, allowing our students to secure high-paying chef positions in top-tier cruise lines, luxury resort properties, and fine-dining establishments across the globe upon graduation."
+        answer: "Yes. Culinary Academy graduates receive international placements and credit transfer pathways to top universities in Malaysia, Australia, and Canada, backed by five-star hotel internships. Culinary Academy's curriculum is globally recognized and fully aligned with international standards, allowing our students to secure high-paying chef positions in top-tier cruise lines, luxury resort properties, and fine-dining establishments across the globe upon graduation."
       }
     ];
   }
@@ -257,9 +257,9 @@ export default async function HomePage({ params: { locale } }: { params: { local
       <SchemaInjector
         schemas={[
           generateWebPageSchema({
-            title: (homeData?.hero?.slides?.[0]?.headline) ? `${homeData.hero.slides[0].headline} | CIB` : 'CIB - Culinary Institute of Bangladesh',
+            title: (homeData?.hero?.slides?.[0]?.headline) ? `${homeData.hero.slides[0].headline} | Culinary Academy` : 'Culinary Academy - Culinary Academy',
             description: (homeData?.hero?.slides?.[0]?.subheadline) || 'Professional Chef Course in Dhaka',
-            url: `https://cibdhk.com/${locale}`
+            url: `https://culinaryacademy.com/${locale}`
           }),
           generateOrganizationSchema(),
           generateLocalBusinessSchema(),
@@ -281,7 +281,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">
-              {locale === 'bn' ? 'CIB কেন আলাদা?' : 'What Makes CIB Different'}
+              {locale === 'bn' ? 'Culinary Academy কেন আলাদা?' : 'What Makes Culinary Academy Different'}
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-medium">
               {locale === 'bn'
@@ -342,8 +342,8 @@ export default async function HomePage({ params: { locale } }: { params: { local
           </span>
           <p className="text-xl md:text-2xl text-white font-medium leading-relaxed tracking-tight">
             {locale === 'bn'
-              ? 'কালিনারি ইনস্টিটিউট অফ বাংলাদেশ (CIB) হলো ঢাকার ধানমন্ডিতে অবস্থিত প্রধানমন্ত্রীর কার্যালয়ের এনএসডিএ (NSDA) অনুমোদিত প্রিমিয়াম কুকিং স্কুল। ৫-তারকা শেফ মেন্টর দেওয়ান ইসমাইলের অধীনে আমরা ১৬+ দেশের ১২০+ রেসিপি, এনএসডিএ লেভেল ২ ও ৩ এবং আইএসও-এইচএসিসিপি ফুড সেফটি মানদণ্ড নিশ্চিত করি, যা শিক্ষার্থীদের বিশ্বজুড়ে ফাইভ-স্টার চাকরি ও ইন্টার্নশিপ পেতে সাহায্য করে।'
-              : 'The Culinary Institute of Bangladesh (CIB) is the premier NSDA-accredited culinary academy in Dhanmondi, Dhaka. Under 5-star executive mentors, CIB provides hands-on training for 120+ recipes across 16+ global cuisines, offering official NSDA Level 2 & 3 credentials, ISO-HACCP certifications, and conditional 5-star hotel job placement support globally.'
+              ? 'কালিনারি একাডেমি হলো ঢাকার ধানমন্ডিতে অবস্থিত প্রধানমন্ত্রীর কার্যালয়ের এনএসডিএ (NSDA) অনুমোদিত প্রিমিয়াম কুকিং স্কুল। আমাদের ৫-তারকা আন্তর্জাতিক শেফ মেন্টরদের অধীনে আমরা ১৬+ দেশের ১২০+ রেসিপি, এনএসডিএ লেভেল ২ ও ৩ এবং আইএসও-এইচএসিসিপি ফুড সেফটি মানদণ্ড নিশ্চিত করি, যা শিক্ষার্থীদের বিশ্বজুড়ে ফাইভ-স্টার চাকরি ও ইন্টার্নশিপ পেতে সাহায্য করে।'
+              : 'Culinary Academy is the premier NSDA-accredited culinary academy in Dhanmondi, Dhaka. Under 5-star executive mentors, Culinary Academy provides hands-on training for 120+ recipes across 16+ global cuisines, offering official NSDA Level 2 & 3 credentials, ISO-HACCP certifications, and conditional 5-star hotel job placement support globally.'
             }
           </p>
         </div>
@@ -354,7 +354,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
         <div className="max-w-4xl mx-auto px-6">
           <div className="glass-card p-6 md:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
             <h3 className="text-prestige-gold font-bold text-xs uppercase tracking-widest mb-6 text-center">
-              {locale === 'bn' ? 'সিআইবি মূল তথ্য তালিকা' : 'CIB Core Key Facts'}
+              {locale === 'bn' ? 'কালিনারি একাডেমি মূল তথ্য তালিকা' : 'Culinary Academy Core Key Facts'}
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-sm">
@@ -393,7 +393,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-bold text-white">{locale === 'bn' ? 'অফিশিয়াল হেল্পলাইন' : 'Official Helpline'}</td>
-                    <td className="py-3 px-4">+8801338958997</td>
+                    <td className="py-3 px-4">+880 1700 000000</td>
                     <td className="py-3 px-4 text-green-400 font-bold">{locale === 'bn' ? 'সরাসরি হোয়াটসঅ্যাপ উপলব্ধ' : 'WhatsApp Available'}</td>
                   </tr>
                 </tbody>
@@ -410,7 +410,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
             {locale === 'bn' ? 'ভিডিও গাইড' : 'Featured Video'}
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6">
-            {locale === 'bn' ? 'আমাদের কিচেন ও ল্যাব কভারেজ' : 'Watch CIB in Action'}
+            {locale === 'bn' ? 'আমাদের কিচেন ও ল্যাব কভারেজ' : 'Watch Culinary Academy in Action'}
           </h2>
           <VideoWithTranscript
             videoId={btvVideo.videoId}
@@ -434,7 +434,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
         <div className="max-w-7xl mx-auto px-4">
           <AuthorBox
             name="Dewan Ismail"
-            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, সিআইবি' : 'Principal & Founder, CIB'}
+            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, কালিনারি একাডেমি' : 'Principal & Founder, Culinary Academy'}
             photo="/images/dewan-ismail-portrait.jpg"
             profileUrl="/expert-culinary-mentors/dewan-ismail"
             lastReviewed={locale === 'bn' ? 'জুন ২০২৬' : 'June 2026'}

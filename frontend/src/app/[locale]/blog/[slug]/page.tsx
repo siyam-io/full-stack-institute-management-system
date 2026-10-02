@@ -43,9 +43,9 @@ export async function generateMetadata({ params: { locale, slug } }: BlogPostPro
   const post = await fetchBlogBySlug(slug, locale);
   if (!post) return {};
 
-  const title = `${post.title} | CIB Blog`;
+  const title = `${post.title} | Culinary Academy Blog`;
   const description = post.excerpt;
-  const ogImage = post.featuredImage.startsWith('http') ? post.featuredImage : `https://cibdhk.com${post.featuredImage}`;
+  const ogImage = post.featuredImage.startsWith('http') ? post.featuredImage : `https://culinaryacademy.com${post.featuredImage}`;
 
   return {
     title,
@@ -57,19 +57,19 @@ export async function generateMetadata({ params: { locale, slug } }: BlogPostPro
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
-      url: `https://cibdhk.com/${locale}/blog/${slug}`,
-      siteName: 'Culinary Institute of Bangladesh',
+      url: `https://culinaryacademy.com/${locale}/blog/${slug}`,
+      siteName: 'Culinary Academy',
     },
     twitter: {
       card: 'summary_large_image',
       images: [ogImage],
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/blog/${slug}`,
+      canonical: `https://culinaryacademy.com/${locale}/blog/${slug}`,
       languages: {
-        'en': `https://cibdhk.com/en/blog/${slug}`,
-        'bn': `https://cibdhk.com/bn/blog/${slug}`,
-        'x-default': `https://cibdhk.com/en/blog/${slug}`,
+        'en': `https://culinaryacademy.com/en/blog/${slug}`,
+        'bn': `https://culinaryacademy.com/bn/blog/${slug}`,
+        'x-default': `https://culinaryacademy.com/en/blog/${slug}`,
       }
     }
   };
@@ -79,9 +79,9 @@ function getAuthorDetails(authorName: string, locale: string) {
   const isBn = locale === 'bn';
   const cleanAuthor = authorName ? authorName.trim() : '';
 
-  if (cleanAuthor === 'Dewan Ismail' || cleanAuthor === 'দেওয়ান ইসমাইল') {
+  if (cleanAuthor === 'Dewan Ismail' || cleanAuthor === 'লিড মেন্টর') {
     return {
-      name: isBn ? 'দেওয়ান ইসমাইল' : 'Dewan Ismail',
+      name: isBn ? 'লিড মেন্টর' : 'Dewan Ismail',
       title: isBn ? 'অধ্যক্ষ ও ক্যারিয়ার পরিকল্পনা পরিচালক' : 'Principal & Director',
       photo: '/images/dewan-ismail-portrait.jpg',
       profileUrl: '/expert-culinary-mentors/dewan-ismail'
@@ -90,7 +90,7 @@ function getAuthorDetails(authorName: string, locale: string) {
     return {
       name: isBn ? 'হাসান রিজভী' : 'Hasan Rizvee',
       title: isBn ? 'বিজনেস অ্যানালিস্ট' : 'Business Analyst',
-      photo: '/images/logo_cib.png',
+      photo: '/images/logo.svg',
       profileUrl: ''
     };
   } else if (cleanAuthor === 'Salman Iqbal' || cleanAuthor === 'সালমান ইকবাল') {
@@ -102,9 +102,9 @@ function getAuthorDetails(authorName: string, locale: string) {
     };
   } else {
     return {
-      name: authorName || (isBn ? 'সিআইবি মেন্টর' : 'CIB Mentor'),
-      title: isBn ? 'মেন্টর, সিআইবি' : 'Mentor, CIB',
-      photo: '/images/logo_cib.png',
+      name: authorName || (isBn ? 'কালিনারি একাডেমি মেন্টর' : 'Culinary Academy Mentor'),
+      title: isBn ? 'মেন্টর, কালিনারি একাডেমি' : 'Mentor, Culinary Academy',
+      photo: '/images/logo.svg',
       profileUrl: ''
     };
   }
@@ -125,20 +125,20 @@ export default async function BlogPostPage({ params: { locale, slug } }: BlogPos
     generateWebPageSchema({
       title: post.title,
       description: post.excerpt,
-      url: `https://cibdhk.com/${locale}/blog/${slug}`
+      url: `https://culinaryacademy.com/${locale}/blog/${slug}`
     }),
     generateArticleSchema({
       title: post.title,
       description: post.excerpt,
-      image: post.featuredImage.startsWith('http') ? post.featuredImage : `https://cibdhk.com${post.featuredImage}`,
+      image: post.featuredImage.startsWith('http') ? post.featuredImage : `https://culinaryacademy.com${post.featuredImage}`,
       datePublished: post.date,
       author: post.author,
       locale: locale
     }),
     generateBreadcrumbSchema([
-      { name: locale === 'en' ? 'Home' : 'হোম', item: `https://cibdhk.com/${locale}` },
-      { name: locale === 'en' ? 'Intel Archive' : 'আর্কাইভ', item: `https://cibdhk.com/${locale}/blog` },
-      { name: post.title, item: `https://cibdhk.com/${locale}/blog/${slug}` }
+      { name: locale === 'en' ? 'Home' : 'হোম', item: `https://culinaryacademy.com/${locale}` },
+      { name: locale === 'en' ? 'Intel Archive' : 'আর্কাইভ', item: `https://culinaryacademy.com/${locale}/blog` },
+      { name: post.title, item: `https://culinaryacademy.com/${locale}/blog/${slug}` }
     ])
   ];
 
@@ -148,7 +148,7 @@ export default async function BlogPostPage({ params: { locale, slug } }: BlogPos
       generateVideoObjectSchema({
         name: post.videoTitle || post.title,
         description: post.videoDescription || post.excerpt,
-        thumbnailUrl: post.videoThumbnailUrl || (post.featuredImage.startsWith('http') ? post.featuredImage : `https://cibdhk.com${post.featuredImage}`),
+        thumbnailUrl: post.videoThumbnailUrl || (post.featuredImage.startsWith('http') ? post.featuredImage : `https://culinaryacademy.com${post.featuredImage}`),
         uploadDate: post.videoUploadDate || post.date,
         embedUrl: post.videoUrl
       })
@@ -390,7 +390,7 @@ export default async function BlogPostPage({ params: { locale, slug } }: BlogPos
                     className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-prestige-gold/50 hover:bg-white/[0.05] transition-all duration-300 flex items-center justify-between group sm:col-span-2"
                   >
                     <span className="text-sm font-bold text-white group-hover:text-prestige-gold transition-colors">
-                      {locale === 'bn' ? 'আমাদের মেন্টর দেওয়ান ইসমাইল সম্পর্কে জানুন' : 'Meet Principal Dewan Ismail'}
+                      {locale === 'bn' ? 'আমাদের মেন্টর লিড মেন্টর সম্পর্কে জানুন' : 'Meet Principal Dewan Ismail'}
                     </span>
                     <ArrowRight className="w-4 h-4 text-prestige-gold group-hover:translate-x-1 transition-transform shrink-0" />
                   </Link>

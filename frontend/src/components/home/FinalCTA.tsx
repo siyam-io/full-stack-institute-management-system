@@ -22,7 +22,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/practical_class_1-1920w.webp"
-          alt="CIB Professional Kitchen"
+          alt="Culinary Academy Professional Kitchen"
           fill
           className="object-cover opacity-5 grayscale"
         />

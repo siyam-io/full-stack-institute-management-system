@@ -77,15 +77,15 @@ export async function generateMetadata({ params: { locale, rest } }: PageProps):
     openGraph: {
       title,
       description,
-      url: `https://cibdhk.com/${locale}/${slug}`,
+      url: `https://culinaryacademy.com/${locale}/${slug}`,
       type: 'website',
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/${slug}`,
+      canonical: `https://culinaryacademy.com/${locale}/${slug}`,
       languages: {
-        'en': `https://cibdhk.com/en/${slug}`,
-        'bn': `https://cibdhk.com/bn/${slug}`,
-        'x-default': `https://cibdhk.com/en/${slug}`,
+        'en': `https://culinaryacademy.com/en/${slug}`,
+        'bn': `https://culinaryacademy.com/bn/${slug}`,
+        'x-default': `https://culinaryacademy.com/en/${slug}`,
       }
     }
   };

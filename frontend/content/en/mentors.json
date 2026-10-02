@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Mentors with Global Expertise",
-    "subheading": "Culinary training at CIB is led by Executive Chefs with decades of experience in global 5-star hospitality markets.",
+    "subheading": "Culinary training at Culinary Academy is led by Executive Chefs with decades of experience in global 5-star hospitality markets.",
     "image": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp"
   },
   "mentors": [
@@ -10,7 +10,7 @@
       "id": "dewan-ismail",
       "title": "Principal & Director of Career Planning & Development",
       "photo": "/images/dewan-ismail-portrait.jpg",
-      "bio": "Dewan Ismail is the Principal of CIB and an authoritative voice in culinary education. He specializes in Culinary Science, ISO-HACCP & Hygiene, and Career Development. With a BBA and MBA from Jagannath University, he bridges professional kitchen standards with technical excellence.",
+      "bio": "Dewan Ismail is the Principal of Culinary Academy and an authoritative voice in culinary education. He specializes in Culinary Science, ISO-HACCP & Hygiene, and Career Development. With a BBA and MBA from Jagannath University, he bridges professional kitchen standards with technical excellence.",
       "credentials": ["BTEB Level 4", "NSDA Level 3", "BBA & MBA (Jagannath University)", "PGD in Tourism & Hospitality (DIU)", "IELTS 7.5", "SGS Switzerland", "ISO Certified"],
       "cta": "Apply Now"
     },
@@ -19,7 +19,7 @@
       "id": "rafeya-chowdhury",
       "title": "Lead Trainer",
       "photo": "/images/rafeya-chowdhury.jpg",
-      "bio": "As Lead Trainer at CIB, Rafeya Chowdhury brings elite 5-star hospitality standards. Her career includes tenure as Chef de Partie at The Westin and years of executive instruction. She is a recognized culinary voice on BTV and Jamuna TV.",
+      "bio": "As Lead Trainer at Culinary Academy, Rafeya Chowdhury brings elite 5-star hospitality standards. Her career includes tenure as Chef de Partie at The Westin and years of executive instruction. She is a recognized culinary voice on BTV and Jamuna TV.",
       "credentials": ["Chef de Partie (The Westin)", "BTV & Jamuna TV Host", "Multi-Cuisine Production", "Fine-Dining Plating Specialist"],
       "cta": "Apply Now"
     },
@@ -37,7 +37,7 @@
       "id": "asifa-rashid-rayta",
       "title": "Theoretical Instructor & Head of Operations",
       "photo": "/images/asifa-rashid-rayta.png",
-      "bio": "Asifa Rashid Rayta bridges administrative excellence and theoretical mastery at CIB, bringing structured academic rigor and compliance to kitchen operations.",
+      "bio": "Asifa Rashid Rayta bridges administrative excellence and theoretical mastery at Culinary Academy, bringing structured academic rigor and compliance to kitchen operations.",
       "credentials": ["BBA Degree", "BTEB Level 4", "NSDA Level 3"],
       "cta": "Apply Now"
     },
@@ -55,7 +55,7 @@
       "id": "salman-iqbal",
       "title": "Brand Manager",
       "photo": "/images/salman-iqbal.jpg",
-      "bio": "Salman Iqbal orchestrates the CIB brand identity and institutional communication, ensuring that CIB's mission of vocational excellence is communicated across all platforms.",
+      "bio": "Salman Iqbal orchestrates the Culinary Academy brand identity and institutional communication, ensuring that Culinary Academy's mission of vocational excellence is communicated across all platforms.",
       "credentials": ["NSDA Food & Beverage Production Level-3", "HACCP, Hygiene & GMP-22000", "BBA Degree"],
       "cta": "Apply Now"
     }

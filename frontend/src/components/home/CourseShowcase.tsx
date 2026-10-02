@@ -41,7 +41,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
           <source media="(max-width: 1280px)" srcSet="/images/principal-dewan-ismail-inspecting-student-practice-session-1280w.webp" />
           <img
             src="/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp"
-            alt="Culinary Institute of Bangladesh"
+            alt="Culinary Academy"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-5 grayscale"
           />
@@ -109,7 +109,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
                 <source media="(max-width: 1280px)" srcSet={data.image.replace('-1920w.webp', '-1280w.webp')} />
                 <img
                   src={data.image}
-                  alt="Practical Class at CIB"
+                  alt="Practical Class at Culinary Academy"
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2000ms]"
                 />
@@ -138,7 +138,7 @@ const CourseShowcase = ({ data }: CourseShowcaseProps) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            {/* CIB Professional Card */}
+            {/* Culinary Academy Professional Card */}
             <div className="relative overflow-hidden group">
               <div className="absolute inset-0 bg-green-500/5 rounded-[4rem] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
               <div className="relative glass-card p-6 md:p-8 rounded-[1.5rem] border border-white/5 hover:border-green-500/30 transition-all duration-700 shadow-2xl h-full">

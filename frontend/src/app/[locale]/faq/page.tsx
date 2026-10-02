@@ -19,7 +19,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   const pageData = await getMarketingPage("faq", locale);
   const data: any = pageData?.content || { hero: { heading: "FAQ", subheading: "Common Questions" } };
 
-  const title = pageData?.seo_title || `${data?.hero?.heading || 'FAQ'} | CIB`;
+  const title = pageData?.seo_title || `${data?.hero?.heading || 'FAQ'} | Culinary Academy`;
   const description = pageData?.seo_description || data?.hero?.subheading || '';
 
   return {
@@ -28,21 +28,21 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     openGraph: {
       title,
       description,
-      url: `https://cibdhk.com/${locale}/faq`,
+      url: `https://culinaryacademy.com/${locale}/faq`,
       type: 'website',
-      siteName: 'Culinary Institute of Bangladesh',
-      images: [{ url: 'https://cibdhk.com/images/og-default.png', width: 1200, height: 630 }],
+      siteName: 'Culinary Academy',
+      images: [{ url: 'https://culinaryacademy.com/images/og-default.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      images: ['https://cibdhk.com/images/og-default.png'],
+      images: ['https://culinaryacademy.com/images/og-default.png'],
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/faq`,
+      canonical: `https://culinaryacademy.com/${locale}/faq`,
       languages: {
-        'en': `https://cibdhk.com/en/faq`,
-        'bn': `https://cibdhk.com/bn/faq`,
-        'x-default': `https://cibdhk.com/en/faq`,
+        'en': `https://culinaryacademy.com/en/faq`,
+        'bn': `https://culinaryacademy.com/bn/faq`,
+        'x-default': `https://culinaryacademy.com/en/faq`,
       }
     }
   };
@@ -63,14 +63,14 @@ export default async function FAQPage({ params: { locale } }: Props) {
       <SchemaInjector 
         schemas={[
           generateWebPageSchema({
-            title: `${data?.hero?.heading || 'FAQ'} | CIB`,
+            title: `${data?.hero?.heading || 'FAQ'} | Culinary Academy`,
             description: data?.hero?.subheading || '',
-            url: `https://cibdhk.com/${locale}/faq`
+            url: `https://culinaryacademy.com/${locale}/faq`
           }),
           generateFAQSchema((data?.categories || []).flatMap((cat: any) => cat.faqs || [])),
           generateBreadcrumbSchema([
-            { name: locale === 'en' ? 'Home' : 'হোম', item: `https://cibdhk.com/${locale}` },
-            { name: data?.hero?.heading || 'FAQ', item: `https://cibdhk.com/${locale}/faq` }
+            { name: locale === 'en' ? 'Home' : 'হোম', item: `https://culinaryacademy.com/${locale}` },
+            { name: data?.hero?.heading || 'FAQ', item: `https://culinaryacademy.com/${locale}/faq` }
           ])
         ]} 
       />

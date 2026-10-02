@@ -29,8 +29,8 @@ export async function POST(req: Request) {
     }
 
     // Determine the host dynamically or from environment variable
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cibdhk.com';
-    let host = 'cibdhk.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://culinaryacademy.com';
+    let host = 'culinaryacademy.com';
     try {
       const urlObj = new URL(siteUrl);
       host = urlObj.hostname;

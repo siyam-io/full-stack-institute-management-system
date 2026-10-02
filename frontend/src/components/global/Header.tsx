@@ -56,11 +56,11 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
           {/* Logo */}
           <Link href="/" className="relative z-10 hover:scale-105 transition-transform duration-500">
             <Image 
-              src="/images/logo_cib.png" 
-              alt="CIB Logo" 
-              width={120} 
-              height={50} 
-              className="w-auto h-10 object-contain"
+              src="/images/logo.svg" 
+              alt="Culinary Academy" 
+              width={180} 
+              height={40} 
+              className="w-auto h-9 object-contain"
               priority
             />
           </Link>
@@ -102,18 +102,18 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 pr-6 border-r border-white/10">
               <a 
-                href="tel:+8801338958997" 
+                href="tel:+8801700000000" 
                 className="text-white hover:text-prestige-gold transition-all"
-                aria-label="Call CIB"
+                aria-label="Call Academy"
               >
                 <Phone className="w-4 h-4" />
               </a>
               <a 
-                href="https://wa.me/8801338958997" 
+                href="https://wa.me/8801700000000" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-whatsapp transition-all"
-                aria-label="WhatsApp CIB"
+                aria-label="WhatsApp Academy"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
@@ -125,15 +125,15 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
 
         {/* Mobile Header Redesign */}
         <div className="lg:hidden flex justify-between items-center h-16">
-          {/* Left side: CIB logo + language toggle */}
+          {/* Left side: Academy logo + language toggle */}
           <div className="flex items-center gap-4">
             <Link href="/" className="relative z-10 shrink-0">
               <Image 
-                src="/images/logo_cib.png" 
-                alt="CIB Logo" 
-                width={120} 
-                height={50} 
-                className="w-auto h-10 object-contain"
+                src="/images/logo.svg" 
+                alt="Culinary Academy" 
+                width={150} 
+                height={35} 
+                className="w-auto h-8 object-contain"
                 priority
               />
             </Link>
@@ -143,11 +143,11 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
           {/* Right side: WhatsApp + hamburger menu */}
           <div className="flex items-center gap-2">
             <a 
-              href="https://wa.me/8801338958997" 
+              href="https://wa.me/8801700000000" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-white p-2 hover:text-whatsapp transition-colors"
-              aria-label="WhatsApp CIB"
+              aria-label="WhatsApp Academy"
             >
               <MessageCircle className="w-6 h-6" />
             </a>

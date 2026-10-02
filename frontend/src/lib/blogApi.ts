@@ -80,7 +80,7 @@ export async function fetchBlogs(locale: string): Promise<BlogPost[]> {
           ? blog.publishedAt.split("T")[0]
           : (blog.createdAt ? blog.createdAt.split("T")[0] : new Date().toISOString().split("T")[0]);
         
-        let imgUrl = blog.coverImageUrl || "/images/logo_cib.png";
+        let imgUrl = blog.coverImageUrl || "/images/logo.svg";
         if (blog.coverImageUrl && blog.coverImageUrl.startsWith("/uploads")) {
           imgUrl = `http://localhost:3043${blog.coverImageUrl}`;
         }
@@ -91,7 +91,7 @@ export async function fetchBlogs(locale: string): Promise<BlogPost[]> {
           featuredImage: imgUrl,
           coverImageUrl: imgUrl,
           category: blog.tags?.[0] || "Culinary",
-          author: blog.author || "Dewan Ismail",
+          author: blog.author || "Culinary Academy",
         };
       });
     }
@@ -113,7 +113,7 @@ export async function fetchBlogBySlug(slug: string, locale: string): Promise<Blo
         ? blog.publishedAt.split("T")[0]
         : (blog.createdAt ? blog.createdAt.split("T")[0] : new Date().toISOString().split("T")[0]);
       
-      let imgUrl = blog.coverImageUrl || "/images/logo_cib.png";
+      let imgUrl = blog.coverImageUrl || "/images/logo.svg";
       if (blog.coverImageUrl && blog.coverImageUrl.startsWith("/uploads")) {
         imgUrl = `http://localhost:3043${blog.coverImageUrl}`;
       }
@@ -124,7 +124,7 @@ export async function fetchBlogBySlug(slug: string, locale: string): Promise<Blo
         featuredImage: imgUrl,
         coverImageUrl: imgUrl,
         category: blog.tags?.[0] || "Culinary",
-        author: blog.author || "Dewan Ismail",
+        author: blog.author || "Culinary Academy",
       };
     }
   } catch (err) {

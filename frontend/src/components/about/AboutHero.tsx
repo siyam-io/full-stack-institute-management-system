@@ -18,7 +18,7 @@ const AboutHero = ({ data }: AboutHeroProps) => {
       <div className="absolute inset-0 z-0">
         <Image
           src={data.image || '/images/practical_class_1-1920w.webp'}
-          alt="CIB Professional Environment"
+          alt="Culinary Academy Professional Environment"
           fill
           priority
           className="object-cover grayscale-[0.2]"

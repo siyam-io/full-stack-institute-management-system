@@ -91,7 +91,7 @@ export function parseEmployeeToMentor(emp: any, locale?: string): any {
     name,
     title: emp.designation || (isBn ? "প্রশিক্ষক" : "Instructor"),
     photo,
-    bio: bio || (isBn ? `${name} সিআইবি-তে একজন কালিনারি প্রফেশনাল।` : `${name} is a culinary professional at CIB.`),
+    bio: bio || (isBn ? `${name} কালিনারি একাডেমি-তে একজন অভিজ্ঞ প্রশিক্ষক।` : `${name} is an experienced culinary instructor at Culinary Academy.`),
     credentials: credentials.length > 0 ? credentials : (isBn ? ["সার্টিফাইড কালিনারি ট্রেইনার"] : ["Certified Culinary Trainer"]),
     cta: isBn ? "আবেদন করুন" : "Apply Now"
   };

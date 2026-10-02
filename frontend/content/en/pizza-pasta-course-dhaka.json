@@ -1,7 +1,7 @@
 {
   "slug": "pizza-pasta-course-dhaka",
   "meta": {
-    "title": "Pizza & Pasta Course in Dhaka | Italian Cooking | CIB",
+    "title": "Pizza & Pasta Course in Dhaka | Italian Cooking | Culinary Academy",
     "description": "Learn the secrets of artisan Italian pizza and fresh pasta making in Dhaka. Master sourdough doughs, wood-fire techniques, and classic sauces."
   },
   "hero": {
@@ -36,14 +36,14 @@
     "Learn wood-fire and high-temperature electric deck oven baking",
     "Master the emulsion techniques for classic egg yolk and cheese sauces",
     "Understand olive oil selections and fresh herb integrations",
-    "All high-grade durum wheat and cheese provided by CIB",
-    "Awarded a CIB Italian Culinary Specialty Certificate"
+    "All high-grade durum wheat and cheese provided by Culinary Academy",
+    "Awarded a Culinary Academy Italian Culinary Specialty Certificate"
   ],
   "table": {
     "heading": "Course Details & Fee Structure",
     "headers": [
       "Criteria",
-      "CIB Pizza & Pasta Details"
+      "Culinary Academy Pizza & Pasta Details"
     ],
     "rows": [
       [
@@ -71,7 +71,7 @@
     },
     {
       "question": "What ovens do we practice on?",
-      "answer": "CIB labs are equipped with high-temperature commercial deck ovens that replicate wood-fired pizza environments."
+      "answer": "Culinary Academy labs are equipped with high-temperature commercial deck ovens that replicate wood-fired pizza environments."
     }
   ],
   "cta": {

@@ -81,7 +81,7 @@ const ThankYouModal = ({ isOpen, onClose }: ThankYouModalProps) => {
               <motion.a 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                href="tel:+8801338958997"
+                href="tel:+880 1700 000000"
                 className="btn-primary w-full py-4 rounded-xl text-sm font-bold tracking-widest uppercase flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4" />
@@ -90,7 +90,7 @@ const ThankYouModal = ({ isOpen, onClose }: ThankYouModalProps) => {
               <motion.a 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                href="https://wa.me/8801338958997"
+                href="https://wa.me/8801700000000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline w-full py-4 rounded-xl text-sm font-bold tracking-widest uppercase flex items-center justify-center gap-2"

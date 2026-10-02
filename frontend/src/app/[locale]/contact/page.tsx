@@ -16,11 +16,11 @@ import InlineFAQ from "@/components/global/InlineFAQ";
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const isBn = locale === 'bn';
   const title = isBn
-    ? 'সিআইবি ঢাকা যোগাযোগ | ক্যাম্পাস ভিজিট, ভর্তি সহায়তা, ডেমো ক্লাস এবং হোয়াটসঅ্যাপ'
-    : 'Contact CIB Dhaka | Campus Visit, Admission Help, Demo Class & WhatsApp';
+    ? 'কালিনারি একাডেমি ঢাকা যোগাযোগ | ক্যাম্পাস ভিজিট, ভর্তি সহায়তা, ডেমো ক্লাস এবং হোয়াটসঅ্যাপ'
+    : 'Contact Culinary Academy Dhaka | Campus Visit, Admission Help, Demo Class & WhatsApp';
   const description = isBn
-    ? 'ধানমন্ডি, ঢাকায় সিআইবি (CIB) ক্যাম্পে যোগাযোগ করুন, কল বা হোয়াটসঅ্যাপ করুন। কোর্সের ফি, ভর্তি সহায়তা এবং ক্যাম্পাসের ঠিকানা ও যাতায়াতের পথ জানুন।'
-    : 'Call, WhatsApp, or visit CIB in Dhanmondi, Dhaka. Get course fees, admission support, and campus directions.';
+    ? 'ধানমন্ডি, ঢাকায় কালিনারি একাডেমি ক্যাম্পে যোগাযোগ করুন, কল বা হোয়াটসঅ্যাপ করুন। কোর্সের ফি, ভর্তি সহায়তা এবং ক্যাম্পাসের ঠিকানা ও যাতায়াতের পথ জানুন।'
+    : 'Call, WhatsApp, or visit Culinary Academy in Dhanmondi, Dhaka. Get course fees, admission support, and campus directions.';
 
   return {
     title,
@@ -28,21 +28,21 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       title,
       description,
-      url: `https://cibdhk.com/${locale}/contact`,
+      url: `https://culinaryacademy.com/${locale}/contact`,
       type: 'website',
-      siteName: 'Culinary Institute of Bangladesh',
-      images: [{ url: 'https://cibdhk.com/images/og-default.png', width: 1200, height: 630 }],
+      siteName: 'Culinary Academy',
+      images: [{ url: 'https://culinaryacademy.com/images/og-default.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      images: ['https://cibdhk.com/images/og-default.png'],
+      images: ['https://culinaryacademy.com/images/og-default.png'],
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/contact`,
+      canonical: `https://culinaryacademy.com/${locale}/contact`,
       languages: {
-        'en': `https://cibdhk.com/en/contact`,
-        'bn': `https://cibdhk.com/bn/contact`,
-        'x-default': `https://cibdhk.com/en/contact`,
+        'en': `https://culinaryacademy.com/en/contact`,
+        'bn': `https://culinaryacademy.com/bn/contact`,
+        'x-default': `https://culinaryacademy.com/en/contact`,
       }
     }
   };
@@ -73,9 +73,9 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
       <SchemaInjector 
         schemas={[
           generateWebPageSchema({
-            title: `Contact Us | ${contactData?.hero?.heading || 'Culinary Institute of Bangladesh'}`,
+            title: `Contact Us | ${contactData?.hero?.heading || 'Culinary Academy'}`,
             description: contactData?.hero?.subheading || '',
-            url: `https://cibdhk.com/${locale}/contact`
+            url: `https://culinaryacademy.com/${locale}/contact`
           }),
           generateLocalBusinessSchema()
         ]} 
@@ -103,7 +103,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="CIB Location"
+                title="Culinary Academy Location"
               ></iframe>
             </div>
           </div>
@@ -150,13 +150,13 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
             </div>
             <InlineFAQ questions={
               locale === 'bn' ? [
-                { question: "সিআইবি (CIB) ক্যাম্পাসটি কোথায় অবস্থিত?", answer: "সিআইবি ক্যাম্পাসটি হাউস-১৬০, লেক সার্কাস, কলাবাগান, ধানমন্ডি, ঢাকা-১২০৫ ঠিকানায় অবস্থিত। এটি কলাবাগান বাস স্ট্যান্ড থেকে খুব সহজেই যাতায়াতযোগ্য।" },
+                { question: "কালিনারি একাডেমি ক্যাম্পাসটি কোথায় অবস্থিত?", answer: "কালিনারি একাডেমি ক্যাম্পাসটি হাউস-১৬০, লেক সার্কাস, কলাবাগান, ধানমন্ডি, ঢাকা-১২০৫ ঠিকানায় অবস্থিত। এটি কলাবাগান বাস স্ট্যান্ড থেকে খুব সহজেই যাতায়াতযোগ্য।" },
                 { question: "ক্যাম্পাস পরিদর্শনের সময় কখন?", answer: "শনিবার থেকে বৃহস্পতিবার সকাল ১০:০০ টা থেকে সন্ধ্যা ৬:০০ টার মধ্যে যেকোনো সময় আপনি আমাদের ক্যাম্পাস পরিদর্শন করতে পারেন, আমাদের আধুনিক রান্নাঘর দেখতে পারেন এবং অ্যাডমিশন কাউন্সেলরদের সাথে সরাসরি কথা বলতে পারেন।" },
-                { question: "আমি কি কোনো ফ্রি ডেমো ক্লাস করতে পারি?", answer: "হ্যাঁ, আপনি আমাদের +৮৮০১৩৩৮৯৫৮৯৯৭ নম্বরে কল করে অথবা যোগাযোগ ফর্মটি পূরণ করে ফ্রি ডেমো ক্লাসের জন্য নাম নিবন্ধন করতে পারেন। আমাদের কাউন্সেলর আপনার জন্য একটি সেশন বুক করবেন।" }
+                { question: "আমি কি কোনো ফ্রি ডেমো ক্লাস করতে পারি?", answer: "হ্যাঁ, আপনি আমাদের +৮৮০ ১৭০০ ০০০০০০ নম্বরে কল করে অথবা যোগাযোগ ফর্মটি পূরণ করে ফ্রি ডেমো ক্লাসের জন্য নাম নিবন্ধন করতে পারেন। আমাদের কাউন্সেলর আপনার জন্য একটি সেশন বুক করবেন।" }
               ] : [
-                { question: "Where is the CIB campus located?", answer: "CIB is located at House-160, Lake Circus, Kalabagan, Dhanmondi, Dhaka-1205. It is easily accessible from the Kalabagan Bus Stand." },
-                { question: "What are the campus visit hours?", answer: "You can visit the CIB campus from Saturday to Thursday, between 10:00 AM and 6:00 PM, to take a tour of our professional kitchens and speak directly with our admission counselors." },
-                { question: "Can I attend a free demo class?", answer: "Yes, you can register for a free demo class by calling us at +8801338958997 or filling out our contact form. Our counselors will schedule a session for you." }
+                { question: "Where is the Culinary Academy campus located?", answer: "Culinary Academy is located at House-160, Lake Circus, Kalabagan, Dhanmondi, Dhaka-1205. It is easily accessible from the Kalabagan Bus Stand." },
+                { question: "What are the campus visit hours?", answer: "You can visit the Culinary Academy campus from Saturday to Thursday, between 10:00 AM and 6:00 PM, to take a tour of our professional kitchens and speak directly with our admission counselors." },
+                { question: "Can I attend a free demo class?", answer: "Yes, you can register for a free demo class by calling us at +880 1700 000000 or filling out our contact form. Our counselors will schedule a session for you." }
               ]
             } />
           </div>

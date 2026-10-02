@@ -31,11 +31,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const pageData = await getMarketingPage("about", locale);
   const isBn = locale === 'bn';
   const title = pageData?.seo_title || (isBn
-    ? 'সিআইবি সম্পর্কে | ঢাকায় এনএসডিএ কালিনারি ইনস্টিটিউট, মেন্টর, সুবিধা এবং সার্টিফিকেট'
-    : 'About CIB | NSDA Culinary Institute in Dhaka, Mentors, Facilities & Certifications');
+    ? 'কালিনারি একাডেমি সম্পর্কে | ঢাকায় এনএসডিএ কালিনারি ইনস্টিটিউট, মেন্টর, সুবিধা এবং সার্টিফিকেট'
+    : 'About Culinary Academy | NSDA Culinary Institute in Dhaka, Mentors, Facilities & Certifications');
   const description = pageData?.seo_description || (isBn
-    ? 'সিআইবি (CIB)-এর মেন্টর প্যানেল, ক্যাম্পাস, সার্টিফিকেট, কোম্পানির প্রোফাইল এবং শিক্ষার্থীরা কেন আমাদের শেফ ট্রেনিং ও গ্লোবাল ক্যারিয়ারের জন্য বেছে নেয় তা জানুন।'
-    : 'See CIB\'s mentors, campus, certifications, company profile, and why students choose us for chef training and global culinary careers.');
+    ? 'কালিনারি একাডেমি-এর মেন্টর প্যানেল, ক্যাম্পাস, সার্টিফিকেট, কোম্পানির প্রোফাইল এবং শিক্ষার্থীরা কেন আমাদের শেফ ট্রেনিং ও গ্লোবাল ক্যারিয়ারের জন্য বেছে নেয় তা জানুন।'
+    : 'See Culinary Academy\'s mentors, campus, certifications, company profile, and why students choose us for chef training and global culinary careers.');
 
   return {
     title,
@@ -43,21 +43,21 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       title,
       description,
-      url: `https://cibdhk.com/${locale}/about`,
+      url: `https://culinaryacademy.com/${locale}/about`,
       type: 'website',
-      siteName: 'Culinary Institute of Bangladesh',
-      images: [{ url: 'https://cibdhk.com/images/og-default.png', width: 1200, height: 630 }],
+      siteName: 'Culinary Academy',
+      images: [{ url: 'https://culinaryacademy.com/images/og-default.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      images: ['https://cibdhk.com/images/og-default.png'],
+      images: ['https://culinaryacademy.com/images/og-default.png'],
     },
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/about`,
+      canonical: `https://culinaryacademy.com/${locale}/about`,
       languages: {
-        'en': `https://cibdhk.com/en/about`,
-        'bn': `https://cibdhk.com/bn/about`,
-        'x-default': `https://cibdhk.com/en/about`,
+        'en': `https://culinaryacademy.com/en/about`,
+        'bn': `https://culinaryacademy.com/bn/about`,
+        'x-default': `https://culinaryacademy.com/en/about`,
       }
     }
   };
@@ -67,7 +67,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
   // Load about page data from DB / Fallback
   const pageData = await getMarketingPage("about", locale);
   const aboutData = pageData?.content || { 
-    hero: { heading: "About Us", subheading: "Culinary Institute of Bangladesh" },
+    hero: { heading: "About Us", subheading: "Culinary Academy" },
     story: { title: "", content: [] },
     finalCta: { heading: "", subheading: "", buttonText: "", buttonHref: "" }
   };
@@ -115,13 +115,13 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
   if (quickAnswersData.length === 0) {
     quickAnswersData = locale === 'bn' ? [
       {
-        question: "সিআইবি (CIB) কবে প্রতিষ্ঠিত হয়েছে?",
-        answer: "কালিনারি ইনস্টিটিউট অফ বাংলাদেশ (CIB) একটি স্বনামধন্য কালিনারি ট্রেনিং একাডেমি যা বাংলাদেশে আন্তর্জাতিক মানের শেফ তৈরির লক্ষ্যে প্রতিষ্ঠিত হয়েছে।"
+        question: "কালিনারি একাডেমি কবে প্রতিষ্ঠিত হয়েছে?",
+        answer: "কালিনারি একাডেমি একটি স্বনামধন্য কালিনারি ট্রেনিং একাডেমি যা বাংলাদেশে আন্তর্জাতিক মানের শেফ তৈরির লক্ষ্যে প্রতিষ্ঠিত হয়েছে।"
       }
     ] : [
       {
-        question: "What is the Culinary Institute of Bangladesh?",
-        answer: "CIB is a premier culinary training academy dedicated to producing internationally standard professional chefs in Bangladesh."
+        question: "What is the Culinary Academy?",
+        answer: "Culinary Academy is a premier culinary training academy dedicated to producing internationally standard professional chefs in Bangladesh."
       }
     ];
   }
@@ -140,9 +140,9 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       <SchemaInjector 
         schemas={[
           generateWebPageSchema({
-            title: `About CIB | ${aboutData?.hero?.heading || 'Culinary Institute of Bangladesh'}`,
+            title: `About Culinary Academy | ${aboutData?.hero?.heading || 'Culinary Academy'}`,
             description: aboutData?.hero?.subheading || '',
-            url: `https://cibdhk.com/${locale}/about`
+            url: `https://culinaryacademy.com/${locale}/about`
           }),
           generateOrganizationSchema(),
           faqSchema
@@ -196,7 +196,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
               <div className="aspect-[21/9] relative">
                 <Image
                   src="/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp"
-                  alt="Principal Dewan Ismail inspecting students' culinary work at CIB lab"
+                  alt="Principal Dewan Ismail inspecting students' culinary work at Culinary Academy lab"
                   fill
                   loading="lazy"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -207,7 +207,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                     {locale === 'bn' ? 'ব্যবহারিক মেন্টরশিপ' : 'Culinary Mentorship'}
                   </span>
                   <p className="text-white text-lg md:text-xl font-black uppercase tracking-tight">
-                    {locale === 'bn' ? 'প্রিন্সিপাল দেওয়ান ইসমাইল কর্তৃক ব্যবহারিক ক্লাস পরিদর্শন' : 'Principal Dewan Ismail Inspecting Student Practice'}
+                    {locale === 'bn' ? 'প্রিন্সিপাল লিড মেন্টর কর্তৃক ব্যবহারিক ক্লাস পরিদর্শন' : 'Principal Dewan Ismail Inspecting Student Practice'}
                   </p>
                 </div>
               </div>
@@ -220,22 +220,22 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         <section className="py-12 relative bg-obsidian border-t border-white/5">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase">
-              {locale === 'bn' ? 'আমাদের সম্পর্কে জিজ্ঞাসা' : 'About CIB FAQs'}
+              {locale === 'bn' ? 'আমাদের সম্পর্কে জিজ্ঞাসা' : 'About Culinary Academy FAQs'}
             </h2>
           </div>
           <InlineFAQ questions={
             locale === 'bn' ? [
-              { question: "সিআইবি (CIB) কবে প্রতিষ্ঠিত হয়েছে?", answer: "কালিনারি ইনস্টিটিউট অফ বাংলাদেশ (CIB) একটি স্বনামধন্য কালিনারি ট্রেনিং একাডেমি যা বাংলাদেশে আন্তর্জাতিক মানের শেফ তৈরির লক্ষ্যে প্রতিষ্ঠিত হয়েছে।" },
+              { question: "কালিনারি একাডেমি কবে প্রতিষ্ঠিত হয়েছে?", answer: "কালিনারি একাডেমি একটি স্বনামধন্য কালিনারি ট্রেনিং একাডেমি যা বাংলাদেশে আন্তর্জাতিক মানের শেফ তৈরির লক্ষ্যে প্রতিষ্ঠিত হয়েছে।" },
               { question: "আপনাদের মেন্টররা কারা?", answer: "আমাদের মেন্টর প্যানেলে রয়েছেন দেশি-বিদেশি ফাইভ-স্টার হোটেলে কাজ করা অভিজ্ঞ এক্সিকিউটিভ শেফবৃন্দ।" },
-              { question: "CIB-এর ক্যাম্পাস কোথায় অবস্থিত?", answer: "আমাদের মূল ক্যাম্পাস ঢাকার ধানমন্ডি (হাউজ-১৬০, লেক সার্কাস, কলাবাগান) এলাকায় অবস্থিত, যেখানে রয়েছে আধুনিক বাণিজ্যিক রান্নাঘর।" },
-              { question: "সিআইবি কী কী সার্টিফিকেট প্রদান করে?", answer: "সিআইবি জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA) লেভেল ২ ও ৩ সার্টিফিকেট, আইএসও-এইচএসিসিপি (ISO-HACCP) খাদ্য নিরাপত্তা সার্টিফিকেট এবং প্রাতিষ্ঠানিক সার্টিফিকেট প্রদান করে যা বিশ্বব্যাপী সমাদৃত।" },
-              { question: "কোর্স শেষে কি চাকরির কোনো ব্যবস্থা করা হয়?", answer: "হ্যাঁ, সিআইবি শিক্ষার্থীদের ইন্টার্নশিপ এবং দেশের শীর্ষ ৫-তারকা হোটেলসহ আন্তর্জাতিক বাজারে চাকরি পেতে সরাসরি প্লেসমেন্ট সহায়তা প্রদান করে।" }
+              { question: "Culinary Academy-এর ক্যাম্পাস কোথায় অবস্থিত?", answer: "আমাদের মূল ক্যাম্পাস ঢাকার ধানমন্ডি (হাউজ-১৬০, লেক সার্কাস, কলাবাগান) এলাকায় অবস্থিত, যেখানে রয়েছে আধুনিক বাণিজ্যিক রান্নাঘর।" },
+              { question: "কালিনারি একাডেমি কী কী সার্টিফিকেট প্রদান করে?", answer: "কালিনারি একাডেমি জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ (NSDA) লেভেল ২ ও ৩ সার্টিফিকেট, আইএসও-এইচএসিসিপি (ISO-HACCP) খাদ্য নিরাপত্তা সার্টিফিকেট এবং প্রাতিষ্ঠানিক সার্টিফিকেট প্রদান করে যা বিশ্বব্যাপী সমাদৃত।" },
+              { question: "কোর্স শেষে কি চাকরির কোনো ব্যবস্থা করা হয়?", answer: "হ্যাঁ, কালিনারি একাডেমি শিক্ষার্থীদের ইন্টার্নশিপ এবং দেশের শীর্ষ ৫-তারকা হোটেলসহ আন্তর্জাতিক বাজারে চাকরি পেতে সরাসরি প্লেসমেন্ট সহায়তা প্রদান করে।" }
             ] : [
-              { question: "What is the Culinary Institute of Bangladesh?", answer: "CIB is a premier culinary training academy dedicated to producing internationally standard professional chefs in Bangladesh." },
-              { question: "Who are the mentors at CIB?", answer: "Our mentor panel consists of highly experienced Executive Chefs with extensive backgrounds working in 5-star hotels globally." },
-              { question: "Where is the CIB campus located?", answer: "Our main campus is located in Dhanmondi, Dhaka (House-160, Lake Circus, Kalabagan), featuring state-of-the-art commercial kitchens." },
-              { question: "What certifications does CIB offer?", answer: "CIB offers National Skill Development Authority (NSDA) Level 2 & 3 certificates, ISO-HACCP food safety certifications, and institutional certificates which are globally recognized." },
-              { question: "Does CIB offer job placement support?", answer: "Yes, CIB provides conditional placement support, helping students secure internships and jobs in leading 5-star hotels in Bangladesh and international hospitality hubs." }
+              { question: "What is the Culinary Academy?", answer: "Culinary Academy is a premier culinary training academy dedicated to producing internationally standard professional chefs in Bangladesh." },
+              { question: "Who are the mentors at Culinary Academy?", answer: "Our mentor panel consists of highly experienced Executive Chefs with extensive backgrounds working in 5-star hotels globally." },
+              { question: "Where is the Culinary Academy campus located?", answer: "Our main campus is located in Dhanmondi, Dhaka (House-160, Lake Circus, Kalabagan), featuring state-of-the-art commercial kitchens." },
+              { question: "What certifications does Culinary Academy offer?", answer: "Culinary Academy offers National Skill Development Authority (NSDA) Level 2 & 3 certificates, ISO-HACCP food safety certifications, and institutional certificates which are globally recognized." },
+              { question: "Does Culinary Academy offer job placement support?", answer: "Yes, Culinary Academy provides conditional placement support, helping students secure internships and jobs in leading 5-star hotels in Bangladesh and international hospitality hubs." }
             ]
           } />
         </section>
@@ -257,7 +257,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
               <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto">
                 {locale === 'bn' 
                   ? 'আমাদের সাথে যুক্ত হওয়ার জন্য নিচের যেকোনো একটি ধাপ বেছে নিন।' 
-                  : 'Take the next step towards your global culinary career with CIB.'}
+                  : 'Take the next step towards your global culinary career with Culinary Academy.'}
               </p>
             </div>
 
@@ -271,7 +271,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                     <User className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-black text-white uppercase mb-4 group-hover:text-prestige-gold transition-colors">
-                    {locale === 'bn' ? 'দেওয়ান ইসমাইল' : 'Meet Dewan Ismail'}
+                    {locale === 'bn' ? 'লিড মেন্টর' : 'Meet Dewan Ismail'}
                   </h3>
                   <p className="text-sm md:text-base text-white/60 mb-10 leading-relaxed">
                     {locale === 'bn' 
@@ -294,7 +294,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                     <Tv className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-black text-white uppercase mb-4 group-hover:text-prestige-gold transition-colors">
-                    {locale === 'bn' ? 'মিডিয়ায় সিআইবি' : 'CIB in the News'}
+                    {locale === 'bn' ? 'মিডিয়ায় কালিনারি একাডেমি' : 'Culinary Academy in the News'}
                   </h3>
                   <p className="text-sm md:text-base text-white/60 mb-10 leading-relaxed">
                     {locale === 'bn' 
@@ -345,8 +345,8 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
           </span>
           <p className="text-xl md:text-2xl text-white font-medium leading-relaxed tracking-tight">
             {locale === 'bn'
-              ? 'সিআইবি (কালিনারি ইনস্টিটিউট অফ বাংলাদেশ) ঢাকার ধানমন্ডিতে অবস্থিত একটি সর্বাধুনিক ও পেশাদার রন্ধনশিল্প শিক্ষালয়। আমরা প্রধানমন্ত্রীর কার্যালয়ের এনএসডিএ (NSDA) এবং বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB) অনুমোদিত। ৫-স্টার শেফ মেন্টর প্যানেল এবং আন্তর্জাতিক মানের ল্যাব সুবিধার মাধ্যমে আমরা বিশ্বমানের রন্ধন শিক্ষা, আইএসও-এইচএসিসিপি সার্টিফিকেশন এবং নির্ভরযোগ্য ক্যারিয়ার সমাধান প্রদান করি।'
-              : 'The Culinary Institute of Bangladesh (CIB) is a premier professional culinary academy in Dhanmondi, Dhaka. Fully accredited by the NSDA (Prime Minister\'s Office) and BTEB, CIB delivers world-class vocational training. Led by 5-star executive chef mentors, our institute features modern kitchen labs, ISO-HACCP standards, and certified pathways to global culinary careers.'
+              ? 'কালিনারি একাডেমি (কালিনারি একাডেমি) ঢাকার ধানমন্ডিতে অবস্থিত একটি সর্বাধুনিক ও পেশাদার রন্ধনশিল্প শিক্ষালয়। আমরা প্রধানমন্ত্রীর কার্যালয়ের এনএসডিএ (NSDA) এবং বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB) অনুমোদিত। ৫-স্টার শেফ মেন্টর প্যানেল এবং আন্তর্জাতিক মানের ল্যাব সুবিধার মাধ্যমে আমরা বিশ্বমানের রন্ধন শিক্ষা, আইএসও-এইচএসিসিপি সার্টিফিকেশন এবং নির্ভরযোগ্য ক্যারিয়ার সমাধান প্রদান করি।'
+              : 'Culinary Academy is a premier professional culinary academy in Dhanmondi, Dhaka. Fully accredited by the NSDA (Prime Minister\'s Office) and BTEB, Culinary Academy delivers world-class vocational training. Led by 5-star executive chef mentors, our institute features modern kitchen labs, ISO-HACCP standards, and certified pathways to global culinary careers.'
             }
           </p>
         </div>
@@ -357,7 +357,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         <div className="max-w-4xl mx-auto px-6">
           <div className="glass-card p-6 md:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
             <h3 className="text-prestige-gold font-bold text-xs uppercase tracking-widest mb-6 text-center">
-              {locale === 'bn' ? 'সিআইবি পরিচিতি ও মূল তথ্য তালিকা' : 'CIB Profile Key Facts'}
+              {locale === 'bn' ? 'কালিনারি একাডেমি পরিচিতি ও মূল তথ্য তালিকা' : 'Culinary Academy Profile Key Facts'}
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-sm">
@@ -371,7 +371,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 <tbody className="divide-y divide-white/5 text-white/80 font-medium">
                   <tr>
                     <td className="py-3 px-4 font-bold text-white">{locale === 'bn' ? 'প্রতিষ্ঠান' : 'Institution'}</td>
-                    <td className="py-3 px-4">Culinary Institute of Bangladesh (CIB)</td>
+                    <td className="py-3 px-4">Culinary Academy</td>
                     <td className="py-3 px-4 text-green-400 font-bold">{locale === 'bn' ? 'নিবন্ধিত ও অনুমোদিত' : 'Registered & Accredited'}</td>
                   </tr>
                   <tr>
@@ -396,7 +396,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                   </tr>
                   <tr>
                     <td className="py-3 px-4 font-bold text-white">{locale === 'bn' ? 'যোগাযোগ নম্বর' : 'Helpline'}</td>
-                    <td className="py-3 px-4">+8801338958997</td>
+                    <td className="py-3 px-4">+880 1700 000000</td>
                     <td className="py-3 px-4 text-green-400 font-bold">{locale === 'bn' ? 'সরাসরি হোয়াটসঅ্যাপ উপলব্ধ' : 'WhatsApp Support Open'}</td>
                   </tr>
                 </tbody>
@@ -412,7 +412,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         <div className="max-w-7xl mx-auto px-4">
           <AuthorBox 
             name="Dewan Ismail"
-            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, সিআইবি' : 'Principal & Founder, CIB'}
+            title={locale === 'bn' ? 'প্রিন্সিপাল ও প্রতিষ্ঠাতা, কালিনারি একাডেমি' : 'Principal & Founder, Culinary Academy'}
             photo="/images/dewan-ismail-portrait.jpg"
             profileUrl="/expert-culinary-mentors/dewan-ismail"
             lastReviewed={locale === 'bn' ? 'জুন ২০২৬' : 'June 2026'}

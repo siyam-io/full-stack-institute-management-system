@@ -5,7 +5,7 @@ import crypto from 'crypto';
 export const dynamic = 'force-dynamic';
 
 /**
- * CIB Unified Tracking API (Server-Side)
+ * Culinary Academy Unified Tracking API (Server-Side)
  * Forwards events to Meta CAPI, TikTok, and Pinterest.
  */
 

@@ -25,7 +25,7 @@ import ErrorBoundary from '@/components/global/ErrorBoundary';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://cibdhk.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://culinaryacademy.com'),
   alternates: {
     languages: {
       'en': '/en',
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: 'Culinary Institute of Bangladesh',
+    siteName: 'Culinary Academy',
     images: [
       {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Culinary Institute of Bangladesh - Premium Culinary Education',
+        alt: 'Culinary Academy - Premium Culinary Education',
       },
     ],
   },
@@ -89,7 +89,7 @@ export default async function LocaleLayout({
   let navigationData: any = { 
     home: "Home",
     about: "About",
-    ourStory: "About CIB",
+    ourStory: "About Academy",
     meetMentors: "Mentors",
     courses: "Courses",
     proChefCourse: "Pro Chef",
@@ -104,12 +104,12 @@ export default async function LocaleLayout({
   };
 
   let footerData: any = { 
-    description: "Culinary Institute of Bangladesh (CIB) is the premier vocational training powerhouse for professional chefs and culinary entrepreneurs in Bangladesh.",
+    description: "Culinary Academy is the premier training powerhouse for professional chefs and culinary entrepreneurs in Bangladesh.",
     columns: [
       { 
         title: "Navigation", 
         links: [
-          { "label": "About CIB", "href": "/about" },
+          { "label": "About Academy", "href": "/about" },
           { "label": "View Courses", "href": "/courses" },
           { "label": "FAQ", "href": "/faq" },
           { "label": "Culinary Blog", "href": "/blog" }
@@ -127,7 +127,7 @@ export default async function LocaleLayout({
       { 
         title: "Institutional", 
         links: [
-          { "label": "Certificate Verification", "href": "https://verification.cibdhk.com" },
+          { "label": "Certificate Verification", "href": process.env.NEXT_PUBLIC_VERIFICATION_URL || "#" },
           { "label": "Frequently Asked Questions", "href": "/faq" },
           { "label": "Privacy Policy", "href": "/privacy-policy" },
           { "label": "Terms & Conditions", "href": "/term-conditions" }
@@ -136,13 +136,10 @@ export default async function LocaleLayout({
       { 
         title: "Contact", 
         address: "House-160, Lake Circus, Kalabagan, Dhanmondi, Dhaka 1205", 
-        phone: "+880 1338 958997", 
-        email: "info@cibdhk.com", 
+        phone: "+880 1700 000000", 
+        email: "info@culinaryacademy.com", 
         socials: {
-          facebook: "https://www.facebook.com/cibdhaka",
-          youtube: "https://www.youtube.com/@cibdhaka",
-          instagram: "https://www.instagram.com/cib.dhk/",
-          whatsapp: "https://wa.me/8801338958997"
+          whatsapp: "https://wa.me/8801700000000"
         } 
       },
       { 
@@ -152,7 +149,7 @@ export default async function LocaleLayout({
         disclaimer: "Join 5,000+ professional chefs." 
       }
     ],
-    copyright: "© {year} Culinary Institute of Bangladesh.",
+    copyright: "© {year} Culinary Academy.",
     legal: []
   };
 

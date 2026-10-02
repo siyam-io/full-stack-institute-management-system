@@ -11,7 +11,7 @@ interface AuthorBoxProps {
   locale: string;
 }
 
-export default function AuthorBox({ name, title, photo = '/images/logo_cib.png', profileUrl = '', lastReviewed, locale }: AuthorBoxProps) {
+export default function AuthorBox({ name, title, photo = '/images/logo.svg', profileUrl = '', lastReviewed, locale }: AuthorBoxProps) {
   const isBn = locale === 'bn';
   const resolvedUrl = profileUrl && profileUrl.startsWith('/') ? `/${locale}${profileUrl}` : profileUrl;
 

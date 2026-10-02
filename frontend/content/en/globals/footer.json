@@ -1,10 +1,10 @@
 {
-  "description": "Culinary Institute of Bangladesh (CIB) is the premier vocational training powerhouse for professional chefs and culinary entrepreneurs in Bangladesh. Accredited by NSDA and BTEB.",
+  "description": "Culinary Academy is the premier training powerhouse for professional chefs and culinary entrepreneurs in Bangladesh. Accredited by NSDA and BTEB.",
   "columns": [
     {
       "title": "Navigation",
       "links": [
-        { "label": "About CIB", "href": "/about" },
+        { "label": "About Academy", "href": "/about" },
         { "label": "View Courses", "href": "/courses" },
         { "label": "FAQ", "href": "/faq" },
         { "label": "Culinary Blog", "href": "/blog" },
@@ -15,7 +15,7 @@
       "title": "Quick Links",
       "links": [
         { "label": "Courses & Programs", "href": "/courses" },
-        { "label": "About CIB", "href": "/about" },
+        { "label": "About Academy", "href": "/about" },
         { "label": "Frequently Asked Questions", "href": "/faq" },
         { "label": "Contact & Location", "href": "/contact" }
       ]
@@ -23,7 +23,7 @@
     {
       "title": "Institutional",
       "links": [
-        { "label": "Certificate Verification", "href": "https://verification.cibdhk.com" },
+        { "label": "Certificate Verification", "href": "#" },
         { "label": "Common Questions (FAQ)", "href": "/faq" },
         { "label": "Privacy Policy", "href": "/privacy-policy" },
         { "label": "Terms & Conditions", "href": "/term-conditions" }
@@ -32,14 +32,10 @@
     {
       "title": "Contact Info",
       "address": "House-160, Lake Circus, Kalabagan, Dhanmondi, Dhaka 1205, Bangladesh",
-      "phone": "+880 1338 958997",
-      "email": "info@cibdhk.com",
+      "phone": "+880 1700 000000",
+      "email": "info@culinaryacademy.com",
       "socials": {
-        "facebook": "https://www.facebook.com/cibdhaka",
-        "youtube": "https://www.youtube.com/channel/UCehkM8tt4M68UBbVqJHC_HQ",
-        "instagram": "https://www.instagram.com/cib.dhk/",
-        "tiktok": "https://www.tiktok.com/@cibdhaka",
-        "whatsapp": "https://wa.me/8801338958997"
+        "whatsapp": "https://wa.me/8801700000000"
       }
     },
     {
@@ -49,7 +45,7 @@
       "disclaimer": "Join our network of 5,000+ professional chefs."
     }
   ],
-  "copyright": "© {year} Culinary Institute of Bangladesh.",
+  "copyright": "© {year} Culinary Academy.",
   "legal": [
     { "label": "Privacy Policy", "href": "/privacy-policy" },
     { "label": "Terms of Service", "href": "/term-conditions" }

@@ -1,24 +1,21 @@
 /**
- * CIB Global SEO & Structured Data Library
+ * Global SEO & Structured Data Library
  * 
  * Functions to generate valid JSON-LD for various entity types.
- * Aligned with 2026 schema standards for high-authority indexing.
+ * Aligned with schema standards for high-authority indexing.
  */
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://culinaryacademy.com";
+const BRAND_NAME = "Culinary Academy";
 
 export const generateOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "name": "The Culinary Institute of Bangladesh (CIB)",
-  "url": "https://cibdhk.com",
-  "logo": "https://cibdhk.com/images/logo_cib.png",
+  "name": BRAND_NAME,
+  "url": SITE_URL,
+  "logo": `${SITE_URL}/images/logo.svg`,
   "sameAs": [
-    "https://www.facebook.com/cibdhaka",
-    "https://www.youtube.com/@cibdhaka",
-    "https://www.instagram.com/cib.dhk/",
-    "https://www.tiktok.com/@cibdhaka",
-    "https://www.linkedin.com/company/cib-the-culinary-institute-of-bangladesh/",
-    "https://wa.me/8801338958997",
-    "https://maps.app.goo.gl/x7ovxN7EbqVaa2Sh8"
+    "https://wa.me/8801700000000"
   ],
   "knowsAbout": [
     "Professional Chef Course",
@@ -31,14 +28,14 @@ export const generateOrganizationSchema = () => ({
   ],
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+8801338958997",
+    "telephone": "+8801700000000",
     "contactType": "customer service",
     "areaServed": ["Dhaka", "Bangladesh", "BD"],
     "availableLanguage": ["English", "Bengali"]
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "House-160, 1st Floor (Beside Longlife Hospital), Lake Circus, Kalabagan",
+    "streetAddress": "House-160, Lake Circus, Kalabagan",
     "addressLocality": "Dhanmondi, Dhaka",
     "postalCode": "1205",
     "addressCountry": "BD"
@@ -59,16 +56,16 @@ export const generateOrganizationSchema = () => ({
 export const generateLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "The Culinary Institute of Bangladesh (CIB)",
-  "url": "https://cibdhk.com",
-  "logo": "https://cibdhk.com/images/logo_cib.png",
-  "image": "https://cibdhk.com/images/practical_class_1-1920w.webp",
-  "telephone": "+8801338958997",
-  "email": "contact@cibdhk.com",
+  "name": BRAND_NAME,
+  "url": SITE_URL,
+  "logo": `${SITE_URL}/images/logo.svg`,
+  "image": `${SITE_URL}/images/practical_class_1-1920w.webp`,
+  "telephone": "+8801700000000",
+  "email": "contact@culinaryacademy.com",
   "priceRange": "BDT 3999 - BDT 110000",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "House-160, 1st Floor (Beside Longlife Hospital), Lake Circus, Kalabagan",
+    "streetAddress": "House-160, Lake Circus, Kalabagan",
     "addressLocality": "Dhanmondi, Dhaka",
     "postalCode": "1205",
     "addressCountry": "BD"
@@ -93,15 +90,8 @@ export const generateLocalBusinessSchema = () => ({
       "closes": "19:00"
     }
   ],
-  "hasMap": "https://maps.app.goo.gl/QEkrd2fTHYhqC1tP9",
   "sameAs": [
-    "https://www.facebook.com/cibdhaka",
-    "https://www.youtube.com/@cibdhaka",
-    "https://www.instagram.com/cib.dhk/",
-    "https://www.tiktok.com/@cibdhaka",
-    "https://www.linkedin.com/company/cib-the-culinary-institute-of-bangladesh/",
-    "https://wa.me/8801338958997",
-    "https://maps.app.goo.gl/x7ovxN7EbqVaa2Sh8"
+    "https://wa.me/8801700000000"
   ],
   "areaServed": [
     {
@@ -154,7 +144,7 @@ export const generateCourseSchema = (course: {
     },
     {
       "@type": "EducationalOccupationalCredential",
-      "name": "CIB Institutional Certificate",
+      "name": "Academy Institutional Certificate",
       "credentialCategory": "Certificate"
     }
   ],
@@ -169,8 +159,8 @@ export const generateCourseSchema = (course: {
   ],
   "provider": {
     "@type": "EducationalOrganization",
-    "name": course.provider,
-    "sameAs": "https://cibdhk.com"
+    "name": course.provider || BRAND_NAME,
+    "sameAs": SITE_URL
   },
   "hasCourseInstance": {
     "@type": "CourseInstance",
@@ -178,7 +168,7 @@ export const generateCourseSchema = (course: {
     ...(course.startDate ? { "startDate": course.startDate } : {}),
     "location": {
       "@type": "Place",
-      "name": "CIB Main Campus",
+      "name": `${BRAND_NAME} Campus`,
       "address": course.location
     }
   }
@@ -196,7 +186,7 @@ export const generateProductSchema = (course: {
   "@type": "Product",
   "name": course.name,
   "description": course.description,
-  "image": "https://cibdhk.com/images/logo_cib.png",
+  "image": `${SITE_URL}/images/logo.svg`,
   "offers": {
     "@type": "Offer",
     "price": course.price,
@@ -205,7 +195,7 @@ export const generateProductSchema = (course: {
     ...(course.priceValidUntil ? { "priceValidUntil": course.priceValidUntil } : {}),
     "eligibleCustomerType": "Student"
   },
-  "brand": { "@type": "Brand", "name": "CIB" },
+  "brand": { "@type": "Brand", "name": BRAND_NAME },
   ...(course.ratingValue && course.reviewCount ? {
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -225,10 +215,10 @@ export const generateEducationEventSchema = (event: { name: string, startDate: s
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
-    "name": "CIB Dhanmondi Campus",
+    "name": `${BRAND_NAME} Campus`,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "House-160, 1st Floor, Lake Circus, Kalabagan",
+      "streetAddress": "House-160, Lake Circus, Kalabagan",
       "addressLocality": "Dhanmondi, Dhaka",
       "postalCode": "1205",
       "addressCountry": "BD"
@@ -272,16 +262,8 @@ export const generateArticleSchema = (article: {
   locale?: string
 }) => {
   const locale = article.locale || 'en';
-  const authorUrl = `https://cibdhk.com/${locale}/expert-culinary-mentors`;
-  let authorImage = "https://cibdhk.com/images/default-author.jpg";
-
-  if (article.author === "Hasan Rizvee") {
-    authorImage = "https://cibdhk.com/images/hasan-rizvee-portrait.jpg";
-  } else if (article.author === "Dewan Ismail") {
-    authorImage = "https://cibdhk.com/images/dewan-ismail-portrait.jpg";
-  } else if (article.author === "Salman Iqbal") {
-    authorImage = "https://cibdhk.com/images/salman-iqbal-portrait.jpg";
-  }
+  const authorUrl = `${SITE_URL}/${locale}/about`;
+  const authorImage = `${SITE_URL}/images/practical_class_1-768w.webp`;
 
   return {
     "@context": "https://schema.org",
@@ -296,16 +278,15 @@ export const generateArticleSchema = (article: {
       "url": authorUrl,
       "image": authorImage,
       "sameAs": [
-        "https://cibdhk.com",
-        "https://www.linkedin.com/company/cibdhaka"
+        SITE_URL
       ]
     },
     "publisher": {
       "@type": "Organization",
-      "name": "CIB",
+      "name": BRAND_NAME,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://cibdhk.com/images/logo_cib.png"
+        "url": `${SITE_URL}/images/logo.svg`
       }
     }
   };
@@ -325,7 +306,7 @@ export const generateHowToSchema = (howto: {
     "position": index + 1,
     "name": step.name,
     "text": step.text,
-    "url": `https://cibdhk.com#step${index + 1}`
+    "url": `${SITE_URL}#step${index + 1}`
   }))
 });
 
@@ -404,4 +385,3 @@ export const generateVideoObjectSchema = (video: {
   "uploadDate": video.uploadDate,
   "embedUrl": video.embedUrl
 });
-

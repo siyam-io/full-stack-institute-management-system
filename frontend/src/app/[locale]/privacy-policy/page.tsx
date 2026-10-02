@@ -24,14 +24,14 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   }
 
   return {
-    title: `${data.title} | CIB`,
-    description: `Read the official ${data.title} of The Culinary Institute of Bangladesh.`,
+    title: `${data.title} | Culinary Academy`,
+    description: `Read the official ${data.title} of Culinary Academy.`,
     alternates: {
-      canonical: `https://cibdhk.com/${locale}/privacy-policy`,
+      canonical: `https://culinaryacademy.com/${locale}/privacy-policy`,
       languages: {
-        'en': 'https://cibdhk.com/en/privacy-policy',
-        'bn': 'https://cibdhk.com/bn/privacy-policy',
-        'x-default': 'https://cibdhk.com/en/privacy-policy',
+        'en': 'https://culinaryacademy.com/en/privacy-policy',
+        'bn': 'https://culinaryacademy.com/bn/privacy-policy',
+        'x-default': 'https://culinaryacademy.com/en/privacy-policy',
       }
     }
   };

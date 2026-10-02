@@ -114,7 +114,7 @@ interface CommercialLandingPageProps {
 
 const CommercialLandingPage = ({ data, locale }: CommercialLandingPageProps) => {
   const isBn = locale === 'bn';
-  const url = `https://cibdhk.com/${locale}/${data.slug}`;
+  const url = `https://culinaryacademy.com/${locale}/${data.slug}`;
 
   const meta = data.meta || {
     title: data.hero?.heading || "",
@@ -133,7 +133,7 @@ const CommercialLandingPage = ({ data, locale }: CommercialLandingPageProps) => 
   const courseSchema = generateCourseSchema({
     name: data.hero?.heading || "",
     description: meta.description,
-    provider: "The Culinary Institute of Bangladesh (CIB)",
+    provider: "Culinary Academy",
     location: "House-160, Lake Circus, Kalabagan, Dhanmondi, Dhaka"
   });
 
@@ -176,7 +176,7 @@ const CommercialLandingPage = ({ data, locale }: CommercialLandingPageProps) => 
               {data.cta?.buttonText || "Apply Now"}
             </Link>
             <a
-              href="https://wa.me/8801338958997"
+              href="https://wa.me/8801700000000"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-4 text-center font-bold tracking-widest text-xs uppercase border border-white/10 hover:border-prestige-gold/50 bg-white/5 hover:bg-white/10 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
@@ -426,7 +426,7 @@ const CommercialLandingPage = ({ data, locale }: CommercialLandingPageProps) => 
                   {isBn ? 'ইনস্টিটিউশনাল ফ্যাক্টস' : 'INSTITUTIONAL STRENGTH'}
                 </span>
                 <h3 className="text-xl font-bold text-white uppercase tracking-tight mb-6">
-                  {isBn ? 'সিআইবি কেন সেরা?' : 'Why Choose CIB?'}
+                  {isBn ? 'কালিনারি একাডেমি কেন সেরা?' : 'Why Choose Culinary Academy?'}
                 </h3>
                 
                 <ul className="space-y-4">
@@ -480,14 +480,14 @@ const CommercialLandingPage = ({ data, locale }: CommercialLandingPageProps) => 
                 </p>
                 <div className="space-y-4">
                   <a 
-                    href="tel:+8801338958997"
+                    href="tel:+880 1700 000000"
                     className="flex items-center gap-3 text-sm text-white hover:text-prestige-gold font-bold transition-colors"
                   >
                     <Phone className="w-4 h-4 text-power-red" />
-                    <span>+880 1338 958997</span>
+                    <span>+880 1700 000000</span>
                   </a>
                   <a 
-                    href="https://wa.me/8801338958997"
+                    href="https://wa.me/8801700000000"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-sm text-white hover:text-whatsapp font-bold transition-colors"

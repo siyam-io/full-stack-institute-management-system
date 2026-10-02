@@ -74,7 +74,7 @@ const Hero = ({ data }: HeroProps) => {
                     <source media="(max-width: 1280px)" srcSet={slide.image.replace('-1920w.webp', '-1280w.webp')} />
                     <img
                       src={slide.image}
-                      alt={slide.headline || 'CIB Hero'}
+                      alt={slide.headline || 'Culinary Academy Hero'}
                       loading={index === 0 ? "eager" : "lazy"}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -82,7 +82,7 @@ const Hero = ({ data }: HeroProps) => {
                 ) : (
                   <img
                     src={slide.image || '/images/practical_class_1-1920w.webp'}
-                    alt={slide.headline || 'CIB Hero'}
+                    alt={slide.headline || 'Culinary Academy Hero'}
                     loading={index === 0 ? "eager" : "lazy"}
                     className="absolute inset-0 w-full h-full object-cover"
                   />

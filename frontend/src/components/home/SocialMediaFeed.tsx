@@ -45,7 +45,7 @@ interface SocialPlatform {
 const platforms: SocialPlatform[] = [
   {
     name: "Facebook",
-    url: "https://www.facebook.com/cibdhaka",
+    url: "#",
     icon: FacebookIcon
   },
   {
@@ -55,22 +55,22 @@ const platforms: SocialPlatform[] = [
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/cib.dhk/",
+    url: "https://www.instagram.com/academy.dhk/",
     icon: InstagramIcon
   },
   {
     name: "TikTok",
-    url: "https://www.tiktok.com/@cibdhaka",
+    url: "#",
     icon: TiktokIcon
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/8801338958997",
+    url: "https://wa.me/8801700000000",
     icon: WhatsappIcon
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/company/cib-the-culinary-institute-of-bangladesh/",
+    url: "https://www.linkedin.com/company/academy-the-culinary-institute-of-bangladesh/",
     icon: LinkedInIcon
   }
 ];

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://cibdhk.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://culinaryacademy.com';
 
 const activeRoutes = [
   { path: '', priority: 1.0, changefreq: 'daily' as const },

@@ -17,7 +17,7 @@ const MentorsHero = ({ data }: MentorsHeroProps) => {
       <div className="absolute inset-0 z-0">
         <Image
           src={data.image}
-          alt="CIB Mentors Backdrop"
+          alt="Culinary Academy Mentors Backdrop"
           fill
           priority
           className="object-cover opacity-10 grayscale"

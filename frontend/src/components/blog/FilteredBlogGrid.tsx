@@ -23,7 +23,7 @@ const CATEGORIES_MAP: Record<string, { en: string; bn: string }> = {
   career: { en: 'Chef Career Path', bn: 'শেফ ক্যারিয়ার' },
   business: { en: 'Food Business', bn: 'ফুড বিজনেস' },
   skills: { en: 'Culinary Skills', bn: 'কালিনারি স্কিলস' },
-  life: { en: 'CIB Life', bn: 'সিআইবি লাইফ' },
+  life: { en: 'Culinary Academy Life', bn: 'কালিনারি একাডেমি লাইফ' },
   ai: { en: 'AI/Ask Engine Focus', bn: 'এআই সার্চ ফোকাস' }
 };
 
@@ -48,7 +48,7 @@ export default function FilteredBlogGrid({ posts, locale }: FilteredBlogGridProp
         case 'skills':
           return category === 'Culinary Skills';
         case 'life':
-          return category === 'CIB Life';
+          return category === 'Culinary Academy Life';
         case 'ai':
           return category === 'AI/Ask Engine Focus';
         default:

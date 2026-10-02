@@ -1,10 +1,10 @@
 {
-  "description": "কালিনারি ইনস্টিটিউট অফ বাংলাদেশ (সিআইবি) বাংলাদেশে পেশাদার শেফ এবং কালিনারি উদ্যোক্তাদের জন্য শীর্ষস্থানীয় ভোকেশনাল ট্রেনিং পাওয়ারহাউজ। এনএসডিএ এবং বিটিইবি দ্বারা অনুমোদিত।",
+  "description": "কালিনারি একাডেমি বাংলাদেশে পেশাদার শেফ এবং কালিনারি উদ্যোক্তাদের জন্য শীর্ষস্থানীয় ট্রেনিং পাওয়ারহাউজ।",
   "columns": [
     {
       "title": "নেভিগেশন",
       "links": [
-        { "label": "সিআইবি সম্পর্কে", "href": "/about" },
+        { "label": "আমাদের সম্পর্কে", "href": "/about" },
         { "label": "কোর্সসমূহ দেখুন", "href": "/courses" },
         { "label": "সাধারণ জিজ্ঞাসা (FAQ)", "href": "/faq" },
         { "label": "কালিনারি ব্লগ", "href": "/blog" },
@@ -15,7 +15,7 @@
       "title": "কুইক লিঙ্কস",
       "links": [
         { "label": "সকল কোর্স ও ট্রেনিং", "href": "/courses" },
-        { "label": "সিআইবি পরিচিতি", "href": "/about" },
+        { "label": "একাডেমি পরিচিতি", "href": "/about" },
         { "label": "সাধারণ জিজ্ঞাসা (FAQ)", "href": "/faq" },
         { "label": "যোগাযোগ ও ঠিকানা", "href": "/contact" }
       ]
@@ -23,7 +23,7 @@
     {
       "title": "প্রাতিষ্ঠানিক",
       "links": [
-        { "label": "সার্টিফিকেট ভেরিফিকেশন", "href": "https://verification.cibdhk.com" },
+        { "label": "সার্টিফিকেট ভেরিফিকেশন", "href": "#" },
         { "label": "সাধারণ জিজ্ঞাসা (FAQ)", "href": "/faq" },
         { "label": "প্রাইভেসি পলিসি", "href": "/privacy-policy" },
         { "label": "টার্মস ও কন্ডিশনস", "href": "/term-conditions" }
@@ -32,14 +32,10 @@
     {
       "title": "যোগাযোগ",
       "address": "হাউস-১৬০, লেক সার্কাস, কলাবাগান, ধানমন্ডি, ঢাকা ১২০৫, বাংলাদেশ",
-      "phone": "+৮৮০ ১৩৩৮ ৯৫৮৯৯৭",
-      "email": "info@cibdhk.com",
+      "phone": "+৮৮০ ১৭০০ ০০০০০০",
+      "email": "info@culinaryacademy.com",
       "socials": {
-        "facebook": "https://www.facebook.com/cibdhaka",
-        "youtube": "https://www.youtube.com/channel/UCehkM8tt4M68UBbVqJHC_HQ",
-        "instagram": "https://www.instagram.com/cib.dhk/",
-        "tiktok": "https://www.tiktok.com/@cibdhaka",
-        "whatsapp": "https://wa.me/8801338958997"
+        "whatsapp": "https://wa.me/8801700000000"
       }
     },
     {
@@ -49,7 +45,7 @@
       "disclaimer": "আমাদের ৫০০০+ পেশাদার শেফদের নেটওয়ার্কে যোগ দিন।"
     }
   ],
-  "copyright": "© {year} কালিনারি ইনস্টিটিউট অফ বাংলাদেশ।",
+  "copyright": "© {year} কালিনারি একাডেমি।",
   "legal": [
     { "label": "প্রাইভেসি পলিসি", "href": "/privacy-policy" },
     { "label": "টার্মস অফ সার্ভিস", "href": "/term-conditions" }

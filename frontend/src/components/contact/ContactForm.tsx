@@ -181,7 +181,7 @@ const ContactForm = ({ data }: ContactFormProps) => {
 
         {status === 'error' && (
           <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 text-center font-black text-[10px] tracking-widest uppercase">
-            Something went wrong. Please call +8801338958997 instead.
+            Something went wrong. Please call +880 1700 000000 instead.
           </div>
         )}
 

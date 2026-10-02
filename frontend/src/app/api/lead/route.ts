@@ -94,7 +94,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: 'Success' }, { status: 200 });
     }
 
-    // 2. Cloudflare Turnstile verification (skip in dev — sitekey is domain-locked to cibdhk.com)
+    // 2. Cloudflare Turnstile verification (skip in dev — sitekey is domain-locked to culinaryacademy.com)
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
     if (!isDev && turnstileSecret && turnstileToken) {
       const turnstileResult = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -139,7 +139,7 @@ export async function POST(req: Request) {
           Email: email,
           Course: course || 'N/A',
           Message: message || '',
-          Source: 'CIB Main Website'
+          Source: 'Culinary Academy Main Website'
         });
       }
     } catch (sheetErr: any) {
