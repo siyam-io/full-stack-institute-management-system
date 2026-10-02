@@ -1,14 +1,24 @@
+/**
+ * Clean API Response Envelope
+ *
+ * Standard response:
+ *   { success: true, message: "Success", data: {}, meta: { pagination: {...} } }
+ *
+ * Standard error:
+ *   { success: false, message: "Error message", code: "ERROR_CODE" }
+ */
 class ApiResponse {
-  constructor(statusCode, data, message = "Success", pagination = null) {
-    this.statusCode = statusCode;
-    this.success = statusCode < 400; // 400 এর নিচে হলে true, নাহলে false
+  constructor(statusCode, message, data = null, meta = null) {
+    this.success = statusCode < 400;
     this.message = message;
     this.data = data;
-    
-    // যদি পেজিনেশন থাকে, তাহলেই শুধু এটা রেসপন্সে অ্যাড হবে
-    if (pagination) {
-      this.pagination = pagination;
+    if (meta) {
+      this.meta = meta;
     }
+  }
+
+  static paginated(message, data, pagination) {
+    return new ApiResponse(200, message, data, { pagination });
   }
 }
 

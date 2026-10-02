@@ -1,0 +1,172 @@
+{
+  "hero": {
+    "heading": "The Blueprint for Your Professional Culinary Career",
+    "subheading": "CIB is a vocational powerhouse. We replace amateur habits with discipline, speed, and precision.",
+    "image": "/images/theoretical-class.jpg"
+  },
+  "story": {
+    "heading": "Our Story",
+    "content": "Founded to bridge the gap between traditional education and global culinary demand, CIB was established by industry veterans. We are an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We don't just teach recipes; we teach the professional speed, hygiene, and workflow required in 5-star kitchens across the globe.",
+    "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
+    "image2": "/images/student_practice_session_1-1920w.webp"
+  },
+  "philosophy": {
+    "heading": "Our Philosophy",
+    "content": "At CIB, we believe that 'Degrees hang on walls, but skills put money in your pocket.' Our training focuses on three keys to success: Technical Mastery, Professional Discipline, and Creative Plating. We treat every student as a future Executive Chef."
+  },
+  "advantage": {
+    "heading": "The CIB Advantage",
+    "points": [
+      { "title": "National Accreditation", "desc": "NSDA (National Skill Development Authority, Prime Minister's Office) approved STP providing Food and Beverage Production (Level-2 & 3) training." },
+      { "title": "100% Practical Classes", "desc": "No long lectures. Every session is held in a professional training kitchen with real professional equipment. 100% practical classes." },
+      { "title": "Global Menu Mastery", "desc": "Master 120+ authentic recipes from 16+ countries, from Fine Dining Plating to Vegetable & Fruit Carving." },
+      { "title": "High ROI Training", "desc": "Professional training designed for immediate entry into high-salary hospitality careers. Earn your tuition back in less than 25 days." }
+    ]
+  },
+  "facility": {
+    "heading": "Our Professional Training Kitchens",
+    "content": "Our campus features a professional training kitchen equipped with professional ovens, high-pressure burners, specialized pastry equipment, and professional workstations that mirror a real hotel kitchen.",
+    "points": [
+      "Individual Workstations for each student",
+      "Full ISO-HACCP compliant hygiene standards",
+      "Specialized Pastry, Bakery, and Beverage sections",
+      "Professional safety equipment and fire suppression"
+    ]
+  },
+  "accreditation": {
+    "heading": "Industry Accreditation & Global Recognition",
+    "content": "CIB is an NSDA (National Skill Development Authority, Prime Minister's Office) approved Skill Training Provider (STP) providing Food and Beverage Production (Level-2 & 3) training. We provide certification upon Assessment. Our curriculum also includes ISO-HACCP, HYGIENE & GMP training.",
+    "logos": [
+      "/images/nsda-logo.png",
+      "/images/iso-logo.png",
+      "/images/egac-logo.png",
+      "/images/iaf-logo.png"
+    ]
+  },
+  "globalStandards": {
+    "heading": "Our Commitment to Global Excellence",
+    "cards": [
+      { "icon": "Target", "title": "Precision Training", "desc": "Every module is designed to meet the exact requirements of the global hospitality industry." },
+      { "icon": "Users", "title": "Elite Alumni", "desc": "Join a network of professional chefs working in top-tier hotels across the globe." },
+      { "icon": "Award", "title": "Institutional Excellence", "desc": "Our Food & Beverage Production Level-3 certificate is recognized by leading global industry partners." }
+    ]
+  },
+  "personas": {
+    "heading": "Choose Your Path to Mastery",
+    "cards": [
+      { "icon": "Plane", "title": "The Global Professional", "desc": "Secure your international career with credentials that speak the language of 5-star hotels worldwide." },
+      { "icon": "RefreshCw", "title": "The Career Strategist", "desc": "Transition from any background into the culinary world with our intensive 3-month ROI-focused program." },
+      { "icon": "Store", "title": "The Culinary Entrepreneur", "desc": "Master the recipes and the professional workflow to launch and scale your own food business." }
+    ]
+  },
+  "btvFeature": {
+    "heading": "Featured on BTV: Principal Dewan Ismail",
+    "subheading": "Institutional Vision and the Future of Culinary Education in Bangladesh.",
+    "embedUrl": "https://www.youtube.com/embed/ayKFD3Nzqag?si=9DNEXiFU74gpBgPg&start=100"
+  },
+  "ourTeam": {
+    "heading": "Our Strategic Team",
+    "subheading": "The administrative and technical leadership driving CIB's mission.",
+    "members": [
+      {
+        "name": "Dewan Ismail",
+        "role": "Principal & Director of Career Planning & Development",
+        "photo": "/images/dewan-ismail-portrait.jpg",
+        "credentials": [
+          "BTEB Level 4",
+          "NSDA Level 3",
+          "BBA & MBA (Jagannath University)",
+          "PGD in Tourism & Hospitality (DIU)",
+          "IELTS 7.5",
+          "SGS Switzerland",
+          "ISO Certified"
+        ]
+      },
+      {
+        "name": "Sabekun Nahar",
+        "role": "Director",
+        "photo": "",
+        "credentials": []
+      },
+      {
+        "name": "Rafeya Chowdhury",
+        "role": "Lead Trainer",
+        "photo": "/images/rafeya-chowdhury.jpg",
+        "credentials": [
+          "Chef de Partie (The Westin)",
+          "BTV & Jamuna TV Host",
+          "Multi-Cuisine Production",
+          "Fine-Dining Plating Specialist"
+        ]
+      },
+      {
+        "name": "Rehana Akhter Poly",
+        "role": "Associate Executive Trainer",
+        "photo": "/images/rehana-akhter-poly.jpg",
+        "credentials": [
+          "MBS in Marketing",
+          "B.Ed (NAEM)",
+          "World Association of Chef Societies",
+          "British Culinary Federation"
+        ]
+      },
+      {
+        "name": "Hasan Rizvee",
+        "role": "Analyst",
+        "photo": "",
+        "credentials": []
+      },
+      {
+        "name": "Asifa Rashid Rayta",
+        "role": "Theoretical Instructor & Head of Operations",
+        "photo": "/images/asifa-rashid-rayta.png",
+        "credentials": [
+          "BBA Degree",
+          "BTEB Level 4",
+          "NSDA Level 3"
+        ]
+      },
+      {
+        "name": "Salman Iqbal",
+        "role": "Brand Manager",
+        "photo": "/images/salman-iqbal.jpg",
+        "credentials": [
+          "NSDA Food & Beverage Production Level-3",
+          "HACCP, Hygiene & GMP-22000",
+          "BBA Degree"
+        ]
+      },
+      {
+        "name": "Abu Baqur Siddik",
+        "role": "Assistant Trainer",
+        "photo": "/images/abu-baqur-siddik.jpg",
+        "credentials": [
+          "BTEB Level 1 & 2",
+          "NSDA Level 3 Certified",
+          "HACCP, Hygiene & GMP-22000",
+          "SGS Trained"
+        ]
+      },
+      {
+        "name": "Rezaul Karim",
+        "role": "Kitchen Assistant",
+        "photo": "/images/rezaul-karim.jpg",
+        "credentials": []
+      },
+      {
+        "name": "Naim",
+        "role": "Accounts Executive",
+        "photo": "/images/naim_accounts_executive.jpg",
+        "credentials": []
+      }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ready to Join the Ranks of Professional Chefs?",
+    "subtext": "Take the first step towards your 5-star career. Visit our campus or apply online.",
+    "buttonText": "Apply Now",
+    "buttonLink": "/admission",
+    "secondaryText": "Meet Our Mentors",
+    "secondaryLink": "/expert-culinary-mentors"
+  }
+}

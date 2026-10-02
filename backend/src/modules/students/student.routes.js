@@ -1,0 +1,28 @@
+import { Router } from "express";
+import * as ctrl from "./student.controller.js";
+import { addComment, deleteComment, getStudentComments } from "./comments/comment.controller.js";
+import { verifyToken, requirePermission, injectBranchFilter } from "../../middlewares/auth.js";
+import { validate } from "../../middlewares/validate.js";
+import { upload } from "../../../middlewares/multer.js";
+import { studentCreateSchema, studentUpdateSchema } from "../../../validators/student.validator.js";
+import { commentCreateSchema } from "../../../validators/comment.validator.js";
+import { PERMISSIONS } from "../../constants/permissions.js";
+
+const router = Router();
+router.get("/public/search", ctrl.publicSearchStudent);
+router.get("/public/:id", ctrl.getPublicStudentById);
+router.use(verifyToken);
+router.get("/all", requirePermission(PERMISSIONS.VIEW_STUDENTS), injectBranchFilter, ctrl.getAllStudents);
+router.get("/", requirePermission(PERMISSIONS.VIEW_STUDENTS), injectBranchFilter, ctrl.getAllStudents);
+router.get("/search", requirePermission(PERMISSIONS.VIEW_STUDENTS), injectBranchFilter, ctrl.searchStudent);
+router.get("/admin/:id", requirePermission(PERMISSIONS.STUDENT_PROFILE), injectBranchFilter, ctrl.getAdminStudentById);
+router.post("/", requirePermission(PERMISSIONS.STUDENT_EDIT), upload.single("photo"), validate(studentCreateSchema), ctrl.addStudent);
+router.post("/create", requirePermission(PERMISSIONS.STUDENT_EDIT), upload.single("photo"), validate(studentCreateSchema), ctrl.addStudent);
+router.put("/update/:id", requirePermission(PERMISSIONS.STUDENT_EDIT), upload.single("photo"), validate(studentUpdateSchema), ctrl.updateStudent);
+router.patch("/toggle-status/:id", requirePermission(PERMISSIONS.STUDENT_ACTIVE_CONTROL), ctrl.toggleStudentStatus);
+router.delete("/remove-image/:id", requirePermission(PERMISSIONS.STUDENT_EDIT), ctrl.removeStudentImage);
+router.delete("/delete/:id", requirePermission(PERMISSIONS.STUDENT_DELETE), ctrl.deleteStudent);
+router.post("/:studentId/comments", requirePermission(PERMISSIONS.STUDENT_COMMENT), validate(commentCreateSchema), addComment);
+router.get("/:studentId/comments", requirePermission(PERMISSIONS.STUDENT_PROFILE), getStudentComments);
+router.delete("/comments/:commentId", requirePermission(PERMISSIONS.STUDENT_COMMENT), deleteComment);
+export default router;

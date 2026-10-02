@@ -1,0 +1,87 @@
+{
+  "slug": "cooking-course-dhaka",
+  "meta": {
+    "title": "Cooking Course in Dhaka for Housewives & Entrepreneurs | CIB",
+    "description": "Enrol in the best cooking course in Dhaka. Tailored for housewives, home chefs, and food entrepreneurs. Learn 40+ recipes, kitchen safety, and costing."
+  },
+  "hero": {
+    "badge": "Short Course Pathway 2026",
+    "heading": "Cooking Course in Dhaka",
+    "subheading": "Master global and domestic cooking techniques. Designed specifically for home makers, home chefs, and food startup entrepreneurs."
+  },
+  "overview": {
+    "title": "Empower Your Kitchen & Business",
+    "text": "Whether you want to upgrade your daily family meals or start a profitable home-based food delivery business, our intensive cooking course is the perfect starting point.\n\nThis course focuses on practical hands-on kitchen training. We cover knife skills, classic mother sauces, culinary hygiene, and menu planning. CIB ensures you build real confidence under professional executive chefs in a state-of-the-art training environment."
+  },
+  "highlights": [
+    {
+      "title": "40+ Recipes",
+      "description": "From daily home cooked favorites to gourmet restaurant appetizers."
+    },
+    {
+      "title": "4 Weeks",
+      "description": "Intensive weekend and weekday schedules (8 sessions)."
+    },
+    {
+      "title": "Kitchen Costing",
+      "description": "Learn recipe cost calculation to run a profitable food business."
+    },
+    {
+      "title": "Official Certificate",
+      "description": "CIB institutional credential recognized across local eateries."
+    }
+  ],
+  "features": [
+    "Hands-on practical cooking using premium fresh ingredients",
+    "Learn classic Bangladeshi, Chinese, and Indian recipes",
+    "ISO-HACCP basic kitchen sanitation and food safety rules",
+    "Perfect for home bakers, housewives, and small cloud kitchen owners",
+    "Flexible batch timings (morning / afternoon / weekend)",
+    "Direct feedback and grading from certified chef mentors"
+  ],
+  "table": {
+    "heading": "Course Details & Fee Structure",
+    "headers": [
+      "Criteria",
+      "CIB Cooking Course Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "4 Weeks (8 Classes, 4 hours each)"
+      ],
+      [
+        "Schedule",
+        "Fridays & Saturdays or Mon & Wed"
+      ],
+      [
+        "Total Fee",
+        "BDT 12,500 (All-inclusive, no hidden charges)"
+      ],
+      [
+        "Materials Provided",
+        "Free recipe guides, chef apron, and ingredients"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do I need any prior cooking experience to join?",
+      "answer": "No. This course starts from basic knife handling and food preparation, making it perfect for absolute beginners."
+    },
+    {
+      "question": "Is this course suitable if I want to open a cloud kitchen?",
+      "answer": "Yes. It includes basic food costing, bulk prep tips, and hygiene standards that are essential for starting a commercial delivery kitchen."
+    },
+    {
+      "question": "Can I pay the course fee in installments?",
+      "answer": "For short courses under BDT 15,000, we require full payment at admission, but credit card EMI options are available."
+    }
+  ],
+  "cta": {
+    "heading": "Start Your Cooking Journey Today",
+    "subheading": "Upgrade your skills, eat healthier, or launch your own home catering brand.",
+    "buttonText": "Enroll in Upcoming Batch Now",
+    "buttonHref": "/admission"
+  }
+}

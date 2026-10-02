@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "heading": "Alumni Success Stories",
+    "subheading": "Meet CIB's graduates who have built high-income careers in 5-star hotels globally and launched successful culinary startups.",
+    "cta": "Start Your Own Success Story"
+  },
+  "stories": [
+    {
+      "name": "Rahim Ahmed",
+      "batch": "Batch 12",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Demi Chef de Partie",
+      "company": "Radisson Blu, Doha",
+      "photo": "/images/success-rahim.jpg",
+      "quote": "CIB's NSDA-accredited training was the turning point in my life. I went from having zero kitchen knowledge to working in a fast-paced 5-star international hotel in Doha. The focus on food safety (HACCP) and practical multitasking helped me excel from day one.",
+      "achievements": [
+        "Secured international placement within 3 months of graduation",
+        "Promoted to Demi Chef de Partie within 1 year",
+        "Masters multi-cuisine production for 500+ guests daily"
+      ]
+    },
+    {
+      "name": "Sumaiya Akhter",
+      "batch": "Batch 14",
+      "course": "Professional Pastry & Bakery Arts",
+      "currentRole": "Founder & Head Pastry Chef",
+      "company": "The Whispering Whisk Patisserie, Dhaka",
+      "photo": "/images/success-sumaiya.jpg",
+      "quote": "CIB didn't just teach me how to bake; they taught me the science behind culinary arts and how to run a business. Principal Dewan Ismail's entrepreneurship classes gave me the confidence to launch my own boutique patisserie which now employs six staff members.",
+      "achievements": [
+        "Launched a profitable boutique patisserie in Dhaka",
+        "Employs 6 professional bakers & assistants",
+        "Features custom French pastry and artisanal breads"
+      ]
+    },
+    {
+      "name": "Arif Hasan",
+      "batch": "Batch 15",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Commis Chef",
+      "company": "The Westin, Dhaka",
+      "photo": "/images/success-arif.jpg",
+      "quote": "The internship placement program at CIB is phenomenal. I did my three-month practical internship at The Westin and was offered a full-time position as Commis Chef immediately after graduation. The practical hands-on hours at CIB prepared me perfectly.",
+      "achievements": [
+        "100% conversion from CIB internship to full-time employment",
+        "Recognized as outstanding intern during his placement",
+        "Specializes in cold larder and modern fine-dining starters"
+      ]
+    },
+    {
+      "name": "Tariqul Islam",
+      "batch": "Batch 16",
+      "course": "6-Month Diploma in Culinary Arts",
+      "currentRole": "Junior Sous Chef",
+      "company": "InterContinental, Dhaka",
+      "photo": "/images/success-tariqul.jpg",
+      "quote": "CIB's 6-Month Diploma course provided the comprehensive business and technical training I needed. The industry partnerships are real, allowing me to start my career directly at InterContinental Dhaka.",
+      "achievements": [
+        "Learned advanced kitchen management and menu engineering",
+        "Secured full-time role at InterContinental Dhaka",
+        "Specializes in traditional Bengali fusion and fine dining production"
+      ]
+    },
+    {
+      "name": "Nusrat Jahan",
+      "batch": "Batch 17",
+      "course": "Chef + Barista Combo Course",
+      "currentRole": "Head Barista & Beverage Consultant",
+      "company": "Nero Coffee & Kitchen, Dhaka",
+      "photo": "/images/success-nusrat.jpg",
+      "quote": "The combination of chef skills and specialty barista training was exactly what the modern cafe market needed. CIB gave me hands-on practice with commercial espresso machines and menu pairing.",
+      "achievements": [
+        "First female head barista at a premium Dhaka cafe",
+        "Designed signature mocktail and coffee pairing menus",
+        "Mentors junior baristas in latte art and roasting techniques"
+      ]
+    },
+    {
+      "name": "Fahim Chowdhury",
+      "batch": "Batch 18",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Commis I",
+      "company": "Hilton Resort, Maldives",
+      "photo": "/images/success-fahim.jpg",
+      "quote": "Studying at CIB opened doors globally for me. Their curriculum is strictly aligned with international ISO and HACCP food safety standards, which makes transitioning to a high-end luxury resort in Maldives seamless.",
+      "achievements": [
+        "Recruited directly for Hilton Maldives resort placement",
+        "Aces food safety audits and temperature log management",
+        "Spearheaded Japanese-fusion live station operations"
+      ]
+    },
+    {
+      "name": "Tanvir Rahman",
+      "batch": "Batch 19",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Commis Chef",
+      "company": "Radisson Blu Water Garden, Dhaka",
+      "photo": "/images/student_1-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "The practical classes at CIB gave me the confidence to handle the pressure in a busy 5-star hotel kitchen. The training under expert mentors made my transition seamless.",
+      "achievements": [
+        "Secured Radisson Blu placement immediately after graduation",
+        "Aces the high-volume Continental banquet operations",
+        "Recognized for outstanding hygiene log compliance"
+      ]
+    },
+    {
+      "name": "Farhana Yeasmin",
+      "batch": "Batch 20",
+      "course": "Professional Pastry & Bakery Arts",
+      "currentRole": "Pastry Chef",
+      "company": "The Westin, Dhaka",
+      "photo": "/images/student_2_holding_beverage_glass-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "Baking is all about chemical precision. CIB taught me the exact science behind sourdoughs and French pastries, helping me lead the dessert section at The Westin.",
+      "achievements": [
+        "Heads the French pastry & custom mousse section",
+        "Reduced dessert wastage by 15% using portion scaling",
+        "Awarded Star Performer of the Month in hospitality"
+      ]
+    },
+    {
+      "name": "Imtiaz Ahmed",
+      "batch": "Batch 21",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Junior Sous Chef in Dubai",
+      "company": "Crowne Plaza, Dubai",
+      "photo": "/images/student_3_practicing-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "My dream was to work in Dubai. CIB's NSDA and ISO-HACCP certifications made my visa processing smooth, and the trade tests were easy due to CIB's rigorous practice labs.",
+      "achievements": [
+        "Passed Dubai culinary trade test on first attempt",
+        "Promoted to Junior Sous Chef in under 2 years",
+        "Specializes in Mediterranean cuisine and seafood station management"
+      ]
+    },
+    {
+      "name": "Sajjad Hossain",
+      "batch": "Batch 22",
+      "course": "Chef + Barista Combo Course",
+      "currentRole": "Kitchen Manager",
+      "company": "Cloud Kitchen Dhaka",
+      "photo": "/images/student-practice-5-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "Running a cloud kitchen requires deep knowledge of food costing and inventory. CIB's entrepreneurship classes were critical in showing me how to maintain margins.",
+      "achievements": [
+        "Manages operations of a multi-brand cloud kitchen in Dhaka",
+        "Optimized menu costing, achieving 35% profit margin",
+        "Supervises a team of 8 cooks and delivery managers"
+      ]
+    },
+    {
+      "name": "Kamrul Hasan",
+      "batch": "Batch 23",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Chef de Partie",
+      "company": "Le Meridien, Dhaka",
+      "photo": "/images/student-practice-6-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "The knife skills and classic sauce training at CIB are exactly what premium kitchens look for. I started as Commis and was promoted to CDP within 18 months.",
+      "achievements": [
+        "Heads the Hot Kitchen section at Le Meridien",
+        "Trained in classic French mother sauces and stock reduction",
+        "Maintains strict ISO-22000 food safety standards daily"
+      ]
+    },
+    {
+      "name": "Jannatul Fardous",
+      "batch": "Batch 24",
+      "course": "Professional Pastry & Bakery Arts",
+      "currentRole": "Cake Decorator & Owner",
+      "company": "Baker's Palette, Dhaka",
+      "photo": "/images/practical_class_1-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "CIB's hands-on training in fondant work and sugar craft allowed me to start my own custom cake business. I currently serve over 50 corporate orders monthly.",
+      "achievements": [
+        "Founded a highly successful custom cake studio in Dhaka",
+        "Averages BDT 80,000+ monthly profit from home bakery",
+        "Specializes in complex 3D fondant structures & tier cakes"
+      ]
+    },
+    {
+      "name": "Mahbub Alam",
+      "batch": "Batch 25",
+      "course": "6-Month Diploma in Culinary Arts",
+      "currentRole": "Commis Chef",
+      "company": "Hilton, Abu Dhabi",
+      "photo": "/images/practical_class_2-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "CIB's curriculum prepares you for global standards. Learning HACCP was key to passing the strict food safety interview for Hilton in Abu Dhabi.",
+      "achievements": [
+        "Secured Abu Dhabi placement through CIB partner network",
+        "Works in premium international buffet and banquets",
+        "ISO-HACCP certified expert in cross-contamination prevention"
+      ]
+    },
+    {
+      "name": "Rashedul Islam",
+      "batch": "Batch 26",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Sous Chef",
+      "company": "Secret Recipe, Dhaka",
+      "photo": "/images/practical_class_3-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "The portion control and plating classes at CIB help me run a tight ship. I supervise the entire kitchen line, maintaining high consistency across all dishes.",
+      "achievements": [
+        "Manages kitchen operations for a premium restaurant brand",
+        "Leads recipe standardization and new menu development",
+        "Ensures zero delay in dish turnaround during rush hours"
+      ]
+    },
+    {
+      "name": "Sadia Afrin",
+      "batch": "Batch 27",
+      "course": "Chef + Barista Combo Course",
+      "currentRole": "Beverage Head",
+      "company": "Tabaq Coffee, Dhaka",
+      "photo": "/images/student_practice_session_1-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "Tasting and milk texturing were skills I perfected at CIB. The combo course makes you highly employable in premium coffee shops and lounges.",
+      "achievements": [
+        "Heads the beverage development team at Tabaq",
+        "Designed a new seasonal mocktail menu that boosted sales by 20%",
+        "Specialist in advanced latte art and custom flavor profiling"
+      ]
+    },
+    {
+      "name": "Nayeem Islam",
+      "batch": "Batch 28",
+      "course": "Professional Chef Course (Level 3)",
+      "currentRole": "Kitchen Executive",
+      "company": "Foodpanda Cloud Kitchen, Dhaka",
+      "photo": "/images/student_practice_session_2-1280w.webp",
+      "isPlaceholder": true,
+      "quote": "CIB's focus on high-speed prep work and commercial kitchen layouts was the best preparation for managing high-volume cloud kitchen orders.",
+      "achievements": [
+        "Coordinates operations for 4 virtual restaurant brands",
+        "Maintains food prep times under 12 minutes average",
+        "Strict compliance with municipal health & safety rules"
+      ]
+    }
+  ]
+}

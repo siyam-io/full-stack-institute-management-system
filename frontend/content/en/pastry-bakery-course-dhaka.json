@@ -1,0 +1,92 @@
+{
+  "slug": "pastry-bakery-course-dhaka",
+  "meta": {
+    "title": "Pastry & Bakery Course in Dhaka | Professional Baking Academy | CIB",
+    "description": "Learn artisanal baking and French pastry arts. Master bread making, cakes, puff pastry, desserts, and bakery business management in Dhaka."
+  },
+  "hero": {
+    "badge": "Baking Specialty 2026",
+    "heading": "Pastry & Bakery Course in Dhaka",
+    "subheading": "Master French pastry arts and commercial bakery operations. Learn the science of baking and launch your home business."
+  },
+  "overview": {
+    "title": "Artisanal Baking & French Pastry Arts",
+    "text": "Baking is a science governed by weight, temperature, and chemical reactions. To succeed in the commercial baking sector, you must understand the physics of gluten development, yeast fermentation, and sugar crystallization. CIB's Pastry & Bakery Course in Dhaka offers a premium, hands-on path to master artisanal baking and French pastry arts.\n\nFrom baking crusty baguettes and soft croissants to creating high-end multi-layered entremets, cheesecakes, and custom fondant decorations, our course covers the exact skills demanded by premium hotels and successful home bakers."
+  },
+  "highlights": [
+    {
+      "title": "Baking Chemistry",
+      "description": "Understanding flour types, hydration, and leaveners."
+    },
+    {
+      "title": "Artisanal Breads",
+      "description": "Sourdough, baguettes, croissants, and brioche."
+    },
+    {
+      "title": "French Pastry",
+      "description": "Macarons, tarts, eclairs, and entremets."
+    },
+    {
+      "title": "Home Business Support",
+      "description": "Marketing, packaging, and pricing advice."
+    }
+  ],
+  "features": [
+    "Hands-on practice using commercial deck ovens and spiral mixers",
+    "Learn advanced bread lamination techniques for croissants and puff pastries",
+    "Gourmet cake baking, slicing, filling, and sharp-edge frosting methods",
+    "HACCP-compliant raw material handling and baking hygiene standards",
+    "Mentorship under certified pastry chefs with years of hotel experience",
+    "Direct business coaching for launching a premium boutique bakery or home kitchen"
+  ],
+  "table": {
+    "heading": "Pastry & Bakery Course Modules",
+    "headers": [
+      "Module Name",
+      "Items Taught",
+      "Baking Skills Covered"
+    ],
+    "rows": [
+      [
+        "Artisanal Yeast Breads",
+        "Baguette, Sourdough, Brioche, Burger Buns",
+        "Gluten structure, shaping, proving, steam injection"
+      ],
+      [
+        "Laminated Doughs",
+        "Croissants, Danish Pastry, Puff Pastry",
+        "Butter block preparation, folding, baking temperature"
+      ],
+      [
+        "Classic Cakes & Frosting",
+        "Red Velvet, Vanilla, Chocolate Fudge, Cheesecakes",
+        "Sponge preparation, crumb coating, piping, sharp-edge finishing"
+      ],
+      [
+        "Premium French Desserts",
+        "Macarons, Chocolate Tarts, Cream Eclairs",
+        "Meringue science, ganache emulsions, pastry cream prep"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the duration of the Pastry & Bakery Course in Dhaka?",
+      "answer": "The Pastry and Bakery module is offered as a specialized track and is also included as a bonus within our Professional Chef Course."
+    },
+    {
+      "question": "Can I start a home bakery business after this course?",
+      "answer": "Absolutely. Many of our alumni have successfully launched profitable home bakeries in Dhaka, earning BDT 50,000+ per month."
+    },
+    {
+      "question": "Do you provide all baking ingredients?",
+      "answer": "Yes. CIB covers the cost of all premium raw baking ingredients, baking kits, and recipes. There are no additional expenses."
+    }
+  ],
+  "cta": {
+    "heading": "Become a Certified Master Baker",
+    "subheading": "Master the science of baking and turn your passion into a profitable career.",
+    "buttonText": "Register for Baking Course",
+    "buttonHref": "/admission"
+  }
+}

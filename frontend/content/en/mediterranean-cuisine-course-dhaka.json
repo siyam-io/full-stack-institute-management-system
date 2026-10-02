@@ -1,0 +1,83 @@
+{
+  "slug": "mediterranean-cuisine-course-dhaka",
+  "meta": {
+    "title": "Mediterranean Cuisine Course in Dhaka | Healthy Cooking | CIB",
+    "description": "Learn healthy Mediterranean cooking in Dhaka. Master Greek salads, Hummus, Falafel, grilled seafood, Shawarma, and healthy olive oil dressings."
+  },
+  "hero": {
+    "badge": "Specialty Certification 2026",
+    "heading": "Mediterranean Cuisine Course in Dhaka",
+    "subheading": "Master the world's healthiest diet. Learn Greek, Italian, and Levantine classics with premium olive oil, fresh herbs, and seafood."
+  },
+  "overview": {
+    "title": "The Bounty of the Mediterranean",
+    "text": "The Mediterranean diet is globally celebrated for its health benefits, relying on olive oil, fresh citrus, rich garlic, and aromatic herbs. As healthy eating trends grow in Dhaka, premium cafes and health-conscious food setups require chefs specialized in Mediterranean gastronomy.\n\nFrom blending velvety smooth hummus to baking fresh pita and grilling seafood with traditional spice rubs, this course covers the vibrant flavors of Greece, Italy, and the Levant."
+  },
+  "highlights": [
+    {
+      "title": "Levantine Dips",
+      "description": "Prepare smooth Hummus, Baba Ganoush, and garlic Tzatziki."
+    },
+    {
+      "title": "Seafood Grills",
+      "description": "Learn direct-fire grilling for sea bass, calamari, and prawns."
+    },
+    {
+      "title": "Flatbreads & Pita",
+      "description": "Bake fresh pita bread and dynamic manakeesh from scratch."
+    },
+    {
+      "title": "Olive Oil Dressings",
+      "description": "Master emulsion sauces and fresh herb vinaigrettes."
+    }
+  ],
+  "features": [
+    "Making authentic Levant flatbreads and fresh pita bread",
+    "Blending emulsified dressings and olive oil vinaigrettes",
+    "Direct flame grilling of Mediterranean style fish and seafood",
+    "Portion costing and organic raw material storage",
+    "Aromatic spice rubs (Za'atar, Sumac, and Cumin) blending",
+    "Specialty Certificate in Mediterranean Gastronomy from CIB"
+  ],
+  "table": {
+    "heading": "Mediterranean Course Details",
+    "headers": [
+      "Criteria",
+      "Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Hands-on Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 12,000 (All premium ingredients included)"
+      ],
+      [
+        "Key Dishes",
+        "Hummus, Falafel, Pita Bread, Tabbouleh, Grilled Calamari, Tzatziki"
+      ],
+      [
+        "Location",
+        "CIB Campus, Dhanmondi, Dhaka"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What ingredients will we work with?",
+      "answer": "We provide premium Extra Virgin Olive Oil, Tahini, fresh herbs, chickpeas, lamb, and seafood for all practical sessions."
+    },
+    {
+      "question": "Is this course suitable for home makers?",
+      "answer": "Yes. It is excellent for homemakers who wish to cook healthy, restaurant-quality Mediterranean meals for their families or start a healthy cloud kitchen."
+    }
+  ],
+  "cta": {
+    "heading": "Master Mediterranean Gastronomy",
+    "subheading": "Gain the skills to cook healthy, vibrant, and incredibly delicious Mediterranean classics.",
+    "buttonText": "Enroll in Mediterranean Course",
+    "buttonHref": "/admission"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "baking-course-dhaka",
+  "meta": {
+    "title": "Baking Course in Dhaka | Pastry, Cake & Bread | CIB",
+    "description": "Professional baking course in Dhaka. Learn celebration cake decoration, French pastries, and commercial bread baking. Ideal for home bakers."
+  },
+  "hero": {
+    "badge": "Professional Pathway 2026",
+    "heading": "Baking Course in Dhaka",
+    "subheading": "Master the chemistry of pastry arts and baking. Learn celebrity cake decoration, artisan breads, and classic French pastries."
+  },
+  "overview": {
+    "title": "Baking is a Precise Science",
+    "text": "Unlike general cooking, baking requires absolute precision. A difference of a few grams or degrees can ruin a recipe. In 2026, the demand for custom cakes, croissants, and artisan breads in Dhaka is higher than ever, creating excellent home business opportunities.\n\nOur Baking Course at CIB is 100% practical. You will master everything from yeast fermentation chemistry to high-end fondant and buttercream cake decorations."
+  },
+  "highlights": [
+    {
+      "title": "Cake Decoration",
+      "description": " buttercream, whipping cream, and fondant cake designs."
+    },
+    {
+      "title": "4 Weeks",
+      "description": "Comprehensive hands-on training (8 sessions)."
+    },
+    {
+      "title": "French Pastry",
+      "description": "Choux pastry, éclairs, tarts, and puff pastry doughs."
+    },
+    {
+      "title": "Artisan Breads",
+      "description": "Yeasted breads, dinner rolls, and pizza dough baking."
+    }
+  ],
+  "features": [
+    "Hands-on weight calculations using baker's percentage rules",
+    "Learn to decorate celebration cakes from scratch",
+    "Master the piping bag techniques for intricate floral designs",
+    "Understand commercial bakery ovens and proofing cabinets",
+    "All premium baking butter, cream, and flour provided by CIB",
+    "Receive a recognized CIB Professional Baking Certification"
+  ],
+  "table": {
+    "heading": "Course Details & Fee Structure",
+    "headers": [
+      "Criteria",
+      "CIB Baking Course Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "4 Weeks (8 Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 18,000 (All-inclusive, ingredients included)"
+      ],
+      [
+        "Topics Covered",
+        "Cake Baking & Decor, Breads, Puff Pastry, French Tarts"
+      ],
+      [
+        "Schedule",
+        "Fridays & Saturdays / Weekday option"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do I need to buy any baking tools for the course?",
+      "answer": "No. CIB provides all piping bags, cake boards, ovens, and baking ingredients during the practical classes."
+    },
+    {
+      "question": "Can I start a home baking business after this course?",
+      "answer": "Yes. Most CIB baking graduates launch custom cake brands immediately, earning BDT 30k-50k per month from home."
+    }
+  ],
+  "cta": {
+    "heading": "Become a Certified Baker",
+    "subheading": "Turn your passion for baking into a highly profitable home business.",
+    "buttonText": "Enroll in Baking Course Now",
+    "buttonHref": "/admission"
+  }
+}

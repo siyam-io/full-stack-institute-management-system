@@ -1,0 +1,83 @@
+{
+  "slug": "pizza-pasta-course-dhaka",
+  "meta": {
+    "title": "Pizza & Pasta Course in Dhaka | Italian Cooking | CIB",
+    "description": "Learn the secrets of artisan Italian pizza and fresh pasta making in Dhaka. Master sourdough doughs, wood-fire techniques, and classic sauces."
+  },
+  "hero": {
+    "badge": "Culinary Masterclass 2026",
+    "heading": "Pizza & Pasta Course in Dhaka",
+    "subheading": "Master the secrets of authentic Italian cuisine. Learn sourdough pizza dough fermentation, hand-rolled fresh pasta, and classic sauces."
+  },
+  "overview": {
+    "title": "The Italian Culinary Heritage",
+    "text": "Authentic Italian pizza and pasta are among the highest margin products in the restaurant industry. However, creating a perfect thin-crust Neapolitan pizza or hand-stretched fettuccine requires a deep understanding of flour hydration, yeast activity, and emulsified sauces.\n\nOur Pizza & Pasta Course teaches you these precise Italian techniques, preparing you to work in high-end Italian eateries or launch your own pizzeria."
+  },
+  "highlights": [
+    {
+      "title": "Sourdough Pizza",
+      "description": "High hydration dough prep, stretching, and temperature control."
+    },
+    {
+      "title": "2 Weeks",
+      "description": "Intensive practical cooking labs (4 sessions)."
+    },
+    {
+      "title": "Fresh Pasta",
+      "description": "Hand-rolling tagliatelle, fettuccine, and filling ravioli."
+    },
+    {
+      "title": "Classic Sauces",
+      "description": "Mastering Pomodoro, Pesto, Carbonara, and Alfredo."
+    }
+  ],
+  "features": [
+    "Hands-on flour hydration and gluten development science",
+    "Learn wood-fire and high-temperature electric deck oven baking",
+    "Master the emulsion techniques for classic egg yolk and cheese sauces",
+    "Understand olive oil selections and fresh herb integrations",
+    "All high-grade durum wheat and cheese provided by CIB",
+    "Awarded a CIB Italian Culinary Specialty Certificate"
+  ],
+  "table": {
+    "heading": "Course Details & Fee Structure",
+    "headers": [
+      "Criteria",
+      "CIB Pizza & Pasta Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 12,000 (All ingredients included)"
+      ],
+      [
+        "Recipes Covered",
+        "Neapolitan Pizza, Fresh Pasta (Tagliatelle, Ravioli), Pesto, Marinara"
+      ],
+      [
+        "Certification",
+        "Specialty Certificate in Italian Culinary Arts"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you teach how to make pizza dough from scratch?",
+      "answer": "Yes. We teach flour selections (00 flour), yeast fermentation, dough proofing, and hand-stretching techniques (no rolling pins)."
+    },
+    {
+      "question": "What ovens do we practice on?",
+      "answer": "CIB labs are equipped with high-temperature commercial deck ovens that replicate wood-fired pizza environments."
+    }
+  ],
+  "cta": {
+    "heading": "Master the Art of Italian Cooking",
+    "subheading": "Acquire high-demand skills to launch a pizzeria or work in gourmet restaurants.",
+    "buttonText": "Enroll in Pizza & Pasta Course Now",
+    "buttonHref": "/admission"
+  }
+}

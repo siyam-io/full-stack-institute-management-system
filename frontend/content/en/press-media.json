@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "heading": "CIB in the Media",
+    "subheading": "Explore the Culinary Institute of Bangladesh's features on national television, key news outlets, and expert discussions.",
+    "cta": "Watch Our Training in Action"
+  },
+  "featuredTv": [
+    {
+      "title": "BTV Special Feature: Vocational Culinary Education in Bangladesh",
+      "url": "https://youtu.be/ayKFD3Nzqag?si=5QPzoyOh5rNc6V7P&t=100",
+      "platform": "BTV",
+      "reporter": "BTV News",
+      "date": "2024-05-15",
+      "description": "A comprehensive national broadcast detailing how CIB Dhanmondi is elevating the standard of technical culinary courses in Bangladesh, aligning with global 5-star hotel requirements."
+    },
+    {
+      "title": "Jamuna TV News Coverage: Professional Career Opportunities as Certified Chefs",
+      "url": "https://www.youtube.com/watch?v=HXocks9iyuc",
+      "platform": "Jamuna TV",
+      "reporter": "Special Correspondent",
+      "date": "2024-08-10",
+      "description": "Highlighting the extreme demand for professional chefs internationally and how CIB's accredited diplomas open fast-track paths to Europe and the Middle East."
+    }
+  ],
+  "youtubeAppearances": [
+    {
+      "title": "Principal Dewan Ismail on Culinary Career Pathways",
+      "url": "https://www.youtube.com/watch?v=otoYOLkFIaQ",
+      "platform": "YouTube",
+      "views": "15K+",
+      "description": "An in-depth career counseling session focusing on global job opportunities for certified chefs in high-end cruise ships and international hotels."
+    },
+    {
+      "title": "HACCP & Food Safety Standards by Principal Dewan Ismail",
+      "url": "https://youtu.be/dx_0ckTV9Eo?si=On4x1BH5LV1itDqH",
+      "platform": "YouTube",
+      "views": "10K+",
+      "description": "Crucial lecture for professional chef candidates detailing the implementation of Hazard Analysis Critical Control Point (HACCP) in commercial kitchens."
+    },
+    {
+      "title": "National Skill Development Authority (NSDA) Level Accreditation Value",
+      "url": "https://youtu.be/CPPKYbWESsI?si=PIXu8_ma-Nlo8NGd",
+      "platform": "YouTube",
+      "views": "8K+",
+      "description": "Why NSDA Level 3 culinary certification is highly valued by global visa processing agencies and international hospitality brands."
+    },
+    {
+      "title": "Lead Trainer Rafeya Chowdhury: Fine-Dining Plating & Presentation Masterclass",
+      "url": "https://youtu.be/7mFajXCg1v0?si=J4IEtMs7FgxuqQtL",
+      "platform": "YouTube",
+      "views": "25K+",
+      "description": "Elite plating techniques demonstrating how culinary art elevates raw food ingredients to high-end fine dining chef standards."
+    }
+  ],
+  "pressMentions": [
+    {
+      "publisher": "The Daily Star",
+      "title": "Culinary Institute of Bangladesh Receives Prestigious NSDA Accreditation",
+      "date": "2024-01-20",
+      "summary": "Highlighting CIB's certification as a licensed culinary training provider under the National Skills Development Authority, enabling students to achieve government-recognized credentials."
+    },
+    {
+      "publisher": "Prothom Alo",
+      "title": "Career in Culinary Arts: CIB Dhanmondi leading the way for vocational success",
+      "date": "2024-03-05",
+      "summary": "Exploration of chef careers for Bangladeshi youth and the high-income potential of accredited bakery and professional culinary diplomas."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "thai-cooking-course-dhaka",
+  "meta": {
+    "title": "Thai Cooking Course in Dhaka | Authentic Thai Cuisine | CIB",
+    "description": "Master authentic Thai cuisine in Dhaka. Hands-on training for green/red curry pastes, Pad Thai, Tom Yum Goong, and traditional stir-fry. Standard recipe sheets."
+  },
+  "hero": {
+    "badge": "Asian Culinary Arts 2026",
+    "heading": "Thai Cooking Course in Dhaka",
+    "subheading": "Learn to balance sweet, sour, salty, and spicy notes of authentic Thai cuisine under expert 5-star culinary mentors."
+  },
+  "overview": {
+    "title": "The Five Tastes of Thailand",
+    "text": "Thai cooking is all about flavor composition. Achieving the perfect balance between lemongrass aroma, kaffir lime zest, chili heat, palm sugar sweetness, and fish sauce salinity is what defines authentic Thai food.\n\nAt CIB, you will not use store-bought curry pastes. Instead, you will learn to grind herbs and spices from scratch using traditional pestle and mortar methods, ensuring that you understand the soul of Thai gastronomy."
+  },
+  "highlights": [
+    {
+      "title": "Scratch Curry Pastes",
+      "description": "Pound green, red, and yellow curry pastes from scratch."
+    },
+    {
+      "title": "Wok Stir-Fry",
+      "description": "Learn high-heat wok controls for Pad Thai and basil chicken."
+    },
+    {
+      "title": "Balance of Flavors",
+      "description": "Master the 4-flavor balance (sour, sweet, salty, spicy)."
+    },
+    {
+      "title": "Herb Infusions",
+      "description": "Work with Lemongrass, Galangal, Kaffir Lime, and Fish Sauce."
+    }
+  ],
+  "features": [
+    "Making fresh Thai green curry and massaman curry from scratch",
+    "Stir-frying techniques with precise wok temperature management",
+    "Preparation of Tom Yum and clear soup bases",
+    "Understanding how to balance pungent and sweet ingredients",
+    "Sourcing guide for authentic Thai sweet basil and galangal in Dhaka",
+    "CIB Institutional Specialty Certificate in Thai Culinary Arts"
+  ],
+  "table": {
+    "heading": "Course Details & Fees",
+    "headers": [
+      "Parameter",
+      "Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Hands-on Sessions, 4 hours each)"
+      ],
+      [
+        "Total Tuition",
+        "BDT 10,000 (Ingredients and recipes included)"
+      ],
+      [
+        "Location",
+        "CIB Dhanmondi Campus, Dhaka"
+      ],
+      [
+        "Key Recipes",
+        "Pad Thai, Tom Yum Goong, Green Curry, Basil Beef, Mango Sticky Rice"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes, we teach you starting from ingredient familiarity, slicing, and paste preparation before doing actual stove-top cooking."
+    },
+    {
+      "question": "Do we cook in individual workstations?",
+      "answer": "Yes. CIB has commercial kitchen setups where students practice in groups or individually to ensure real learning."
+    }
+  ],
+  "cta": {
+    "heading": "Learn Authentic Thai Cooking",
+    "subheading": "Stop using pre-made pastes. Cook real Thai street food and fine dining classics.",
+    "buttonText": "Enroll in Thai Course Now",
+    "buttonHref": "/admission"
+  }
+}

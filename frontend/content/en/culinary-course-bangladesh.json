@@ -1,0 +1,91 @@
+{
+  "slug": "culinary-course-bangladesh",
+  "meta": {
+    "title": "Culinary Course in Bangladesh | Professional Food Production | CIB",
+    "description": "Explore premier culinary courses in Bangladesh. Master 16+ international cuisines, advanced food safety, and kitchen operations. Join CIB in Dhaka."
+  },
+  "hero": {
+    "badge": "Professional Culinary Arts",
+    "heading": "Culinary Course in Bangladesh",
+    "subheading": "Master global food production and kitchen management standards. Earn recognized credentials for international hotel careers."
+  },
+  "overview": {
+    "title": "Culinary Arts & Science Education",
+    "text": "A professional culinary course goes beyond simple recipe following; it is an education in food science, kitchen chemistry, and high-volume cost optimization. CIB's culinary course in Bangladesh teaches the precise technical disciplines that separate executive culinary managers from basic home cooks.\n\nOur program focuses heavily on global food operations, recipe drafting, ingredient yield calculations, and the execution of 16+ international cuisines. This comprehensive structure guarantees that our graduates are fully qualified to lead commercial kitchens worldwide."
+  },
+  "highlights": [
+    {
+      "title": "Food Chemistry",
+      "description": "Understanding taste profiles, emulsions, and ingredient properties."
+    },
+    {
+      "title": "120+ Recipes",
+      "description": "Comprehensive coverage of Western, Asian, and Mediterranean menus."
+    },
+    {
+      "title": "ISO-HACCP Safety",
+      "description": "Strict training in international kitchen sanitation."
+    },
+    {
+      "title": "BTEB & NSDA",
+      "description": "Fully approved national and international vocational standards."
+    }
+  ],
+  "features": [
+    "100% practical lab lessons focusing on precision and technique",
+    "Comprehensive study of commercial recipe costing and portion control",
+    "ISO-HACCP standards that prevent foodborne hazards in restaurant setups",
+    "Special guest lectures and classes conducted by 5-star Executive Chefs",
+    "Structured industrial internships at premier hotels in Dhaka",
+    "Post-course support and career counseling for international placements"
+  ],
+  "table": {
+    "heading": "Our Culinary Courses & Modules Comparison",
+    "headers": [
+      "Program Level",
+      "Duration",
+      "Key Focus Area",
+      "Best Suited For"
+    ],
+    "rows": [
+      [
+        "Fast Food Course",
+        "1 Month (Short)",
+        "Burgers, Pizza, Snacks",
+        "Entrepreneurs / Cafes"
+      ],
+      [
+        "Pro Chef Course",
+        "3 Months (Intensive)",
+        "120+ Recipes, Multi-cuisine",
+        "Job Seekers / Placements"
+      ],
+      [
+        "Culinary Diploma",
+        "6 Months (Comprehensive)",
+        "Advanced Management & Plating",
+        "Cruises / Executive Careers"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the difference between home cooking and culinary arts?",
+      "answer": "Home cooking is domestic and simple. Culinary arts involves professional kitchen hierarchy, commercial cooking equipment, precision plating, portion costing, and strict food safety compliance (HACCP)."
+    },
+    {
+      "question": "Will I learn pastry and baking in this course?",
+      "answer": "Yes, CIB's culinary courses include a dedicated bonus module on baking and pastry arts, covering breads, doughs, cakes, and decoration."
+    },
+    {
+      "question": "Are there scholarship opportunities?",
+      "answer": "Yes. CIB offers partial merit-based scholarships and fee waivers for outstanding candidates. Contact our admissions desk for details."
+    }
+  ],
+  "cta": {
+    "heading": "Enroll in the Premier Culinary Academy",
+    "subheading": "Take the first step to professional mastery. Get the skills that give you a high-paying career.",
+    "buttonText": "View Admission Requirements",
+    "buttonHref": "/admission"
+  }
+}

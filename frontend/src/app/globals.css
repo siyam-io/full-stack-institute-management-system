@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../styles/components.css";
+
+/* Font Faces */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anek Bangla';
+  src: url('/fonts/Anek_Bangla/AnekBangla-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --obsidian: #000A1A;
+  --power-red: #EC1B23;
+  --prestige-gold: #FFD700;
+  --titanium-white: #FFFFFF;
+  --ice-gray: #F8FAFC;
+  
+  /* Next.js default variables mapping to CIB tokens */
+  --background: var(--obsidian);
+  --foreground: var(--titanium-white);
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white font-sans antialiased;
+    line-height: 1.625; /* relaxed */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tighter leading-[1.1];
+  }
+
+  h1 { @apply text-5xl md:text-7xl; }
+  h2 { @apply text-4xl md:text-6xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+}
+
+/* Language specific font overriding */
+[lang="bn"] body {
+  font-family: 'Anek Bangla', serif;
+}
+
+/* Scrollbar styling for Obsidian theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}

@@ -1,0 +1,8 @@
+# Un-ignore everything as requested by user
+# Except environment secrets and files over 100MB
+.env.local
+.env*.local
+.env
+*.zip
+*.node
+deploy_cpanel.zip

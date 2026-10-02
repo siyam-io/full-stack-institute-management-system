@@ -1,0 +1,91 @@
+{
+  "slug": "culinary-diploma-bangladesh",
+  "meta": {
+    "title": "Culinary Diploma Bangladesh | 6-Month Professional Chef Course | CIB",
+    "description": "Get a 6-Month professional Culinary Diploma in Bangladesh. Comprehensive training, 5-star hotel internship, ISO standards, and global placement support."
+  },
+  "hero": {
+    "badge": "6-Month Career Track",
+    "heading": "Culinary Diploma in Bangladesh",
+    "subheading": "Earn our premier 6-Month Culinary Diploma. Combine advanced kitchen production with a guaranteed 3-month 5-star industrial internship."
+  },
+  "overview": {
+    "title": "Executive Culinary Career Track",
+    "text": "A Culinary Diploma is the gold standard for individuals aiming to secure careers in premium global cruise liners, international resort chains, and high-paying European kitchens. CIB's 6-Month Culinary Diploma in Bangladesh is an intensive program structured specifically around global hospitality frameworks.\n\nThe first 3 months are dedicated to master-level practical kitchen training in our Dhanmondi campus, covering advanced hot kitchen production, food science, cost controls, and fine-dining plating. The remaining 3 months consist of a guaranteed industrial internship placement at one of our partner 5-star hotels, providing crucial real-world experience and industry networks."
+  },
+  "highlights": [
+    {
+      "title": "6-Month Duration",
+      "description": "3 months campus training + 3 months 5-star hotel internship."
+    },
+    {
+      "title": "Advanced Plating",
+      "description": "Mastering modern gastronomy and fine-dining aesthetics."
+    },
+    {
+      "title": "Guaranteed Internship",
+      "description": "Direct placement in top hotels like Radisson and Westin."
+    },
+    {
+      "title": "Global Recognition",
+      "description": "NSDA & ISO certification easily verified abroad."
+    }
+  ],
+  "features": [
+    "Advanced masterclass modules covering complex sauces and cold-kitchen guards",
+    "Intensive training on international HACCP compliance and food safety laws",
+    "Direct practice in recipe costing, buffet planning, and banqueting operations",
+    "Guaranteed internship placement support with 100% full-time job transition rates",
+    "Comprehensive interview preparation and trade test drills for jobs abroad",
+    "Special pricing of BDT 110,000 with flexible installment options"
+  ],
+  "table": {
+    "heading": "6-Month Culinary Diploma Syllabus Breakdown",
+    "headers": [
+      "Phase",
+      "Duration",
+      "Modules Covered",
+      "Outcome / Milestone"
+    ],
+    "rows": [
+      [
+        "Phase 1: Foundations",
+        "Month 1 - 2",
+        "Knife skills, Stocks, Sauces, basic cuisines",
+        "Safe Food & Knife Skills Certificate"
+      ],
+      [
+        "Phase 2: Master Cuisines",
+        "Month 3",
+        "Italian, French, Mediterranean, Plating",
+        "Advanced Culinary Arts Certificate"
+      ],
+      [
+        "Phase 3: Hotel Placement",
+        "Month 4 - 6",
+        "3-Month Internship at 5-Star Hotel",
+        "5-Star Internship Experience Letter"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the fee for the 6-Month Culinary Diploma in Bangladesh?",
+      "answer": "The total fee is BDT 110,000, payable in customized installments. This fee includes all raw materials, uniforms, knives, and the guaranteed 5-star internship placement."
+    },
+    {
+      "question": "Are CIB diploma holders eligible to work on international cruise ships?",
+      "answer": "Yes, cruise lines require certified diplomas and 5-star hotel experience. CIB's diploma combined with our partner internships meets the exact prerequisites for major lines like Royal Caribbean and Carnival."
+    },
+    {
+      "question": "Is the internship placement guaranteed?",
+      "answer": "Yes. CIB guarantees a 3-month industrial internship at a 5-star hotel for every student who maintains a 90% attendance record and passes our internal practical exams."
+    }
+  ],
+  "cta": {
+    "heading": "Accelerate Your Path to Executive Chef",
+    "subheading": "Earn the diploma that opens doors to high-paying international culinary careers.",
+    "buttonText": "Enroll in Diploma Track Now",
+    "buttonHref": "/admission"
+  }
+}

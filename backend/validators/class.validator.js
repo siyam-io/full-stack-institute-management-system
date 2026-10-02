@@ -23,19 +23,4 @@ export const updateClassContentSchema = z.object({
 export const scheduleClassSchema = z.object({
   date_scheduled: z.string().datetime() // Validates ISO date strings
 });
-
-export const updateAttendanceSchema = z.object({
-  attendanceRecords: z.array(
-    z.object({
-      student: objectIdSchema,
-      status: z.enum(["Present", "Absent", "Late", "Excused"]),
-      remarks: z.string().optional().default("")
-    })
-  ),
-  instructorId: objectIdSchema.optional(),
-  is_completed: z.boolean().optional(),
-  financials: z.object({
-    actual_cost: z.number().nonnegative(),
-    expense_notes: z.string().optional().default("")
-  }).optional()
-});
+

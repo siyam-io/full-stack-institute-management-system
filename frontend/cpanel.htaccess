@@ -1,0 +1,15 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# CIB Main Website - Production .htaccess Backup (Apache + Passenger)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# Use this file to restore the .htaccess file in your cPanel public_html/ folder.
+#
+
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/cibdtamx/cib_nextjs_app"
+PassengerBaseURI "/"
+PassengerNodejs "/home/cibdtamx/nodeenv/cib_nextjs_app/20/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+

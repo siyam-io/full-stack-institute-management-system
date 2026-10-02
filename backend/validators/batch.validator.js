@@ -29,6 +29,7 @@ const scheduleDaysSchema = z.preprocess((val) => {
 
 export const batchCreateSchema = z.object({
   batch_name: z.string().trim().min(1),
+  batch_name_bn: z.string().trim().nullable().optional(),
   course: objectIdSchema,
   branch: objectIdSchema.optional(),
 
@@ -41,17 +42,26 @@ export const batchCreateSchema = z.object({
     start_time: z.string().min(1),
     end_time: z.string().min(1),
   }),
+  class_time_bn: z.string().nullable().optional(),
 
   schedule_days: scheduleDaysSchema,
+  class_days_bn: z.string().nullable().optional(),
 
   status: z
     .enum(["Upcoming", "Active", "Completed", "On Hold"])
     .default("Upcoming"),
+  capacity: z.preprocess((val) => (val === "" ? null : Number(val)), z.number().nullable().optional()),
+  duration_en: z.string().nullable().optional(),
+  duration_bn: z.string().nullable().optional(),
+  total_classes: z.preprocess((val) => (val === "" ? null : Number(val)), z.number().nullable().optional()),
+  badge_en: z.string().nullable().optional(),
+  badge_bn: z.string().nullable().optional(),
 });
 
 export const batchUpdateSchema = z
   .object({
     batch_name: z.string().trim().optional(),
+    batch_name_bn: z.string().trim().nullable().optional(),
     course: objectIdSchema.optional(),
 
     instructors: objectIdArraySchema.optional(),
@@ -65,10 +75,18 @@ export const batchUpdateSchema = z
         end_time: z.string().optional(),
       })
       .optional(),
+    class_time_bn: z.string().nullable().optional(),
 
     schedule_days: scheduleDaysSchema.optional(),
+    class_days_bn: z.string().nullable().optional(),
 
-    status: z.enum(["Upcoming", "Active", "Completed"]).optional(),
+    status: z.enum(["Upcoming", "Active", "Completed", "On Hold"]).optional(),
+    capacity: z.preprocess((val) => (val === "" ? null : Number(val)), z.number().nullable().optional()),
+    duration_en: z.string().nullable().optional(),
+    duration_bn: z.string().nullable().optional(),
+    total_classes: z.preprocess((val) => (val === "" ? null : Number(val)), z.number().nullable().optional()),
+    badge_en: z.string().nullable().optional(),
+    badge_bn: z.string().nullable().optional(),
   })
   .refine((data) => Object.keys(data).length > 0, {
     message: "At least one field is required to update",

@@ -6,9 +6,11 @@ import multer from "multer";
 const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
 const STUDENT_DIR = path.join(UPLOADS_DIR, "students");
 const EMPLOYEE_DIR = path.join(UPLOADS_DIR, "employees");
+const BLOG_DIR = path.join(UPLOADS_DIR, "blogs");
+const COURSE_DIR = path.join(UPLOADS_DIR, "courses");
 
 // Ensure directories exist
-[STUDENT_DIR, EMPLOYEE_DIR].forEach((dir) => {
+[STUDENT_DIR, EMPLOYEE_DIR, BLOG_DIR, COURSE_DIR].forEach((dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
@@ -16,7 +18,11 @@ const EMPLOYEE_DIR = path.join(UPLOADS_DIR, "employees");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    if (req.originalUrl.includes("/employees/") || req.originalUrl.includes("/user")) {
+    if (req.originalUrl.includes("/blogs")) {
+      cb(null, BLOG_DIR);
+    } else if (req.originalUrl.includes("/courses")) {
+      cb(null, COURSE_DIR);
+    } else if (req.originalUrl.includes("/employees/") || req.originalUrl.includes("/user")) {
       cb(null, EMPLOYEE_DIR);
     } else {
       cb(null, STUDENT_DIR); 

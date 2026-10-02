@@ -1,0 +1,103 @@
+{
+  "slug": "short-courses",
+  "meta": {
+    "title": "Short Culinary Courses in Dhaka | Quick Professional Training | CIB",
+    "description": "Explore CIB short culinary courses in Dhaka. Intensive 2 to 4-week certificate programs in Sushi rolling, Korean BBQ, Baking, and Sourdough pizza."
+  },
+  "hero": {
+    "badge": "Express Professional Training 2026",
+    "heading": "Short Culinary Courses in Dhaka",
+    "subheading": "Acquire high-demand specialty skills in under 4 weeks. Ideal for home bakers, chefs expanding their menu, and food entrepreneurs."
+  },
+  "overview": {
+    "title": "Acquire Niche Culinary Mastery",
+    "text": "A full-term culinary diploma is a major commitment. If you are a specialized food entrepreneur, housewife, or working professional seeking specific skills, our short courses provide intensive hands-on execution without the fluff.\n\nOur kitchen labs in Dhanmondi run specialized batches led by industry veterans. Learn authentic international standards, ISO-HACCP hygiene, and ingredient costing."
+  },
+  "highlights": [
+    {
+      "title": "Specialty Skills",
+      "description": "Sushi rolling, Korean Bulgogi, Sourdough Pizza, Artisan Cakes."
+    },
+    {
+      "title": "2-4 Weeks",
+      "description": "Fast-paced, high-velocity practical programs."
+    },
+    {
+      "title": "High Margins",
+      "description": "Learn commercial costing to maximize food business profits."
+    },
+    {
+      "title": "Bilingual Classes",
+      "description": "Bilingual support (English & Bengali) for easy learning."
+    }
+  ],
+  "features": [
+    "Artisan Sourdough Pizza & Pasta Course (2 Weeks)",
+    "Specialty Japanese Gastronomy & Sushi Course (2 Weeks)",
+    "Authentic Korean K-Food & BBQ Course (2 Weeks)",
+    "Professional Baking, Bread & Celebration Cake Course (4 Weeks)",
+    "Cooking Course for Housewives & Small Cloud Kitchens (4 Weeks)",
+    "100% hands-on practical classes with all raw ingredients provided"
+  ],
+  "table": {
+    "heading": "Short Course Fees & Duration Comparison",
+    "headers": [
+      "Specialty Course",
+      "Duration",
+      "Total Course Fee (BDT)",
+      "Key Recipes Covered"
+    ],
+    "rows": [
+      [
+        "Japanese Cooking (Sushi & Ramen)",
+        "2 Weeks (4 Classes)",
+        "BDT 15,000",
+        "Maki, Nigiri, Ramen, Tempura, Gyoza"
+      ],
+      [
+        "Korean Cooking (K-Food & BBQ)",
+        "2 Weeks (4 Classes)",
+        "BDT 15,000",
+        "Kimchi, Bulgogi, Bibimbap, Gimbap"
+      ],
+      [
+        "Pizza & Pasta (Italian Arts)",
+        "2 Weeks (4 Classes)",
+        "BDT 12,000",
+        "Neapolitan Pizza, Fresh Tagliatelle"
+      ],
+      [
+        "Baking & Celebration Cakes",
+        "4 Weeks (8 Classes)",
+        "BDT 18,000",
+        "Fondant Cake, French Pastries, Artisan Bread"
+      ],
+      [
+        "Cooking Course for Home Chefs",
+        "4 Weeks (8 Classes)",
+        "BDT 12,500",
+        "Appetizers, Bengali & Chinese Entrees"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the schedule for these short courses?",
+      "answer": "We offer weekend-only classes (Friday/Saturday) for busy professionals, as well as weekday afternoon options."
+    },
+    {
+      "question": "Do I get a certificate after completing a short course?",
+      "answer": "Yes. CIB awards a Specialty Institutional Certificate upon successful completion and recipe testing."
+    },
+    {
+      "question": "How do I register for a class?",
+      "answer": "You can submit an online application via our Admission portal or visit our Dhanmondi campus to secure your seat."
+    }
+  ],
+  "cta": {
+    "heading": "Upgrade Your Culinary Portfolio",
+    "subheading": "Enroll in Month Three batches. Limited seats per specialty kitchen table.",
+    "buttonText": "Register for Short Course Now",
+    "buttonHref": "/admission"
+  }
+}

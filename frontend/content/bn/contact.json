@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "heading": "যোগাযোগ করুন",
+    "subheading": "কোর্স, ভর্তি এবং ক্যারিয়ার পাথওয়ে সম্পর্কে আপনার প্রশ্নের উত্তর দিতে আমরা প্রস্তুত।"
+  },
+  "info": {
+    "address": "হাউস-১৬০, ১ম তলা (লংলাইফ হাসপাতালের পাশে), লেক সার্কাস, কলাবাগান, ধানমন্ডি, ঢাকা - ১২০৫",
+    "phone": {
+      "number": "+৮৮০১৩৩৮৯৫৮৯৯৭",
+      "label": "কল করুন"
+    },
+    "whatsapp": {
+      "number": "+৮৮০১৩৩৮৯৫৮৯৯৭",
+      "label": "হোয়াটসঅ্যাপ"
+    },
+    "email": {
+      "address": "contact@cibdhk.com",
+      "secondaryAddress": "cib.dhk@gmail.com",
+      "label": "ইমেল করুন"
+    },
+    "hours": {
+      "label": "অফিস আওয়ার্স",
+      "schedule": "শনিবার - বৃহস্পতিবার: সকাল ১০:০০ - সন্ধ্যা ০৭:০০"
+    }
+  },
+  "form": {
+    "heading": "কথা শুরু করুন",
+    "fields": {
+      "name": "পূর্ণ নাম",
+      "phone": "ফোন নম্বর",
+      "email": "ইমেল অ্যাড্রেস",
+      "message": "আপনার বার্তা"
+    },
+    "placeholders": {
+      "name": "যেমন: মো: রহিম আহমেদ",
+      "phone": "যেমন: +৮৮০ ১৩XX-XXXXXX",
+      "email": "যেমন: rahim@example.com",
+      "message": "আমরা আপনাকে কীভাবে সাহায্য করতে পারি?"
+    },
+    "submitButton": "বার্তা পাঠান",
+    "successMessage": "ধন্যবাদ! আমরা ২৪ ঘন্টার মধ্যে আপনার সাথে যোগাযোগ করব।"
+  },
+  "map": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d322.78753610106565!2d90.37910819710673!3d23.750086204847523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b95e7a43bf21%3A0xd1c7ee1fe52d6a70!2sCIB%20-%20The%20Culinary%20Institute%20of%20Bangladesh!5e0!3m2!1sen!2sbd!4v1777794969457!5m2!1sen!2sbd",
+    "heading": "আমাদের ক্যাম্পাস ভিজিট করুন"
+  }
+}

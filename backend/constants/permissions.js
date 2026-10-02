@@ -33,6 +33,7 @@ export const PERMISSIONS = {
   COURSE_ACTIVE: "course_active",
   COURSE_EDIT: "course_edit",
   COURSE_DELETE: "course_delete",
+  COURSE_PUBLISH: "course_publish",
 
   // 📜 Master Syllabus Permissions
   VIEW_SYLLABUS: "view_syllabus",
@@ -72,7 +73,26 @@ export const PERMISSIONS = {
   // ⚙️ System Settings Permissions
   VIEW_SETTINGS: "view_settings",
   MANAGE_ROLES: "manage_roles",
-  MANAGE_SETTINGS: "manage_settings"
+  MANAGE_SETTINGS: "manage_settings",
+
+  // 📝 Blog Permissions
+  BLOG_VIEW: "blog_view",
+  BLOG_CREATE: "blog_create",
+  BLOG_EDIT: "blog_edit",
+  BLOG_DELETE: "blog_delete",
+  BLOG_PUBLISH: "blog_publish",
+
+  // 📄 CMS Section Permissions
+  CMS_VIEW: "cms_view",
+  CMS_EDIT: "cms_edit",
+
+  // 💬 Testimonial Permissions
+  TESTIMONIAL_VIEW: "testimonial_view",
+  TESTIMONIAL_EDIT: "testimonial_edit",
+
+  // 👥 Team Permissions
+  TEAM_VIEW: "team_view",
+  TEAM_EDIT: "team_edit"
 };
 
 Object.freeze(PERMISSIONS);

@@ -1,0 +1,83 @@
+{
+  "slug": "korean-cooking-course-dhaka",
+  "meta": {
+    "title": "Korean Cuisine Course in Dhaka | K-Food & BBQ | CIB",
+    "description": "Learn authentic Korean cooking in Dhaka. Master Kimchi fermentation, Korean BBQ, Bulgogi, Bibimbap, and K-Street food. Professional training."
+  },
+  "hero": {
+    "badge": "Specialty Certification 2026",
+    "heading": "Korean Cuisine Course in Dhaka",
+    "subheading": "Ride the Hallyu wave in the culinary world. Master the art of Kimchi fermentation, Korean BBQ grilling, Bulgogi, and Bibimbap."
+  },
+  "overview": {
+    "title": "Master the Bold Flavors of K-Food",
+    "text": "Korean cuisine has taken the global culinary scene by storm. In Dhaka, K-dramas have fueled a massive craving for authentic Korean food like Kimchi, Bulgogi, Gimbap, and Korean Fried Chicken.\n\nAt CIB, our Korean Cuisine Short Course teaches you the traditional fermentation sciences and modern street food recipes that are highly profitable for restaurants and cloud kitchens."
+  },
+  "highlights": [
+    {
+      "title": "Kimchi Science",
+      "description": "Traditional fermentation of Baechu (napa cabbage) Kimchi."
+    },
+    {
+      "title": "2 Weeks",
+      "description": "Focused weekend and weekday classes (4 sessions)."
+    },
+    {
+      "title": "Korean BBQ",
+      "description": "Mastering Bulgogi marinades and table-side grilling prep."
+    },
+    {
+      "title": "K-Street Food",
+      "description": "Learn Tteokbokki, Gimbap, and Korean Fried Chicken."
+    }
+  ],
+  "features": [
+    "Learn authentic Korean marination and fermentation methods",
+    "Master the spice profiles of Gochugaru and Gochujang",
+    "Hands-on preparation of Bibimbap and traditional side dishes (Banchan)",
+    "Ideal for entrepreneurs launching virtual K-food brands",
+    "All Korean ingredients provided by CIB",
+    "Receive a recognized CIB Specialty Certificate in Korean Cuisine"
+  ],
+  "table": {
+    "heading": "Specialty Course Fee & Schedule",
+    "headers": [
+      "Criteria",
+      "CIB Korean Course Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 15,000 (All ingredients included)"
+      ],
+      [
+        "Recipes Covered",
+        "Kimchi, Bulgogi, Bibimbap, Gimbap, Korean Fried Chicken"
+      ],
+      [
+        "Accreditation",
+        "CIB Specialty Certificate in Korean Cuisine"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you teach the fermentation process for Kimchi?",
+      "answer": "Yes. We teach the complete science of Korean lactic acid fermentation, cabbage brining, and spice paste preparation."
+    },
+    {
+      "question": "Is Korean food profitable for cloud kitchens in Dhaka?",
+      "answer": "Extremely. The target audience of K-food (Gen Z & millennials) is highly active on delivery apps, yielding high margins on street food items."
+    }
+  ],
+  "cta": {
+    "heading": "Ride the Korean Culinary Wave",
+    "subheading": "Capitalize on the Hallyu trend by mastering authentic K-food recipes.",
+    "buttonText": "Enroll in Korean Course Now",
+    "buttonHref": "/admission"
+  }
+}

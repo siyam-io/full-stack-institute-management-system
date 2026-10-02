@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Location",
+    "heading": "Visit Our Campus",
+    "subheading": "See where professional chefs are made. Our Dhanmondi campus is open for visits."
+  },
+  "campus": {
+    "address": "House-160, 1st Floor (Beside Longlife Hospital), Lake Circus, Kalabagan, Dhanmondi, Dhaka - 1205",
+    "phone": "+880 1338-958997",
+    "whatsapp": "+880 1338-958997",
+    "email": "contact@cibdhk.com",
+    "hours": "Saturday - Thursday, 10:00 AM – 7:00 PM (Friday Closed)"
+  },
+  "nearby_landmarks": [
+    "Beside Longlife Hospital",
+    "Near Lake Circus",
+    "Walking distance from Dhanmondi Lake",
+    "Close to Kalabagan Bus Stand"
+  ],
+  "travel_times": [
+    { "area": "Gulshan", "time": "25-30 minutes", "route": "via Dhanmondi Road" },
+    { "area": "Banani", "time": "25-30 minutes", "route": "via Satmasjid Road" },
+    { "area": "Mirpur", "time": "20-25 minutes", "route": "via Dhanmondi Road" },
+    { "area": "Uttara", "time": "45-50 minutes", "route": "via Airport Road" },
+    { "area": "Old Dhaka", "time": "20-25 minutes", "route": "via New Market" },
+    { "area": "Motijheel", "time": "20-25 minutes", "route": "via Shahbagh" }
+  ],
+  "cta": {
+    "heading": "Want to See Our Kitchen?",
+    "primaryButtonText": "Book a Campus Visit",
+    "primaryButtonLink": "/admission",
+    "secondaryButtonText": "Contact Us",
+    "secondaryButtonLink": "/contact"
+  }
+}

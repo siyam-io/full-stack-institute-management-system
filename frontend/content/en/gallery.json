@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "heading": "The CIB Action Gallery",
+    "subheading": "Raw discipline. High-intensity practice. This is where professional chefs are forged."
+  },
+  "categories": ["All", "Classes", "Practice", "Students", "Theory"],
+  "images": [
+    { "src": "/images/student-practice-6-1920w.webp", "alt": "Student knife skills practice", "category": "Practice" },
+    { "src": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp", "alt": "Chef Rafeya conducting practical class", "category": "Classes" },
+    { "src": "/images/principal-dewan-ismail-preparing-fish-for-turkish-cuisine-2-1920w.webp", "alt": "Principal Dewan Ismail preparing Turkish cuisine", "category": "Classes" },
+    { "src": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp", "alt": "Expert supervision", "category": "Classes" },
+    { "src": "/images/student-practice-5-1920w.webp", "alt": "Student practice session", "category": "Students" },
+    { "src": "/images/student_practice_session_6-1920w.webp", "alt": "Commercial kitchen operations", "category": "Practice" },
+    { "src": "/images/practical_class_1-1920w.webp", "alt": "Practical excellence", "category": "Classes" },
+    { "src": "/images/practical_class_2-1920w.webp", "alt": "Hands-on training", "category": "Classes" },
+    { "src": "/images/practical_class_3-1920w.webp", "alt": "Advanced culinary techniques", "category": "Classes" },
+    { "src": "/images/theoritical_class-1920w.webp", "alt": "Theoretical knowledge session", "category": "Theory" },
+    { "src": "/images/student_practice_session_1-1920w.webp", "alt": "Kitchen practice", "category": "Practice" },
+    { "src": "/images/student_practice_session_2-1920w.webp", "alt": "Culinary arts in action", "category": "Students" },
+    { "src": "/images/student_2_holding_beverage_glass-1920w.webp", "alt": "Beverage arts training", "category": "Practice" },
+    { "src": "/images/student_practice_session_3-1920w.webp", "alt": "Skill refinement", "category": "Practice" },
+    { "src": "/images/student_practice_session_4-1920w.webp", "alt": "Industrial kitchen workflow", "category": "Practice" },
+    { "src": "/images/student_practice_session_5-1920w.webp", "alt": "Culinary precision", "category": "Students" },
+    { "src": "/images/student_practice_session_7-1920w.webp", "alt": "Final plating session", "category": "Students" }
+  ]
+}

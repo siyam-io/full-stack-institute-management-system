@@ -17,6 +17,7 @@ export const userCreateSchema = z.object({
   email: z.string().email().toLowerCase(),
   password: z.string().min(6),
   full_name: z.string().regex(nameRegex, "Invalid name format."),
+  full_name_bn: z.string().optional(),
   employee_id: z.string().min(1),
   joining_date: z.string().optional(),
   phone: z.string().min(1),
@@ -33,6 +34,11 @@ export const userCreateSchema = z.object({
   twitter: z.string().optional(),
   instagram: z.string().optional(),
   others: z.string().optional(),
+  bio: z.string().optional(),
+  bio_bn: z.string().optional(),
+  achievements: z.string().optional(),
+  achievements_bn: z.string().optional(),
+  is_mentor: z.preprocess((val) => val === "true" || val === true || val === "on", z.boolean()).optional(),
   photo: z.any().optional(),
 });
 
@@ -63,6 +69,7 @@ export const userCreateSchema = z.object({
 
 export const updateUserSchema = z.object({
     full_name: z.string().regex(nameRegex, "Invalid name format.").optional(),
+    full_name_bn: z.string().optional(),
     email: z.string().email().toLowerCase().optional(),
     phone: z.string().optional(),
     designation: z.string().optional(),
@@ -79,6 +86,11 @@ export const updateUserSchema = z.object({
     twitter: z.string().url().optional().or(z.literal("")),
     instagram: z.string().url().optional().or(z.literal("")),
     others: z.string().url().optional().or(z.literal("")),
+    bio: z.string().optional().or(z.literal("")),
+    bio_bn: z.string().optional().or(z.literal("")),
+    achievements: z.string().optional().or(z.literal("")),
+    achievements_bn: z.string().optional().or(z.literal("")),
+    is_mentor: z.preprocess((val) => val === "true" || val === true || val === "on", z.boolean()).optional(),
     photo: z.any().optional(),
 }).refine((data) => Object.keys(data).length > 0, {
     message: "At least one field must be provided for update",

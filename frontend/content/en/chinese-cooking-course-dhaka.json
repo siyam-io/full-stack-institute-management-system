@@ -1,0 +1,83 @@
+{
+  "slug": "chinese-cooking-course-dhaka",
+  "meta": {
+    "title": "Chinese Cooking Course in Dhaka | Wok & Stir-Fry | CIB",
+    "description": "Join the best Chinese cooking course in Dhaka. Master wok hei, stir-fry techniques, dim sum folding, Szechuan sauces, and restaurant-style plating."
+  },
+  "hero": {
+    "badge": "Specialty Certification 2026",
+    "heading": "Chinese Cooking Course in Dhaka",
+    "subheading": "Command the flames. Master wok tossing, dim sum folding, and the secret sauces of authentic Szechuan and Cantonese cuisines."
+  },
+  "overview": {
+    "title": "The Flame and the Wok",
+    "text": "Authentic Chinese cuisine is a masterclass in fire control (Wok Hei) and precise choping. In Dhaka, Chinese food has evolved, but the demand for authentic, high-fidelity Cantonese and Szechuan cooking remains extremely strong for restaurant-tier chefs.\n\nCIB's Chinese Cooking Course teaches you the technical rules of high-heat cooking. You will learn to control wok fire, execute traditional dim sum folding, and draft complex Chinese stocks and sauces."
+  },
+  "highlights": [
+    {
+      "title": "Wok Hei Mastery",
+      "description": "Learn flame management and tossing for authentic wok breath."
+    },
+    {
+      "title": "Dim Sum Folding",
+      "description": "Master dumpling dough prep and intricate folding techniques."
+    },
+    {
+      "title": "Mother Sauces",
+      "description": "Prepare Szechuan, Kung Pao, Sweet & Sour, and Black Bean bases."
+    },
+    {
+      "title": "Texture Control",
+      "description": "Understand velvetting meat and crisp vegetable blanching."
+    }
+  ],
+  "features": [
+    "Mastering high-heat wok tossing and flame safety protocols",
+    "Folding dim sums, momos, and traditional spring rolls",
+    "Preparing clear broths and traditional Chinese chicken stocks",
+    "Velvetting chicken and beef for soft, restaurant-grade texture",
+    "Making custom chili oil, Szechuan paste, and sweet soy reduction",
+    "Accredited specialty certificate in Chinese Gastronomy"
+  ],
+  "table": {
+    "heading": "Chinese Course Outline & Intake",
+    "headers": [
+      "Specification",
+      "Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Hands-on Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 10,000 (All ingredients, worksheets, and uniform included)"
+      ],
+      [
+        "Intake Limit",
+        "12 students per batch for kitchen safety"
+      ],
+      [
+        "Class Timings",
+        "Flexible batches (Fridays / weekdays)"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What dishes are taught in this course?",
+      "answer": "We cover Dim Sum/Dumplings, Kung Pao Chicken, Beef with Black Bean Sauce, Szechuan Fried Rice, Hakka Noodles, and Hot & Sour Soup."
+    },
+    {
+      "question": "Is this the same as local Bangla-Chinese cooking?",
+      "answer": "No. While we briefly explain the history of Chinese-Bangla adaptation, this course focuses primarily on authentic Szechuan and Cantonese techniques."
+    }
+  ],
+  "cta": {
+    "heading": "Master the Flame & Wok",
+    "subheading": "Develop professional stir-frying skills and enter commercial kitchens with confidence.",
+    "buttonText": "Register for Chinese Course",
+    "buttonHref": "/admission"
+  }
+}

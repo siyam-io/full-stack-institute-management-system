@@ -1,0 +1,83 @@
+{
+  "slug": "indian-cuisine-course-dhaka",
+  "meta": {
+    "title": "Indian Cuisine Course in Dhaka | Curry & Tandoor | CIB",
+    "description": "Master professional Indian cooking in Dhaka. Learn curry gravy bases, tandoori marinades, naan baking, and aromatic spice roasting. Traditional clay oven skills."
+  },
+  "hero": {
+    "badge": "Specialty Certification 2026",
+    "heading": "Indian Cuisine Course in Dhaka",
+    "subheading": "Unlock the secrets of subcontinental spices. Master rich restaurant gravies, tandoori baking, and aromatic spice blending."
+  },
+  "overview": {
+    "title": "The Art of Curry and Spice",
+    "text": "Subcontinental cuisine is a complex dance of spice tempering (Tadka) and slow-cooked gravy reduction. Restaurant-grade Indian cooking is highly technical, demanding knowledge of base gravies, clay oven (Tandoor) heat, and custom spice blends.\n\nCIB's Indian Cuisine Course teaches you how to replicate 5-star restaurant flavors. You will learn the science of Indian mother gravies, yogurt marinades, and how to bake soft, pillowy naan on direct commercial heat."
+  },
+  "highlights": [
+    {
+      "title": "Clay Oven Baking",
+      "description": "Master Naan and Tandoori Roti baking on direct heat."
+    },
+    {
+      "title": "4 Mother Gravies",
+      "description": "Learn Makhani, Onion-Tomato Masala, Korma, and Palak bases."
+    },
+    {
+      "title": "Tandoori Marinades",
+      "description": "Master yogurt-spice marination for tikka and kebabs."
+    },
+    {
+      "title": "Spice Roasting",
+      "description": "Learn to roast and blend custom Garam Masalas."
+    }
+  ],
+  "features": [
+    "Preparing Makhani gravy and onion-tomato masala base from scratch",
+    "Marinating and baking chicken tikka, seekh kebab, and fish tandoori",
+    "Baking butter naan, garlic naan, and paratha on hot griddles/tandoor",
+    "Understanding tadka (tempering) science for lentil and vegetable dishes",
+    "Calculating spice yields and commercial portion controls",
+    "CIB Institutional Specialty Certificate in Indian Culinary Arts"
+  ],
+  "table": {
+    "heading": "Indian Course Details",
+    "headers": [
+      "Specification",
+      "Course Specifications"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Hands-on Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 10,000 (All raw materials and recipe books included)"
+      ],
+      [
+        "Key Recipes",
+        "Butter Chicken, Mutton Rogan Josh, Chicken Tikka, Garlic Naan, Biryani Aromatics"
+      ],
+      [
+        "Intake Limit",
+        "15 students per batch"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Will we learn how to make Mughlai dishes?",
+      "answer": "Yes. We cover aromatic rice preparations, slow-cooking (Dum) basics, and rich korma gravies that form the basis of Mughlai gastronomy."
+    },
+    {
+      "question": "Is this course useful for opening a catering business?",
+      "answer": "Yes. Indian cuisine is the most popular catering option in Dhaka. We focus on batch cooking and maintaining taste consistency."
+    }
+  ],
+  "cta": {
+    "heading": "Master Indian Culinary Science",
+    "subheading": "Replicate 5-star restaurant flavors. Learn the core principles of subcontinental cooking.",
+    "buttonText": "Enroll in Indian Course Now",
+    "buttonHref": "/admission"
+  }
+}

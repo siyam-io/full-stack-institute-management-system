@@ -1,0 +1,97 @@
+{
+  "slug": "chef-course-bangladesh",
+  "meta": {
+    "title": "Chef Course in Bangladesh | Professional Culinary Institute | CIB",
+    "description": "Looking for the best chef course in Bangladesh? CIB offers NSDA accredited culinary training, 120+ recipes, and international placement support."
+  },
+  "hero": {
+    "badge": "Professional Pathway 2026",
+    "heading": "Chef Course in Bangladesh",
+    "subheading": "Master professional culinary arts under 5-star executive mentors. Secure global employment with NSDA-accredited training."
+  },
+  "overview": {
+    "title": "Culinary Career Powerhouse",
+    "text": "The hospitality and food service industry in Bangladesh is expanding rapidly, offering lucrative career paths for trained professionals. CIB is the premier culinary institute in Bangladesh, bridging the gap between domestic cooking and high-performance commercial kitchen environments.\n\nOur curriculum is mapped to international guidelines and accredited by the National Skills Development Authority (NSDA) under the Prime Minister's Office. This ensures your credentials are recognized globally by embassies, visa processing centers, and 5-star hotels."
+  },
+  "highlights": [
+    {
+      "title": "120+ Recipes",
+      "description": "From basic culinary science to advanced international menus."
+    },
+    {
+      "title": "16+ Cuisines",
+      "description": "Italian, French, Mediterranean, Turkish, Asian, and more."
+    },
+    {
+      "title": "NSDA Certification",
+      "description": "Government-approved Level 2 and Level 3 vocational certificates."
+    },
+    {
+      "title": "5-Star Placement",
+      "description": "Conditional internships and jobs at Radisson, Westin, and InterContinental."
+    }
+  ],
+  "features": [
+    "State-of-the-art 2,000 sq. ft. commercial kitchen lab in Dhaka",
+    "Direct hands-on practical classes with premium ingredients",
+    "ISO-HACCP food safety & kitchen hygiene standards training",
+    "Comprehensive pastry and baking bonus module included free",
+    "Flexible class schedules (Fridays / weekdays) for students & professionals",
+    "Job placement cell with verified local and Middle East hotel partnerships"
+  ],
+  "table": {
+    "heading": "Chef Course Details & Comparison",
+    "headers": [
+      "Criteria",
+      "CIB Professional Course",
+      "Ordinary Institutes"
+    ],
+    "rows": [
+      [
+        "Accreditation",
+        "NSDA & ISO-HACCP Standards",
+        "Unaccredited / Domestic"
+      ],
+      [
+        "Curriculum Depth",
+        "120+ Recipes, 16+ Cuisines",
+        "Basic local dishes only"
+      ],
+      [
+        "Mentorship",
+        "Executive 5-Star Chefs",
+        "Instructors with basic skills"
+      ],
+      [
+        "Kitchen Size",
+        "2,000 sq. ft. Commercial Lab",
+        "Home kitchen setup"
+      ],
+      [
+        "Internship Support",
+        "100% conditional placement support",
+        "No internship support"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the eligibility for a chef course in Bangladesh?",
+      "answer": "A minimum education of SSC/HSC or equivalent is recommended, with age 16+ and a passion for cooking. No prior kitchen experience is required."
+    },
+    {
+      "question": "Are CIB certificates accepted for visa processing?",
+      "answer": "Yes. CIB's NSDA-accredited vocational certificates are government-approved and widely accepted by embassies for skilled worker visas in Europe, Canada, and the Gulf."
+    },
+    {
+      "question": "Can I pay the course fees in installments?",
+      "answer": "Yes, CIB offers a flexible payment structure where the total fee of BDT 44,000 is payable in three easy installments: BDT 16,000 admission + two installments of BDT 14,000."
+    }
+  ],
+  "cta": {
+    "heading": "Become a Certified Professional Chef",
+    "subheading": "Stop surviving on odd jobs. Get the skills that give you a high-paying career worldwide.",
+    "buttonText": "Enroll in Month 1 Batch Now",
+    "buttonHref": "/admission"
+  }
+}

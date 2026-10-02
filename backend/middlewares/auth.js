@@ -1,15 +1,26 @@
 import jwt from "jsonwebtoken";
-import User from "../models/user.js";
 import { ENV } from "../lib/env.js";
+import prisma from "../lib/prisma.js";
 import AppError from "../utils/AppError.js";
 import catchAsync from "../utils/catchAsync.js";
 
 const checkIsMaster = (role) => {
   if (!role) return false;
-  const safeName = role.name?.toLowerCase().replace(/\s/g, ''); 
-  return safeName === "superadmin" || safeName === "admin" || (Array.isArray(role.permissions) && role.permissions.includes("all_access"));
+  const safeName = role.name?.toLowerCase().replace(/\s/g, "");
+  let permissions = role.permissions || [];
+  if (typeof permissions === "string") {
+    try {
+      permissions = JSON.parse(permissions);
+    } catch {
+      permissions = [];
+    }
+  }
+  return (
+    safeName === "superadmin" ||
+    safeName === "admin" ||
+    (Array.isArray(permissions) && permissions.includes("all_access"))
+  );
 };
-
 
 export const verifyToken = catchAsync(async (req, res, next) => {
   let token = req.cookies?.jwt;
@@ -21,34 +32,32 @@ export const verifyToken = catchAsync(async (req, res, next) => {
   if (!token) return next(new AppError("Unauthorized - No Token Provided", 401));
 
   const decoded = jwt.verify(token, ENV.JWT_SECRET);
-  const user = await User.findById(decoded.userId).select("-password").populate("role");
+  const user = await prisma.user.findUnique({
+    where: { id: decoded.userId },
+    include: { role: true },
+  });
 
   if (!user) return next(new AppError("Account not found", 404));
   if (user.status !== "Active") return next(new AppError("Your account is deactivated", 403));
 
   req.user = user;
-  req.isMaster = checkIsMaster(user.role);
   
+  let permissions = user.role?.permissions || [];
+  if (typeof permissions === "string") {
+    try {
+      permissions = JSON.parse(permissions);
+    } catch {
+      permissions = [];
+    }
+  }
+  req.user.permissions = permissions;
+  req.isMaster = checkIsMaster(user.role);
+
   next();
 });
 
-
-// export const requirePermission = (requiredPermission) => {
-//   return (req, res, next) => {
-//     if (req.isMaster) return next();
-
-//     const permissions = req.user.role?.permissions || [];
-//     // console.log(permissions)
-//     if (permissions.includes(requiredPermission)) return next();
-
-//     return next(new AppError(`Access denied. Missing permission: ${requiredPermission}`, 403));
-//   };
-// };
-
-
 export const requirePermission = (permission) => {
   return (req, res, next) => {
-    // Master Admin hole permission check charai access pabe
     if (req.isMaster) {
       return next();
     }
@@ -61,23 +70,28 @@ export const requirePermission = (permission) => {
   };
 };
 
-
 export const injectBranchFilter = (req, res, next) => {
-  req.branchFilter = { branch: req.user.branch };
+  req.branchFilter = { branch: req.user.branchId };
 
   if (req.isMaster) {
     const requestedBranch = req.query.branch || req.body.branch;
-    
+
     if (requestedBranch && requestedBranch !== "all") {
-      req.branchFilter = { branch: requestedBranch }; 
+      req.branchFilter = { branch: requestedBranch };
     } else {
-      req.branchFilter = {}; 
+      req.branchFilter = {};
     }
   } else {
     const requestedBranch = req.params.branchId || req.query.branch || req.body.branch;
-    
-    if (requestedBranch && requestedBranch !== "all" && requestedBranch.toString() !== req.user.branch.toString()) {
-      return next(new AppError("Branch Access Denied! You can only access your own campus data.", 403));
+
+    if (
+      requestedBranch &&
+      requestedBranch !== "all" &&
+      requestedBranch.toString() !== req.user.branchId?.toString()
+    ) {
+      return next(
+        new AppError("Branch Access Denied! You can only access your own campus data.", 403),
+      );
     }
   }
 

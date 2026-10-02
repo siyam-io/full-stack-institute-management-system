@@ -1,0 +1,467 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Branch {
+  id            String    @id @default(uuid()) @db.Uuid
+  branch_name   String    @unique @map("branch_name")
+  branch_name_bn String?   @map("branch_name_bn")
+  branch_code   String    @unique @map("branch_code")
+  address       String
+  contact_email String?   @map("contact_email")
+  contact_phone String?   @map("contact_phone")
+  is_active     Boolean   @default(true) @map("is_active")
+  created_at    DateTime  @default(now()) @map("created_at")
+  updated_at    DateTime  @updatedAt @map("updated_at")
+  deleted_at    DateTime? @map("deleted_at")
+
+  users        User[]
+  batches      Batch[]
+
+  @@index([is_active])
+  @@map("branches")
+}
+
+model Role {
+  id             String   @id @default(uuid()) @db.Uuid
+  name           String   @unique
+  description    String?
+  permissions    Json     @default("[]")
+  is_system_role Boolean  @default(false) @map("is_system_role")
+  created_at     DateTime @default(now()) @map("created_at")
+  updated_at     DateTime @updatedAt @map("updated_at")
+
+  users User[]
+
+  @@map("roles")
+}
+
+model User {
+  id                    String    @id @default(uuid()) @db.Uuid
+  username              String    @unique
+  email                 String    @unique
+  password              String    @map("password_hash")
+  employee_id           String?   @unique @map("employee_id")
+  full_name             String    @map("full_name")
+  full_name_bn          String?   @map("full_name_bn")
+  photo_url             String    @default("") @map("photo_url")
+  phone                 String?
+  designation           String?
+  department            String?
+  joining_date          DateTime  @default(now()) @db.Date @map("joining_date")
+  status                String    @default("Active")
+  social_links          Json      @default("{}") @map("social_links")
+  bio                   String    @default("")
+  bio_bn                String    @default("") @map("bio_bn")
+  is_mentor             Boolean   @default(false) @map("is_mentor")
+  reset_password_token  String?   @map("reset_password_token")
+  reset_password_expire DateTime? @map("reset_password_expire")
+  created_at            DateTime  @default(now()) @map("created_at")
+  updated_at            DateTime  @updatedAt @map("updated_at")
+  deleted_at            DateTime? @map("deleted_at")
+
+  role_id   String @db.Uuid @map("role_id")
+  role      Role   @relation(fields: [role_id], references: [id], onDelete: Restrict)
+  branch_id String @db.Uuid @map("branch_id")
+  branch    Branch @relation(fields: [branch_id], references: [id], onDelete: Restrict)
+
+
+  classContents     ClassContent[]
+  comments          Comment[]
+  collectedPayments Payment[]
+  blogPosts         BlogPost[]
+  discountLogs      DiscountLog[]
+  mentor            Mentor?
+  strategicTeamMembers StrategicTeamMember[]
+  auditLogs            AuditLog[]
+  achievements         Achievement[]
+
+  @@index([branch_id, role_id, status])
+  @@map("users")
+}
+
+model Course {
+  id                  String    @id @default(uuid()) @db.Uuid
+  course_code         String    @unique @map("course_code")
+  slug                String    @unique
+  course_name_en      String    @map("course_name_en")
+  course_name_bn      String?   @map("course_name_bn")
+  short_description_en String?  @map("short_description_en")
+  short_description_bn String?  @map("short_description_bn")
+  description_en      String    @default("") @map("description_en")
+  description_bn      String?   @map("description_bn")
+  duration_value      Int       @map("duration_value")
+  duration_unit       String    @default("months") @map("duration_unit")
+  base_fee            Decimal   @default(0) @db.Decimal(12, 2) @map("base_fee")
+  admission_fee       Decimal   @default(0) @db.Decimal(12, 2) @map("admission_fee")
+  first_installment   Decimal   @default(0) @db.Decimal(12, 2) @map("first_installment")
+  second_installment  Decimal   @default(0) @db.Decimal(12, 2) @map("second_installment")
+  cover_image_url     String?   @map("cover_image_url")
+  additional_info     Json      @default("[]") @map("additional_info")
+  is_active           Boolean   @default(true) @map("is_active")
+  created_at          DateTime  @default(now()) @map("created_at")
+  updated_at          DateTime  @updatedAt @map("updated_at")
+  deleted_at          DateTime? @map("deleted_at")
+  seo_title_en        String?   @db.VarChar(255) @map("seo_title_en")
+  seo_title_bn        String?   @db.VarChar(255) @map("seo_title_bn")
+  seo_description_en  String?   @map("seo_description_en")
+  seo_description_bn  String?   @map("seo_description_bn")
+
+  // Public/Landing Page merged fields
+  hero_title_en       String?   @map("hero_title_en")
+  hero_title_bn       String?   @map("hero_title_bn")
+  hero_subtitle_en    String?   @map("hero_subtitle_en")
+  hero_subtitle_bn    String?   @map("hero_subtitle_bn")
+  overview_en         String?   @map("overview_en")
+  overview_bn         String?   @map("overview_bn")
+  content_en          Json      @default("{}") @map("content_en")
+  content_bn          Json      @default("{}") @map("content_bn")
+  curriculum_en       Json      @default("[]") @map("curriculum_en")
+  curriculum_bn       Json      @default("[]") @map("curriculum_bn")
+  faqs_en             Json      @default("[]") @map("faqs_en")
+  faqs_bn             Json      @default("[]") @map("faqs_bn")
+  outcomes_en         Json      @default("[]") @map("outcomes_en")
+  outcomes_bn         Json      @default("[]") @map("outcomes_bn")
+  public_page_status  String    @default("draft") @map("public_page_status")
+  published_at        DateTime? @map("published_at")
+
+  batches            Batch[]
+
+  @@map("courses")
+}
+
+model Batch {
+  id            String    @id @default(uuid()) @db.Uuid
+  batch_name    String    @map("batch_name")
+  batch_name_bn String?   @map("batch_name_bn")
+  start_date    DateTime  @db.Date @map("start_date")
+  schedule_days Json      @default("[]") @map("schedule_days")
+  class_days_bn String?   @map("class_days_bn")
+  class_time_en String?   @map("class_time_en")
+  class_time_bn String?   @map("class_time_bn")
+  status        String    @default("Upcoming")
+  capacity      Int?
+  duration_en   String?   @map("duration_en")
+  duration_bn   String?   @map("duration_bn")
+  total_classes Int?      @map("total_classes")
+  badge_en      String?   @map("badge_en")
+  badge_bn      String?   @map("badge_bn")
+  created_at    DateTime  @default(now()) @map("created_at")
+  updated_at    DateTime  @updatedAt @map("updated_at")
+  deleted_at    DateTime? @map("deleted_at")
+
+  course_id String @db.Uuid @map("course_id")
+  course    Course @relation(fields: [course_id], references: [id], onDelete: Restrict)
+  branch_id String @db.Uuid @map("branch_id")
+  branch    Branch @relation(fields: [branch_id], references: [id], onDelete: Restrict)
+
+
+  students      Student[]
+  classContents ClassContent[]
+
+  @@unique([branch_id, batch_name])
+  @@index([branch_id, status])
+  @@index([course_id, branch_id])
+  @@map("batches")
+}
+
+
+
+model Student {
+  id                  String    @id @default(uuid()) @db.Uuid
+  student_name        String    @map("student_name")
+  student_name_bn     String?   @map("student_name_bn")
+  fathers_name        String    @map("fathers_name")
+  fathers_name_bn     String?   @map("fathers_name_bn")
+  student_id          String    @unique @map("student_id")
+  registration_number String?   @unique @map("registration_number")
+  competency          String    @default("not_assessed")
+  status              String    @default("active")
+  is_active           Boolean   @default(true) @map("is_active")
+  is_verified         Boolean   @default(false) @map("is_verified")
+  admission_date      DateTime  @db.Date @map("admission_date")
+  completion_date     DateTime? @db.Date @map("completion_date")
+  photo_url           String    @default("") @map("photo_url")
+  gender              String
+  contact_number      String?   @map("contact_number")
+  email               String?
+  address             String?
+  created_at          DateTime  @default(now()) @map("created_at")
+  updated_at          DateTime  @updatedAt @map("updated_at")
+  deleted_at          DateTime? @map("deleted_at")
+
+  batch_id String @db.Uuid @map("batch_id")
+  batch    Batch  @relation(fields: [batch_id], references: [id], onDelete: Restrict)
+
+  invoices       Invoice[]
+  comments       Comment[]
+
+  @@index([batch_id, status])
+  @@index([student_name])
+  @@index([contact_number])
+  @@index([email])
+  @@map("students")
+}
+
+model Invoice {
+  id            String   @id @default(uuid()) @db.Uuid
+  invoice_no    String   @unique @map("invoice_no")
+  total_amount  Decimal  @db.Decimal(12, 2) @map("total_amount")
+  discount      Decimal  @default(0) @db.Decimal(12, 2)
+  net_payable   Decimal  @db.Decimal(12, 2) @map("net_payable")
+  paid_amount   Decimal  @default(0) @db.Decimal(12, 2) @map("paid_amount")
+  status        String   @default("UNPAID")
+  due_date      DateTime? @db.Date @map("due_date")
+  created_at    DateTime @default(now()) @map("created_at")
+  updated_at    DateTime @updatedAt @map("updated_at")
+
+  student_id    String   @db.Uuid @map("student_id")
+  student       Student  @relation(fields: [student_id], references: [id], onDelete: Cascade)
+
+  items         InvoiceItem[]
+  payments      Payment[]
+  discount_logs DiscountLog[]
+
+  @@index([status])
+  @@index([student_id])
+  @@map("invoices")
+}
+
+model InvoiceItem {
+  id          String   @id @default(uuid()) @db.Uuid
+  description String
+  amount      Decimal  @db.Decimal(12, 2)
+  created_at  DateTime @default(now()) @map("created_at")
+
+  invoice_id  String   @db.Uuid @map("invoice_id")
+  invoice     Invoice  @relation(fields: [invoice_id], references: [id], onDelete: Cascade)
+
+  @@map("invoice_items")
+}
+
+model DiscountLog {
+  id            String   @id @default(uuid()) @db.Uuid
+  amount        Decimal  @db.Decimal(12, 2)
+  reason        String?
+  created_at    DateTime @default(now()) @map("created_at")
+
+  invoice_id    String   @db.Uuid @map("invoice_id")
+  invoice       Invoice  @relation(fields: [invoice_id], references: [id], onDelete: Cascade)
+  applied_by_id String   @db.Uuid @map("applied_by_id")
+  applied_by    User     @relation(fields: [applied_by_id], references: [id], onDelete: Restrict)
+
+  @@map("discount_logs")
+}
+
+model Payment {
+  id             String   @id @default(uuid()) @db.Uuid
+  amount         Decimal  @db.Decimal(12, 2)
+  payment_method String   @map("payment_method")
+  transaction_id String?  @map("transaction_id")
+  receipt_number String   @unique @map("receipt_number")
+  remarks        String   @default("")
+  created_at     DateTime @default(now()) @map("created_at")
+  updated_at     DateTime @updatedAt @map("updated_at")
+
+  invoice_id      String   @db.Uuid @map("invoice_id")
+  invoice_record  Invoice  @relation(fields: [invoice_id], references: [id], onDelete: Cascade)
+  collected_by    String   @db.Uuid @map("collected_by")
+  collector       User     @relation(fields: [collected_by], references: [id], onDelete: Restrict)
+
+  @@index([invoice_id, created_at])
+  @@index([collected_by])
+  @@map("payments")
+}
+
+model ClassContent {
+  id                 String    @id @default(uuid()) @db.Uuid
+  class_number       Int?      @map("class_number")
+  topic              String
+  content_details    Json      @default("[]") @map("content_details")
+  date_scheduled     DateTime? @db.Date @map("date_scheduled")
+  is_completed       Boolean   @default(false) @map("is_completed")
+  created_at         DateTime  @default(now()) @map("created_at")
+  updated_at         DateTime  @updatedAt @map("updated_at")
+
+  batch_id      String  @db.Uuid @map("batch_id")
+  batch         Batch   @relation(fields: [batch_id], references: [id], onDelete: Cascade)
+  instructor_id String? @db.Uuid @map("instructor_id")
+  instructor    User?   @relation(fields: [instructor_id], references: [id], onDelete: SetNull)
+
+  @@unique([batch_id, class_number])
+  @@map("class_contents")
+}
+
+model Comment {
+  id         String   @id @default(uuid()) @db.Uuid
+  text       String
+  created_at DateTime @default(now()) @map("created_at")
+  updated_at DateTime @updatedAt @map("updated_at")
+
+  student_id String  @db.Uuid @map("student_id")
+  student    Student @relation(fields: [student_id], references: [id], onDelete: Cascade)
+  comment_by String  @db.Uuid @map("comment_by")
+  commenter  User    @relation(fields: [comment_by], references: [id], onDelete: Restrict)
+
+  @@map("comments")
+}
+
+
+
+
+model BlogPost {
+  id                 String    @id @default(uuid()) @db.Uuid
+  slug               String    @unique
+  title_en           String    @map("title_en")
+  title_bn           String?   @map("title_bn")
+  excerpt_en         String?   @map("excerpt_en")
+  excerpt_bn         String?   @map("excerpt_bn")
+  content_en         Json      @default("{}") @map("content_en")
+  content_bn         Json      @default("{}") @map("content_bn")
+  author_id          String?   @db.Uuid @map("author_id")
+  author             User?     @relation(fields: [author_id], references: [id], onDelete: SetNull)
+  cover_image_url    String?   @map("cover_image_url")
+  tags               Json      @default("[]")
+  seo_title_en       String?   @map("seo_title_en")
+  seo_title_bn       String?   @map("seo_title_bn")
+  seo_description_en String?   @map("seo_description_en")
+  seo_description_bn String?   @map("seo_description_bn")
+  status             String    @default("draft")
+  is_featured        Boolean   @default(false) @map("is_featured")
+  published_at       DateTime? @map("published_at")
+  created_at         DateTime  @default(now()) @map("created_at")
+  updated_at         DateTime  @updatedAt @map("updated_at")
+  deleted_at         DateTime? @map("deleted_at")
+
+  @@index([status, published_at(sort: Desc)])
+  @@map("blog_posts")
+}
+
+model MarketingPage {
+  id                 String   @id @default(uuid()) @db.Uuid
+  slug               String   @unique
+  title_en           String   @map("title_en")
+  title_bn           String?  @map("title_bn")
+  content_en         Json     @default("{}") @map("content_en")
+  content_bn         Json     @default("{}") @map("content_bn")
+  seo_title_en       String?  @map("seo_title_en")
+  seo_title_bn       String?  @map("seo_title_bn")
+  seo_description_en String?  @map("seo_description_en")
+  seo_description_bn String?  @map("seo_description_bn")
+  created_at         DateTime @default(now()) @map("created_at")
+  updated_at         DateTime @updatedAt @map("updated_at")
+
+  @@map("marketing_pages")
+}
+
+model Mentor {
+  id            String   @id @default(uuid()) @db.Uuid
+  user_id       String?  @unique @db.Uuid @map("user_id")
+  user          User?    @relation(fields: [user_id], references: [id], onDelete: SetNull)
+  full_name     String   @map("full_name")
+  designation   String?
+  department    String?
+  photo_url     String   @default("") @map("photo_url")
+  bio           String   @default("")
+  social_links  Json     @default("{}") @map("social_links")
+  is_active     Boolean  @default(true) @map("is_active")
+  created_at    DateTime @default(now()) @map("created_at")
+  updated_at    DateTime @updatedAt @map("updated_at")
+
+  @@map("mentors")
+}
+
+model CmsSection {
+  id               String    @id @default(uuid()) @db.Uuid
+  sectionKey       String    @unique @map("section_key")
+  pageKey          String    @map("page_key")
+  title            String
+  dataEn           Json      @default("{}") @map("data_en")
+  dataBn           Json      @default("{}") @map("data_bn")
+  seoTitleEn       String?   @map("seo_title_en")
+  seoTitleBn       String?   @map("seo_title_bn")
+  seoDescriptionEn String?   @map("seo_description_en")
+  seoDescriptionBn String?   @map("seo_description_bn")
+  status           String    @default("published")
+  isActive         Boolean   @default(true) @map("is_active")
+  publishedAt      DateTime? @map("published_at")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+
+  @@map("cms_sections")
+}
+
+model Testimonial {
+  id             String   @id @default(uuid()) @db.Uuid
+  studentNameEn  String   @map("student_name_en")
+  studentNameBn  String?  @map("student_name_bn")
+  designationEn  String?  @map("designation_en")
+  designationBn  String?  @map("designation_bn")
+  messageEn      String   @map("message_en")
+  messageBn      String?  @map("message_bn")
+  imageUrl       String?  @map("image_url")
+  videoUrl       String?  @map("video_url")
+  rating         Int?
+  sortOrder      Int      @default(0) @map("sort_order")
+  isActive       Boolean  @default(true) @map("is_active")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("testimonials")
+}
+
+model StrategicTeamMember {
+  id            String   @id @default(uuid()) @db.Uuid
+  user_id       String?  @db.Uuid @map("user_id")
+  user          User?    @relation(fields: [user_id], references: [id], onDelete: SetNull)
+  nameEn        String   @map("name_en")
+  nameBn        String?  @map("name_bn")
+  designationEn String   @map("designation_en")
+  designationBn String?  @map("designation_bn")
+  bioEn         String?  @map("bio_en")
+  bioBn         String?  @map("bio_bn")
+  imageUrl      String?  @map("image_url")
+  facebook      String?
+  linkedin      String?
+  sortOrder     Int      @default(0) @map("sort_order")
+  isActive      Boolean  @default(true) @map("is_active")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("strategic_team_members")
+}
+
+model AuditLog {
+  id         String   @id @default(uuid()) @db.Uuid
+  action     String   @map("action")
+  method     String   @map("method")
+  endpoint   String   @map("endpoint")
+  payload    Json?    @map("payload")
+  ip_address String?  @map("ip_address")
+  created_at DateTime @default(now()) @map("created_at")
+
+  user_id String? @db.Uuid @map("user_id")
+  user    User?   @relation(fields: [user_id], references: [id], onDelete: SetNull)
+
+  @@map("audit_logs")
+}
+
+model Achievement {
+  id          String   @id @default(uuid()) @db.Uuid
+  user_id     String   @db.Uuid @map("user_id")
+  user        User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  title_en    String   @map("title_en")
+  title_bn    String?  @map("title_bn")
+  is_verified Boolean  @default(true) @map("is_verified")
+  created_at  DateTime @default(now()) @map("created_at")
+  updated_at  DateTime @updatedAt @map("updated_at")
+
+  @@map("achievements")
+}
+
+

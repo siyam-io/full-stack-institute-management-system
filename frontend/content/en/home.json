@@ -1,0 +1,133 @@
+{
+  "batchInfo": "Enrolling now — {batches}. Limited seats.",
+  "hero": {
+    "slides": [
+      {
+        "image": "/images/principal-dewan-ismail-preparing-fish-for-turkish-cuisine-2-1920w.webp",
+        "headline": "Your Dream Chef Career Starts in Dhaka",
+        "subheadline": "Bangladesh's #1 Professional Chef Course in Dhanmondi, Dhaka. Learn 120+ recipes, earn NSDA accreditation, and work in top hotels globally.",
+        "ctaText": "View Courses",
+        "ctaLink": "/courses"
+      },
+      {
+        "image": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp",
+        "headline": "Skip Labor Jobs. Become a Certified Chef.",
+        "subheadline": "Stop surviving on low-wage odd jobs abroad. Our 3-month intensive course gives you the skills and passport to work in the global 5-star hospitality market.",
+        "ctaText": "Apply Now",
+        "ctaLink": "/admission"
+      },
+      {
+        "image": "/images/student-practice-5-1920w.webp",
+        "headline": "Learn from 5-Star Mentors",
+        "subheadline": "Train directly under Chef Dewan Ismail and Chef Rafeya Chowdhury, veterans of global 5-star hotel chains.",
+        "ctaText": "Start Your Career",
+        "ctaLink": "/admission"
+      }
+    ]
+  },
+  "valueProposition": {
+    "heading": "The Best Chef Training for the Global Market",
+    "cards": [
+      {
+        "icon": "UtensilsCrossed",
+        "title": "120+ Recipes, 16+ Countries",
+        "description": "From Pizza and Burgers to Fine Dining Plating. Master the exact menus that 5-star hotels serve."
+      },
+      {
+        "icon": "GraduationCap",
+        "title": "NSDA & ISO Certified",
+        "description": "NSDA (Prime Minister's Office) and ISO-HACCP certifications recognized in global hospitality hubs."
+      },
+      {
+        "icon": "ChefHat",
+        "title": "100% Hands-On Practical Training",
+        "description": "Zero fluffy lectures. Every hour is in a professional training kitchen under authoritative mentorship."
+      }
+    ],
+    "stats": [
+      { "value": 500, "suffix": "+", "label": "Students Placed" },
+      { "value": 10, "suffix": "+", "label": "Hiring Partners" },
+      { "value": 95, "suffix": "%", "label": "Success Rate" }
+    ]
+  },
+  "courseShowcase": {
+    "heading": "Your Global Career Starts Here",
+    "courseName": "Professional Chef Course (Basic to Advance)",
+    "price": "৳44,000",
+    "features": [
+      "3 easy installments, zero hidden cost",
+      "Free professional chef kit (uniform, knife, board)",
+      "NSDA Level-2 & 3 certification",
+      "120+ recipes from 16+ global cuisines"
+    ],
+    "comparison": {
+      "heading": "Professional Track vs Ordinary Training",
+      "professional": {
+        "title": "CIB Professional",
+        "benefits": [
+          "Professional training kitchens",
+          "NSDA & ISO-HACCP credentials",
+          "5-star performance-based support",
+          "High ROI career training"
+        ]
+      },
+      "ordinary": {
+        "title": "Ordinary Training",
+        "drawbacks": [
+          "Basic domestic setups",
+          "No government credentials",
+          "No structured mentorship",
+          "Limited career networking"
+        ]
+      }
+    },
+    "cta": "Start Your Professional Journey",
+    "ctaLink": "/courses",
+    "image": "/images/student_practice_session_1-1920w.webp"
+  },
+  "socialProof": {
+    "heading": "Sneak Peek of CIB's Kitchen",
+    "partnerLogos": [
+      { "src": "/images/student-practice-5-1920w.webp", "alt": "Student Practice" },
+      { "src": "/images/practical_class_1-1920w.webp", "alt": "Kitchen Action" },
+      { "src": "/images/practical_class_2-1920w.webp", "alt": "Culinary Session" },
+      { "src": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp", "alt": "Mentorship" }
+    ],
+    "testimonialsHeading": "What Our Students Say",
+    "testimonials": [
+      {
+        "name": "Rahim Ahmed",
+        "batch": "Batch 8",
+        "photo": "/images/student_1-768w.webp",
+        "quote": "CIB changed my life. I went from washing dishes to working in a 5-star kitchen in under a year. The hands-on training taught me exactly what hotels demand."
+      },
+      {
+        "name": "Sumaiya Akhter",
+        "batch": "Batch 10",
+        "photo": "/images/student_2_holding_beverage_glass-768w.webp",
+        "quote": "The pastry and bakery bonus module was worth the investment. I now run a successful home-baking business earning 50k+ per month."
+      },
+      {
+        "name": "Arif Hasan",
+        "batch": "Batch 7",
+        "photo": "/images/student_3_practicing-768w.webp",
+        "quote": "The NSDA certification opened doors I never thought possible. I'm now working as a Commis Chef at a 5-star resort in Dubai."
+      }
+    ]
+  },
+  "socialMedia": {
+    "heading": "Follow Our Kitchen"
+  },
+  "finalCta": {
+    "heading": "Stop surviving on low wages. Become a certified professional chef.",
+    "subtext": "Your 3-month transformation starts now.",
+    "nextBatchDate": "",
+    "buttonText": "Apply Now",
+    "buttonLink": "/admission"
+  },
+  "recentPosts": {
+    "heading": "Latest Insights",
+    "subheading": "Culinary Knowledge Hub",
+    "viewAll": "View All Articles"
+  }
+}

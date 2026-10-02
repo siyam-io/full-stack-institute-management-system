@@ -1,0 +1,83 @@
+{
+  "slug": "sushi-course-dhaka",
+  "meta": {
+    "title": "Sushi Making Course in Dhaka | Japanese Cuisine | CIB",
+    "description": "Learn the art of authentic Japanese sushi making in Dhaka. Master sushi rice preparation, rolling Maki, Nigiri, Temaki, and premium plating. Hands-on training."
+  },
+  "hero": {
+    "badge": "Specialty Masterclass 2026",
+    "heading": "Sushi Making Course in Dhaka",
+    "subheading": "Learn the precise art of Japanese sushi from 5-star master chefs. 100% hands-on practical training in rolling and presentation."
+  },
+  "overview": {
+    "title": "The Precision of Sushi Craft",
+    "text": "Sushi is a global culinary sensation, and professional sushi rollers are highly sought after by luxury hotels and premium restaurants in Bangladesh and abroad. This specialty short course focuses entirely on the traditional techniques of Washoku, specifically the art of sushi.\n\nFrom washing, cooking, and vinegar-seasoning the perfect sushi rice (Shari) to masterfully slicing raw salmon and tuna, you will learn the exact steps required to create restaurant-grade sushi."
+  },
+  "highlights": [
+    {
+      "title": "Sushi Rice Science",
+      "description": "Mastering vinegar seasoning, cooling, and rice texture."
+    },
+    {
+      "title": "4 Roll Styles",
+      "description": "Maki, Nigiri, Temaki, and Uramaki rolling techniques."
+    },
+    {
+      "title": "Sashimi Slicing",
+      "description": "Learn professional knife skills for slicing fresh fish."
+    },
+    {
+      "title": "Premium Ingredients",
+      "description": "Work with grade-A Nori, Salmon, Wasabi, and Gari."
+    }
+  ],
+  "features": [
+    "Hands-on rice preparation and cooking temperature control",
+    "Traditional bamboo mat rolling and cutting techniques",
+    "Plating aesthetics and dynamic presentation formats",
+    "Handling fresh raw seafood and sanitation safety",
+    "Ingredient sourcing guides for local and imported materials",
+    "Accredited specialty certificate awarded upon completion"
+  ],
+  "table": {
+    "heading": "Course Details & Intake Info",
+    "headers": [
+      "Criteria",
+      "Course Specifications"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Intensive Hands-on Classes)"
+      ],
+      [
+        "Total Fee",
+        "BDT 12,000 (All premium ingredients included)"
+      ],
+      [
+        "Accreditation",
+        "CIB Specialty Certificate in Japanese Gastronomy"
+      ],
+      [
+        "Eligibility",
+        "Age 16+ with basic kitchen interest. No prior chef experience required."
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do I need to buy ingredients like salmon myself?",
+      "answer": "No. CIB provides all raw materials including fresh salmon, nori sheets, crab sticks, and specialty sushi rice for all practical sessions."
+    },
+    {
+      "question": "Will this course help me start a business?",
+      "answer": "Yes. Sushi businesses have high-profit margins in Dhaka. We cover portion costing and commercial presentation styles designed for restaurant owners."
+    }
+  ],
+  "cta": {
+    "heading": "Master the Art of Sushi Rolling",
+    "subheading": "Upgrade your culinary skills and stand out as a certified specialty chef.",
+    "buttonText": "Secure Your Seat Now",
+    "buttonHref": "/admission"
+  }
+}

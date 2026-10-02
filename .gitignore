@@ -1,4 +1,61 @@
+# Dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
 
-# Security: ignore env and node_modules
+# Environment Variables & Secrets
+.env
 .env*
-**/.env*
+*.env
+!.env.sample
+!.env.example
+!*/.env.sample
+!*/.env.example
+
+# Next.js Build
+.next/
+*/.next/
+out/
+*/out/
+
+# Build & Dist
+build/
+*/build/
+dist/
+*/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+logs/
+*/logs/
+
+# AI, Agent & Scratch
+.agent/
+*/.agent/
+.agents/
+*/.agents/
+.ai/
+*/.ai/
+graphify-out/
+*/graphify-out/
+lighthouse_reports/
+*/lighthouse_reports/
+scratch/
+*/scratch/
+
+# Deployments & Platforms
+.vercel/
+*/.vercel/
+.netlify/
+*/.netlify/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

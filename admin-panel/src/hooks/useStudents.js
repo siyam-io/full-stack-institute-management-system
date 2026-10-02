@@ -1,0 +1,246 @@
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import toast from "react-hot-toast";
+import * as StudentAPI from "../api/student.api.js";
+import { handleError } from "../api/error";
+import { mapStudent, mapStudentListResponse } from "../api/mappers";
+
+export const usePublicStudentProfile = (id, options = {}) => {
+  return useQuery({
+    queryKey: ["student", "public", id],
+    queryFn: async () => {
+      const data = await StudentAPI.fetchPublicStudentById(id);
+      return mapStudent(data);
+    },
+    enabled: !!id && options.enabled !== false,
+    retry: false,
+  });
+};
+
+export const usePublicStudentSearch = (searchQuery, isSearchEnabled) => {
+  return useQuery({
+    queryKey: ["studentSearch", searchQuery],
+    queryFn: async () => {
+      const data = await StudentAPI.fetchPublicStudentBySearch(searchQuery);
+      return mapStudent(data);
+    },
+    enabled: isSearchEnabled,
+    retry: 1,
+    onError: () => toast.error("Student not found. Please check ID."),
+    onSuccess: () => toast.success("Student record found!"),
+  });
+};
+
+export const useStudents = (page = 1, limit = 30, filters = {}) => {
+  return useQuery({
+    queryKey: ["students", page, filters],
+    queryFn: async () => {
+      const data = await StudentAPI.fetchStudents(page, limit, filters);
+      return mapStudentListResponse(data);
+    },
+    keepPreviousData: true,
+  });
+};
+
+export const useStudent = (id, options = {}) => {
+  return useQuery({
+    queryKey: ["student", "admin", id],
+    queryFn: async () => {
+      const data = await StudentAPI.fetchAdminStudentById(id);
+      return mapStudent(data);
+    },
+    enabled: !!id && options.enabled !== false,
+  });
+};
+
+export const useAdminStudentSearch = (searchQuery, isSearchEnabled) => {
+  return useQuery({
+    queryKey: ["adminStudentSearch", searchQuery],
+    queryFn: async () => {
+      const data = await StudentAPI.fetchAdminStudentBySearch(searchQuery);
+      return mapStudent(data);
+    },
+    enabled: isSearchEnabled && !!searchQuery,
+  });
+};
+
+export const useAddStudent = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.addStudent,
+    onSuccess: () => {
+      toast.success("Student added successfully!");
+      queryClient.invalidateQueries({ queryKey: ["students"] });
+    },
+    onError: (error) => handleError(error, "Failed to add student"),
+  });
+};
+
+export const useUpdateStudent = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.updateStudent,
+    onSuccess: (_, variables) => {
+      toast.success("Student updated successfully!");
+      queryClient.invalidateQueries({ queryKey: ["students"] });
+      queryClient.invalidateQueries({ queryKey: ["student", "admin", variables.id] });
+    },
+    onError: (error) => handleError(error, "Failed to update student"),
+  });
+};
+
+export const useToggleStudentStatus = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.toggleStudentStatus,
+    onSuccess: () => {
+      toast.success(`Student status updated successfully!`);
+      queryClient.invalidateQueries({ queryKey: ["students"] });
+    },
+    onError: (error) => handleError(error, "Failed to toggle status"),
+  });
+};
+
+export const useRemoveStudentPhoto = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.removeStudentPhoto,
+    onSuccess: (_, id) => {
+      toast.success("Photo removed successfully!");
+      queryClient.invalidateQueries({ queryKey: ["students"] });
+      queryClient.invalidateQueries({ queryKey: ["student", "admin", id] });
+    },
+    onError: (error) => handleError(error, "Failed to remove photo"),
+  });
+};
+
+export const useDeleteStudent = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.deleteStudent,
+    onMutate: async (id) => {
+      await queryClient.cancelQueries({ queryKey: ["students"] });
+      const previousStudents = queryClient.getQueryData(["students"]);
+      
+      queryClient.setQueryData(["students"], (old) => {
+        if (!old) return old;
+        return {
+          ...old,
+          data: old.data.filter((student) => student._id !== id),
+        };
+      });
+      return { previousStudents };
+    },
+    onSuccess: () => toast.success("Student deleted successfully!"),
+    onError: (error, id, context) => {
+      if (context?.previousStudents) queryClient.setQueryData(["students"], context.previousStudents);
+      handleError(error, "Failed to delete student");
+    },
+    onSettled: () => queryClient.invalidateQueries({ queryKey: ["students"] }),
+  });
+};
+
+// COMMENTS & CERTIFICATES
+export const useStudentComments = (studentId) => {
+  return useQuery({
+    queryKey: ["studentComments", studentId],
+    queryFn: async () => {
+      const data = await StudentAPI.fetchStudentComments(studentId);
+      if (!Array.isArray(data)) return [];
+      return data.map((c) => {
+        const commenterData = c.commenter || c.instructor;
+        const commenterMapped = commenterData ? {
+          id: commenterData.id,
+          full_name: commenterData.full_name || commenterData.fullName,
+          photo_url: commenterData.photo_url || commenterData.photoUrl,
+          designation: commenterData.designation,
+        } : null;
+        return {
+          ...c,
+          _id: c.id || c._id,
+          commenter: commenterMapped,
+          instructor: commenterMapped,
+        };
+      });
+    },
+    enabled: !!studentId,
+  });
+};
+
+export const useAddComment = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.addStudentComment,
+    onSuccess: (_, variables) => {
+      toast.success("Comment added successfully");
+      queryClient.invalidateQueries({ queryKey: ["studentComments", variables.studentId] });
+    },
+    onError: (error) => handleError(error, "Failed to add comment"),
+  });
+};
+
+export const useDeleteComment = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: StudentAPI.deleteStudentComment,
+    onSuccess: () => {
+      toast.success("Comment deleted successfully");
+      queryClient.invalidateQueries({ queryKey: ["studentComments"] });
+    },
+    onError: (error) => handleError(error, "Failed to delete comment"),
+  });
+};
+
+// export const useDownloadCertificate = () => {
+//   return useMutation({
+//     mutationFn: (student) => StudentAPI.downloadStudentCertificate(student._id),
+//     onSuccess: (blobData, student) => {
+//       const url = window.URL.createObjectURL(new Blob([blobData], { type: "application/pdf" }));
+//       const link = document.createElement("a");
+//       link.href = url;
+//       const safeName = student.student_name.replace(/[^a-zA-Z0-9]/g, "_");
+//       link.setAttribute("download", `CIB_Certificate_${safeName}.pdf`);
+//       document.body.appendChild(link);
+//       link.click();
+//       link.remove();
+//       window.URL.revokeObjectURL(url);
+//       toast.success("Certificate downloaded successfully");
+//     },
+//     onError: () => handleError(null, "Failed to generate certificate"),
+//   });
+// };
+
+
+
+export const useDownloadCertificate = () => {
+  return useMutation({
+    // 🚀 API তে { studentId, awardedOn } অবজেক্ট পাঠানো হচ্ছে
+    mutationFn: (data) => StudentAPI.downloadStudentCertificate({ 
+      studentId: data.student._id, 
+      awardedOn: data.awardedOn 
+    }),
+    onSuccess: (blobData, variables) => {
+      const url = window.URL.createObjectURL(new Blob([blobData], { type: "application/pdf" }));
+      const link = document.createElement("a");
+      link.href = url;
+      const safeName = variables.student.student_name.replace(/[^a-zA-Z0-9]/g, "_");
+      link.setAttribute("download", `CIB_Certificate_${safeName}.pdf`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(url);
+      toast.success("Certificate downloaded successfully");
+    },
+    onError: () => handleError(null, "Failed to generate certificate"),
+  });
+};
+
+
+
+//  useSendCertificateEmail Hook 
+export const useSendCertificateEmail = () => {
+  return useMutation({
+    mutationFn: StudentAPI.sendStudentCertificateEmail,
+    onSuccess: () => toast.success("Certificate sent to email successfully!"),
+    onError: (error) => handleError(error, "Failed to send email"),
+  });
+};

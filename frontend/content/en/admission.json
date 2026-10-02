@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "heading": "Secure Your Seat in the Professional Chef Course",
+    "subheading": "Admission is open for the upcoming batch. Limited seats available."
+  },
+  "process": {
+    "heading": "Admission Process",
+    "steps": [
+      { "number": "01", "title": "Submit Application", "desc": "Fill out the form below with your details." },
+      { "number": "02", "title": "Admission Confirmation", "desc": "Our team will contact you within 24 hours to confirm your seat and payment plan." },
+      { "number": "03", "title": "Start Training", "desc": "Attend orientation and begin your 3-month transformation." }
+    ]
+  },
+  "feeTable": {
+    "heading": "Transparent Fee Structure",
+    "feeHighlights": "Zero Hidden Costs • Tool Kit Included • Professional Liability Covered • Global Certification Path",
+    "courses": [
+      {
+        "name": "Professional Chef Course (Basic to Advance)",
+        "admissionFee": "৳16,000",
+        "installments": [
+          { "label": "1st Installment", "amount": "৳14,000" },
+          { "label": "2nd Installment", "amount": "৳14,000" }
+        ],
+        "total": "৳44,000"
+      },
+      {
+        "name": "Chef + Barista Combo",
+        "admissionFee": "৳16,000",
+        "installments": [
+          { "label": "1st Installment", "amount": "৳16,000" },
+          { "label": "2nd Installment", "amount": "৳16,000" }
+        ],
+        "total": "৳48,000"
+      },
+      {
+        "name": "Fast Food Short Course",
+        "admissionFee": "৳3,999",
+        "installments": [],
+        "total": "৳3,999"
+      },
+      {
+        "name": "Customized Course (Pizza, Sushi & Specialties)",
+        "admissionFee": "৳12,000",
+        "installments": [],
+        "total": "৳12,000"
+      },
+      {
+        "name": "6-Month Professional Diploma Course",
+        "admissionFee": "৳40,000",
+        "installments": [
+          { "label": "1st Installment", "amount": "৳35,000" },
+          { "label": "2nd Installment", "amount": "৳35,000" }
+        ],
+        "total": "৳110,000"
+      }
+    ]
+  },
+  "admissionGifts": {
+    "heading": "Free Admission Gifts",
+    "items": [
+      "International Culinary Sheet",
+      "Full Chef Uniform Set",
+      "Professional Cutting Board & Knife"
+    ]
+  },
+  "form": {
+    "heading": "Start Your Application",
+    "fields": {
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "course": "Course Interest",
+      "message": "Message (Optional)"
+    },
+    "placeholders": {
+      "name": "e.g. John Doe",
+      "phone": "e.g. +880 1XXX-XXXXXX",
+      "email": "e.g. john@example.com",
+      "message": "Tell us about your culinary goals..."
+    },
+    "courseOptions": [
+      "Professional Chef Course (Basic to Advance)",
+      "Chef + Barista Combo",
+      "Fast Food Short Course",
+      "Customized Course (Pizza, Sushi & Specialties)",
+      "6-Month Professional Diploma Course"
+    ],
+    "submitButton": "Submit Application",
+    "successMessage": "Thank you! Our admissions team will contact you shortly. Redirecting...",
+    "redirectUrl": "/courses"
+  }
+}

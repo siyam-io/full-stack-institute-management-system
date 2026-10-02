@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "heading": "Mentors with Global Expertise",
+    "subheading": "Culinary training at CIB is led by Executive Chefs with decades of experience in global 5-star hospitality markets.",
+    "image": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp"
+  },
+  "mentors": [
+    {
+      "name": "Dewan Ismail",
+      "id": "dewan-ismail",
+      "title": "Principal & Director of Career Planning & Development",
+      "photo": "/images/dewan-ismail-portrait.jpg",
+      "bio": "Dewan Ismail is the Principal of CIB and an authoritative voice in culinary education. He specializes in Culinary Science, ISO-HACCP & Hygiene, and Career Development. With a BBA and MBA from Jagannath University, he bridges professional kitchen standards with technical excellence.",
+      "credentials": ["BTEB Level 4", "NSDA Level 3", "BBA & MBA (Jagannath University)", "PGD in Tourism & Hospitality (DIU)", "IELTS 7.5", "SGS Switzerland", "ISO Certified"],
+      "cta": "Apply Now"
+    },
+    {
+      "name": "Rafeya Chowdhury",
+      "id": "rafeya-chowdhury",
+      "title": "Lead Trainer",
+      "photo": "/images/rafeya-chowdhury.jpg",
+      "bio": "As Lead Trainer at CIB, Rafeya Chowdhury brings elite 5-star hospitality standards. Her career includes tenure as Chef de Partie at The Westin and years of executive instruction. She is a recognized culinary voice on BTV and Jamuna TV.",
+      "credentials": ["Chef de Partie (The Westin)", "BTV & Jamuna TV Host", "Multi-Cuisine Production", "Fine-Dining Plating Specialist"],
+      "cta": "Apply Now"
+    },
+    {
+      "name": "Rehana Akhter Poly",
+      "id": "rehana-akhter-poly",
+      "title": "Associate Executive Trainer",
+      "photo": "/images/rehana-akhter-poly.jpg",
+      "bio": "Rehana Akhter Poly specializes in Food & Beverage production and Bakery & Pastry arts. Her technical standards in Food Art are recognized by international culinary bodies.",
+      "credentials": ["MBS in Marketing", "B.Ed (NAEM)", "World Association of Chef Societies", "British Culinary Federation"],
+      "cta": "Apply Now"
+    },
+    {
+      "name": "Asifa Rashid Rayta",
+      "id": "asifa-rashid-rayta",
+      "title": "Theoretical Instructor & Head of Operations",
+      "photo": "/images/asifa-rashid-rayta.png",
+      "bio": "Asifa Rashid Rayta bridges administrative excellence and theoretical mastery at CIB, bringing structured academic rigor and compliance to kitchen operations.",
+      "credentials": ["BBA Degree", "BTEB Level 4", "NSDA Level 3"],
+      "cta": "Apply Now"
+    },
+    {
+      "name": "Abu Baqur Siddik",
+      "id": "abu-baqur-siddik",
+      "title": "Assistant Trainer",
+      "photo": "/images/abu-baqur-siddik.jpg",
+      "bio": "Abu Baqur Siddik focuses on foundational culinary techniques and practical lab assistance, ensuring every student masters the core physical skills required in high-pressure commercial kitchens.",
+      "credentials": ["BTEB Level 1 & 2", "NSDA Level 3 Certified", "HACCP, Hygiene & GMP-22000", "SGS Trained"],
+      "cta": "Apply Now"
+    },
+    {
+      "name": "Salman Iqbal",
+      "id": "salman-iqbal",
+      "title": "Brand Manager",
+      "photo": "/images/salman-iqbal.jpg",
+      "bio": "Salman Iqbal orchestrates the CIB brand identity and institutional communication, ensuring that CIB's mission of vocational excellence is communicated across all platforms.",
+      "credentials": ["NSDA Food & Beverage Production Level-3", "HACCP, Hygiene & GMP-22000", "BBA Degree"],
+      "cta": "Apply Now"
+    }
+  ],
+  "finalCta": {
+    "heading": "Ready to Learn from the Best?",
+    "buttonText": "Secure Your Seat Now",
+    "buttonLink": "/admission"
+  }
+}

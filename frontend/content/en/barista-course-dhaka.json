@@ -1,0 +1,92 @@
+{
+  "slug": "barista-course-dhaka",
+  "meta": {
+    "title": "Barista Course in Dhaka | Chef & Coffee Brewing Combo | CIB",
+    "description": "Become a certified barista in Dhaka. Master espresso brewing, latte art, coffee science, and beverage management. Join our Chef+Barista Combo."
+  },
+  "hero": {
+    "badge": "Beverage Specialty 2026",
+    "heading": "Barista Course in Dhaka",
+    "subheading": "Master espresso extraction, latte art, and coffee shop operations. Secure premium jobs in global coffee chains."
+  },
+  "overview": {
+    "title": "Professional Barista & Coffee Science",
+    "text": "The specialty coffee industry is expanding at a record pace. From local artisan cafes in Dhaka to global brands in Europe and North America, certified baristas are in exceptionally high demand. CIB's Barista Course in Dhaka (included in our Chef+Barista Combo) provides intensive training in espresso physics, milk texturing, latte art, and cafe workflow management.\n\nUnder the guidance of professional beverage mentors, you will train directly on commercial Italian espresso machines and grinders, mastering coffee extraction, grind adjustment, and the chemistry behind the perfect cup."
+  },
+  "highlights": [
+    {
+      "title": "Espresso Physics",
+      "description": "Understanding pressure, temperature, and extraction rates."
+    },
+    {
+      "title": "Latte Art Mastery",
+      "description": "Hands-on pouring techniques for hearts, rosettas, and tulips."
+    },
+    {
+      "title": "Cafe Operations",
+      "description": "Equipment maintenance, workflow, and customer service."
+    },
+    {
+      "title": "Barista Certification",
+      "description": "Accredited certificate for domestic & international coffee jobs."
+    }
+  ],
+  "features": [
+    "Direct practice on commercial multi-boiler Italian espresso machines",
+    "Learn coffee bean origins, roasting science, and sensory cupping",
+    "Perfecting micro-foam steaming and pouring high-fidelity latte art",
+    "Complete hot and cold cafe beverage menu training",
+    "Daily cleaning, backflushing, and maintenance of barista tools",
+    "Guidance on starting a specialty coffee shop with high profit margins"
+  ],
+  "table": {
+    "heading": "Barista Course Modules & Skills Taught",
+    "headers": [
+      "Module Title",
+      "Beverage Coverage",
+      "Key Barista Skills"
+    ],
+    "rows": [
+      [
+        "Espresso Foundations",
+        "Solo Espresso, Ristretto, Americano",
+        "Grinder calibration, tamping pressure, extraction logs"
+      ],
+      [
+        "Milk Texturing & Art",
+        "Cappuccino, Flat White, Cafe Latte",
+        "Micro-foam steaming, temperature control, free-pour art"
+      ],
+      [
+        "Cold Beverage Menu",
+        "Iced Latte, Affogato, Frappuccino, Flavor syrups",
+        "Ice blending controls, portioning, aesthetic layering"
+      ],
+      [
+        "Cafe Business Management",
+        "Menu planning, cost optimization",
+        "Inventory, equipment selection, barista operations"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the duration of the Barista training in Dhaka?",
+      "answer": "The barista training is integrated within our 3-Month Chef + Barista Combo, ensuring you gain comprehensive food and beverage skills."
+    },
+    {
+      "question": "Is prior experience needed to learn barista skills?",
+      "answer": "No. Our program starts with the basic anatomy of coffee beans and grinder adjustments before progressing to advanced latte art."
+    },
+    {
+      "question": "Are there jobs for baristas abroad?",
+      "answer": "Yes, certified baristas are highly sought after in the UAE, Saudi Arabia, UK, and Australia, commanding excellent wages."
+    }
+  ],
+  "cta": {
+    "heading": "Master the Art of Specialty Coffee",
+    "subheading": "Get certified and start your career in the booming coffee industry.",
+    "buttonText": "Apply for Chef + Barista Combo",
+    "buttonHref": "/admission"
+  }
+}

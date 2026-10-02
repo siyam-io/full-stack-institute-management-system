@@ -1,0 +1,92 @@
+{
+  "slug": "fast-food-course-dhaka",
+  "meta": {
+    "title": "Fast Food Course in Dhaka | Short Baking & Cooking Course | CIB",
+    "description": "Enroll in our Fast Food Course in Dhaka. Learn commercial secrets for burgers, pizza, pasta, and appetizers. 3,999 BDT total fee. Certified short course."
+  },
+  "hero": {
+    "badge": "Short Course Enrollment",
+    "heading": "Fast Food Course in Dhaka",
+    "subheading": "Learn the commercial recipes behind Dhaka's most popular fast-food items. Perfect for aspiring cafe entrepreneurs. Only BDT 3,999."
+  },
+  "overview": {
+    "title": "Fast Food & Appetizer Mastery",
+    "text": "Dhaka's street food and cafe culture is thriving. Launching a successful fast-food outlet or cloud kitchen requires standardized recipes that guarantee consistency and profit margins. CIB's Fast Food Course in Dhaka is a highly structured, 1-month short program designed to teach the commercial preparation of premium fast-food items.\n\nFrom baking the perfect soft brioche burger buns to preparing signature pizza doughs, gourmet pastas, and signature sauces, this course covers the exact items that dominate cafe menus today."
+  },
+  "highlights": [
+    {
+      "title": "BDT 3,999 Total Fee",
+      "description": "Affordable fee covering all raw ingredients."
+    },
+    {
+      "title": "1-Month Duration",
+      "description": "Short, intensive, highly practical syllabus."
+    },
+    {
+      "title": "Commercial Recipes",
+      "description": "Standardized methods designed for business success."
+    },
+    {
+      "title": "Certificate Issued",
+      "description": "CIB institutional certificate upon completion."
+    }
+  ],
+  "features": [
+    "Hands-on preparation of burgers, pizzas, pastas, and dynamic wraps",
+    "Learn the chemistry of commercial sauces and dressing formulas",
+    "Detailed lessons on dough fermentation and baking conditions",
+    "Food costing advice to maximize profit margins for cafe startups",
+    "HACCP-compliant raw material handling and kitchen hygiene training",
+    "Direct career counseling on starting your own home bakery or cafe business"
+  ],
+  "table": {
+    "heading": "Fast Food Course Curriculum & Recipes",
+    "headers": [
+      "Module",
+      "Items Taught",
+      "Skills Covered"
+    ],
+    "rows": [
+      [
+        "Burgers & Sandwiches",
+        "Gourmet Beef Burger, Crispy Chicken, Sandwiches",
+        "Patty seasoning, brioche buns, commercial dressings"
+      ],
+      [
+        "Pizzas & Breads",
+        "Italian Pizza, Garlic Bread, Calzone",
+        "Yeast fermentation, stretching, commercial baking"
+      ],
+      [
+        "Pasta & Appetizers",
+        "White Sauce Pasta, Baked Pasta, French Fries",
+        "Emulsions, saucing, deep-frying controls"
+      ],
+      [
+        "Beverages & Mocktails",
+        "Cold Coffee, Mint Lemonade, Mojito",
+        "Blending, layering, cafe beverage service"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the total fee for the Fast Food Course in Dhaka?",
+      "answer": "The total fee is only BDT 3,999, which covers all raw ingredients, training materials, and certification. There are no hidden charges."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. Most of our students start with zero commercial cooking experience. We guide you step-by-step from raw materials to final plating."
+    },
+    {
+      "question": "Do I get a certificate after completing this course?",
+      "answer": "Yes, CIB issues a recognized institutional certificate of achievement in Fast Food and Commercial Appetizer Production upon completion."
+    }
+  ],
+  "cta": {
+    "heading": "Launch Your Cafe Business Today",
+    "subheading": "Learn the commercial recipes that guarantee customers and profits.",
+    "buttonText": "Register for Fast Food Course",
+    "buttonHref": "/admission"
+  }
+}

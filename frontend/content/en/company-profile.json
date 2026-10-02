@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "heading": "Company Profile",
+    "subheading": "Institutional Identity 2026"
+  },
+  "tagline": "Crafting Culinary Leaders, Empowering Global Careers.",
+  "mission": {
+    "heading": "Global Mission",
+    "text": "To provide authoritative, high-velocity culinary education that meets NSDA and international standards while upholding professional excellence."
+  },
+  "vision": {
+    "heading": "Future Vision",
+    "text": "To be the leading vocational powerhouse in South Asia, producing professional chefs recognized globally for their skill, discipline, and technical sharpness."
+  },
+  "tracks": {
+    "heading": "Core Training Tracks",
+    "items": [
+      { "title": "Food & Beverage Production", "desc": "Mastering 120+ authentic recipes across 16+ countries with NSDA Level-2 & 3 training." },
+      { "title": "Professional Baking & Pastry", "desc": "Technical science of artisanal breads and pâtisserie (Bonus module included)." },
+      { "title": "Culinary Entrepreneurship", "desc": "ROI-focused training for launching high-profit commercial kitchens and industrial management." }
+    ]
+  },
+  "process": {
+    "heading": "The CIB Industrial Process",
+    "steps": ["Assessment: NSDA skill evaluation and orientation into international standards.", "Immersion: 36 intensive practical sessions covering 120+ global recipes.", "Mentorship: Guided technical labs focusing on high-velocity commercial production.", "Placement: Performance-based internship and career readiness support."]
+  },
+  "compliance": {
+    "heading": "Institutional Compliance",
+    "items": [
+      "NSDA: Approved Skill Training Provider (STP) under the Prime Minister's Office.",
+      "ISO-HACCP: Training aligned with global food safety and hygiene standards.",
+      "Professional Certification: Providing NSDA Level-2 & 3 and ISO-22000 aligned training."
+    ]
+  },
+  "fee": {
+    "text": "Professional Fee: ৳44,000 (No Hidden Charges).",
+    "phone": "📞 +8801338958997",
+    "verification": "Verify Credentials ➜"
+  },
+  "address": "House-160, 1st Floor (Beside Longlife Hospital), Lake Circus, Kalabagan, Dhanmondi, Dhaka - 1205",
+  "social": {
+    "facebook": "https://www.facebook.com/cibdhaka",
+    "instagram": "https://instagram.com/cib.dhk",
+    "whatsapp": "https://wa.me/8801338958997"
+  }
+}

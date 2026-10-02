@@ -1,0 +1,402 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Branch {
+  id            String   @id @default(uuid())
+  branch_name   String   @unique
+  branch_code   String   @unique
+  address       String   @db.Text
+  contact_email String?
+  contact_phone String?
+  is_active     Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  users         User[]
+  students      Student[]
+  batches       Batch[]
+  fees          Fee[]
+  payments      Payment[]
+  expenses      Expense[]
+  inventories   Inventory[]
+  requisitions  Requisition[]
+  stockTxns     StockTransaction[]
+
+  @@index([branch_code])
+}
+
+model Role {
+  id             String   @id @default(uuid())
+  name           String   @unique
+  description    String?
+  permissions    String   @default("[]") @db.Text
+  is_system_role Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  users          User[]
+}
+
+model User {
+  id                  String    @id @default(uuid())
+  username            String    @unique @db.VarChar(255)
+  email               String    @unique @db.VarChar(255)
+  password            String    @db.Text
+  employee_id         String?   @unique @db.VarChar(255)
+  full_name           String    @db.VarChar(500)
+  photo_url           String    @default("")
+  phone               String?   @db.VarChar(50)
+  designation         String?
+  department          String?
+  joining_date        DateTime  @default(now())
+  status              String    @default("Active")
+  facebook            String    @default("")
+  linkedin            String    @default("")
+  twitter             String    @default("")
+  instagram           String    @default("")
+  custom              String    @default("")
+  resetPasswordToken  String?
+  resetPasswordExpire DateTime?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  roleId              String
+  role                Role      @relation(fields: [roleId], references: [id])
+  branchId            String
+  branch              Branch    @relation(fields: [branchId], references: [id])
+
+  instructorBatches   Batch[]   @relation("BatchInstructors")
+  classContents       ClassContent[]
+  comments            Comment[]
+  recordedExpenses    Expense[]
+  collectedPayments   Payment[]
+  requestedReqs       Requisition[] @relation("RequestedBy")
+  approvedReqs        Requisition[] @relation("ApprovedBy")
+  performedTxns       StockTransaction[] @relation("PerformedBy")
+  requestedTxns       StockTransaction[] @relation("TxnRequestedBy")
+
+  @@index([branchId, roleId, status])
+}
+
+model Course {
+  id              String   @id @default(uuid())
+  course_name     String   @unique
+  course_code     String   @unique
+  duration_value  Int
+  duration_unit   String   @default("months")
+  base_fee        Decimal  @default(0) @db.Decimal(12, 2)
+  additional_info String   @default("[]") @db.Text
+  description     String   @default("") @db.Text
+  is_active       Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  students        Student[]
+  batches         Batch[]
+  fees            Fee[]
+}
+
+model Batch {
+  id            String   @id @default(uuid())
+  batch_name    String   @db.VarChar(500)
+  start_date    DateTime
+  schedule_days String   @default("[]") @db.Text
+  start_time    String
+  end_time      String
+  status        String   @default("Upcoming")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  courseId      String
+  course        Course   @relation(fields: [courseId], references: [id])
+  branchId      String
+  branch        Branch   @relation(fields: [branchId], references: [id])
+
+  instructors   User[]   @relation("BatchInstructors")
+  students      Student[]
+  classContents ClassContent[]
+  expenses      Expense[]
+  requisitions  Requisition[]
+
+  @@index([branchId, status])
+  @@index([courseId, branchId])
+}
+
+model Student {
+  id                  String   @id @default(uuid())
+  student_name        String   @db.VarChar(500)
+  fathers_name        String   @db.VarChar(500)
+  student_id          String   @unique @db.VarChar(255)
+  registration_number String?  @unique @db.VarChar(255)
+  competency          String   @default("not_assessed")
+  status              String   @default("active")
+  is_active           Boolean  @default(true)
+  is_verified         Boolean  @default(false)
+  issue_date          DateTime
+  completion_date     DateTime?
+  photo_url           String   @default("")
+  gender              String
+  contact_number      String?  @db.VarChar(50)
+  email               String?  @db.VarChar(255)
+  address             String?  @db.Text
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  courseId            String
+  course              Course   @relation(fields: [courseId], references: [id])
+  batchId             String
+  batch               Batch    @relation(fields: [batchId], references: [id])
+  branchId            String
+  branch              Branch   @relation(fields: [branchId], references: [id])
+
+  fees                Fee[]
+  payments            Payment[]
+  attendanceRows      Attendance[]
+  comments            Comment[]
+
+  @@index([branchId, batchId, status])
+}
+
+model Fee {
+  id              String   @id @default(uuid())
+  total_amount    Decimal  @db.Decimal(12, 2)
+  discount        Decimal  @default(0) @db.Decimal(12, 2)
+  net_payable     Decimal  @db.Decimal(12, 2)
+  paid_amount     Decimal  @default(0) @db.Decimal(12, 2)
+  status          String   @default("Unpaid")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  branchId        String
+  branch          Branch   @relation(fields: [branchId], references: [id])
+  courseId        String
+  course          Course   @relation(fields: [courseId], references: [id])
+
+  payments        Payment[]
+  discountHistory DiscountHistory[]
+
+  @@index([branchId, status])
+  @@index([studentId])
+}
+
+model DiscountHistory {
+  id                String   @id @default(uuid())
+  previous_discount Decimal  @db.Decimal(12, 2)
+  new_discount      Decimal  @db.Decimal(12, 2)
+  updated_at        DateTime @default(now())
+  updatedById       String?
+
+  feeId             String
+  fee               Fee      @relation(fields: [feeId], references: [id], onDelete: Cascade)
+}
+
+model Payment {
+  id             String   @id @default(uuid())
+  amount         Decimal  @db.Decimal(12, 2)
+  payment_type   String
+  payment_method String
+  transaction_id String?  @db.VarChar(255)
+  receipt_number String   @unique @db.VarChar(50)
+  remarks        String   @default("") @db.Text
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  feeId          String
+  fee_record     Fee      @relation(fields: [feeId], references: [id], onDelete: Cascade)
+  studentId      String
+  student        Student  @relation(fields: [studentId], references: [id])
+  branchId       String
+  branch         Branch   @relation(fields: [branchId], references: [id])
+  collectedById  String
+  collected_by   User     @relation(fields: [collectedById], references: [id])
+
+  @@index([branchId, createdAt])
+  @@index([studentId])
+}
+
+model ClassContent {
+  id                 String   @id @default(uuid())
+  class_number       Int?
+  topic              String   @db.Text
+  content_details    String   @default("[]") @db.Text
+  date_scheduled     DateTime?
+  is_completed       Boolean  @default(false)
+  requisition_status String   @default("none")
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  batchId            String
+  batch              Batch    @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  instructorId       String?
+  instructor         User?    @relation(fields: [instructorId], references: [id])
+
+  attendance         Attendance[]
+  expenses           Expense[]
+  requisitions       Requisition[]
+  stockTxns          StockTransaction[]
+
+  @@index([batchId, class_number])
+  @@index([batchId, date_scheduled])
+}
+
+model Attendance {
+  id             String       @id @default(uuid())
+  status         String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  classContentId String
+  classContent   ClassContent @relation(fields: [classContentId], references: [id], onDelete: Cascade)
+  studentId      String
+  student        Student      @relation(fields: [studentId], references: [id])
+}
+
+model Comment {
+  id           String   @id @default(uuid())
+  text         String   @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  studentId    String
+  student      Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  instructorId String
+  instructor   User     @relation(fields: [instructorId], references: [id])
+
+  @@index([studentId])
+}
+
+model Expense {
+  id             String        @id @default(uuid())
+  title          String        @default("Class Requisition & Ingredients")
+  amount         Decimal       @db.Decimal(12, 2)
+  date_incurred  DateTime      @default(now())
+  category       String        @default("Other")
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  classContentId String?
+  class_content  ClassContent? @relation(fields: [classContentId], references: [id])
+  batchId        String?
+  batch          Batch?        @relation(fields: [batchId], references: [id])
+  branchId       String
+  branch         Branch        @relation(fields: [branchId], references: [id])
+  recordedById   String?
+  recorded_by    User?         @relation(fields: [recordedById], references: [id])
+
+  @@index([branchId, date_incurred])
+  @@index([batchId, date_incurred])
+}
+
+model Inventory {
+  id                String   @id @default(uuid())
+  item_name         String   @db.VarChar(500)
+  category          String   @default("Other")
+  unit              String
+  quantity_in_stock Decimal  @default(0) @db.Decimal(12, 2)
+  unit_price        Decimal  @default(0) @db.Decimal(12, 2)
+  reorder_threshold Decimal  @default(5) @db.Decimal(12, 2)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  branchId          String
+  branch            Branch   @relation(fields: [branchId], references: [id])
+
+  requisitionItems  RequisitionItem[]
+  stockTxns         StockTransaction[]
+
+  @@unique([branchId, item_name])
+}
+
+model Requisition {
+  id              String   @id @default(uuid())
+  status          String   @default("pending")
+  admin_note      String?  @db.Text
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  classContentId  String
+  class_content   ClassContent @relation(fields: [classContentId], references: [id])
+  batchId         String
+  batch           Batch @relation(fields: [batchId], references: [id])
+  branchId        String
+  branch          Branch @relation(fields: [branchId], references: [id])
+  requestedById   String
+  requested_by    User @relation("RequestedBy", fields: [requestedById], references: [id])
+  approvedById    String?
+  approved_by     User? @relation("ApprovedBy", fields: [approvedById], references: [id])
+
+  items           RequisitionItem[]
+  stockTxns       StockTransaction[]
+
+  @@index([classContentId])
+  @@index([branchId, status])
+}
+
+model RequisitionItem {
+  id              String   @id @default(uuid())
+  item_name       String   @db.VarChar(500)
+  quantity        Decimal  @db.Decimal(12, 2)
+  unit            String
+  is_custom       Boolean  @default(false)
+
+  requisitionId   String
+  requisition     Requisition @relation(fields: [requisitionId], references: [id], onDelete: Cascade)
+  inventoryItemId String?
+  inventory_item  Inventory? @relation(fields: [inventoryItemId], references: [id])
+}
+
+model StockTransaction {
+  id                String   @id @default(uuid())
+  transaction_type  String
+  quantity          Decimal  @db.Decimal(12, 2)
+  total_cost        Decimal  @default(0) @db.Decimal(12, 2)
+  supplier          String?
+  notes             String?  @db.Text
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  inventoryItemId   String
+  inventory_item    Inventory @relation(fields: [inventoryItemId], references: [id])
+  branchId          String
+  branch            Branch @relation(fields: [branchId], references: [id])
+  performedById     String
+  performed_by      User @relation("PerformedBy", fields: [performedById], references: [id])
+  requestedById     String?
+  requested_by      User? @relation("TxnRequestedBy", fields: [requestedById], references: [id])
+  requisitionId     String?
+  requisition       Requisition? @relation(fields: [requisitionId], references: [id])
+  referenceClassId  String?
+  reference_class   ClassContent? @relation(fields: [referenceClassId], references: [id])
+
+  @@index([branchId, transaction_type, createdAt])
+}
+
+model MasterSyllabus {
+  id          String   @id @default(uuid())
+  topic       String   @unique @db.VarChar(500)
+  order_index Int
+  class_type  String   @default("Lecture")
+  description String?  @db.Text
+  category    String   @default("General")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([order_index])
+}
+
+model Holiday {
+  id          String   @id @default(uuid())
+  title       String   @db.VarChar(500)
+  date_string String   @unique @db.VarChar(50)
+  is_active   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

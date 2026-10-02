@@ -1,0 +1,83 @@
+{
+  "slug": "japanese-cooking-course-dhaka",
+  "meta": {
+    "title": "Japanese Cuisine Course in Dhaka | Sushi, Ramen & More | CIB",
+    "description": "Master authentic Japanese cooking in Dhaka. Hands-on training for Sushi making, Ramen broths, Tempura, and plating. Ideal for chefs and hobbyists."
+  },
+  "hero": {
+    "badge": "Specialty Certification 2026",
+    "heading": "Japanese Cuisine Course in Dhaka",
+    "subheading": "Learn the precise art of Japanese culinary science. Master authentic Sushi rolling, rich Ramen broths, and tempura frying."
+  },
+  "overview": {
+    "title": "The Art of Washoku",
+    "text": "Japanese cuisine is renowned for its focus on seasonality, ingredient purity, and meticulous presentation. In 2026, Japanese dining is booming in Dhaka, creating a massive demand for skilled sushi rollers and hot kitchen chefs.\n\nOur specialty short course teaches you the foundations of Japanese culinary arts. You will train directly under expert chefs who have managed high-end Japanese kitchens in 5-star hotels."
+  },
+  "highlights": [
+    {
+      "title": "Sushi Mastery",
+      "description": "Maki, Nigiri, and Temaki rolling techniques with sushi rice prep."
+    },
+    {
+      "title": "2 Weeks",
+      "description": "Focused specialty schedule (4 intensive hands-on classes)."
+    },
+    {
+      "title": "Ramen & Dashi",
+      "description": "Learn to extract rich umami broths and compile authentic ramen."
+    },
+    {
+      "title": "Exotic Ingredients",
+      "description": "Work with premium Nori, Gyoza wrappers, Wasabi, and Mirin."
+    }
+  ],
+  "features": [
+    "Hands-on slicing techniques for sashimi and sushi rolls",
+    "Learn the science of dashi (Japanese stock base) extraction",
+    "Master the tempura batter technique for maximum crispiness",
+    "Understand traditional Japanese plating rules and aesthetics",
+    "All raw ingredients and premium fish provided by CIB",
+    "Accredited institutional specialty certificate awarded upon completion"
+  ],
+  "table": {
+    "heading": "Specialty Course Fee & Schedule",
+    "headers": [
+      "Criteria",
+      "CIB Japanese Course Details"
+    ],
+    "rows": [
+      [
+        "Duration",
+        "2 Weeks (4 Classes, 4 hours each)"
+      ],
+      [
+        "Total Fee",
+        "BDT 15,000 (All ingredients included)"
+      ],
+      [
+        "Recipes Covered",
+        "Sushi (Maki & Nigiri), Ramen, Gyoza, Tempura, Teriyaki"
+      ],
+      [
+        "Accreditation",
+        "CIB Specialty Certificate in Japanese Gastronomy"
+      ]
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Are ingredients like raw salmon provided in the course fee?",
+      "answer": "Yes. CIB provides all premium fresh salmon, crab sticks, nori sheets, and specialty sauces required for the practical classes."
+    },
+    {
+      "question": "Is this course useful for securing jobs in international Japanese restaurants?",
+      "answer": "Absolutely. Japanese cuisine chefs command higher salaries globally. Having certified sushi rolling skills gives you a major advantage in the Gulf and Europe."
+    }
+  ],
+  "cta": {
+    "heading": "Master Japanese Gastronomy",
+    "subheading": "Stand out from standard cooks. Gain high-value sushi and ramen skills.",
+    "buttonText": "Enroll in Specialty Course Now",
+    "buttonHref": "/admission"
+  }
+}

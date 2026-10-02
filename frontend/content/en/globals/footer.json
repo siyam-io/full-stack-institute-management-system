@@ -1,0 +1,76 @@
+{
+  "description": "Culinary Institute of Bangladesh (CIB) is the premier vocational training powerhouse for professional chefs and culinary entrepreneurs in Bangladesh. Accredited by NSDA and BTEB.",
+  "columns": [
+    {
+      "title": "Navigation",
+      "links": [
+        { "label": "About CIB", "href": "/about" },
+        { "label": "Admission", "href": "/admission" },
+        { "label": "View Courses", "href": "/courses" },
+        { "label": "Short Courses", "href": "/short-courses" },
+        { "label": "Culinary Blog", "href": "/blog" }
+      ]
+    },
+    {
+      "title": "Quick Links",
+      "links": [
+        { "label": "Pro Chef Course", "href": "/chef-course-bangladesh" },
+        { "label": "Chef Course Dhaka", "href": "/chef-course-dhaka" },
+        { "label": "Chef Course Fees", "href": "/chef-course-fees-bangladesh" },
+        { "label": "Culinary Course BD", "href": "/culinary-course-bangladesh" },
+        { "label": "Diploma Courses", "href": "/culinary-diploma-bangladesh" },
+        { "label": "Fast Food Course", "href": "/fast-food-course-dhaka" },
+        { "label": "Barista Course", "href": "/barista-course-dhaka" },
+        { "label": "Pastry Course", "href": "/pastry-bakery-course-dhaka" },
+        { "label": "Best Culinary Institute", "href": "/best-culinary-institute-bangladesh" },
+        { "label": "Best Institute Dhaka", "href": "/best-culinary-institute-dhaka" },
+        { "label": "Sushi Course", "href": "/sushi-course-dhaka" },
+        { "label": "Thai Cooking Course", "href": "/thai-cooking-course-dhaka" },
+        { "label": "Chinese Cooking Course", "href": "/chinese-cooking-course-dhaka" },
+        { "label": "Mediterranean Course", "href": "/mediterranean-cuisine-course-dhaka" },
+        { "label": "Indian Cuisine Course", "href": "/indian-cuisine-course-dhaka" },
+        { "label": "Contact Us", "href": "/contact" }
+      ]
+    },
+    {
+      "title": "Institutional",
+      "links": [
+        { "label": "Certificate Verification", "href": "https://verification.cibdhk.com" },
+        { "label": "Expert Mentors", "href": "/expert-culinary-mentors" },
+        { "label": "Press & Media", "href": "/press-media" },
+        { "label": "Success Stories", "href": "/success-stories" },
+        { "label": "Industry Partners", "href": "/industry-partners" },
+        { "label": "Common Questions (FAQ)", "href": "/faq" },
+        { "label": "Company Profile", "href": "/companyprofile" },
+        { "label": "Privacy Policy", "href": "/privacy-policy" },
+        { "label": "Terms & Conditions", "href": "/term-conditions" },
+        { "label": "Campus Gallery", "href": "/gallery" },
+        { "label": "Location & Directions", "href": "/location" }
+      ]
+    },
+    {
+      "title": "Contact Info",
+      "address": "House-160, Lake Circus, Kalabagan, Dhanmondi, Dhaka 1205, Bangladesh",
+      "phone": "+880 1338 958997",
+      "email": "info@cibdhk.com",
+      "socials": {
+        "facebook": "https://www.facebook.com/cibdhaka",
+        "youtube": "https://www.youtube.com/channel/UCehkM8tt4M68UBbVqJHC_HQ",
+        "instagram": "https://www.instagram.com/cib.dhk/",
+        "tiktok": "https://www.tiktok.com/@cibdhaka",
+        "whatsapp": "https://wa.me/8801338958997"
+      }
+    },
+    {
+      "title": "Newsletter",
+      "placeholder": "Enter your email",
+      "buttonText": "Subscribe",
+      "disclaimer": "Join our network of 5,000+ professional chefs."
+    }
+  ],
+  "copyright": "© {year} Culinary Institute of Bangladesh.",
+  "legal": [
+    { "label": "Privacy Policy", "href": "/privacy-policy" },
+    { "label": "Terms of Service", "href": "/term-conditions" }
+  ]
+}

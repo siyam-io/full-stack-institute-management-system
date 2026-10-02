@@ -1,0 +1,76 @@
+{
+  "description": "কালিনারি ইনস্টিটিউট অফ বাংলাদেশ (সিআইবি) বাংলাদেশে পেশাদার শেফ এবং কালিনারি উদ্যোক্তাদের জন্য শীর্ষস্থানীয় ভোকেশনাল ট্রেনিং পাওয়ারহাউজ। এনএসডিএ এবং বিটিইবি দ্বারা অনুমোদিত।",
+  "columns": [
+    {
+      "title": "নেভিগেশন",
+      "links": [
+        { "label": "সিআইবি সম্পর্কে", "href": "/about" },
+        { "label": "ভর্তি", "href": "/admission" },
+        { "label": "কোর্সসমূহ দেখুন", "href": "/courses" },
+        { "label": "শর্ট কোর্সসমূহ", "href": "/short-courses" },
+        { "label": "কালিনারি ব্লগ", "href": "/blog" }
+      ]
+    },
+    {
+      "title": "কুইক লিঙ্কস",
+      "links": [
+        { "label": "প্রো শেফ কোর্স", "href": "/chef-course-bangladesh" },
+        { "label": "শেফ কোর্স ঢাকা", "href": "/chef-course-dhaka" },
+        { "label": "শেফ কোর্সের ফি", "href": "/chef-course-fees-bangladesh" },
+        { "label": "কালিনারি কোর্স বিডি", "href": "/culinary-course-bangladesh" },
+        { "label": "ডিপ্লোমা কোর্স", "href": "/culinary-diploma-bangladesh" },
+        { "label": "ফাস্ট ফুড কোর্স", "href": "/fast-food-course-dhaka" },
+        { "label": "বারিস্তা কোর্স", "href": "/barista-course-dhaka" },
+        { "label": "পেস্ট্রি কোর্স", "href": "/pastry-bakery-course-dhaka" },
+        { "label": "সেরা কালিনারি ইনস্টিটিউট", "href": "/best-culinary-institute-bangladesh" },
+        { "label": "ঢাকার সেরা ইনস্টিটিউট", "href": "/best-culinary-institute-dhaka" },
+        { "label": "সুশি কোর্স", "href": "/sushi-course-dhaka" },
+        { "label": "থাই কুকিং কোর্স", "href": "/thai-cooking-course-dhaka" },
+        { "label": "চাইনিজ কুকিং কোর্স", "href": "/chinese-cooking-course-dhaka" },
+        { "label": "মেডিটেরেনিয়ান কুইজিন কোর্স", "href": "/mediterranean-cuisine-course-dhaka" },
+        { "label": "ইন্ডিয়ান কুইজিন কোর্স", "href": "/indian-cuisine-course-dhaka" },
+        { "label": "যোগাযোগ করুন", "href": "/contact" }
+      ]
+    },
+    {
+      "title": "প্রাতিষ্ঠানিক",
+      "links": [
+        { "label": "সার্টিফিকেট ভেরিফিকেশন", "href": "https://verification.cibdhk.com" },
+        { "label": "কালিনারি মেন্টরগণ", "href": "/expert-culinary-mentors" },
+        { "label": "মিডিয়া ও সংবাদ", "href": "/press-media" },
+        { "label": "সাফল্যগাথা", "href": "/success-stories" },
+        { "label": "সহযোগী প্রতিষ্ঠান", "href": "/industry-partners" },
+        { "label": "সাধারণ জিজ্ঞাসা (FAQ)", "href": "/faq" },
+        { "label": "কোম্পানি প্রোফাইল", "href": "/companyprofile" },
+        { "label": "প্রাইভেসি পলিসি", "href": "/privacy-policy" },
+        { "label": "টার্মস ও কন্ডিশনস", "href": "/term-conditions" },
+        { "label": "ক্যাম্পাস গ্যালারি", "href": "/gallery" },
+        { "label": "লোকেশন ও ডিরেকশন", "href": "/location" }
+      ]
+    },
+    {
+      "title": "যোগাযোগ",
+      "address": "হাউস-১৬০, লেক সার্কাস, কলাবাগান, ধানমন্ডি, ঢাকা ১২০৫, বাংলাদেশ",
+      "phone": "+৮৮০ ১৩৩৮ ৯৫৮৯৯৭",
+      "email": "info@cibdhk.com",
+      "socials": {
+        "facebook": "https://www.facebook.com/cibdhaka",
+        "youtube": "https://www.youtube.com/channel/UCehkM8tt4M68UBbVqJHC_HQ",
+        "instagram": "https://www.instagram.com/cib.dhk/",
+        "tiktok": "https://www.tiktok.com/@cibdhaka",
+        "whatsapp": "https://wa.me/8801338958997"
+      }
+    },
+    {
+      "title": "নিউজলেটার",
+      "placeholder": "আপনার ইমেইল লিখুন",
+      "buttonText": "সাবস্ক্রাইব",
+      "disclaimer": "আমাদের ৫০০০+ পেশাদার শেফদের নেটওয়ার্কে যোগ দিন।"
+    }
+  ],
+  "copyright": "© {year} কালিনারি ইনস্টিটিউট অফ বাংলাদেশ।",
+  "legal": [
+    { "label": "প্রাইভেসি পলিসি", "href": "/privacy-policy" },
+    { "label": "টার্মস অফ সার্ভিস", "href": "/term-conditions" }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "heading": "Our Industry Partners",
+    "subheading": "CIB collaborates with leading 5-star hotel chains, global culinary bodies, and elite restaurant networks to ensure premium placement and training standards.",
+    "cta": "Explore Placement Opportunities"
+  },
+  "partners": [
+    {
+      "name": "Radisson Blu, Dhaka & Chattogram",
+      "type": "5-Star Hospitality Partner",
+      "role": "Placement & Internship Collaboration",
+      "logoId": "radisson",
+      "description": "CIB students receive preferential placement for their mandatory 3-month industrial training at Radisson Blu hotels. Executive Chefs from Radisson also conduct specialized masterclasses at our Dhanmondi campus.",
+      "benefits": [
+        "Structured 3-month industrial internship placements",
+        "Direct recruitment pathway for top CIB graduates",
+        "Quarterly curriculum review by Radisson Executive Chefs"
+      ]
+    },
+    {
+      "name": "The Westin, Dhaka",
+      "type": "5-Star Hospitality Partner",
+      "role": "Advanced Culinary Placement Channel",
+      "logoId": "westin",
+      "description": "Through our institutional partnership, The Westin Dhaka hosts advanced kitchen demonstrations for CIB diploma students. This collaboration focuses heavily on global cold-kitchen and pastry standards.",
+      "benefits": [
+        "Access to advanced commercial kitchen operation models",
+        "Priority invitation for banquet and event training sessions",
+        "Joint vocational training certificates for select modules"
+      ]
+    },
+    {
+      "name": "InterContinental Dhaka",
+      "type": "Heritage 5-Star Partner",
+      "role": "HACCP & Operational Standards Integration",
+      "logoId": "intercontinental",
+      "description": "InterContinental Dhaka works with CIB to align our curriculum with high-authority global hygiene and food science guidelines, ensuring CIB students enter international kitchens fully pre-equipped with elite compliance training.",
+      "benefits": [
+        "Hygiene & HACCP standards benchmarking",
+        "Guest lectures by certified food safety officers",
+        "Preferential hiring during seasonal peak operations"
+      ]
+    }
+  ]
+}

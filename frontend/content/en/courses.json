@@ -1,0 +1,104 @@
+{
+  "batchAvailability": "Currently Enrolling: {batches}",
+  "nextBatchDate": "",
+  "hero": {
+    "heading": "Become a Professional Chef in Dhaka",
+    "subheading": "Bangladesh's #1 chef course in Dhaka. NSDA approved Skill Training Provider (STP) providing high-salary culinary training and certification near you."
+  },
+  "courses": [],
+  "whyChoose": {
+    "heading": "Why Choose Our Professional Chef Course?",
+    "content": "Most cooking classes teach recipes, but we teach professions. Our curriculum is designed to make you an immediate asset in a professional commercial kitchen. Earn your entire tuition back in less than 25 days of work.",
+    "points": [
+      { "title": "100% Practical Classes", "desc": "You learn by doing. Every recipe is practiced individually in our professional training kitchen." },
+      { "title": "National Accreditation", "desc": "We are an NSDA approved STP under the Prime Minister's Office, ensuring your skills are nationally and internationally recognized." },
+      { "title": "Master Chef Mentors", "desc": "Learn from veterans with decades of experience in global luxury hotel chains." },
+      { "title": "ROI Focused", "desc": "Professional training designed for high-salary hospitality careers. Stop trading time for low wages." }
+    ]
+  },
+  "learningOutcomes": {
+    "heading": "What You Will Master",
+    "outcomes": [
+      "120+ Authentic Recipes from 16+ countries",
+      "Key Modules: Pizza, Burger, Sandwich, Shawarma, Appetizers, Desserts",
+      "Fine Dining Plating, Salads, Soups",
+      "10+ Beverages, Mocktails, Healthy Drinks",
+      "Vegetable & Fruit Carving",
+      "Food Safety & Hygiene (ISO-HACCP standards)",
+      "Kitchen Management & Spoken English for Chefs"
+    ]
+  },
+  "certifications": {
+    "heading": "Certifications You'll Earn",
+    "certs": [
+      { 
+        "title": "NSDA Food and Beverage Production Certificate", 
+        "desc": "Level-2 & 3 certification from the National Skill Development Authority, Prime Minister's Office. Certification provided upon Assessment." 
+      },
+      { 
+        "title": "ISO-HACCP, HYGIENE & GMP Certificate", 
+        "desc": "Training and certification aligned with ISO-AQC, Codex, WHO & FAO-UN, and ISO-22000 Standards." 
+      },
+      { 
+        "title": "CIB Institutional Certificate", 
+        "desc": "Professional Food & Beverage Production Level-3 certificate recognized by global industry partners." 
+      }
+    ]
+  },
+  "curriculum": {
+    "heading": "The 90-Day Intensive Roadmap",
+    "months": [
+      {
+        "title": "Month 1: The Foundation",
+        "items": ["Professional Knife Skills", "Science of Mother Sauces", "ISO-HACCP & International Food Safety", "Professional Hygiene Standards"]
+      },
+      {
+        "title": "Month 2: Global Mastery",
+        "items": ["Pizza, Burger, Sandwich & Shawarma Labs", "Arabic & Continental Cuisine", "Appetizers, Salads & Soups", "Vegetable & Fruit Carving"]
+      },
+      {
+        "title": "Month 3: Fine Dining & Pastry",
+        "items": ["Advanced Fine Dining Plating", "Advanced Pastry & Bakery Course (Bonus)", "Mocktails & Beverage Crafting", "Final Mandatory Practice Exams"]
+      }
+    ]
+  },
+  "feeStructure": {
+    "heading": "Transparent Pricing",
+    "total": "৳44,000",
+    "installments": [
+      { "name": "Admission Fee", "amount": "৳16,000" },
+      { "name": "1st Installment", "amount": "৳14,000" },
+      { "name": "2nd Installment", "amount": "৳14,000" }
+    ],
+    "gifts": [
+      "International Culinary Sheet",
+      "Full Chef Uniform Set",
+      "Professional Cutting Board & Knife"
+    ]
+  },
+  "certComparison": {
+    "heading": "Certification Paths Comparison",
+    "global": {
+      "title": "CIB Global Executive Diploma",
+      "bestFor": [
+        "Aspiring international executive chefs",
+        "Seeking jobs in European, Middle Eastern, & Western luxury hotels",
+        "Students planning credit transfer pathways to Australia, Canada, or Malaysia"
+      ]
+    },
+    "nsda": {
+      "title": "National Skill Development Authority (NSDA) Certificate",
+      "bestFor": [
+        "Aspiring local professional kitchen leaders",
+        "Securing government job recognition and local 5-star hotel positions",
+        "Candidates seeking officially validated national skills credentials (Level-2/3)"
+      ]
+    }
+  },
+  "economics": {
+    "heading": "The Economics of Your Career",
+    "body": "Earn back your entire tuition fee in less than 25 working days. CIB doesn't just train cooks; we build earners who dominate the high-salary hospitality landscape.",
+    "cta": "Enroll Now",
+    "ctaLink": "/admission"
+  }
+}

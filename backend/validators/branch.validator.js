@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const branchCreateSchema = z.object({
   branch_name: z.string().trim().min(1),
+  branch_name_bn: z.string().trim().optional(),
   branch_code: z.string().trim().min(1),
   address: z.string().trim().optional().default(""),
   contact_number: z.string().trim().optional().default(""),
@@ -10,6 +11,7 @@ export const branchCreateSchema = z.object({
 
 export const branchUpdateSchema = z.object({
   branch_name: z.string().trim().optional(),
+  branch_name_bn: z.string().trim().optional(),
   branch_code: z.string().trim().optional(),
   address: z.string().trim().optional(),
   contact_number: z.string().trim().optional(),
