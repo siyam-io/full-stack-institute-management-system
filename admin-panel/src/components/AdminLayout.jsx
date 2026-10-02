@@ -287,7 +287,7 @@ const AdminLayout = () => {
           </div>
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2 text-slate-300"
+            className="p-2 text-zinc-400"
           >
             {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -353,7 +353,7 @@ const AdminLayout = () => {
           {filteredNavigation.map((group, idx) => (
             <div key={idx} className="space-y-1">
               {!isCollapsed && group.label && (
-                <h3 className="px-4 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] mb-2 mt-4 opacity-50">
+                <h3 className="px-4 text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em] mb-2 mt-4 opacity-50">
                   {group.label}
                 </h3>
               )}
@@ -364,11 +364,11 @@ const AdminLayout = () => {
                     key={item.name}
                     to={item.href}
                     onClick={() => setSidebarOpen(false)}
-                    className={`flex items-center rounded-xl transition-all group ${isCollapsed ? "justify-center py-3" : "space-x-3 px-4 py-3"} ${isActive ? "bg-power-red/10 text-white shadow-sm ring-1 ring-power-red/20" : "text-slate-400 hover:bg-white/5 hover:text-slate-200"}`}
+                    className={`flex items-center rounded-xl transition-all group ${isCollapsed ? "justify-center py-3" : "space-x-3 px-4 py-3"} ${isActive ? "bg-power-red/10 text-white shadow-sm ring-1 ring-power-red/20" : "text-zinc-500 hover:bg-white/5 hover:text-slate-200"}`}
                   >
                     <item.icon
                       size={20}
-                      className={`${isActive ? "text-power-red" : "text-slate-500 group-hover:text-slate-300"}`}
+                      className={`${isActive ? "text-power-red" : "text-zinc-500 group-hover:text-zinc-400"}`}
                     />
                     {!isCollapsed && (
                       <span
@@ -388,7 +388,7 @@ const AdminLayout = () => {
         <div className={`shrink-0 mt-auto p-4`}>
           <button
             onClick={logout}
-            className={`flex items-center justify-center w-full rounded-xl text-slate-400 font-bold hover:bg-red-500/10 hover:text-red-400 transition-all ${isCollapsed ? "py-3" : "space-x-2 py-3"}`}
+            className={`flex items-center justify-center w-full rounded-xl text-zinc-500 font-bold hover:bg-red-500/10 hover:text-red-400 transition-all ${isCollapsed ? "py-3" : "space-x-2 py-3"}`}
           >
             <LogOut size={18} />
             {!isCollapsed && <span className="text-sm">Logout</span>}

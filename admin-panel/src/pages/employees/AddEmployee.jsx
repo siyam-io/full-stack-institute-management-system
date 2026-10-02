@@ -342,7 +342,7 @@ const AddEmployeeForm = ({ mode = "add", data = null, isLoading }) => {
         buttonText={mode === "edit" ? "Save Changes" : "Register Employee"}
         mode={mode}
         onCancel={() => navigate("/admin/all-employees")}
-        buttonColor="bg-[#1e293b] hover:bg-slate-800"
+        buttonColor="bg-[#EF233C] hover:bg-slate-800"
       />
     </div>
   );

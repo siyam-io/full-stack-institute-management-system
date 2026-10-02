@@ -154,20 +154,20 @@ const EditBlog = () => {
 
   return (
     <div className="card-premium max-w-5xl mx-auto mt-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/5">
         <div>
-          <h1 className="text-2xl font-black text-slate-800 uppercase tracking-tight">Edit Blog Post</h1>
-          <p className="text-slate-500 text-sm font-medium mt-1">Edit English and Bangla content in one blog record</p>
+          <h1 className="text-2xl font-black text-zinc-100 uppercase tracking-tight">Edit Blog Post</h1>
+          <p className="text-zinc-500 text-sm font-medium mt-1">Edit English and Bangla content in one blog record</p>
         </div>
         <div className="flex items-center gap-3 self-end sm:self-auto">
-          <div className="flex rounded-xl bg-slate-100 p-1 border border-slate-200">
+          <div className="flex rounded-xl bg-white/5 p-1 border border-white/10">
             <button
               type="button"
               onClick={() => handleToggleMode("visual")}
               className={`px-4 py-1.5 text-xs font-black uppercase tracking-wider rounded-lg transition-all ${
                 editMode === "visual"
-                  ? "bg-white text-slate-800 shadow-sm"
-                  : "text-slate-500 hover:text-slate-800"
+                  ? "bg-white/5 text-zinc-100 shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               Visual
@@ -177,8 +177,8 @@ const EditBlog = () => {
               onClick={() => handleToggleMode("json")}
               className={`px-4 py-1.5 text-xs font-black uppercase tracking-wider rounded-lg transition-all ${
                 editMode === "json"
-                  ? "bg-white text-slate-800 shadow-sm"
-                  : "text-slate-500 hover:text-slate-800"
+                  ? "bg-white/5 text-zinc-100 shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               JSON
@@ -194,7 +194,7 @@ const EditBlog = () => {
         {editMode === "json" ? (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <label className="block text-sm font-bold text-slate-700">Raw JSON Payload</label>
+              <label className="block text-sm font-bold text-zinc-200">Raw JSON Payload</label>
               <button
                 type="button"
                 onClick={() => {
@@ -206,7 +206,7 @@ const EditBlog = () => {
                     Swal.fire("Format Error", "Invalid JSON structure", "error");
                   }
                 }}
-                className="text-xs font-bold text-indigo-600 hover:underline"
+                className="text-xs font-bold text-power-red hover:underline"
               >
                 Format JSON
               </button>
@@ -214,15 +214,15 @@ const EditBlog = () => {
             <textarea
               value={rawJsonText}
               onChange={(e) => setRawJsonText(e.target.value)}
-              className="w-full h-[550px] p-5 font-mono text-xs bg-slate-900 text-slate-100 rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-inner"
+              className="w-full h-[550px] p-5 font-mono text-xs bg-slate-900 text-slate-100 rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-power-red/40 shadow-inner"
               placeholder="Paste raw JSON here..."
             />
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-200 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white/5 rounded-2xl border border-white/10 mt-4">
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">Cover Image File (Optional)</label>
-                <input type="file" accept="image/*" onChange={handleFileChange} className="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700" />
-                {photoPreview && <img src={photoPreview} alt="Preview" className="mt-4 w-72 h-44 object-cover rounded-2xl border border-slate-200" />}
+                <label className="block text-sm font-bold text-zinc-200 mb-2">Cover Image File (Optional)</label>
+                <input type="file" accept="image/*" onChange={handleFileChange} className="w-full text-sm text-zinc-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-power-red/10 file:text-power-red" />
+                {photoPreview && <img src={photoPreview} alt="Preview" className="mt-4 w-72 h-44 object-cover rounded-2xl border border-white/10" />}
               </div>
             </div>
           </div>
@@ -241,36 +241,36 @@ const EditBlog = () => {
             <TextArea label="SEO Description BN" name="seoDescriptionBn" value={form.seoDescriptionBn} onChange={handleChange} maxLength={170} />
             <Field className="md:col-span-2" label="Tags / Categories" name="tags" value={form.tags} onChange={handleChange} />
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">Status</label>
+              <label className="block text-sm font-bold text-zinc-200 mb-2">Status</label>
               <select name="status" value={form.status} onChange={handleChange} className="w-full">
                 <option value="draft">Draft</option>
                 <option value="published">Published</option>
                 <option value="archived">Archived</option>
               </select>
             </div>
-            <div className="flex items-center space-x-2 bg-slate-50 p-3 rounded-2xl border border-slate-200 self-end h-[46px]">
+            <div className="flex items-center space-x-2 bg-white/5 p-3 rounded-2xl border border-white/10 self-end h-[46px]">
               <input
                 type="checkbox"
                 id="isFeatured"
                 name="isFeatured"
                 checked={form.isFeatured}
                 onChange={handleChange}
-                className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 cursor-pointer"
+                className="w-4 h-4 text-power-red border-white/15 rounded focus:ring-power-red/40 cursor-pointer"
               />
-              <label htmlFor="isFeatured" className="text-sm font-bold text-slate-700 cursor-pointer select-none">
+              <label htmlFor="isFeatured" className="text-sm font-bold text-zinc-200 cursor-pointer select-none">
                 Feature this Blog Post (Show on Home)
               </label>
             </div>
             <Field label="Or Image URL" name="coverImageUrl" value={form.coverImageUrl} onChange={handleChange} />
             <div className="md:col-span-2">
-              <label className="block text-sm font-bold text-slate-700 mb-2">Cover Image</label>
-              <input type="file" accept="image/*" onChange={handleFileChange} className="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700" />
-              {photoPreview && <img src={photoPreview} alt="Preview" className="mt-4 w-72 h-44 object-cover rounded-2xl border border-slate-200" />}
+              <label className="block text-sm font-bold text-zinc-200 mb-2">Cover Image</label>
+              <input type="file" accept="image/*" onChange={handleFileChange} className="w-full text-sm text-zinc-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-power-red/10 file:text-power-red" />
+              {photoPreview && <img src={photoPreview} alt="Preview" className="mt-4 w-72 h-44 object-cover rounded-2xl border border-white/10" />}
             </div>
           </div>
         )}
 
-        <div className="flex justify-end gap-3 pt-6 border-t border-slate-100/60">
+        <div className="flex justify-end gap-3 pt-6 border-t border-white/5">
           <button type="button" onClick={() => navigate("/admin/blogs")} className="btn-secondary">
             Cancel
           </button>
@@ -285,14 +285,14 @@ const EditBlog = () => {
 
 const Field = ({ label, className = "", mono = false, ...props }) => (
   <div className={className}>
-    <label className="block text-sm font-bold text-slate-700 mb-2">{label}</label>
+    <label className="block text-sm font-bold text-zinc-200 mb-2">{label}</label>
     <input {...props} className={`w-full ${mono ? "font-mono text-sm" : ""}`} />
   </div>
 );
 
 const TextArea = ({ label, rows = 3, mono = false, ...props }) => (
   <div>
-    <label className="block text-sm font-bold text-slate-700 mb-2">{label}</label>
+    <label className="block text-sm font-bold text-zinc-200 mb-2">{label}</label>
     <textarea {...props} rows={rows} className={`w-full ${mono ? "font-mono text-sm" : "text-sm"}`} />
   </div>
 );

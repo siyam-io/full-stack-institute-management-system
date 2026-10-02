@@ -49,7 +49,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
       {/* ID Card Wrapper */}
       <div 
         ref={modalRef}
-        className="bg-white w-[380px] h-[640px] shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-300 flex flex-col"
+        className="bg-white/5 w-[380px] h-[640px] shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-300 flex flex-col"
         style={{
           backgroundImage: `url(${IDBackground})`,
           backgroundSize: 'cover',
@@ -60,7 +60,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
         <div className="pt-12 px-8 flex items-center gap-3">
           <img src={Logo} alt="CIB Logo" className="w-16 h-16 object-contain" />
           <div className="text-left">
-            <h2 className="text-[17px] font-bold text-gray-900 leading-tight">
+            <h2 className="text-[17px] font-bold text-white leading-tight">
               The Culinary Institute <br /> of Bangladesh (CIB)
             </h2>
           </div>
@@ -68,7 +68,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
 
         {/* Profile Image Section */}
         <div className="flex justify-center mt-12">
-          <div className="w-44 h-44 rounded-full overflow-hidden border-[6px] border-gray-200/50 shadow-xl bg-slate-100">
+          <div className="w-44 h-44 rounded-full overflow-hidden border-[6px] border-white/10 shadow-xl bg-white/5">
             {employee.photo_url ? (
               <img 
                 src={getImageUrl(employee.photo_url)} 
@@ -77,7 +77,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center">
-                <User size={60} className="text-slate-400" />
+                <User size={60} className="text-zinc-500" />
               </div>
             )}
           </div>
@@ -85,14 +85,14 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
 
         {/* Info Section */}
         <div className="text-center mt-8 px-4">
-          <h1 className="text-3xl font-black text-gray-900 tracking-tight">
+          <h1 className="text-3xl font-black text-white tracking-tight">
             {employee.full_name}
           </h1>
           <div className="mt-2 space-y-1">
-            <p className="text-lg font-medium text-gray-700 leading-tight">
+            <p className="text-lg font-medium text-zinc-200 leading-tight">
               {employee.designation}
             </p>
-            <p className="text-md text-gray-600 font-normal italic">
+            <p className="text-md text-zinc-500 font-normal italic">
               {employee.department} Department
             </p>
           </div>
@@ -100,7 +100,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
 
         {/* QR Code & ID Footer */}
         <div className="absolute bottom-16 left-0 right-0 flex flex-col items-center">
-          <div className="bg-white p-2 rounded-lg shadow-sm border border-gray-100">
+          <div className="bg-white/5 p-2 rounded-lg shadow-sm border border-white/5">
             <QRCodeCanvas 
               value={scanUrl} 
               size={100} 
@@ -109,7 +109,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
             />
           </div>
           <div className="mt-4 flex flex-col items-center">
-             <span className="text-[12px] font-bold text-gray-500 uppercase tracking-[0.2em]">
+             <span className="text-[12px] font-bold text-zinc-500 uppercase tracking-[0.2em]">
                ID: {employee.employee_id}
              </span>
           </div>
@@ -120,7 +120,7 @@ const EmployeeQRCodeModal = ({ employee, onClose }) => {
       <div className="mt-10">
         <button 
           onClick={handleDownloadQR} 
-          className="px-8 py-3 bg-[#EC1B23] text-white rounded-full font-bold flex items-center gap-3 hover:bg-[#cc141b] shadow-xl transition-all active:scale-95"
+          className="px-8 py-3 bg-[#EF233C] text-white rounded-full font-bold flex items-center gap-3 hover:bg-[#C8102E] shadow-xl transition-all active:scale-95"
         >
           <Download size={20} /> Export ID Card
         </button>

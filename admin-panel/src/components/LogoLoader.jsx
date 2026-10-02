@@ -27,17 +27,17 @@ const LogoLoader = ({ isLoading = true }) => {
   return (
     <div
       onTransitionEnd={handleTransitionEnd}
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#000c1d]/90 backdrop-blur-md transition-opacity duration-700 ease-in-out ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#050506]/90 backdrop-blur-md transition-opacity duration-700 ease-in-out ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="relative flex flex-col items-center animate-gentleFloat">
         
         {/* Soft, diffuse background glow */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EC1B23]/10 to-blue-500/10 blur-[80px] scale-150 pointer-events-none"></div>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EC1B23]/10 to-accent-red-deep/10 blur-[80px] scale-150 pointer-events-none"></div>
 
         {/* Logo Card */}
-        <div className="relative p-8 rounded-3xl bg-white/[0.03] border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-700">
+        <div className="relative p-8 rounded-3xl bg-white/5[0.03] border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-700">
           {!imgError ? (
             <img
               src="/logo.png"

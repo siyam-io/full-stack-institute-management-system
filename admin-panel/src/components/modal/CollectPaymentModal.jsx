@@ -60,19 +60,19 @@ const CollectPaymentModal = ({ isOpen, onClose, studentId, studentName }) => {
   if (successfulTxn) {
     return (
       <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
-        <div className="w-full max-w-md bg-white p-8 rounded-3xl text-center shadow-2xl relative flex flex-col items-center">
+        <div className="w-full max-w-md bg-white/5 p-8 rounded-3xl text-center shadow-2xl relative flex flex-col items-center">
           <CheckCircle className="text-emerald-500 mb-4" size={64} />
-          <h2 className="text-2xl font-black text-slate-800 tracking-tight">Payment Successful!</h2>
-          <p className="text-sm font-bold text-slate-400 mt-2">Receipt No: <span className="font-mono text-slate-700">{successfulTxn.receipt_number}</span></p>
+          <h2 className="text-2xl font-black text-zinc-100 tracking-tight">Payment Successful!</h2>
+          <p className="text-sm font-bold text-zinc-500 mt-2">Receipt No: <span className="font-mono text-zinc-200">{successfulTxn.receipt_number}</span></p>
           
           <div className="flex gap-3 w-full mt-8">
-            <button onClick={onClose} className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-black uppercase tracking-widest text-xs rounded-xl transition-all">
+            <button onClick={onClose} className="flex-1 py-3 bg-white/5 hover:bg-white/10 text-zinc-500 font-black uppercase tracking-widest text-xs rounded-xl transition-all">
               Done
             </button>
             <button 
               onClick={() => downloadReceipt(successfulTxn._id)} 
               disabled={isDownloading}
-              className="flex-1 py-3 bg-teal-600 hover:bg-teal-700 text-white font-black uppercase tracking-widest text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-teal-600/20"
+              className="flex-1 py-3 bg-power-red hover:bg-[#C8102E] text-white font-black uppercase tracking-widest text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-power-red/20"
             >
               {isDownloading ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
               {isDownloading ? "Generating..." : "Download PDF"}
@@ -86,25 +86,25 @@ const CollectPaymentModal = ({ isOpen, onClose, studentId, studentName }) => {
   // 🚀 MAIN MODAL UI
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
-      <div className="w-full max-w-lg bg-slate-50 shadow-2xl rounded-[2.5rem] flex flex-col overflow-hidden relative">
-        <div className="p-6 bg-white border-b border-slate-100 flex justify-between items-center shrink-0">
+      <div className="w-full max-w-lg bg-white/5 shadow-2xl rounded-[2.5rem] flex flex-col overflow-hidden relative">
+        <div className="p-6 bg-white/5 border-b border-white/5 flex justify-between items-center shrink-0">
           <div>
-            <h2 className="text-lg font-black text-slate-800 flex items-center gap-2">
-              <Wallet size={20} className="text-teal-600" /> Action Panel
+            <h2 className="text-lg font-black text-zinc-100 flex items-center gap-2">
+              <Wallet size={20} className="text-power-red" /> Action Panel
             </h2>
-            <p className="text-xs font-bold text-slate-400 mt-1">For <span className="text-teal-600">{studentName}</span></p>
+            <p className="text-xs font-bold text-zinc-500 mt-1">For <span className="text-power-red">{studentName}</span></p>
           </div>
-          <button onClick={onClose} className="p-2.5 bg-slate-100 hover:bg-rose-50 hover:text-rose-500 rounded-full transition-colors text-slate-400">
+          <button onClick={onClose} className="p-2.5 bg-white/5 hover:bg-rose-50 hover:text-rose-500 rounded-full transition-colors text-zinc-500">
             <X size={18} />
           </button>
         </div>
 
-        <div className="p-6 bg-white overflow-y-auto custom-scrollbar flex-1">
-          <div className="flex bg-slate-100 p-1.5 rounded-2xl mb-6 shrink-0">
-            <button onClick={() => setActiveTab("payment")} className={`flex-1 flex items-center justify-center gap-2 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all ${activeTab === "payment" ? "bg-white text-teal-600 shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>
+        <div className="p-6 bg-white/5 overflow-y-auto custom-scrollbar flex-1">
+          <div className="flex bg-white/5 p-1.5 rounded-2xl mb-6 shrink-0">
+            <button onClick={() => setActiveTab("payment")} className={`flex-1 flex items-center justify-center gap-2 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all ${activeTab === "payment" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500 hover:text-zinc-500"}`}>
               <ReceiptText size={16} /> Collect
             </button>
-            <button onClick={() => setActiveTab("discount")} className={`flex-1 flex items-center justify-center gap-2 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all ${activeTab === "discount" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>
+            <button onClick={() => setActiveTab("discount")} className={`flex-1 flex items-center justify-center gap-2 py-3 text-xs font-black uppercase tracking-widest rounded-xl transition-all ${activeTab === "discount" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500 hover:text-zinc-500"}`}>
               <Tags size={16} /> Discount
             </button>
           </div>
@@ -123,7 +123,7 @@ const CollectPaymentModal = ({ isOpen, onClose, studentId, studentName }) => {
                 <EntityForm
                   title="" subtitle={`Total Due: ৳${dueAmount.toLocaleString()}`} config={paymentConfig}
                   onSubmit={handlePaymentSubmit} isLoading={paymentMutation.isPending} onCancel={onClose}
-                  buttonText="Confirm & Complete" buttonColor="bg-teal-600 hover:bg-teal-700 shadow-teal-600/20"
+                  buttonText="Confirm & Complete" buttonColor="bg-power-red hover:bg-[#C8102E] shadow-power-red/20"
                   initialData={{ payment_type: "Installment", payment_method: "Cash" }}
                 />
               )
@@ -131,7 +131,7 @@ const CollectPaymentModal = ({ isOpen, onClose, studentId, studentName }) => {
               <EntityForm
                 title="" subtitle={`Current Fee: ৳${feeSummary.net_payable?.toLocaleString()}`} config={discountConfig}
                 onSubmit={handleDiscountSubmit} isLoading={discountMutation.isPending} onCancel={onClose}
-                buttonText="Apply Extra Discount" buttonColor="bg-indigo-600 hover:bg-indigo-700 shadow-indigo-600/20"
+                buttonText="Apply Extra Discount" buttonColor="bg-power-red hover:bg-[#C8102E] shadow-power-red/20"
               />
             )}
           </div>

@@ -41,8 +41,8 @@ const MainPageEdit = () => {
     <div className="max-w-full px-4 lg:px-8 mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-black text-slate-800 tracking-tighter uppercase">Main Page Edit</h1>
-        <p className="text-slate-500 text-sm font-medium mt-1">Edit dynamic content sections for the public website with live interactive component preview</p>
+        <h1 className="text-3xl font-black text-zinc-100 tracking-tighter uppercase">Main Page Edit</h1>
+        <p className="text-zinc-500 text-sm font-medium mt-1">Edit dynamic content sections for the public website with live interactive component preview</p>
       </div>
 
       {/* Tabs */}
@@ -53,8 +53,8 @@ const MainPageEdit = () => {
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${activeTab === tab.key
-                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-200"
-                : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 hover:border-slate-300"
+                ? "bg-power-red text-white shadow-lg shadow-power-red/20"
+                : "bg-white/5 text-zinc-500 border border-white/10 hover:bg-white/5 hover:border-white/15"
                 }`}
             >
               {tab.label}
@@ -64,7 +64,7 @@ const MainPageEdit = () => {
       </div>
 
       {/* Content Area */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 md:p-8">
+      <div className="bg-white/5 rounded-3xl border border-white/10 shadow-sm p-6 md:p-8">
         <div key={activeTab}>
           {tabContent()}
         </div>

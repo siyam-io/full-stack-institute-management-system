@@ -3,14 +3,14 @@ import { Filter, X, ChevronDown, ChevronUp, Search } from "lucide-react";
 import SearchBar from './SearchBar';
 
 const badgeColorClasses = {
-  blue: "bg-blue-500/10 text-blue-300 border-blue-500/20",
+  blue: "bg-power-red/10 text-power-red border-power-red/30",
   green: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
-  purple: "bg-purple-500/10 text-purple-300 border-purple-500/20",
+  purple: "bg-power-red/10 text-power-red border-power-red/30",
   yellow: "bg-amber-500/10 text-amber-300 border-amber-500/20",
   orange: "bg-orange-500/10 text-orange-300 border-orange-500/20",
-  indigo: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+  indigo: "bg-power-red/10 text-power-red border-power-red/30",
   red: "bg-power-red/10 text-power-red border-power-red/20",
-  default: "bg-white/5 text-zinc-300 border-white/10"
+  default: "bg-white/5 text-zinc-400 border-white/10"
 };
 
 const DataFilters = ({
@@ -69,7 +69,7 @@ const DataFilters = ({
           className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-sm border ${
             showFilters 
             ? 'bg-power-red text-white border-power-red' 
-            : 'bg-white/5 text-zinc-300 border-white/10 hover:border-white/20'
+            : 'bg-white/5 text-zinc-400 border-white/10 hover:border-white/20'
           }`}
           disabled={isLoading}
         >

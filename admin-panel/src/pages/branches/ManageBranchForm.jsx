@@ -118,7 +118,7 @@ const ManageBranchForm = ({ mode = "add" }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f4f7fb] py-10 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
       <EntityForm
         // KEY MAGIC: Forces a full re-render when data arrives
         key={mode === "edit" ? `edit-${branchData?._id}` : "new-branch"} 
@@ -130,7 +130,7 @@ const ManageBranchForm = ({ mode = "add" }) => {
         isLoading={createBranchMutation.isPending || updateBranchMutation.isPending}
         buttonText={mode === "edit" ? "Save Changes" : "Deploy Branch"}
         onCancel={() => navigate("/admin/branches")}
-        buttonColor="bg-slate-900 hover:bg-indigo-600"
+        buttonColor="bg-slate-900 hover:bg-power-red"
       />
     </div>
   );

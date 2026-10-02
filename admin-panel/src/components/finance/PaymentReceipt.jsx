@@ -60,7 +60,7 @@ export default function PaymentReceipt({ txn, studentName, studentId, courseName
       
       {/* Action Bar */}
       <div className="w-full max-w-3xl flex justify-end gap-3 mb-4">
-        <button onClick={handlePrint} className="px-6 py-2.5 bg-teal-600 text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-teal-700 transition-all flex items-center gap-2 shadow-lg shadow-teal-600/20">
+        <button onClick={handlePrint} className="px-6 py-2.5 bg-power-red text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#C8102E] transition-all flex items-center gap-2 shadow-lg shadow-power-red/20">
           <Printer size={16} /> Print / Save PDF
         </button>
         <button onClick={onClose} className="p-2.5 bg-white/10 hover:bg-rose-500 text-white rounded-xl transition-all">
@@ -69,7 +69,7 @@ export default function PaymentReceipt({ txn, studentName, studentId, courseName
       </div>
 
       {/* 🚀 THE RECEIPT PREVIEW (This UI mirrors the Print CSS above) */}
-      <div className="w-full max-w-3xl bg-white shadow-2xl rounded-2xl overflow-y-auto max-h-[80vh] custom-scrollbar">
+      <div className="w-full max-w-3xl bg-white/5 shadow-2xl rounded-2xl overflow-y-auto max-h-[80vh] custom-scrollbar">
         <div ref={printRef} className="p-8 sm:p-12">
           
           {/* Header */}

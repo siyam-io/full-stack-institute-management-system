@@ -78,13 +78,13 @@ export default function BatchWorkspace({
     // 🚀 FIXED: Removed strict h-full for mobile, kept for lg screens
     <div className="flex flex-col lg:flex-row gap-6 lg:h-full">
       {/* 🚀 FIXED: Added min-h-[500px] for mobile so calendar doesn't collapse */}
-      <div className="flex-1 flex flex-col min-w-0 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden min-h-[500px] lg:min-h-0">
-        <div className="flex items-center gap-2 p-4 bg-slate-50 border-b border-slate-100 shrink-0 overflow-x-auto custom-scrollbar">
+      <div className="flex-1 flex flex-col min-w-0 bg-white/5 rounded-[2rem] border border-white/10 shadow-sm overflow-hidden min-h-[500px] lg:min-h-0">
+        <div className="flex items-center gap-2 p-4 bg-white/5 border-b border-white/5 shrink-0 overflow-x-auto custom-scrollbar">
           {/* Tabs */}
           {canViewCalendar && (
             <button
               onClick={() => setActiveTab("calendar")}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === "calendar" ? "bg-white text-teal-600 shadow-sm border border-slate-200" : "text-slate-400 hover:text-slate-700"}`}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === "calendar" ? "bg-white/5 text-power-red shadow-sm border border-white/10" : "text-zinc-500 hover:text-zinc-200"}`}
             >
               <CalendarIcon size={14} /> Calendar
             </button>
@@ -93,7 +93,7 @@ export default function BatchWorkspace({
           {canViewCurriculum && (
             <button
               onClick={() => setActiveTab("curriculum")}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === "curriculum" ? "bg-white text-indigo-600 shadow-sm border border-slate-200" : "text-slate-400 hover:text-slate-700"}`}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === "curriculum" ? "bg-white/5 text-power-red shadow-sm border border-white/10" : "text-zinc-500 hover:text-zinc-200"}`}
             >
               <BookOpen size={14} /> Curriculum Matrix
             </button>
@@ -128,19 +128,19 @@ export default function BatchWorkspace({
 
       {/* 🚀 FIXED: Added lg:h-full to prevent overlapping on mobile */}
       <div className="w-full lg:w-[400px] flex flex-col gap-6 shrink-0 lg:h-full">
-        <div className="flex-1 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[300px]">
-          <div className="p-5 bg-slate-50 border-b border-slate-100 flex items-center justify-between shrink-0">
-            <h3 className="font-black text-slate-800 uppercase tracking-widest text-[10px] flex items-center gap-2">
-              <CalendarIcon size={14} className="text-teal-500" /> Daily Agenda
+        <div className="flex-1 bg-white/5 rounded-[2rem] border border-white/10 shadow-sm overflow-hidden flex flex-col min-h-[300px]">
+          <div className="p-5 bg-white/5 border-b border-white/5 flex items-center justify-between shrink-0">
+            <h3 className="font-black text-zinc-100 uppercase tracking-widest text-[10px] flex items-center gap-2">
+              <CalendarIcon size={14} className="text-power-red" /> Daily Agenda
             </h3>
-            <span className="text-xs font-bold text-slate-500">
+            <span className="text-xs font-bold text-zinc-500">
               {selectedDate.toLocaleDateString("en-US", {
                 month: "short",
                 day: "numeric",
               })}
             </span>
           </div>
-          <div className="flex-1 overflow-y-auto p-4 custom-scrollbar bg-slate-50/30">
+          <div className="flex-1 overflow-y-auto p-4 custom-scrollbar bg-white/5">
             <DayAgendaPanel
               classes={dayClasses}
               selectedClass={selectedClass}
@@ -150,10 +150,10 @@ export default function BatchWorkspace({
           </div>
         </div>
 
-        <div className="shrink-0 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden min-h-[250px]">
-          <div className="p-4 bg-slate-50 border-b border-slate-100 shrink-0">
-            <h3 className="font-black text-slate-800 uppercase tracking-widest text-[10px] flex items-center gap-2">
-              <BookOpen size={14} className="text-indigo-500" /> Operations Desk
+        <div className="shrink-0 bg-white/5 rounded-[2rem] border border-white/10 shadow-sm overflow-hidden min-h-[250px]">
+          <div className="p-4 bg-white/5 border-b border-white/5 shrink-0">
+            <h3 className="font-black text-zinc-100 uppercase tracking-widest text-[10px] flex items-center gap-2">
+              <BookOpen size={14} className="text-power-red" /> Operations Desk
             </h3>
           </div>
           <div className="p-4">

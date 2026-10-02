@@ -5,7 +5,6 @@ import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import { notFound } from 'next/navigation';
 import SkipToContent from "@/components/global/SkipToContent";
-import ClientLayoutWrapper from '@/components/global/ClientLayoutWrapper';
 import FloatingApplyButton from '@/components/global/FloatingApplyButton';
 import QuickContactPanel from '@/components/global/QuickContactPanel';
 import Breadcrumb from '@/components/global/Breadcrumb';
@@ -111,27 +110,27 @@ export default async function LocaleLayout({
         title: "Navigation", 
         links: [
           { "label": "About CIB", "href": "/about" },
-          { "label": "Admission", "href": "/admission" },
           { "label": "View Courses", "href": "/courses" },
+          { "label": "FAQ", "href": "/faq" },
           { "label": "Culinary Blog", "href": "/blog" }
         ] 
       },
       { 
         title: "Quick Links", 
         links: [
-          { "label": "Pro Chef Landing", "href": "/professional-chef-course-basic-to-advance/" },
-          { "label": "Diploma Courses", "href": "/courses" },
-          { "label": "Short Courses", "href": "/courses" },
+          { "label": "Courses & Programs", "href": "/courses" },
+          { "label": "About Us", "href": "/about" },
+          { "label": "FAQ", "href": "/faq" },
           { "label": "Contact Us", "href": "/contact" }
         ] 
       },
       { 
         title: "Institutional", 
         links: [
-          { "label": "Verification", "href": "https://verification.cibdhk.com" },
-          { "label": "Expert Mentors", "href": "/expert-culinary-mentors" },
-          { "label": "FAQ", "href": "/faq" },
-          { "label": "Gallery", "href": "/gallery" }
+          { "label": "Certificate Verification", "href": "https://verification.cibdhk.com" },
+          { "label": "Frequently Asked Questions", "href": "/faq" },
+          { "label": "Privacy Policy", "href": "/privacy-policy" },
+          { "label": "Terms & Conditions", "href": "/term-conditions" }
         ] 
       },
       { 

@@ -39,16 +39,16 @@ const CourseCard = ({ course, selected, onSelect }) => (
     type="button"
     onClick={onSelect}
     className={`w-full text-left p-4 rounded-2xl border transition-all ${selected
-      ? "border-indigo-500 bg-indigo-50 shadow-sm"
-      : "border-slate-200 bg-white hover:border-indigo-200 hover:bg-slate-50"
+      ? "border-power-red/30 bg-power-red/10 shadow-sm"
+      : "border-white/10 bg-white/5 hover:border-power-red/30 hover:bg-white/5"
       }`}
   >
     <div className="flex items-start justify-between gap-3">
       <div>
-        <h3 className="font-black text-slate-900 text-sm leading-snug">
+        <h3 className="font-black text-white text-sm leading-snug">
           {course.course_name || course.name || "Untitled Course"}
         </h3>
-        <div className="mt-2 flex flex-wrap gap-2 text-[11px] font-bold text-slate-500">
+        <div className="mt-2 flex flex-wrap gap-2 text-[11px] font-bold text-zinc-500">
           <span className="inline-flex items-center gap-1">
             <Hash size={12} /> {course.course_code || course.code || "NO-CODE"}
           </span>
@@ -61,12 +61,12 @@ const CourseCard = ({ course, selected, onSelect }) => (
         ? "bg-emerald-50 text-emerald-700"
         : course.publicPageStatus === "draft"
           ? "bg-amber-50 text-amber-700"
-          : "bg-slate-100 text-slate-500"
+          : "bg-white/5 text-zinc-500"
         }`}>
         {course.publicPageStatus || "not ready"}
       </span>
     </div>
-    <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-[11px] font-black text-slate-700 border border-slate-200">
+    <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1 text-[11px] font-black text-zinc-200 border border-white/10">
       <Wallet size={12} /> {formatMoney(course.base_fee || course.baseFee)}
     </div>
   </button>
@@ -75,7 +75,7 @@ const CourseCard = ({ course, selected, onSelect }) => (
 const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
   if (!course) {
     return (
-      <div className="h-full min-h-[420px] rounded-3xl border border-dashed border-slate-300 bg-slate-50 flex items-center justify-center text-sm font-bold text-slate-400">
+      <div className="h-full min-h-[420px] rounded-3xl border border-dashed border-white/15 bg-white/5 flex items-center justify-center text-sm font-bold text-zinc-500">
         Select a course to preview.
       </div>
     );
@@ -83,7 +83,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
 
   if (isLoading) {
     return (
-      <div className="h-full min-h-[420px] rounded-3xl border border-slate-200 bg-white flex items-center justify-center">
+      <div className="h-full min-h-[420px] rounded-3xl border border-white/10 bg-white/5 flex items-center justify-center">
         <Loader />
       </div>
     );
@@ -123,7 +123,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
   }
 
   return (
-    <div className="rounded-3xl border border-slate-200 bg-obsidian text-white overflow-hidden shadow-2xl flex flex-col justify-between">
+    <div className="rounded-3xl border border-white/10 bg-obsidian text-white overflow-hidden shadow-2xl flex flex-col justify-between">
 
 
       {/* Main Grid Mockup */}
@@ -133,7 +133,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-1 bg-power-red shadow-[0_0_10px] shadow-power-red/60"></div>
-            <span className="text-gray-400 font-black tracking-widest text-[10px] md:text-xs uppercase">
+            <span className="text-zinc-500 font-black tracking-widest text-[10px] md:text-xs uppercase">
               {subtitle}
             </span>
           </div>
@@ -142,8 +142,8 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
             {title}
           </h2>
 
-          <div className="inline-flex flex-col p-4 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-md">
-            <span className="text-gray-500 text-[9px] font-bold tracking-widest uppercase mb-1">Investment Capital</span>
+          <div className="inline-flex flex-col p-4 rounded-2xl bg-white/5[0.03] border border-white/5 backdrop-blur-md">
+            <span className="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mb-1">Investment Capital</span>
             <div className="text-2xl font-black text-white tracking-tighter">
               {formatMoney(course.base_fee || course.baseFee)}
             </div>
@@ -151,11 +151,11 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {mappedFeatures.slice(0, 4).map((feat, i) => (
-              <li key={i} className="flex items-center gap-2 text-gray-300">
+              <li key={i} className="flex items-center gap-2 text-zinc-400">
                 <div className="p-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400">
                   <CheckCircle2 size={12} className="shrink-0" />
                 </div>
-                <span className="text-xs font-bold text-gray-400">{feat}</span>
+                <span className="text-xs font-bold text-zinc-500">{feat}</span>
               </li>
             ))}
           </ul>
@@ -175,7 +175,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
           {coverImage ? (
             <img src={coverImage} alt={title} className="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-[2000ms]" />
           ) : (
-            <div className="h-full w-full bg-slate-900 flex items-center justify-center text-xs font-bold text-slate-500">
+            <div className="h-full w-full bg-slate-900 flex items-center justify-center text-xs font-bold text-zinc-500">
               No Cover Image
             </div>
           )}
@@ -191,7 +191,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
         <button
           type="button"
           onClick={onEdit}
-          className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-indigo-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white hover:bg-indigo-700 transition"
+          className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-power-red px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white hover:bg-[#C8102E] transition"
         >
           <PencilLine size={14} /> Edit Public Page
         </button>
@@ -199,7 +199,7 @@ const CoursePreview = ({ course, pageData, isLoading, onEdit }) => {
           href={`https://cibdhk.com/courses/${pageData?.slug || course.slug || ""}`}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-gray-300 hover:bg-white/5 transition"
+          className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-zinc-400 hover:bg-white/5 transition"
         >
           <Eye size={14} /> Web Preview
         </a>
@@ -292,15 +292,15 @@ const ChefCourseEditor = () => {
     <div className="space-y-6">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Professional Chef Course Showcase</h2>
-          <p className="mt-1 text-sm font-medium text-slate-500">
+          <h2 className="text-xl font-black text-white uppercase tracking-tight">Professional Chef Course Showcase</h2>
+          <p className="mt-1 text-sm font-medium text-zinc-500">
             Main page now selects existing course records. Details stay in Course Management, preview stays beside list.
           </p>
         </div>
         <button
           type="button"
           onClick={() => navigate("/admin/all-courses")}
-          className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-black uppercase tracking-wider text-slate-600 hover:bg-slate-50"
+          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-zinc-500 hover:bg-white/5"
         >
           <BookOpen size={15} /> Manage Courses
         </button>
@@ -308,23 +308,23 @@ const ChefCourseEditor = () => {
           type="button"
           onClick={handleSaveSelection}
           disabled={!selectedCourseId || selectedIsSaved || updateSection.isPending}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-power-red px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white hover:bg-[#C8102E] disabled:cursor-not-allowed disabled:opacity-50"
         >
           <Save size={15} /> {updateSection.isPending ? "Saving..." : selectedIsSaved ? "Saved For Home" : "Use On Home"}
         </button>
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-[380px_1fr] gap-6">
-        <div className="rounded-3xl border border-slate-200 bg-slate-50/70 p-4">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-4">
           <div className="mb-4 flex items-center justify-between">
-            <p className="text-xs font-black uppercase tracking-widest text-slate-500">Course List</p>
-            <span className="rounded-full bg-white px-3 py-1 text-[11px] font-black text-slate-500 border border-slate-200">
+            <p className="text-xs font-black uppercase tracking-widest text-zinc-500">Course List</p>
+            <span className="rounded-full bg-white/5 px-3 py-1 text-[11px] font-black text-zinc-500 border border-white/10">
               {courses.length}
             </span>
           </div>
           <div className="space-y-3 max-h-[720px] overflow-y-auto pr-1">
             {courses.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-sm font-bold text-slate-400">
+              <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-sm font-bold text-zinc-500">
                 No courses found.
               </div>
             ) : (

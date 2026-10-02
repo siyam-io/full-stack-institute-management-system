@@ -23,13 +23,13 @@ export const confirmDelete = ({
     reverseButtons: true, 
     buttonsStyling: false, 
     customClass: {
-      popup: 'rounded-[2rem] border border-slate-100 shadow-2xl p-6',
-      title: 'text-2xl font-black text-slate-800 tracking-tight mt-4',
-      htmlContainer: 'text-sm font-semibold text-slate-500 mt-2',
+      popup: 'rounded-[2rem] border border-white/5 shadow-2xl p-6',
+      title: 'text-2xl font-black text-zinc-100 tracking-tight mt-4',
+      htmlContainer: 'text-sm font-semibold text-zinc-500 mt-2',
       icon: 'border-rose-500 text-rose-500 mt-4',
       actions: 'w-full flex justify-center gap-4 mt-8',
       confirmButton: 'bg-rose-500 hover:bg-rose-600 text-white rounded-xl px-8 py-3 text-sm font-black uppercase tracking-widest transition-all shadow-lg shadow-rose-500/30 active:scale-95',
-      cancelButton: 'bg-slate-100 hover:bg-slate-200 text-slate-600 border border-slate-200 rounded-xl px-8 py-3 text-sm font-black uppercase tracking-widest transition-all active:scale-95'
+      cancelButton: 'bg-white/5 hover:bg-white/10 text-zinc-500 border border-white/10 rounded-xl px-8 py-3 text-sm font-black uppercase tracking-widest transition-all active:scale-95'
     }
   }).then((result) => {
     if (result.isConfirmed && onConfirm) {

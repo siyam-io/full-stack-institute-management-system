@@ -235,14 +235,14 @@ const FaqEditor = () => {
   return (
     <div className="space-y-6">
       {/* Mode Switcher */}
-      <div className="flex justify-between items-center bg-slate-50 px-6 py-4 rounded-[1.5rem] border border-slate-200">
-        <span className="text-sm font-bold text-slate-700">FAQ Editor Mode:</span>
-        <div className="flex space-x-1 bg-slate-200/60 p-1 rounded-xl">
+      <div className="flex justify-between items-center bg-white/5 px-6 py-4 rounded-[1.5rem] border border-white/10">
+        <span className="text-sm font-bold text-zinc-200">FAQ Editor Mode:</span>
+        <div className="flex space-x-1 bg-white/10 p-1 rounded-xl">
           <button
             type="button"
             onClick={() => handleModeChange("visual")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "visual" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "visual" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Visual Builder
@@ -251,7 +251,7 @@ const FaqEditor = () => {
             type="button"
             onClick={() => handleModeChange("json")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "json" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "json" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Bulk JSON Editor
@@ -265,51 +265,51 @@ const FaqEditor = () => {
           {editorMode === "visual" ? (
             <div className="space-y-6">
               {/* Hero Stacked Layout */}
-              <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-200 space-y-6">
-                <h3 className="font-bold text-slate-800 text-sm border-b pb-2 uppercase tracking-wide">FAQ Page Hero Section</h3>
+              <div className="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-6">
+                <h3 className="font-bold text-zinc-100 text-sm border-b pb-2 uppercase tracking-wide">FAQ Page Hero Section</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* English Hero */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇬🇧 English Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇬🇧 English Translation</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Heading</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Heading</label>
                       <input
                         type="text"
                         value={faqStructureEn.hero.heading}
                         onChange={(e) => handleHeroChange("en", "heading", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Subheading</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Subheading</label>
                       <input
                         type="text"
                         value={faqStructureEn.hero.subheading}
                         onChange={(e) => handleHeroChange("en", "subheading", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
 
                   {/* Bangla Hero */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇧🇩 Bangla Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇧🇩 Bangla Translation</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Heading (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Heading (Bangla)</label>
                       <input
                         type="text"
                         value={faqStructureBn.hero.heading}
                         onChange={(e) => handleHeroChange("bn", "heading", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Subheading (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Subheading (Bangla)</label>
                       <input
                         type="text"
                         value={faqStructureBn.hero.subheading}
                         onChange={(e) => handleHeroChange("bn", "subheading", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
@@ -319,33 +319,33 @@ const FaqEditor = () => {
               {/* Categories & FAQs */}
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <label className="text-sm font-black text-slate-800 uppercase tracking-wider">FAQ Categories</label>
+                  <label className="text-sm font-black text-zinc-100 uppercase tracking-wider">FAQ Categories</label>
                   <button
                     type="button"
                     onClick={addCategory}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold uppercase transition duration-300 shadow-md shadow-indigo-100"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-power-red hover:bg-[#C8102E] text-white rounded-xl text-xs font-bold uppercase transition duration-300 shadow-md shadow-power-red/20"
                   >
                     + Add Category
                   </button>
                 </div>
 
                 {faqStructureEn.categories.length === 0 ? (
-                  <div className="p-8 text-center bg-slate-50 rounded-[2rem] border border-dashed border-slate-300 text-slate-400 font-medium">
+                  <div className="p-8 text-center bg-white/5 rounded-[2rem] border border-dashed border-white/15 text-zinc-500 font-medium">
                     No categories found. Click "+ Add Category" to begin building.
                   </div>
                 ) : (
                   faqStructureEn.categories.map((cat, catIdx) => {
                     const catBn = faqStructureBn.categories[catIdx] || { category: "", faqs: [] };
                     return (
-                      <div key={catIdx} className={`bg-slate-50 p-6 rounded-[2rem] border space-y-6 ${activePreviewCatIdx === catIdx ? "border-indigo-500 ring-2 ring-indigo-500/10" : "border-slate-200"}`}>
+                      <div key={catIdx} className={`bg-white/5 p-6 rounded-[2rem] border space-y-6 ${activePreviewCatIdx === catIdx ? "border-power-red/30 ring-2 ring-power-red/40" : "border-white/10"}`}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center border-b pb-4">
                           <div>
                             <div className="flex items-center gap-2 mb-1">
-                              <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider">Category Name (English)</label>
+                              <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider">Category Name (English)</label>
                               <button
                                 type="button"
                                 onClick={() => setActivePreviewCatIdx(catIdx)}
-                                className={`text-[8px] font-black px-1.5 py-0.5 rounded ${activePreviewCatIdx === catIdx ? "bg-indigo-600 text-white" : "bg-slate-200 text-slate-500"}`}
+                                className={`text-[8px] font-black px-1.5 py-0.5 rounded ${activePreviewCatIdx === catIdx ? "bg-power-red text-white" : "bg-white/10 text-zinc-500"}`}
                               >
                                 View in Preview
                               </button>
@@ -354,24 +354,24 @@ const FaqEditor = () => {
                               type="text"
                               value={cat.category}
                               onChange={(e) => handleCategoryNameChange(catIdx, "en", e.target.value)}
-                              className="w-full font-bold text-slate-800 text-sm bg-white px-3 py-1.5 border border-slate-200 rounded-lg"
+                              className="w-full font-bold text-zinc-100 text-sm bg-white/5 px-3 py-1.5 border border-white/10 rounded-lg"
                             />
                           </div>
                           <div className="flex gap-2 items-center">
                             <div className="flex-grow">
-                              <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">Category Name (Bangla)</label>
+                              <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Category Name (Bangla)</label>
                               <input
                                 type="text"
                                 value={catBn.category}
                                 onChange={(e) => handleCategoryNameChange(catIdx, "bn", e.target.value)}
-                                className="w-full font-bold text-slate-800 text-sm bg-white px-3 py-1.5 border border-slate-200 rounded-lg"
+                                className="w-full font-bold text-zinc-100 text-sm bg-white/5 px-3 py-1.5 border border-white/10 rounded-lg"
                               />
                             </div>
                             <div className="flex items-center gap-2 pt-4">
                               <button
                                 type="button"
                                 onClick={() => addFaqQuestion(catIdx)}
-                                className="text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-3 py-1.5 rounded-lg font-bold"
+                                className="text-xs bg-power-red/10 hover:bg-indigo-200 text-power-red px-3 py-1.5 rounded-lg font-bold"
                               >
                                 + Q/A
                               </button>
@@ -389,16 +389,16 @@ const FaqEditor = () => {
                         {/* Questions */}
                         <div className="space-y-4">
                           {(!cat.faqs || cat.faqs.length === 0) ? (
-                            <div className="text-center py-6 text-xs text-slate-400 font-medium bg-white rounded-xl border border-dashed">
+                            <div className="text-center py-6 text-xs text-zinc-500 font-medium bg-white/5 rounded-xl border border-dashed">
                               No questions in this category. Click "+ Q/A" to start.
                             </div>
                           ) : (
                             cat.faqs.map((faq, faqIdx) => {
                               const faqBn = catBn.faqs?.[faqIdx] || { question: "", answer: "", fullAnswer: "", seoAnswer: "" };
                               return (
-                                <div key={faqIdx} className="p-5 bg-white border border-slate-200 rounded-2xl relative space-y-4 shadow-sm">
+                                <div key={faqIdx} className="p-5 bg-white/5 border border-white/10 rounded-2xl relative space-y-4 shadow-sm">
                                   <div className="flex justify-between items-center border-b pb-2">
-                                    <span className="text-[10px] bg-slate-100 text-slate-500 px-2.5 py-1 rounded-md font-bold">FAQ Query #{faqIdx + 1}</span>
+                                    <span className="text-[10px] bg-white/5 text-zinc-500 px-2.5 py-1 rounded-md font-bold">FAQ Query #{faqIdx + 1}</span>
                                     <button
                                       type="button"
                                       onClick={() => removeFaqQuestion(catIdx, faqIdx)}
@@ -410,28 +410,28 @@ const FaqEditor = () => {
 
                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {/* English Q/A */}
-                                    <div className="space-y-3 bg-slate-50/50 p-4 rounded-xl border border-slate-100">
-                                      <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">🇬🇧 English Translation</span>
+                                    <div className="space-y-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                                      <span className="text-[8px] font-bold text-zinc-500 uppercase tracking-widest block">🇬🇧 English Translation</span>
                                       <div>
-                                        <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">Question</label>
+                                        <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Question</label>
                                         <input
                                           type="text"
                                           value={faq.question || ""}
                                           onChange={(e) => handleFaqFieldChange(catIdx, faqIdx, "en", "question", e.target.value)}
-                                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                                          className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                                         />
                                       </div>
                                       <div>
-                                        <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">SEO Answer Summary</label>
+                                        <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">SEO Answer Summary</label>
                                         <input
                                           type="text"
                                           value={faq.seoAnswer || ""}
                                           onChange={(e) => handleFaqFieldChange(catIdx, faqIdx, "en", "seoAnswer", e.target.value)}
-                                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                                          className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                                         />
                                       </div>
                                       <div>
-                                        <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">Detailed Answer Text</label>
+                                        <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Detailed Answer Text</label>
                                         <textarea
                                           value={faq.fullAnswer || faq.answer || ""}
                                           onChange={(e) => {
@@ -439,34 +439,34 @@ const FaqEditor = () => {
                                             handleFaqFieldChange(catIdx, faqIdx, "en", "answer", e.target.value);
                                           }}
                                           rows={3}
-                                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                                          className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                                         />
                                       </div>
                                     </div>
 
                                     {/* Bangla Q/A */}
-                                    <div className="space-y-3 bg-slate-50/50 p-4 rounded-xl border border-slate-100">
-                                      <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">🇧🇩 Bangla Translation</span>
+                                    <div className="space-y-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                                      <span className="text-[8px] font-bold text-zinc-500 uppercase tracking-widest block">🇧🇩 Bangla Translation</span>
                                       <div>
-                                        <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">Question (Bangla)</label>
+                                        <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Question (Bangla)</label>
                                         <input
                                           type="text"
                                           value={faqBn.question || ""}
                                           onChange={(e) => handleFaqFieldChange(catIdx, faqIdx, "bn", "question", e.target.value)}
-                                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                                          className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                                         />
                                       </div>
                                       <div>
-                                        <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">SEO Answer Summary (Bangla)</label>
+                                        <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">SEO Answer Summary (Bangla)</label>
                                         <input
                                           type="text"
                                           value={faqBn.seoAnswer || ""}
                                           onChange={(e) => handleFaqFieldChange(catIdx, faqIdx, "bn", "seoAnswer", e.target.value)}
-                                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                                          className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                                         />
                                       </div>
                                       <div>
-                                        <label className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider mb-1">Detailed Answer (Bangla)</label>
+                                        <label className="block text-[8px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Detailed Answer (Bangla)</label>
                                         <textarea
                                           value={faqBn.fullAnswer || faqBn.answer || ""}
                                           onChange={(e) => {
@@ -474,7 +474,7 @@ const FaqEditor = () => {
                                             handleFaqFieldChange(catIdx, faqIdx, "bn", "answer", e.target.value);
                                           }}
                                           rows={3}
-                                          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                                          className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                                         />
                                       </div>
                                     </div>
@@ -491,76 +491,76 @@ const FaqEditor = () => {
               </div>
 
               {/* Bottom CTA Block */}
-              <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-200 space-y-6">
-                <h3 className="font-bold text-slate-800 text-sm border-b pb-2 uppercase tracking-wide">FAQ Bottom CTA</h3>
+              <div className="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-6">
+                <h3 className="font-bold text-zinc-100 text-sm border-b pb-2 uppercase tracking-wide">FAQ Bottom CTA</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* English CTA */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇬🇧 English Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇬🇧 English Translation</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Heading</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Heading</label>
                       <input
                         type="text"
                         value={faqStructureEn.cta.heading}
                         onChange={(e) => handleCtaChange("en", "heading", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Subtext</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Subtext</label>
                       <input
                         type="text"
                         value={faqStructureEn.cta.subtext}
                         onChange={(e) => handleCtaChange("en", "subtext", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Button Text</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Button Text</label>
                       <input
                         type="text"
                         value={faqStructureEn.cta.buttonText}
                         onChange={(e) => handleCtaChange("en", "buttonText", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
 
                   {/* Bangla CTA */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇧🇩 Bangla Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇧🇩 Bangla Translation</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Heading (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Heading (Bangla)</label>
                       <input
                         type="text"
                         value={faqStructureBn.cta.heading}
                         onChange={(e) => handleCtaChange("bn", "heading", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Subtext (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Subtext (Bangla)</label>
                       <input
                         type="text"
                         value={faqStructureBn.cta.subtext}
                         onChange={(e) => handleCtaChange("bn", "subtext", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Button Text (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Button Text (Bangla)</label>
                       <input
                         type="text"
                         value={faqStructureBn.cta.buttonText}
                         onChange={(e) => handleCtaChange("bn", "buttonText", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white p-5 rounded-xl border border-slate-200">
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Shared Button Link (Href)</label>
+                <div className="bg-white/5 p-5 rounded-xl border border-white/10">
+                  <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Shared Button Link (Href)</label>
                   <input
                     type="text"
                     value={faqStructureEn.cta.buttonLink}
@@ -568,75 +568,75 @@ const FaqEditor = () => {
                       handleCtaChange("en", "buttonLink", e.target.value);
                       handleCtaChange("bn", "buttonLink", e.target.value);
                     }}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                    className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                   />
                 </div>
               </div>
 
               {/* SEO Controls */}
-              <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-200 space-y-6">
-                <h3 className="font-bold text-slate-800 text-sm border-b pb-2 uppercase tracking-wide">Page Info & SEO Settings</h3>
+              <div className="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-6">
+                <h3 className="font-bold text-zinc-100 text-sm border-b pb-2 uppercase tracking-wide">Page Info & SEO Settings</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* English page settings */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇬🇧 English Info</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇬🇧 English Info</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase mb-2">Page Title</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">Page Title</label>
                       <input
                         type="text"
                         value={form.titleEn}
                         onChange={(e) => setForm(p => ({ ...p, titleEn: e.target.value }))}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase mb-2">SEO Title</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Title</label>
                       <input
                         type="text"
                         value={form.seoTitleEn}
                         onChange={(e) => setForm(p => ({ ...p, seoTitleEn: e.target.value }))}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase mb-2">SEO Description</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Description</label>
                       <textarea
                         value={form.seoDescriptionEn}
                         onChange={(e) => setForm(p => ({ ...p, seoDescriptionEn: e.target.value }))}
                         rows={2}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
 
                   {/* Bangla page settings */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇧🇩 Bangla Info</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇧🇩 Bangla Info</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase mb-2">Page Title (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">Page Title (Bangla)</label>
                       <input
                         type="text"
                         value={form.titleBn}
                         onChange={(e) => setForm(p => ({ ...p, titleBn: e.target.value }))}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase mb-2">SEO Title (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Title (Bangla)</label>
                       <input
                         type="text"
                         value={form.seoTitleBn}
                         onChange={(e) => setForm(p => ({ ...p, seoTitleBn: e.target.value }))}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-400 uppercase mb-2">SEO Description (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Description (Bangla)</label>
                       <textarea
                         value={form.seoDescriptionBn}
                         onChange={(e) => setForm(p => ({ ...p, seoDescriptionBn: e.target.value }))}
                         rows={2}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
@@ -649,26 +649,26 @@ const FaqEditor = () => {
                   type="button"
                   onClick={handleSave}
                   disabled={savePageMutation.isPending}
-                  className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-200 transition disabled:opacity-50"
+                  className="px-8 py-3 rounded-xl bg-power-red hover:bg-[#C8102E] text-white font-bold text-sm shadow-lg shadow-power-red/20 transition disabled:opacity-50"
                 >
                   {savePageMutation.isPending ? "Saving..." : "Save FAQ Catalog"}
                 </button>
               </div>
             </div>
           ) : (
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+            <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
               <textarea
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 rows={15}
-                className="w-full p-4 font-mono text-xs border border-slate-200 rounded-xl bg-white"
+                className="w-full p-4 font-mono text-xs border border-white/10 rounded-xl bg-white/5"
               />
               <div className="flex justify-end pt-2">
                 <button
                   type="button"
                   onClick={handleApplyBulkJson}
                   disabled={!jsonInput.trim()}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black uppercase"
+                  className="px-5 py-2.5 bg-power-red hover:bg-[#C8102E] text-white rounded-xl text-xs font-black uppercase"
                 >
                   Apply JSON Changes
                 </button>
@@ -680,19 +680,19 @@ const FaqEditor = () => {
         {/* Right Side: Interactive Mockup Preview (FAQ Page Mock) */}
         <div className="sticky top-6 space-y-6">
           <div className="flex justify-between items-center bg-slate-900 text-white px-5 py-3.5 rounded-2xl border border-white/5 shadow">
-            <span className="text-xs font-black uppercase tracking-widest text-slate-400">FAQ Page Preview</span>
+            <span className="text-xs font-black uppercase tracking-widest text-zinc-500">FAQ Page Preview</span>
             <div className="flex items-center bg-slate-800 p-1 rounded-xl border border-white/5">
               <button
                 type="button"
                 onClick={() => setPreviewLocale("en")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-zinc-500 hover:text-white"}`}
               >
                 🇬🇧 En
               </button>
               <button
                 type="button"
                 onClick={() => setPreviewLocale("bn")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-zinc-500 hover:text-white"}`}
               >
                 🇧🇩 Bn
               </button>
@@ -708,7 +708,7 @@ const FaqEditor = () => {
                 {currentStructure.hero.heading || (previewLocale === "en" ? "Frequently Asked Questions" : "সাধারণ জিজ্ঞাসা")}
               </h2>
               {currentStructure.hero.subheading && (
-                <p className="text-[10px] text-slate-400 mt-2">{currentStructure.hero.subheading}</p>
+                <p className="text-[10px] text-zinc-500 mt-2">{currentStructure.hero.subheading}</p>
               )}
               <div className="w-12 h-0.5 bg-red-600 mx-auto mt-3 rounded-full"></div>
             </div>
@@ -724,7 +724,7 @@ const FaqEditor = () => {
                       setActivePreviewCatIdx(idx);
                       setExpandedPreviewFaqIdx(null);
                     }}
-                    className={`px-3 py-1 rounded-xl text-[9px] font-black uppercase transition ${activePreviewCatIdx === idx ? "bg-red-600 text-white shadow" : "bg-white/5 text-slate-400 hover:bg-white/10"}`}
+                    className={`px-3 py-1 rounded-xl text-[9px] font-black uppercase transition ${activePreviewCatIdx === idx ? "bg-red-600 text-white shadow" : "bg-white/5 text-zinc-500 hover:bg-white/10"}`}
                   >
                     {cat.category || "Category"}
                   </button>
@@ -735,24 +735,24 @@ const FaqEditor = () => {
             {/* Q/A List */}
             <div className="space-y-3">
               {(!selectedPreviewCat.faqs || selectedPreviewCat.faqs.length === 0) ? (
-                <div className="text-center py-6 text-[10px] text-slate-500 bg-white/[0.01] rounded-xl border border-dashed border-white/5">
+                <div className="text-center py-6 text-[10px] text-zinc-500 bg-white/5[0.01] rounded-xl border border-dashed border-white/5">
                   No FAQ questions in this category.
                 </div>
               ) : (
                 selectedPreviewCat.faqs.map((faq, idx) => {
                   const active = expandedPreviewFaqIdx === idx;
                   return (
-                    <div key={idx} className="rounded-xl border border-white/5 overflow-hidden bg-white/[0.01]">
+                    <div key={idx} className="rounded-xl border border-white/5 overflow-hidden bg-white/5[0.01]">
                       <button
                         type="button"
                         onClick={() => setExpandedPreviewFaqIdx(active ? null : idx)}
-                        className="w-full px-4 py-3 flex justify-between items-center text-left text-xs font-bold text-slate-300 hover:bg-white/5 transition"
+                        className="w-full px-4 py-3 flex justify-between items-center text-left text-xs font-bold text-zinc-400 hover:bg-white/5 transition"
                       >
                         <span>{faq.question || "Question Text?"}</span>
                         {active ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                       </button>
                       {active && (
-                        <div className="px-4 py-3 bg-white/[0.02] border-t border-white/5 text-[10px] text-slate-400 leading-relaxed font-semibold">
+                        <div className="px-4 py-3 bg-white/5[0.02] border-t border-white/5 text-[10px] text-zinc-500 leading-relaxed font-semibold">
                           {faq.fullAnswer || faq.answer || "Answer description text."}
                         </div>
                       )}
@@ -764,15 +764,15 @@ const FaqEditor = () => {
 
             {/* Bottom CTA Mockup */}
             {currentStructure.cta && (
-              <div className="bg-white/[0.02] border border-white/5 p-6 rounded-[1.8rem] text-center space-y-3">
+              <div className="bg-white/5[0.02] border border-white/5 p-6 rounded-[1.8rem] text-center space-y-3">
                 <h3 className="text-xs font-black text-white uppercase">{currentStructure.cta.heading || "Need more help?"}</h3>
                 {currentStructure.cta.subtext && (
-                  <p className="text-[9px] text-slate-400 leading-relaxed">{currentStructure.cta.subtext}</p>
+                  <p className="text-[9px] text-zinc-500 leading-relaxed">{currentStructure.cta.subtext}</p>
                 )}
                 <a
                   href="#contact"
                   onClick={(e) => e.preventDefault()}
-                  className="inline-block px-5 py-2.5 bg-[#ec1b23] hover:bg-red-700 hover:scale-105 transition-all text-white text-[9px] font-black uppercase tracking-wider rounded-xl shadow shadow-red-950/20"
+                  className="inline-block px-5 py-2.5 bg-[#EF233C] hover:bg-red-700 hover:scale-105 transition-all text-white text-[9px] font-black uppercase tracking-wider rounded-xl shadow shadow-red-950/20"
                 >
                   {currentStructure.cta.buttonText || "Contact Us"}
                 </a>

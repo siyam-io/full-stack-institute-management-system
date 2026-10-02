@@ -15,7 +15,7 @@ const UpdateEmployee = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-white/5">
         <Loader />
       </div>
     );
@@ -23,11 +23,11 @@ const UpdateEmployee = () => {
 
   if (isError || !employee) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">Employee Not Found</h2>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white/5">
+        <h2 className="text-2xl font-bold text-zinc-100 mb-2">Employee Not Found</h2>
         <button
           onClick={() => navigate("/admin/all-employees")}
-          className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg"
+          className="mt-4 px-6 py-2 bg-power-red text-white rounded-lg"
         >
           Back to Directory
         </button>

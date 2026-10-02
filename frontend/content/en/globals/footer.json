@@ -5,47 +5,28 @@
       "title": "Navigation",
       "links": [
         { "label": "About CIB", "href": "/about" },
-        { "label": "Admission", "href": "/admission" },
         { "label": "View Courses", "href": "/courses" },
-        { "label": "Short Courses", "href": "/short-courses" },
-        { "label": "Culinary Blog", "href": "/blog" }
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Culinary Blog", "href": "/blog" },
+        { "label": "Contact Us", "href": "/contact" }
       ]
     },
     {
       "title": "Quick Links",
       "links": [
-        { "label": "Pro Chef Course", "href": "/chef-course-bangladesh" },
-        { "label": "Chef Course Dhaka", "href": "/chef-course-dhaka" },
-        { "label": "Chef Course Fees", "href": "/chef-course-fees-bangladesh" },
-        { "label": "Culinary Course BD", "href": "/culinary-course-bangladesh" },
-        { "label": "Diploma Courses", "href": "/culinary-diploma-bangladesh" },
-        { "label": "Fast Food Course", "href": "/fast-food-course-dhaka" },
-        { "label": "Barista Course", "href": "/barista-course-dhaka" },
-        { "label": "Pastry Course", "href": "/pastry-bakery-course-dhaka" },
-        { "label": "Best Culinary Institute", "href": "/best-culinary-institute-bangladesh" },
-        { "label": "Best Institute Dhaka", "href": "/best-culinary-institute-dhaka" },
-        { "label": "Sushi Course", "href": "/sushi-course-dhaka" },
-        { "label": "Thai Cooking Course", "href": "/thai-cooking-course-dhaka" },
-        { "label": "Chinese Cooking Course", "href": "/chinese-cooking-course-dhaka" },
-        { "label": "Mediterranean Course", "href": "/mediterranean-cuisine-course-dhaka" },
-        { "label": "Indian Cuisine Course", "href": "/indian-cuisine-course-dhaka" },
-        { "label": "Contact Us", "href": "/contact" }
+        { "label": "Courses & Programs", "href": "/courses" },
+        { "label": "About CIB", "href": "/about" },
+        { "label": "Frequently Asked Questions", "href": "/faq" },
+        { "label": "Contact & Location", "href": "/contact" }
       ]
     },
     {
       "title": "Institutional",
       "links": [
         { "label": "Certificate Verification", "href": "https://verification.cibdhk.com" },
-        { "label": "Expert Mentors", "href": "/expert-culinary-mentors" },
-        { "label": "Press & Media", "href": "/press-media" },
-        { "label": "Success Stories", "href": "/success-stories" },
-        { "label": "Industry Partners", "href": "/industry-partners" },
         { "label": "Common Questions (FAQ)", "href": "/faq" },
-        { "label": "Company Profile", "href": "/companyprofile" },
         { "label": "Privacy Policy", "href": "/privacy-policy" },
-        { "label": "Terms & Conditions", "href": "/term-conditions" },
-        { "label": "Campus Gallery", "href": "/gallery" },
-        { "label": "Location & Directions", "href": "/location" }
+        { "label": "Terms & Conditions", "href": "/term-conditions" }
       ]
     },
     {

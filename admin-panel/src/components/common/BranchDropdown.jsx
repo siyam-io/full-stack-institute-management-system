@@ -17,7 +17,7 @@ export default function BranchDropdown({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full appearance-none pl-10 pr-8 py-2.5 bg-white border border-slate-200 rounded-xl text-sm font-bold text-slate-700 outline-none focus:border-teal-500 shadow-sm cursor-pointer hover:bg-slate-50 transition-colors"
+          className="w-full appearance-none pl-10 pr-8 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-zinc-200 outline-none focus:border-power-red/30 shadow-sm cursor-pointer hover:bg-white/5 transition-colors"
         >
           {showAllOption && <option value="all">🌐 All Campuses</option>}
           
@@ -27,8 +27,8 @@ export default function BranchDropdown({
             </option>
           ))}
         </select>
-        <MapPin size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-teal-500 pointer-events-none" />
-        <ChevronDown size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+        <MapPin size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-power-red pointer-events-none" />
+        <ChevronDown size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none" />
       </div>
     </div>
   );

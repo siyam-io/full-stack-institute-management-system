@@ -55,7 +55,7 @@ const QuickActionButton = ({ label, icon: Icon, to, colorClass, onClick }) => (
     >
       <Icon size={22} strokeWidth={2.5} />
     </div>
-    <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-power-red transition-colors text-center leading-tight">
+    <span className="text-[10px] font-black uppercase tracking-widest text-zinc-500 group-hover:text-power-red transition-colors text-center leading-tight">
       {label}
     </span>
   </Link>
@@ -127,16 +127,16 @@ const Dashboard = () => {
 
   // 🚀 QUICK ACTIONS ARRAY CONFIGURATION
   const QUICK_ACTIONS = [
-    { label: "New Student", icon: UserPlus, to: "/admin/add-student", color: "bg-blue-500/10 text-blue-400" },
-    { label: "Collect Fee", icon: CreditCard, to: "/admin/all-students", color: "bg-emerald-500/10 text-emerald-400" },
-    { label: "New Batch", icon: Layers, to: "/admin/add-batch", color: "bg-indigo-500/10 text-indigo-400" },
-    { label: "Class Workspace", icon: ClipboardList, to: "/admin/manage-batches", color: "bg-amber-500/10 text-amber-400" },
+    { label: "New Student", icon: UserPlus, to: "/admin/add-student", color: "bg-power-red/10 text-power-red" },
+    { label: "Collect Fee", icon: CreditCard, to: "/admin/all-students", color: "bg-power-red/10 text-power-red" },
+    { label: "New Batch", icon: Layers, to: "/admin/add-batch", color: "bg-power-red/10 text-power-red" },
+    { label: "Class Workspace", icon: ClipboardList, to: "/admin/manage-batches", color: "bg-power-red/10 text-power-red" },
     { label: "Attendance", icon: CalendarCheck, to: "/admin/attendance-book", color: "bg-power-red/10 text-power-red" },
-    { label: "Inventory", icon: Package, to: "/admin/inventory", color: "bg-cyan-500/10 text-cyan-400" },
-    { label: "Staff", icon: GraduationCap, to: "/admin/all-employees", color: "bg-purple-500/10 text-purple-400" },
-    { label: "Courses", icon: BookOpen, to: "/admin/all-courses", color: "bg-fuchsia-500/10 text-fuchsia-400" },
-    { label: "Branches", icon: Building2, to: "/admin/branches", color: "bg-teal-500/10 text-teal-400" },
-    { label: "Holidays", icon: Settings, to: "/admin/manage-holidays", color: "bg-white/10 text-zinc-400" },
+    { label: "Inventory", icon: Package, to: "/admin/inventory", color: "bg-power-red/10 text-power-red" },
+    { label: "Staff", icon: GraduationCap, to: "/admin/all-employees", color: "bg-power-red/10 text-power-red" },
+    { label: "Courses", icon: BookOpen, to: "/admin/all-courses", color: "bg-power-red/10 text-power-red" },
+    { label: "Branches", icon: Building2, to: "/admin/branches", color: "bg-power-red/10 text-power-red" },
+    { label: "Holidays", icon: Settings, to: "/admin/manage-holidays", color: "bg-white/10 text-zinc-500" },
   ];
 
   if (isLoading) {
@@ -158,7 +158,7 @@ const Dashboard = () => {
           <h2 className="text-xl font-black text-white uppercase tracking-tight">
             System Offline
           </h2>
-          <p className="text-sm text-zinc-400 font-medium mt-2 mb-6">
+          <p className="text-sm text-zinc-500 font-medium mt-2 mb-6">
             Failed to aggregate dashboard data from DB.
           </p>
           <button
@@ -207,26 +207,26 @@ const Dashboard = () => {
           title="Total Revenue"
           value={totals?.finance?.collected || 0}
           icon={Wallet}
-          colorClass="bg-emerald-500/10 text-emerald-400"
+          colorClass="bg-power-red/10 text-power-red"
           isCurrency={true}
         />
         <KPICard
           title="Active Students"
           value={totals?.students?.active}
           icon={Users}
-          colorClass="bg-blue-500/10 text-blue-400"
+          colorClass="bg-power-red/10 text-power-red"
         />
         <KPICard
           title="Active Batches"
           value={totals?.batches?.active}
           icon={Layers}
-          colorClass="bg-indigo-500/10 text-indigo-400"
+          colorClass="bg-power-red/10 text-power-red"
         />
         <KPICard
           title="Total Instructors"
           value={totals?.staff?.instructors}
           icon={GraduationCap}
-          colorClass="bg-purple-500/10 text-purple-400"
+          colorClass="bg-power-red/10 text-power-red"
         />
       </div>
 
@@ -330,12 +330,12 @@ const Dashboard = () => {
               Active students per batch digitally aligned
             </p>
           </div>
-          <div className="flex-1 w-full min-h-[300px]">
+          <div className="flex-1 w-full min-h-[420px]">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={charts?.batchDistribution}
                 layout="vertical"
-                margin={{ top: 0, right: 80, left: 40, bottom: 0 }}
+                margin={{ top: 0, right: 40, left: 40, bottom: 0 }}
               >
                 <CartesianGrid
                   strokeDasharray="3 3"
@@ -348,8 +348,12 @@ const Dashboard = () => {
                   type="category"
                   axisLine={false}
                   tickLine={false}
-                  tick={{ fontSize: 12, fill: "#a1a1aa", fontWeight: "bold" }}
-                  width={120}
+                  interval={0}
+                  tick={{ fontSize: 11, fill: "#a1a1aa", fontWeight: "bold" }}
+                  tickFormatter={(value) =>
+                    value && value.length > 18 ? `${value.slice(0, 17)}…` : value
+                  }
+                  width={170}
                 />
                 <RechartsTooltip
                   cursor={{ fill: "rgba(255,255,255,0.04)" }}
@@ -371,7 +375,6 @@ const Dashboard = () => {
                     fill="#EF233C"
                     fontWeight="black"
                     fontSize={12}
-                    formatter={(val) => `${val} Students`}
                   />
                 </Bar>
               </BarChart>

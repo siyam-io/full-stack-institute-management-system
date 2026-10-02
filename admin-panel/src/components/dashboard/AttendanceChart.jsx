@@ -16,17 +16,17 @@ const AttendanceChart = ({ attendanceSummary, height = 280 }) => {
   const presentPercentage = total > 0 ? Math.round((present / total) * 100) : 0;
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col" style={{ height: `${height}px` }}>
+    <div className="bg-white/5 rounded-2xl shadow-sm border border-white/5 p-5 flex flex-col" style={{ height: `${height}px` }}>
       <div className="flex items-center gap-2 mb-2">
-        <div className="p-1.5 bg-teal-50 text-teal-600 rounded-lg">
+        <div className="p-1.5 bg-power-red/10 text-power-red rounded-lg">
           <UserCheck size={18} />
         </div>
-        <h3 className="font-bold text-gray-800">Attendance Health</h3>
+        <h3 className="font-bold text-zinc-100">Attendance Health</h3>
       </div>
       
       <div className="flex-1 relative min-h-0 mt-2">
         {total === 0 ? (
-          <div className="absolute inset-0 flex items-center justify-center text-sm text-gray-400">
+          <div className="absolute inset-0 flex items-center justify-center text-sm text-zinc-500">
             No attendance data yet
           </div>
         ) : (
@@ -55,8 +55,8 @@ const AttendanceChart = ({ attendanceSummary, height = 280 }) => {
             </ResponsiveContainer>
             {/* Center Label */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <span className="text-2xl font-black text-gray-800">{presentPercentage}%</span>
-              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Present</span>
+              <span className="text-2xl font-black text-zinc-100">{presentPercentage}%</span>
+              <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Present</span>
             </div>
           </>
         )}

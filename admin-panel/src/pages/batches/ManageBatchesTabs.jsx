@@ -41,7 +41,7 @@ export default function ManageBatchesTabs() {
   if (isLoading) return <Loader />;
 
   return (
-    <div className="p-4 md:p-8 bg-[#e8f0f2] min-h-screen">
+    <div className="p-4 md:p-8 min-h-screen">
       <div className="max-w-[1600px] mx-auto space-y-6">
         <BatchHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         

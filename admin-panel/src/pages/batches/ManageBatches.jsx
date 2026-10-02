@@ -35,7 +35,7 @@ export default function ManageBatches() {
 
   if (!selectedBatch) {
     return (
-      <div className="p-20 text-center font-bold text-slate-400">
+      <div className="p-20 text-center font-bold text-zinc-500">
         Batch Not Found or Access Denied.
       </div>
     );
@@ -50,15 +50,15 @@ export default function ManageBatches() {
         <div className="flex items-center gap-4 mb-6 shrink-0">
           <button 
             onClick={() => navigate('/admin/manage-batches')} 
-            className="p-3 bg-white rounded-2xl text-slate-400 hover:text-teal-600 shadow-sm transition-all"
+            className="p-3 bg-white/5 rounded-2xl text-zinc-500 hover:text-power-red shadow-sm transition-all"
           >
             <ArrowLeft size={20} />
           </button>
           <div>
-            <h1 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic">
+            <h1 className="text-2xl font-black text-white uppercase tracking-tighter italic">
               {selectedBatch.batch_name}
             </h1>
-            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">
+            <p className="text-[11px] font-bold text-zinc-500 uppercase tracking-widest">
               {selectedBatch.course?.course_name}
             </p>
           </div>

@@ -223,26 +223,26 @@ const AddCourse = ({ mode = "add" }) => {
 
   return (
     <div className="p-8 max-w-4xl mx-auto relative">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 pb-4 border-b border-slate-100/50">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 pb-4 border-b border-white/5">
         <div>
-          <h1 className="text-2xl font-black text-gray-900 uppercase tracking-tight">
+          <h1 className="text-2xl font-black text-white uppercase tracking-tight">
             {mode === "edit" ? "Edit Operational Course" : "Create New Course"}
           </h1>
-          <p className="text-sm text-gray-500 mt-1">
+          <p className="text-sm text-zinc-500 mt-1">
             Configure the core operational settings, fees, and certifications for this course.
           </p>
         </div>
         
         <div className="flex items-center gap-3 mt-4 md:mt-0">
           {/* Edit Mode Toggle Switch */}
-          <div className="flex items-center bg-gray-100 p-1.5 rounded-xl border border-gray-200">
+          <div className="flex items-center bg-white/5 p-1.5 rounded-xl border border-white/10">
             <button
               type="button"
               onClick={() => handleToggleMode("visual")}
               className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black tracking-wider uppercase transition-all ${
                 editMode === "visual"
-                  ? "bg-white text-teal-600 shadow-sm"
-                  : "text-gray-400 hover:text-gray-800"
+                  ? "bg-white/5 text-power-red shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               <Layout size={14} /> Visual Mode
@@ -252,8 +252,8 @@ const AddCourse = ({ mode = "add" }) => {
               onClick={() => handleToggleMode("json")}
               className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black tracking-wider uppercase transition-all ${
                 editMode === "json"
-                  ? "bg-white text-teal-600 shadow-sm"
-                  : "text-gray-400 hover:text-gray-800"
+                  ? "bg-white/5 text-power-red shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               <Code size={14} /> Raw JSON Mode
@@ -262,7 +262,7 @@ const AddCourse = ({ mode = "add" }) => {
           <button 
             onClick={() => navigate("/admin/all-courses")} 
             type="button" 
-            className="text-[10px] font-black tracking-wider uppercase text-gray-400 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 px-3.5 py-2 rounded-xl transition-all border border-gray-100"
+            className="text-[10px] font-black tracking-wider uppercase text-zinc-500 hover:text-white bg-white/5 hover:bg-white/5 px-3.5 py-2 rounded-xl transition-all border border-white/5"
           >
             CANCEL
           </button>
@@ -273,14 +273,14 @@ const AddCourse = ({ mode = "add" }) => {
         {editMode === "visual" ? (
           <>
             {/* Core details */}
-            <div className="bg-white p-6 rounded-[2rem] space-y-4 shadow-sm border border-slate-100/60">
-              <h2 className="font-bold text-gray-800 text-md border-b border-slate-100/60 pb-2 flex items-center gap-2">
-                <BookOpen size={18} className="text-teal-600" /> Operational Course Configuration
+            <div className="bg-white/5 p-6 rounded-[2rem] space-y-4 shadow-sm border border-white/5">
+              <h2 className="font-bold text-zinc-100 text-md border-b border-white/5 pb-2 flex items-center gap-2">
+                <BookOpen size={18} className="text-power-red" /> Operational Course Configuration
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                  <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                     Course Name (English) <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -295,7 +295,7 @@ const AddCourse = ({ mode = "add" }) => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                  <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                     Course Name (Bangla)
                   </label>
                   <input
@@ -310,7 +310,7 @@ const AddCourse = ({ mode = "add" }) => {
               </div>
 
               <div>
-                <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                   Course Code <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -327,7 +327,7 @@ const AddCourse = ({ mode = "add" }) => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                  <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                     Duration Value <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -342,14 +342,14 @@ const AddCourse = ({ mode = "add" }) => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                  <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                     Duration Unit <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="duration_unit"
                     value={form.duration_unit}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-lg text-sm bg-white focus:outline-none"
+                    className="w-full px-4 py-2 border rounded-lg text-sm bg-white/5 focus:outline-none"
                   >
                     <option value="days">Days</option>
                     <option value="weeks">Weeks</option>
@@ -359,7 +359,7 @@ const AddCourse = ({ mode = "add" }) => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                  <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                     Base Fee (BDT) <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -375,7 +375,7 @@ const AddCourse = ({ mode = "add" }) => {
               </div>
 
               <div>
-                <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                   Internal Description (English)
                 </label>
                 <textarea
@@ -389,7 +389,7 @@ const AddCourse = ({ mode = "add" }) => {
               </div>
 
               <div>
-                <label className="block text-xs font-black uppercase text-gray-500 mb-1">
+                <label className="block text-xs font-black uppercase text-zinc-500 mb-1">
                   Internal Description (Bangla)
                 </label>
                 <textarea
@@ -409,17 +409,17 @@ const AddCourse = ({ mode = "add" }) => {
                   id="is_active"
                   checked={form.is_active}
                   onChange={handleChange}
-                  className="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500 accent-teal-600 cursor-pointer"
+                  className="w-4 h-4 text-power-red border-white/15 rounded focus:ring-power-red/40 accent-power-red cursor-pointer"
                 />
-                <label htmlFor="is_active" className="text-sm font-bold text-gray-600 select-none cursor-pointer">
+                <label htmlFor="is_active" className="text-sm font-bold text-zinc-500 select-none cursor-pointer">
                   Active Operational Status
                 </label>
               </div>
             </div>
 
             {/* Certifications and Additional Info */}
-            <div className="bg-white p-6 rounded-[2rem] space-y-4 shadow-sm border border-slate-100/60">
-              <h2 className="font-bold text-slate-800 text-sm border-b border-slate-100 pb-2">
+            <div className="bg-white/5 p-6 rounded-[2rem] space-y-4 shadow-sm border border-white/5">
+              <h2 className="font-bold text-zinc-100 text-sm border-b border-white/5 pb-2">
                 Certifications & Affiliation Tags
               </h2>
               
@@ -433,8 +433,8 @@ const AddCourse = ({ mode = "add" }) => {
                       onClick={() => handleToggleCert(opt.value)}
                       className={`flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase border transition-all ${
                         selected 
-                          ? "bg-teal-50 border-teal-200 text-teal-700 shadow-sm shadow-teal-500/5"
-                          : "bg-white border-slate-200 text-slate-500 hover:border-slate-300"
+                          ? "bg-power-red/10 border-power-red/30 text-power-red shadow-sm shadow-power-red/20"
+                          : "bg-white/5 border-white/10 text-zinc-500 hover:border-white/15"
                       }`}
                     >
                       <span>{opt.label}</span>
@@ -444,8 +444,8 @@ const AddCourse = ({ mode = "add" }) => {
                 })}
               </div>
 
-              <div className="pt-4 border-t border-slate-100/60">
-                <label className="block text-xs font-black uppercase text-gray-500 mb-2">
+              <div className="pt-4 border-t border-white/5">
+                <label className="block text-xs font-black uppercase text-zinc-500 mb-2">
                   Add Custom Affiliation Tag
                 </label>
                 <div className="flex max-w-md gap-2">
@@ -459,7 +459,7 @@ const AddCourse = ({ mode = "add" }) => {
                   <button
                     type="button"
                     onClick={handleAddCustomCert}
-                    className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-black rounded-lg uppercase tracking-wider transition-all"
+                    className="px-4 py-2 bg-white/5 hover:bg-white/10 text-zinc-500 text-xs font-black rounded-lg uppercase tracking-wider transition-all"
                   >
                     Add
                   </button>
@@ -468,27 +468,27 @@ const AddCourse = ({ mode = "add" }) => {
             </div>
           </>
         ) : (
-          <div className="bg-white p-6 rounded-[2rem] space-y-4 border border-slate-100/60">
-            <div className="flex justify-between items-center border-b border-slate-100 pb-2">
-              <span className="font-bold text-slate-800 text-sm">Raw Course JSON Configuration</span>
+          <div className="bg-white/5 p-6 rounded-[2rem] space-y-4 border border-white/5">
+            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+              <span className="font-bold text-zinc-100 text-sm">Raw Course JSON Configuration</span>
               <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={handleCopyTemplateJson}
-                  className="text-[10px] text-blue-600 hover:text-blue-800 font-black tracking-wider uppercase border border-blue-100 bg-blue-50 px-2.5 py-1.5 rounded-lg transition-all"
+                  className="text-[10px] text-power-red hover:text-power-red font-black tracking-wider uppercase border border-power-red/30 bg-power-red/10 px-2.5 py-1.5 rounded-lg transition-all"
                 >
                   Copy AI Template
                 </button>
                 <button
                   type="button"
                   onClick={handleCopyCurrentJson}
-                  className="text-[10px] text-teal-600 hover:text-teal-800 font-black tracking-wider uppercase border border-teal-100/50 bg-teal-50/50 px-2.5 py-1.5 rounded-lg transition-all"
+                  className="text-[10px] text-power-red hover:text-power-red font-black tracking-wider uppercase border border-power-red/30 bg-power-red/10 px-2.5 py-1.5 rounded-lg transition-all"
                 >
                   Copy Current JSON
                 </button>
               </div>
             </div>
-            <p className="text-[10px] text-gray-500">Advanced: Paste course configuration directly in JSON format below.</p>
+            <p className="text-[10px] text-zinc-500">Advanced: Paste course configuration directly in JSON format below.</p>
             <textarea
               value={rawJsonText}
               onChange={(e) => setRawJsonText(e.target.value)}
@@ -501,7 +501,7 @@ const AddCourse = ({ mode = "add" }) => {
         <button 
           type="submit" 
           disabled={isLoading}
-          className="w-full py-4 bg-[#14b8a6] hover:bg-teal-600 text-white rounded-2xl text-sm font-black shadow-lg shadow-teal-500/10 tracking-widest transition uppercase disabled:opacity-50 active:scale-[0.98]"
+          className="w-full py-4 bg-[#EF233C] hover:bg-[#C8102E] text-white rounded-2xl text-sm font-black shadow-lg shadow-power-red/20 tracking-widest transition uppercase disabled:opacity-50 active:scale-[0.98]"
         >
           {isLoading ? "Saving..." : mode === 'edit' ? 'Update Course' : 'Create Course'}
         </button>

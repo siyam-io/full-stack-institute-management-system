@@ -206,29 +206,29 @@ const EntityForm = ({
   const singleCheckboxFields = config.filter(f => f.type === "checkbox");
 
   return (
-    <div className="max-w-4xl mx-auto bg-white rounded-[2rem] shadow-sm p-8 relative overflow-hidden border border-slate-100/60">
+    <div className="max-w-4xl mx-auto bg-white/5 rounded-[2rem] shadow-sm p-8 relative overflow-hidden border border-white/5">
       {(isLoading || isCompressing) && (
-        <div className="absolute inset-0 bg-white/60 z-50 flex items-center justify-center backdrop-blur-[2px]">
-          <Loader2 className="animate-spin text-teal-600" size={40} />
+        <div className="absolute inset-0 bg-black/60 z-50 flex items-center justify-center backdrop-blur-[2px]">
+          <Loader2 className="animate-spin text-power-red" size={40} />
         </div>
       )}
 
-      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-8 pb-4 border-b border-slate-100/60">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-8 pb-4 border-b border-white/5">
         <div>
-          <h1 className="text-2xl font-black text-gray-900 tracking-tight">{title}</h1>
-          <p className="text-sm font-medium text-gray-500 mt-1">{subtitle}</p>
+          <h1 className="text-2xl font-black text-white tracking-tight">{title}</h1>
+          <p className="text-sm font-medium text-zinc-500 mt-1">{subtitle}</p>
         </div>
         
         <div className="flex items-center gap-3">
           {/* Edit Mode Toggle Switch */}
-          <div className="flex items-center bg-gray-100 p-1.5 rounded-xl border border-gray-200">
+          <div className="flex items-center bg-white/5 p-1.5 rounded-xl border border-white/10">
             <button
               type="button"
               onClick={() => handleToggleMode("visual")}
               className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black tracking-wider uppercase transition-all ${
                 editMode === "visual"
-                  ? "bg-white text-teal-600 shadow-sm"
-                  : "text-gray-400 hover:text-gray-800"
+                  ? "bg-white/5 text-power-red shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               <Layout size={14} /> Visual Mode
@@ -238,8 +238,8 @@ const EntityForm = ({
               onClick={() => handleToggleMode("json")}
               className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black tracking-wider uppercase transition-all ${
                 editMode === "json"
-                  ? "bg-white text-teal-600 shadow-sm"
-                  : "text-gray-400 hover:text-gray-800"
+                  ? "bg-white/5 text-power-red shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               <Code size={14} /> Raw JSON Mode
@@ -260,8 +260,8 @@ const EntityForm = ({
 
                 if (field.divider) {
                   return (
-                    <div key={uniqueKey} className="col-span-full pt-4 mt-2 border-t border-slate-100/60">
-                      {field.title && <h2 className="text-sm font-black text-gray-400 uppercase tracking-widest mb-4">{field.title}</h2>}
+                    <div key={uniqueKey} className="col-span-full pt-4 mt-2 border-t border-white/5">
+                      {field.title && <h2 className="text-sm font-black text-zinc-500 uppercase tracking-widest mb-4">{field.title}</h2>}
                     </div>
                   );
                 }
@@ -284,7 +284,7 @@ const EntityForm = ({
                   const currentValues = Array.isArray(formData[field.name]) ? formData[field.name] : [];
                   return (
                     <div key={uniqueKey} className="col-span-full">
-                      <label className="block mb-4 text-[13px] font-bold text-gray-800 tracking-wide ml-1">
+                      <label className="block mb-4 text-[13px] font-bold text-zinc-100 tracking-wide ml-1">
                         {field.label}
                       </label>
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-6 ml-1">
@@ -300,9 +300,9 @@ const EntityForm = ({
                                 handleChange(e);
                                 if (field.onChange) field.onChange(e); 
                               }}
-                              className="w-[18px] h-[18px] text-teal-600 bg-white border-gray-300 rounded focus:ring-teal-500 accent-teal-600 cursor-pointer transition-all"
+                              className="w-[18px] h-[18px] text-power-red bg-white/5 border-white/15 rounded focus:ring-power-red/40 accent-power-red cursor-pointer transition-all"
                             />
-                            <span className="text-[14px] text-gray-700 font-medium select-none group-hover:text-gray-900 transition-colors">
+                            <span className="text-[14px] text-zinc-200 font-medium select-none group-hover:text-white transition-colors">
                               {opt.label}
                             </span>
                           </label>
@@ -337,7 +337,7 @@ const EntityForm = ({
                 if (field.type === "textarea") {
                   return (
                     <div key={uniqueKey} className={`flex flex-col ${field.fullWidth ? 'col-span-full' : ''}`}>
-                      <label className="block mb-1.5 text-xs font-bold text-gray-700 uppercase tracking-wide ml-1">{field.label}</label>
+                      <label className="block mb-1.5 text-xs font-bold text-zinc-200 uppercase tracking-wide ml-1">{field.label}</label>
                       <textarea 
                         name={field.name} 
                         value={formData[field.name] || ""} 
@@ -347,7 +347,7 @@ const EntityForm = ({
                         }} 
                         rows={field.rows || "3"} 
                         placeholder={field.placeholder} 
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-2xl text-sm placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-teal-500/5 focus:border-teal-500 transition-all duration-200" 
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-2xl text-sm placeholder-zinc-500 focus:outline-none focus:ring-4 focus:ring-power-red/40 focus:border-power-red/30 transition-all duration-200" 
                       />
                       {formErrors[field.name] && <p className="text-[10px] font-bold text-red-500 mt-1 ml-1 uppercase">{formErrors[field.name]}</p>}
                     </div>
@@ -376,14 +376,14 @@ const EntityForm = ({
             </div>
 
             {fileField && (
-              <div className="pt-6 border-t border-slate-100/60">
-                <h2 className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-4 ml-1">{fileField.label}</h2>
-                <div className="flex items-center space-x-6 bg-gray-50 p-4 rounded-3xl border border-slate-100/60">
+              <div className="pt-6 border-t border-white/5">
+                <h2 className="text-xs font-bold text-zinc-200 uppercase tracking-wide mb-4 ml-1">{fileField.label}</h2>
+                <div className="flex items-center space-x-6 bg-white/5 p-4 rounded-3xl border border-white/5">
                   <div className="shrink-0">
-                    {previewUrl ? <img src={previewUrl} alt="Preview" className="h-20 w-20 object-cover rounded-2xl shadow-md border-2 border-white" /> : <div className="h-20 w-20 rounded-2xl bg-white border border-gray-200 border-dashed flex items-center justify-center text-[10px] font-bold text-gray-300 uppercase">No Image</div>}
+                    {previewUrl ? <img src={previewUrl} alt="Preview" className="h-20 w-20 object-cover rounded-2xl shadow-md border-2 border-white" /> : <div className="h-20 w-20 rounded-2xl bg-white/5 border border-white/10 border-dashed flex items-center justify-center text-[10px] font-bold text-zinc-400 uppercase">No Image</div>}
                   </div>
                   <label className="block flex-1">
-                    <input type="file" onChange={handleUploadPhoto} accept="image/*" className="block w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-teal-50 file:text-teal-700 hover:file:bg-teal-100 cursor-pointer transition-all" />
+                    <input type="file" onChange={handleUploadPhoto} accept="image/*" className="block w-full text-xs text-zinc-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-power-red/10 file:text-power-red hover:file:bg-power-red/10 cursor-pointer transition-all" />
                     {formErrors.photo && <p className="text-[10px] font-bold text-red-500 mt-2 uppercase">{formErrors.photo}</p>}
                   </label>
                 </div>
@@ -391,7 +391,7 @@ const EntityForm = ({
             )}
 
             {singleCheckboxFields.length > 0 && (
-              <div className="flex flex-wrap gap-6 pt-6 border-t border-slate-100/60">
+              <div className="flex flex-wrap gap-6 pt-6 border-t border-white/5">
                 {singleCheckboxFields.map((field) => (
                   <label key={field.name} className="flex items-center space-x-3 cursor-pointer group">
                     <input 
@@ -402,36 +402,36 @@ const EntityForm = ({
                         handleChange(e);
                         if (field.onChange) field.onChange(e); 
                       }} 
-                      className="w-[18px] h-[18px] text-teal-600 rounded-lg border-gray-300 focus:ring-teal-500 accent-teal-600 transition-all cursor-pointer" 
+                      className="w-[18px] h-[18px] text-power-red rounded-lg border-white/15 focus:ring-power-red/40 accent-power-red transition-all cursor-pointer" 
                     />
-                    <span className="text-sm font-bold text-gray-600 group-hover:text-gray-900 transition-colors">{field.label}</span>
+                    <span className="text-sm font-bold text-zinc-500 group-hover:text-white transition-colors">{field.label}</span>
                   </label>
                 ))}
               </div>
             )}
           </>
         ) : (
-          <div className="bg-white p-6 rounded-[2rem] space-y-4 border border-slate-100/60">
-            <div className="flex justify-between items-center border-b border-slate-100 pb-2">
-              <span className="font-bold text-slate-800 text-sm">Raw Form JSON Configuration</span>
+          <div className="bg-white/5 p-6 rounded-[2rem] space-y-4 border border-white/5">
+            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+              <span className="font-bold text-zinc-100 text-sm">Raw Form JSON Configuration</span>
               <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={handleCopyTemplateJson}
-                  className="text-[10px] text-blue-600 hover:text-blue-800 font-black tracking-wider uppercase border border-blue-100 bg-blue-50 px-2.5 py-1.5 rounded-lg transition-all"
+                  className="text-[10px] text-power-red hover:text-power-red font-black tracking-wider uppercase border border-power-red/30 bg-power-red/10 px-2.5 py-1.5 rounded-lg transition-all"
                 >
                   Copy AI Template
                 </button>
                 <button
                   type="button"
                   onClick={handleCopyCurrentJson}
-                  className="text-[10px] text-teal-600 hover:text-teal-800 font-black tracking-wider uppercase border border-teal-100/50 bg-teal-50/50 px-2.5 py-1.5 rounded-lg transition-all"
+                  className="text-[10px] text-power-red hover:text-power-red font-black tracking-wider uppercase border border-power-red/30 bg-power-red/10 px-2.5 py-1.5 rounded-lg transition-all"
                 >
                   Copy Current JSON
                 </button>
               </div>
             </div>
-            <p className="text-[10px] text-gray-500">Advanced: Paste form values directly in JSON format. Match configuration keys to populate input fields.</p>
+            <p className="text-[10px] text-zinc-500">Advanced: Paste form values directly in JSON format. Match configuration keys to populate input fields.</p>
             <textarea
               value={rawJsonText}
               onChange={(e) => setRawJsonText(e.target.value)}

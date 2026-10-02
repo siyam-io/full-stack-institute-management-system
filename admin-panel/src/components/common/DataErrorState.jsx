@@ -6,7 +6,7 @@ const DataErrorState = ({ error, onRetry, isRetrying }) => {
     <div className="flex flex-col items-center justify-center py-12 bg-power-red/5 border border-power-red/20 rounded-xl">
       <AlertCircle className="w-10 h-10 text-power-red mb-3" />
       <h3 className="text-lg font-semibold text-white">Connection Error</h3>
-      <p className="text-sm text-zinc-400 text-center max-w-xs">{error?.message || "Failed to load data."}</p>
+      <p className="text-sm text-zinc-500 text-center max-w-xs">{error?.message || "Failed to load data."}</p>
       
       {onRetry && (
         <button 

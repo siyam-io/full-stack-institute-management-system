@@ -30,8 +30,8 @@ export default function BranchGatekeeper({ children, pageTitle = "Select Campus"
     return (
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 p-4 md:p-8 max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-black text-slate-800 tracking-tight">{pageTitle}</h1>
-          <p className="text-sm font-bold text-slate-400 mt-1 uppercase tracking-widest">
+          <h1 className="text-3xl font-black text-zinc-100 tracking-tight">{pageTitle}</h1>
+          <p className="text-sm font-bold text-zinc-500 mt-1 uppercase tracking-widest">
             Choose a branch to view and manage its data
           </p>
         </div>
@@ -41,13 +41,13 @@ export default function BranchGatekeeper({ children, pageTitle = "Select Campus"
             <button
               key={branch._id}
               onClick={() => setSelectedBranch(branch)}
-              className="group bg-white p-6 rounded-[2rem] border border-slate-200 shadow-sm hover:shadow-xl hover:border-teal-500/30 hover:-translate-y-1 transition-all text-left flex flex-col"
+              className="group bg-white/5 p-6 rounded-[2rem] border border-white/10 shadow-sm hover:shadow-xl hover:border-power-red/30 hover:-translate-y-1 transition-all text-left flex flex-col"
             >
-              <div className="w-14 h-14 rounded-2xl bg-teal-50 group-hover:bg-teal-500 flex items-center justify-center mb-6 transition-colors">
-                <Building2 size={24} className="text-teal-600 group-hover:text-white transition-colors" />
+              <div className="w-14 h-14 rounded-2xl bg-power-red/10 group-hover:bg-power-red flex items-center justify-center mb-6 transition-colors">
+                <Building2 size={24} className="text-power-red group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-xl font-black text-slate-800 mb-1">{branch.branch_name}</h3>
-              <div className="flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-widest">
+              <h3 className="text-xl font-black text-zinc-100 mb-1">{branch.branch_name}</h3>
+              <div className="flex items-center gap-1.5 text-xs font-bold text-zinc-500 uppercase tracking-widest">
                 <MapPin size={12} />
                 {branch.branch_code || "Main"}
               </div>
@@ -67,13 +67,13 @@ export default function BranchGatekeeper({ children, pageTitle = "Select Campus"
           <div className="max-w-[1600px] mx-auto px-4 md:px-6 pt-4">
             <button
               onClick={() => setSelectedBranch(null)}
-              className="flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-teal-600 uppercase tracking-widest transition-colors mb-2"
+              className="flex items-center gap-1.5 text-xs font-bold text-zinc-500 hover:text-power-red uppercase tracking-widest transition-colors mb-2"
             >
               <ArrowLeft size={14} /> Back to Campuses
             </button>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-lg mb-2">
-              <Building2 size={12} className="text-indigo-500" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-indigo-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-power-red/10 border border-power-red/30 rounded-lg mb-2">
+              <Building2 size={12} className="text-power-red" />
+              <span className="text-[10px] font-black uppercase tracking-widest text-power-red">
                 Viewing: {selectedBranch.branch_name}
               </span>
             </div>

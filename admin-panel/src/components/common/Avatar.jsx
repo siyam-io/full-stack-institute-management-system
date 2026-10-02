@@ -31,7 +31,7 @@ const Avatar = ({
 
   return (
     <div
-      className={`shrink-0 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center overflow-hidden ${sizeClass} ${
+      className={`shrink-0 rounded-full bg-power-red/10 border border-power-red/30 flex items-center justify-center overflow-hidden ${sizeClass} ${
         isInactive ? "opacity-60 grayscale" : ""
       } ${className}`}
     >
@@ -45,12 +45,12 @@ const Avatar = ({
         />
       ) : fallbackText ? (
         /* 2. Fallback to first letter of their name (e.g., "J" for John) */
-        <span className="text-blue-500 font-bold text-sm uppercase">
+        <span className="text-power-red font-bold text-sm uppercase">
           {fallbackText.charAt(0)}
         </span>
       ) : (
         /* 3. Ultimate fallback: A generic user icon */
-        <User size={18} className="text-blue-500" />
+        <User size={18} className="text-power-red" />
       )}
     </div>
   );

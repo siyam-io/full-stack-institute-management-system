@@ -479,24 +479,24 @@ const CoursePublicPageEditor = () => {
 
   return (
     <div className="p-8 max-w-[1450px] mx-auto min-h-screen relative">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 pb-4 border-b border-slate-100/50">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 pb-4 border-b border-white/5">
         <div>
-          <h1 className="text-2xl font-black text-gray-900 uppercase tracking-tight flex items-center gap-2">
-            <Globe className="text-teal-600 w-7 h-7" /> Manage Course Public Page
+          <h1 className="text-2xl font-black text-white uppercase tracking-tight flex items-center gap-2">
+            <Globe className="text-power-red w-7 h-7" /> Manage Course Public Page
           </h1>
-          <p className="text-sm text-gray-500 mt-1">Configure landing page metadata, timeline, outcomes and localized texts.</p>
+          <p className="text-sm text-zinc-500 mt-1">Configure landing page metadata, timeline, outcomes and localized texts.</p>
         </div>
         
         <div className="flex items-center gap-3 mt-4 md:mt-0">
           {/* Edit Mode Toggle Switch */}
-          <div className="flex items-center bg-gray-100 p-1.5 rounded-xl border border-gray-200">
+          <div className="flex items-center bg-white/5 p-1.5 rounded-xl border border-white/10">
             <button
               type="button"
               onClick={() => handleToggleMode("visual")}
               className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black tracking-wider uppercase transition-all ${
                 editMode === "visual"
-                  ? "bg-white text-teal-600 shadow-sm"
-                  : "text-gray-400 hover:text-gray-800"
+                  ? "bg-white/5 text-power-red shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               <Layout size={14} /> Visual Mode
@@ -506,8 +506,8 @@ const CoursePublicPageEditor = () => {
               onClick={() => handleToggleMode("json")}
               className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-black tracking-wider uppercase transition-all ${
                 editMode === "json"
-                  ? "bg-white text-teal-600 shadow-sm"
-                  : "text-gray-400 hover:text-gray-800"
+                  ? "bg-white/5 text-power-red shadow-sm"
+                  : "text-zinc-500 hover:text-zinc-100"
               }`}
             >
               <Code size={14} /> Raw JSON Mode
@@ -516,7 +516,7 @@ const CoursePublicPageEditor = () => {
           <button
             onClick={() => navigate("/admin/all-courses")}
             type="button"
-            className="text-[10px] font-black tracking-wider uppercase text-gray-400 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 px-3.5 py-2 rounded-xl transition-all border border-gray-100"
+            className="text-[10px] font-black tracking-wider uppercase text-zinc-500 hover:text-white bg-white/5 hover:bg-white/5 px-3.5 py-2 rounded-xl transition-all border border-white/5"
           >
             Cancel
           </button>
@@ -525,7 +525,7 @@ const CoursePublicPageEditor = () => {
 
       {/* Tabs - Show only if in Visual Mode */}
       {editMode === "visual" && (
-        <div className="flex border-b border-slate-200 mb-6 gap-2">
+        <div className="flex border-b border-white/10 mb-6 gap-2">
           <TabButton id="basic" active={activeTab} onClick={setActiveTab} icon={BookOpen} label="Hero & Overview" />
           <TabButton id="sections" active={activeTab} onClick={setActiveTab} icon={Sparkles} label="Landing Page Sections" />
           <TabButton id="settings" active={activeTab} onClick={setActiveTab} icon={Settings} label="SEO & Cover" />
@@ -558,16 +558,16 @@ const CoursePublicPageEditor = () => {
                     title={
                       <>
                         <span>Course Key Highlights</span>
-                        <button type="button" onClick={addHighlight} className="flex items-center gap-1 text-xs text-teal-600 hover:text-teal-800 font-bold">
+                        <button type="button" onClick={addHighlight} className="flex items-center gap-1 text-xs text-power-red hover:text-power-red font-bold">
                           <Plus size={14} /> Add Highlight Card
                         </button>
                       </>
                     }
                   >
                     <div className="space-y-4">
-                      {highlights.length === 0 && <p className="text-xs text-gray-400">No highlights added yet.</p>}
+                      {highlights.length === 0 && <p className="text-xs text-zinc-500">No highlights added yet.</p>}
                       {highlights.map((item, idx) => (
-                        <div key={idx} className="flex gap-4 items-start bg-slate-50/50 p-4 rounded-xl border border-slate-100">
+                        <div key={idx} className="flex gap-4 items-start bg-white/5 p-4 rounded-xl border border-white/5">
                           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-3">
                               <Field label="Highlight Title (English)" value={item.titleEn} onChange={(e) => updateHighlight(idx, "titleEn", e.target.value)} placeholder="e.g. Dhanmondi Location" />
@@ -591,14 +591,14 @@ const CoursePublicPageEditor = () => {
                     title={
                       <>
                         <span>Program Features & Badges</span>
-                        <button type="button" onClick={() => addZipItem(setFeatures)} className="flex items-center gap-1 text-xs text-teal-600 hover:text-teal-800 font-bold">
+                        <button type="button" onClick={() => addZipItem(setFeatures)} className="flex items-center gap-1 text-xs text-power-red hover:text-power-red font-bold">
                           <Plus size={14} /> Add Feature Line
                         </button>
                       </>
                     }
                   >
                     <div className="space-y-3">
-                      {features.length === 0 && <p className="text-xs text-gray-400">No features added yet.</p>}
+                      {features.length === 0 && <p className="text-xs text-zinc-500">No features added yet.</p>}
                       {features.map((item, idx) => (
                         <div key={idx} className="flex gap-3 items-center">
                           <input
@@ -628,17 +628,17 @@ const CoursePublicPageEditor = () => {
                     title={
                       <>
                         <span>Curriculum Timeline Modules</span>
-                        <button type="button" onClick={addModule} className="flex items-center gap-1 text-xs text-teal-600 hover:text-teal-800 font-bold">
+                        <button type="button" onClick={addModule} className="flex items-center gap-1 text-xs text-power-red hover:text-power-red font-bold">
                           <Plus size={14} /> Add Module
                         </button>
                       </>
                     }
                   >
                     <div className="space-y-6">
-                      {curriculum.length === 0 && <p className="text-xs text-gray-400">No modules added yet.</p>}
+                      {curriculum.length === 0 && <p className="text-xs text-zinc-500">No modules added yet.</p>}
                       {curriculum.map((module, mIdx) => (
-                        <div key={mIdx} className="bg-slate-50/50 p-5 rounded-2xl border border-slate-100 space-y-4">
-                          <div className="flex gap-4 items-end border-b border-slate-200 pb-3">
+                        <div key={mIdx} className="bg-white/5 p-5 rounded-2xl border border-white/5 space-y-4">
+                          <div className="flex gap-4 items-end border-b border-white/10 pb-3">
                             <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-3">
                               <Field label="Module Title (English)" value={module.titleEn} onChange={(e) => updateModuleTitle(mIdx, "titleEn", e.target.value)} placeholder="e.g. Month 1: Foundation" />
                               <Field label="Module Title (Bangla)" value={module.titleBn} onChange={(e) => updateModuleTitle(mIdx, "titleBn", e.target.value)} placeholder="যেমন: ১ম মাস: বেসিক ফাউন্ডেশন" />
@@ -650,8 +650,8 @@ const CoursePublicPageEditor = () => {
 
                           <div className="space-y-2">
                             <div className="flex justify-between items-center">
-                              <span className="text-[10px] font-black uppercase text-gray-500">Module Bullet Points / Topics</span>
-                              <button type="button" onClick={() => addModuleItem(mIdx)} className="text-[10px] text-teal-600 hover:text-teal-800 font-bold flex items-center">
+                              <span className="text-[10px] font-black uppercase text-zinc-500">Module Bullet Points / Topics</span>
+                              <button type="button" onClick={() => addModuleItem(mIdx)} className="text-[10px] text-power-red hover:text-power-red font-bold flex items-center">
                                 + Add Topic
                               </button>
                             </div>
@@ -672,7 +672,7 @@ const CoursePublicPageEditor = () => {
                                   className="flex-1 px-3 py-1.5 border rounded-lg text-xs focus:outline-none"
                                   placeholder="টপিক (বাংলা)"
                                 />
-                                <button type="button" onClick={() => removeModuleItem(mIdx, itemIdx)} className="text-gray-400 hover:text-red-500">
+                                <button type="button" onClick={() => removeModuleItem(mIdx, itemIdx)} className="text-zinc-500 hover:text-red-500">
                                   ×
                                 </button>
                               </div>
@@ -688,16 +688,16 @@ const CoursePublicPageEditor = () => {
                     title={
                       <>
                         <span>FAQs Items</span>
-                        <button type="button" onClick={addFAQ} className="flex items-center gap-1 text-xs text-teal-600 hover:text-teal-800 font-bold">
+                        <button type="button" onClick={addFAQ} className="flex items-center gap-1 text-xs text-power-red hover:text-power-red font-bold">
                           <Plus size={14} /> Add FAQ Item
                         </button>
                       </>
                     }
                   >
                     <div className="space-y-4">
-                      {faqs.length === 0 && <p className="text-xs text-gray-400">No FAQs added yet.</p>}
+                      {faqs.length === 0 && <p className="text-xs text-zinc-500">No FAQs added yet.</p>}
                       {faqs.map((item, idx) => (
-                        <div key={idx} className="flex gap-4 items-start bg-slate-50/50 p-4 rounded-xl border border-slate-100">
+                        <div key={idx} className="flex gap-4 items-start bg-white/5 p-4 rounded-xl border border-white/5">
                           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2">
                               <Field label="Question (English)" value={item.qEn} onChange={(e) => updateFAQ(idx, "qEn", e.target.value)} placeholder="e.g. Do you offer weekend classes?" />
@@ -721,14 +721,14 @@ const CoursePublicPageEditor = () => {
                     title={
                       <>
                         <span>Learning Outcomes</span>
-                        <button type="button" onClick={() => addZipItem(setOutcomes)} className="flex items-center gap-1 text-xs text-teal-600 hover:text-teal-800 font-bold">
+                        <button type="button" onClick={() => addZipItem(setOutcomes)} className="flex items-center gap-1 text-xs text-power-red hover:text-power-red font-bold">
                           <Plus size={14} /> Add Outcome Line
                         </button>
                       </>
                     }
                   >
                     <div className="space-y-3">
-                      {outcomes.length === 0 && <p className="text-xs text-gray-400">No outcomes added yet.</p>}
+                      {outcomes.length === 0 && <p className="text-xs text-zinc-500">No outcomes added yet.</p>}
                       {outcomes.map((item, idx) => (
                         <div key={idx} className="flex gap-3 items-center">
                           <input
@@ -788,7 +788,7 @@ const CoursePublicPageEditor = () => {
                           showConfirmButton: false,
                         });
                       }}
-                      className="text-[10px] text-blue-600 hover:text-blue-800 font-black tracking-wider uppercase border border-blue-100 bg-blue-50 px-2.5 py-1.5 rounded-lg transition-all"
+                      className="text-[10px] text-power-red hover:text-power-red font-black tracking-wider uppercase border border-power-red/30 bg-power-red/10 px-2.5 py-1.5 rounded-lg transition-all"
                     >
                       Copy AI Template
                     </button>
@@ -804,7 +804,7 @@ const CoursePublicPageEditor = () => {
                           showConfirmButton: false,
                         });
                       }}
-                      className="text-[10px] text-teal-600 hover:text-teal-800 font-black tracking-wider uppercase border border-teal-100/50 bg-teal-50/50 px-2.5 py-1.5 rounded-lg transition-all"
+                      className="text-[10px] text-power-red hover:text-power-red font-black tracking-wider uppercase border border-power-red/30 bg-power-red/10 px-2.5 py-1.5 rounded-lg transition-all"
                     >
                       Copy Current JSON
                     </button>
@@ -812,7 +812,7 @@ const CoursePublicPageEditor = () => {
                 </div>
               }
             >
-              <p className="text-xs text-gray-500 mb-2">Advanced: Edit or paste the entire course public configuration dump directly in JSON format below.</p>
+              <p className="text-xs text-zinc-500 mb-2">Advanced: Edit or paste the entire course public configuration dump directly in JSON format below.</p>
               <textarea
                 value={rawJsonText}
                 onChange={(e) => setRawJsonText(e.target.value)}
@@ -825,15 +825,15 @@ const CoursePublicPageEditor = () => {
 
         <div className="space-y-6">
           <Panel title="Publish Settings">
-            <label className="block text-xs font-black uppercase text-gray-500 mb-1">Status</label>
-            <select name="status" value={form.status} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg text-sm bg-white focus:outline-none">
+            <label className="block text-xs font-black uppercase text-zinc-500 mb-1">Status</label>
+            <select name="status" value={form.status} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg text-sm bg-white/5 focus:outline-none">
               <option value="draft">Draft</option>
               <option value="published">Published</option>
               <option value="archived">Archived</option>
             </select>
 
-            <label className="block text-xs font-black uppercase text-gray-500 mt-4 mb-2">Cover Image</label>
-            <div className="border border-dashed border-slate-200 rounded-lg p-4 text-center bg-gray-50">
+            <label className="block text-xs font-black uppercase text-zinc-500 mt-4 mb-2">Cover Image</label>
+            <div className="border border-dashed border-white/10 rounded-lg p-4 text-center bg-white/5">
               {photoPreview ? (
                 <div className="relative">
                   <img src={photoPreview} alt="Cover Preview" className="max-h-[160px] mx-auto object-contain rounded" />
@@ -852,7 +852,7 @@ const CoursePublicPageEditor = () => {
               ) : (
                 <div>
                   <input type="file" id="coverImageInput" accept="image/*" onChange={handleFileChange} className="hidden" />
-                  <label htmlFor="coverImageInput" className="cursor-pointer text-xs text-blue-600 hover:underline font-semibold block py-6">
+                  <label htmlFor="coverImageInput" className="cursor-pointer text-xs text-power-red hover:underline font-semibold block py-6">
                     Click to upload cover image
                   </label>
                 </div>
@@ -866,7 +866,7 @@ const CoursePublicPageEditor = () => {
           <button
             type="submit"
             disabled={updatePageMutation.isPending}
-            className="w-full py-4 bg-[#14b8a6] hover:bg-teal-600 text-white rounded-2xl text-sm font-black shadow-lg shadow-teal-500/10 tracking-widest transition uppercase disabled:opacity-50 active:scale-[0.98]"
+            className="w-full py-4 bg-[#EF233C] hover:bg-[#C8102E] text-white rounded-2xl text-sm font-black shadow-lg shadow-power-red/20 tracking-widest transition uppercase disabled:opacity-50 active:scale-[0.98]"
           >
             {updatePageMutation.isPending ? "Saving..." : "Save Public Page"}
           </button>
@@ -884,8 +884,8 @@ const TabButton = ({ id, active, onClick, icon: Icon, label }) => (
     onClick={() => onClick(id)}
     className={`flex items-center gap-2 px-4 py-3 text-sm font-bold border-b-2 transition-all ${
       active === id
-        ? "border-teal-600 text-teal-600"
-        : "border-transparent text-gray-500 hover:text-gray-800"
+        ? "border-power-red/30 text-power-red"
+        : "border-transparent text-zinc-500 hover:text-zinc-100"
     }`}
   >
     <Icon size={16} />
@@ -894,22 +894,22 @@ const TabButton = ({ id, active, onClick, icon: Icon, label }) => (
 );
 
 const Panel = ({ title, children }) => (
-  <div className="bg-white p-6 rounded-[2rem] space-y-4 shadow-sm border border-slate-100/50">
-    <h2 className="font-bold text-gray-800 text-md border-b border-slate-100/60 pb-2 flex items-center justify-between">{title}</h2>
+  <div className="bg-white/5 p-6 rounded-[2rem] space-y-4 shadow-sm border border-white/5">
+    <h2 className="font-bold text-zinc-100 text-md border-b border-white/5 pb-2 flex items-center justify-between">{title}</h2>
     {children}
   </div>
 );
 
 const Field = ({ label, ...props }) => (
   <div>
-    <label className="block text-xs font-black uppercase text-gray-500 mb-1">{label}</label>
+    <label className="block text-xs font-black uppercase text-zinc-500 mb-1">{label}</label>
     <input {...props} className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none" />
   </div>
 );
 
 const TextArea = ({ label, rows = 3, ...props }) => (
   <div>
-    <label className="block text-xs font-black uppercase text-gray-500 mb-1">{label}</label>
+    <label className="block text-xs font-black uppercase text-zinc-500 mb-1">{label}</label>
     <textarea {...props} rows={rows} className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none" />
   </div>
 );

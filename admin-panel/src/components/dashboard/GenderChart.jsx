@@ -29,9 +29,9 @@ const GenderChart = ({ genderDistribution = [], height = 320 }) => {
     if (active && payload && payload.length) {
       const percentage = ((payload[0].value / total) * 100).toFixed(1);
       return (
-        <div className="bg-white p-3 border border-gray-100 shadow-xl rounded-lg">
-          <p className="text-sm font-semibold text-gray-800">{payload[0].name}</p>
-          <p className="text-sm text-gray-600">
+        <div className="bg-white/5 p-3 border border-white/5 shadow-xl rounded-lg">
+          <p className="text-sm font-semibold text-zinc-100">{payload[0].name}</p>
+          <p className="text-sm text-zinc-500">
             {payload[0].value} Students ({percentage}%)
           </p>
         </div>
@@ -41,10 +41,10 @@ const GenderChart = ({ genderDistribution = [], height = 320 }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col" style={{ height }}>
+    <div className="bg-white/5 rounded-xl shadow-sm border border-white/5 p-6 flex flex-col" style={{ height }}>
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-bold text-gray-800">Gender Distribution</h3>
-        <span className="text-xs font-medium px-2.5 py-1 bg-gray-100 text-gray-600 rounded-full">
+        <h3 className="text-lg font-bold text-zinc-100">Gender Distribution</h3>
+        <span className="text-xs font-medium px-2.5 py-1 bg-white/5 text-zinc-500 rounded-full">
           Total: {total}
         </span>
       </div>
@@ -74,7 +74,7 @@ const GenderChart = ({ genderDistribution = [], height = 320 }) => {
               verticalAlign="bottom" 
               height={36} 
               iconType="circle"
-              formatter={(value) => <span className="text-sm text-gray-600 font-medium">{value}</span>}
+              formatter={(value) => <span className="text-sm text-zinc-500 font-medium">{value}</span>}
             />
           </PieChart>
         </ResponsiveContainer>

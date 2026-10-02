@@ -125,13 +125,13 @@ const EmployeesTable = ({
 
         <td className="px-6 py-4 hidden md:table-cell">
           <div className="flex flex-col">
-            <span className="text-[13px] font-medium text-zinc-300">{employee.designation || "N/A"}</span>
+            <span className="text-[13px] font-medium text-zinc-400">{employee.designation || "N/A"}</span>
             <span className="text-[10px] font-bold uppercase text-zinc-500">{employee.department || "General"}</span>
           </div>
         </td>
 
         <td className="px-6 py-4 hidden lg:table-cell">
-          <div className="flex flex-col text-[12px] text-zinc-400">
+          <div className="flex flex-col text-[12px] text-zinc-500">
             <span>{employee.phone}</span>
             <span className="truncate max-w-[140px]">{employee.email}</span>
           </div>

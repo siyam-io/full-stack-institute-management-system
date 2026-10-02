@@ -16,7 +16,7 @@ const Pagination = ({
     <div className="pagination-container">
       
       {/* Left Side: Info & Search Context */}
-      <div className="text-sm text-zinc-400 mb-4 sm:mb-0 text-center sm:text-left">
+      <div className="text-sm text-zinc-500 mb-4 sm:mb-0 text-center sm:text-left">
         Showing <span className="font-bold text-white">{currentLength}</span> of <span className="font-bold text-white">{total}</span> {itemName}
         {searchTerm && (
           <span className="ml-2 text-prestige-gold bg-prestige-gold/10 px-2 py-0.5 rounded-md border border-prestige-gold/20">

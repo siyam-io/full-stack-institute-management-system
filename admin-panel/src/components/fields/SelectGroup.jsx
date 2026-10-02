@@ -7,7 +7,7 @@ const SelectGroup = ({
   return (
     <div className="flex flex-col w-full">
       {label && (
-        <label className="block mb-1.5 text-xs font-bold text-zinc-300 uppercase tracking-wide ml-1">
+        <label className="block mb-1.5 text-xs font-bold text-zinc-400 uppercase tracking-wide ml-1">
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}

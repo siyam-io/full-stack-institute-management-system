@@ -50,38 +50,38 @@ const CommentModal = ({ student, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-white w-full max-w-lg rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="bg-white/5 w-full max-w-lg rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden animate-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="p-4 border-b flex items-center justify-between bg-gray-50">
+        <div className="p-4 border-b flex items-center justify-between bg-white/5">
           <div className="flex items-center gap-3">
-            <div className="bg-indigo-100 p-2 rounded-lg text-indigo-600">
+            <div className="bg-power-red/10 p-2 rounded-lg text-power-red">
               <MessageSquare size={20} />
             </div>
             <div>
-              <h2 className="font-bold text-gray-900">Student Observations</h2>
-              <p className="text-[11px] text-gray-500 uppercase tracking-wider">
+              <h2 className="font-bold text-white">Student Observations</h2>
+              <p className="text-[11px] text-zinc-500 uppercase tracking-wider">
                 {student.student_name}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-200 rounded-full transition-colors text-gray-400"
+            className="p-2 hover:bg-white/10 rounded-full transition-colors text-zinc-500"
           >
             <X size={20} />
           </button>
         </div>
 
         {/* Comment List */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50/50">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-white/5">
           {isLoading ? (
             <div className="flex justify-center py-10">
-              <RefreshCw className="animate-spin text-indigo-500" />
+              <RefreshCw className="animate-spin text-power-red" />
             </div>
           ) : comments.length > 0 ? (
             comments.map((comment) => (
               <div key={comment._id} className="flex gap-3 relative group">
-                <div className="h-8 w-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 border border-indigo-100 shrink-0 overflow-hidden">
+                <div className="h-8 w-8 rounded-full bg-power-red/10 flex items-center justify-center text-power-red border border-power-red/30 shrink-0 overflow-hidden">
                   {(comment.commenter?.photo_url || comment.instructor?.photo_url) ? (
                     <img
                       src={`${apiURL.image_url}${comment.commenter?.photo_url || comment.instructor?.photo_url}`}
@@ -92,13 +92,13 @@ const CommentModal = ({ student, onClose }) => {
                     <UserIcon size={14} />
                   )}
                 </div>
-                <div className="flex-1 bg-white p-3 rounded-2xl rounded-tl-none border border-slate-200 shadow-sm relative">
+                <div className="flex-1 bg-white/5 p-3 rounded-2xl rounded-tl-none border border-white/10 shadow-sm relative">
                   <div className="flex justify-between items-start mb-1">
-                    <p className="text-xs font-bold text-gray-900">
+                    <p className="text-xs font-bold text-white">
                       {comment.commenter?.full_name || comment.instructor?.full_name || "User"}
                     </p>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] text-gray-400">
+                      <span className="text-[10px] text-zinc-500">
                         {new Date(comment.createdAt).toLocaleDateString()}
                       </span>
 
@@ -112,7 +112,7 @@ const CommentModal = ({ student, onClose }) => {
                       </button>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-700 leading-relaxed pr-6">
+                  <p className="text-sm text-zinc-200 leading-relaxed pr-6">
                     {comment.text}
                   </p>
                 </div>
@@ -120,10 +120,10 @@ const CommentModal = ({ student, onClose }) => {
             ))
           ) : (
             <div className="text-center py-10">
-              <div className="text-slate-300 mb-2 flex justify-center">
+              <div className="text-zinc-400 mb-2 flex justify-center">
                 <MessageSquare size={40} />
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-zinc-500 text-sm">
                 No comments yet for this student.
               </p>
             </div>
@@ -131,18 +131,18 @@ const CommentModal = ({ student, onClose }) => {
         </div>
 
         {/* Input Area */}
-        <div className="p-4 border-t bg-white">
+        <div className="p-4 border-t bg-white/5">
           <form onSubmit={handleSubmit} className="relative">
             <textarea
               value={commentText}
               onChange={(e) => setCommentText(e.target.value)}
               placeholder="Write a private observation..."
-              className="w-full border border-slate-200 rounded-xl px-4 py-3 pr-12 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none min-h-[80px]"
+              className="w-full border border-white/10 rounded-xl px-4 py-3 pr-12 text-sm focus:ring-2 focus:ring-power-red/40 outline-none resize-none min-h-[80px]"
             />
             <button
               type="submit"
               disabled={!commentText.trim() || addCommentMutation.isPending}
-              className="absolute bottom-3 right-3 p-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 transition-all"
+              className="absolute bottom-3 right-3 p-2 bg-power-red text-white rounded-lg hover:bg-[#C8102E] disabled:opacity-50 transition-all"
             >
               {addCommentMutation.isPending ? (
                 <RefreshCw size={18} className="animate-spin" />

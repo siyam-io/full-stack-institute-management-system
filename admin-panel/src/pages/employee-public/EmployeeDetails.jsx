@@ -36,7 +36,7 @@ const EmployeeDetails = () => {
       case "Active": return "bg-emerald-100 text-emerald-700 border-emerald-200";
       case "On Leave": return "bg-amber-100 text-amber-700 border-amber-200";
       case "Resigned": return "bg-rose-100 text-rose-700 border-rose-200";
-      default: return "bg-slate-100 text-slate-700 border-slate-200";
+      default: return "bg-white/5 text-zinc-200 border-white/10";
     }
   };
 
@@ -44,13 +44,13 @@ const EmployeeDetails = () => {
   const roleName = typeof employee.role === 'object' ? employee.role.name : employee.role;
 
   return (
-    <div className="min-h-screen bg-[#f4f7fb] font-sans pb-20 animate-in fade-in duration-500">
+    <div className="min-h-screen bg-[#050506] font-sans pb-20 animate-in fade-in duration-500">
       {/* Corporate Cover Header */}
-      <div className="h-64 bg-gradient-to-r from-slate-900 via-[#1e293b] to-indigo-950 relative overflow-hidden">
+      <div className="h-64 bg-gradient-to-r from-[#140405] via-[#0a0a0c] to-[#050506] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent mix-blend-overlay"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
-          <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors font-black text-[10px] uppercase tracking-widest group bg-white/5 px-4 py-2 rounded-xl backdrop-blur-sm border border-white/10">
+          <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors font-black text-[10px] uppercase tracking-widest group bg-white/5 px-4 py-2 rounded-xl backdrop-blur-sm border border-white/10">
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             Back to Directory
           </button>
@@ -61,7 +61,7 @@ const EmployeeDetails = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 relative z-20">
         
         {/* Profile Identity Card */}
-        <div className="bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-10 mb-8 flex flex-col md:flex-row gap-8 items-center md:items-end relative">
+        <div className="bg-white/5 rounded-[2.5rem] shadow-2xl shadow-slate-200/50 border border-white/5 p-6 sm:p-10 mb-8 flex flex-col md:flex-row gap-8 items-center md:items-end relative">
           
           <div className="relative -mt-20 md:-mt-24 shrink-0">
             {/* 🚀 Avatar Component Integration */}
@@ -78,25 +78,25 @@ const EmployeeDetails = () => {
 
           <div className="flex-1 text-center md:text-left mt-4 md:mt-0">
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-2">
-              <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight uppercase">
+              <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
                 {employee.full_name}
               </h1>
-              <span className="w-fit mx-auto md:mx-0 px-3 py-1 bg-indigo-600 text-white rounded-lg text-[10px] font-black uppercase tracking-widest shadow-lg shadow-indigo-100">
+              <span className="w-fit mx-auto md:mx-0 px-3 py-1 bg-power-red text-white rounded-lg text-[10px] font-black uppercase tracking-widest shadow-lg shadow-power-red/20">
                 {roleName}
               </span>
             </div>
-            <p className="text-lg text-slate-500 font-bold flex items-center justify-center md:justify-start gap-2 mb-6">
-              <Briefcase size={18} className="text-teal-500" /> {employee.designation || "Executive"}
+            <p className="text-lg text-zinc-500 font-bold flex items-center justify-center md:justify-start gap-2 mb-6">
+              <Briefcase size={18} className="text-power-red" /> {employee.designation || "Executive"}
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <div className="flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
-                <Building size={16} className="text-slate-400" />
-                <span className="text-xs font-black uppercase text-slate-600 tracking-tight">{employee.department || "General"}</span>
+              <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                <Building size={16} className="text-zinc-500" />
+                <span className="text-xs font-black uppercase text-zinc-500 tracking-tight">{employee.department || "General"}</span>
               </div>
-              <div className="flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
-                <Hash size={16} className="text-slate-400" />
-                <span className="text-xs font-black text-slate-600 font-mono tracking-widest">{employee.employee_id}</span>
+              <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                <Hash size={16} className="text-zinc-500" />
+                <span className="text-xs font-black text-zinc-500 font-mono tracking-widest">{employee.employee_id}</span>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const EmployeeDetails = () => {
             <div className="w-full md:w-auto mt-4 md:mt-0">
               <button
                 onClick={() => navigate(`/admin/update-employee/${employee._id}`)}
-                className="w-full md:w-auto px-8 py-4 bg-slate-900 hover:bg-teal-600 text-white font-black text-[11px] uppercase tracking-[0.2em] rounded-2xl transition-all shadow-xl shadow-slate-200 flex items-center justify-center gap-2 active:scale-95"
+                className="w-full md:w-auto px-8 py-4 bg-power-red hover:bg-power-red/90 text-white font-black text-[11px] uppercase tracking-[0.2em] rounded-2xl transition-all shadow-xl shadow-power-red/20 flex items-center justify-center gap-2 active:scale-95"
               >
                 <Edit3 size={16} /> Update Record
               </button>
@@ -118,12 +118,12 @@ const EmployeeDetails = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           <div className="space-y-8">
-            <InfoCard title="Communication" icon={Phone} iconColor="text-teal-500" bg="bg-teal-50">
+            <InfoCard title="Communication" icon={Phone} iconColor="text-power-red" bg="bg-power-red/10">
               <DetailRow icon={Mail} label="Email Address" value={employee.email} isLink href={`mailto:${employee.email}`} />
               <DetailRow icon={Phone} label="Mobile Phone" value={employee.phone} isLink href={`tel:${employee.phone}`} />
             </InfoCard>
 
-            <InfoCard title="Digital Footprint" icon={Globe} iconColor="text-indigo-500" bg="bg-indigo-50">
+            <InfoCard title="Digital Footprint" icon={Globe} iconColor="text-power-red" bg="bg-power-red/10">
               <div className="grid grid-cols-2 gap-3 mt-2">
                 <SocialButton type="linkedin" url={employee.social_links?.linkedin} />
                 <SocialButton type="facebook" url={employee.social_links?.facebook} />
@@ -131,7 +131,7 @@ const EmployeeDetails = () => {
                 <SocialButton type="instagram" url={employee.social_links?.instagram} />
               </div>
               {!employee.social_links?.facebook && !employee.social_links?.linkedin && !employee.social_links?.twitter && !employee.social_links?.instagram && (
-                <p className="text-[10px] font-black uppercase tracking-widest text-slate-300 text-center py-6 bg-slate-50 rounded-2xl border border-slate-100 border-dashed">No social links</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-zinc-400 text-center py-6 bg-white/5 rounded-2xl border border-white/5 border-dashed">No social links</p>
               )}
             </InfoCard>
           </div>
@@ -139,19 +139,19 @@ const EmployeeDetails = () => {
           <div className="lg:col-span-2 space-y-8">
             {/* 🚀 System Info: Restricted by Role Control Permission */}
             {canSeeCredentials && (
-              <InfoCard title="Authorization Layer" icon={Shield} iconColor="text-indigo-500" bg="bg-indigo-50">
+              <InfoCard title="Authorization Layer" icon={Shield} iconColor="text-power-red" bg="bg-power-red/10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100">
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3 ml-1">System Username</p>
+                  <div className="p-5 rounded-2xl bg-white/5 border border-white/5">
+                    <p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-3 ml-1">System Username</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg font-mono font-black text-slate-800 tracking-tighter">@{employee.username}</span>
-                      <Shield size={20} className="text-indigo-200" />
+                      <span className="text-lg font-mono font-black text-zinc-100 tracking-tighter">@{employee.username}</span>
+                      <Shield size={20} className="text-power-red/40" />
                     </div>
                   </div>
-                  <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100">
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3 ml-1">Assigned Access</p>
+                  <div className="p-5 rounded-2xl bg-white/5 border border-white/5">
+                    <p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-3 ml-1">Assigned Access</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg font-black text-slate-800 uppercase tracking-tighter">{roleName} Level</span>
+                      <span className="text-lg font-black text-zinc-100 uppercase tracking-tighter">{roleName} Level</span>
                       <Shield size={20} className="text-teal-200" />
                     </div>
                   </div>
@@ -176,28 +176,28 @@ const EmployeeDetails = () => {
 // --- Sub-Components (Styled for Premium Look) --- //
 
 const InfoCard = ({ title, icon: Icon, iconColor, bg, children }) => (
-  <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-200/60 relative">
+  <div className="bg-white/5 p-8 rounded-[2.5rem] shadow-sm border border-white/10 relative">
     <div className="flex items-center gap-3 mb-8">
       <div className={`p-3 rounded-2xl ${bg} ${iconColor} shadow-inner`}>
         <Icon size={20} />
       </div>
-      <h2 className="text-sm font-black text-slate-800 uppercase tracking-widest">{title}</h2>
+      <h2 className="text-sm font-black text-zinc-100 uppercase tracking-widest">{title}</h2>
     </div>
     {children}
   </div>
 );
 
 const DetailRow = ({ icon: Icon, label, value, isLink, href }) => (
-  <div className="flex items-start gap-4 p-4 hover:bg-slate-50 rounded-2xl transition-all mb-2 last:mb-0 group">
-    <div className="mt-1 bg-slate-100 p-2 rounded-lg group-hover:bg-white group-hover:shadow-sm transition-all">
-      <Icon size={16} className="text-slate-400 group-hover:text-indigo-500" />
+  <div className="flex items-start gap-4 p-4 hover:bg-white/5 rounded-2xl transition-all mb-2 last:mb-0 group">
+    <div className="mt-1 bg-white/5 p-2 rounded-lg group-hover:bg-white group-hover:shadow-sm transition-all">
+      <Icon size={16} className="text-zinc-500 group-hover:text-power-red" />
     </div>
     <div className="overflow-hidden">
-      <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">{label}</p>
+      <p className="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em] mb-1">{label}</p>
       {isLink ? (
-        <a href={href} className="text-sm font-bold text-indigo-600 hover:text-indigo-800 truncate block transition-colors">{value}</a>
+        <a href={href} className="text-sm font-bold text-power-red hover:text-power-red truncate block transition-colors">{value}</a>
       ) : (
-        <p className="text-sm font-bold text-slate-800 truncate">{value}</p>
+        <p className="text-sm font-bold text-zinc-100 truncate">{value}</p>
       )}
     </div>
   </div>
@@ -210,7 +210,7 @@ const SocialButton = ({ type, url }) => {
   const config = {
     linkedin: { icon: Linkedin, color: "text-[#0A66C2] bg-[#0A66C2]/5 hover:bg-[#0A66C2] hover:text-white" },
     facebook: { icon: Facebook, color: "text-[#1877F2] bg-[#1877F2]/5 hover:bg-[#1877F2] hover:text-white" },
-    twitter: { icon: Twitter, color: "text-slate-800 bg-slate-100 hover:bg-slate-800 hover:text-white" },
+    twitter: { icon: Twitter, color: "text-zinc-100 bg-white/5 hover:bg-slate-800 hover:text-white" },
     instagram: { icon: Instagram, color: "text-[#E4405F] bg-[#E4405F]/5 hover:bg-gradient-to-tr hover:from-[#F58529] hover:to-[#DD2A7B] hover:text-white" },
   };
 
@@ -225,27 +225,27 @@ const SocialButton = ({ type, url }) => {
 
 const TimelineRow = ({ date, title, desc, isFirst, isLast }) => (
   <div className="flex gap-6 relative">
-    {!isLast && <div className="absolute left-[13px] top-8 bottom-[-24px] w-0.5 bg-slate-100"></div>}
-    <div className={`relative z-10 w-7 h-7 rounded-xl border-4 border-white shrink-0 mt-1 flex items-center justify-center shadow-md ${isFirst ? 'bg-indigo-600 shadow-indigo-100' : 'bg-slate-200'}`}>
-      {isFirst && <div className="w-1.5 h-1.5 bg-white rounded-full animate-ping"></div>}
+    {!isLast && <div className="absolute left-[13px] top-8 bottom-[-24px] w-0.5 bg-white/5"></div>}
+    <div className={`relative z-10 w-7 h-7 rounded-xl border-4 border-white shrink-0 mt-1 flex items-center justify-center shadow-md ${isFirst ? 'bg-power-red shadow-power-red/20' : 'bg-white/20'}`}>
+      {isFirst && <div className="w-1.5 h-1.5 bg-white/5 rounded-full animate-ping"></div>}
     </div>
     <div className="pb-10">
-      <p className="text-[10px] font-black text-teal-600 uppercase tracking-widest mb-1">{date}</p>
-      <p className="text-sm font-black text-slate-800 uppercase tracking-tight">{title}</p>
-      <p className="text-xs font-bold text-slate-400 mt-2 leading-relaxed">{desc}</p>
+      <p className="text-[10px] font-black text-power-red uppercase tracking-widest mb-1">{date}</p>
+      <p className="text-sm font-black text-zinc-100 uppercase tracking-tight">{title}</p>
+      <p className="text-xs font-bold text-zinc-500 mt-2 leading-relaxed">{desc}</p>
     </div>
   </div>
 );
 
 const ErrorState = ({ navigate, error }) => (
-  <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
-    <div className="max-w-md w-full bg-white border border-slate-200 p-10 rounded-[3rem] shadow-2xl text-center">
+  <div className="min-h-screen bg-white/5 flex items-center justify-center p-6">
+    <div className="max-w-md w-full bg-white/5 border border-white/10 p-10 rounded-[3rem] shadow-2xl text-center">
       <div className="inline-flex items-center justify-center p-6 bg-rose-50 rounded-full mb-6">
         <XCircle className="w-16 h-16 text-rose-500" />
       </div>
-      <h1 className="text-2xl font-black text-slate-800 mb-3 uppercase">Sync Failed</h1>
-      <p className="text-sm font-bold text-slate-400 mb-8">{error?.message || "The requested administrative record is unavailable."}</p>
-      <button onClick={() => navigate(-1)} className="w-full py-4 bg-slate-900 text-white rounded-2xl font-black text-[11px] uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-xl shadow-indigo-100">
+      <h1 className="text-2xl font-black text-zinc-100 mb-3 uppercase">Sync Failed</h1>
+      <p className="text-sm font-bold text-zinc-500 mb-8">{error?.message || "The requested administrative record is unavailable."}</p>
+      <button onClick={() => navigate(-1)} className="w-full py-4 bg-slate-900 text-white rounded-2xl font-black text-[11px] uppercase tracking-widest hover:bg-[#C8102E] transition-all shadow-xl shadow-power-red/20">
         Return to Safety
       </button>
     </div>

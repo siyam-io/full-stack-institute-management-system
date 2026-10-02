@@ -89,17 +89,17 @@ const ManageAdmins = () => {
   ];
 
   const renderRow = (user) => (
-    <tr key={user._id} className="hover:bg-slate-50/50 transition-colors group">
+    <tr key={user._id} className="hover:bg-white/5 transition-colors group border-b border-white/5">
       <td className="px-6 py-5">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 border border-indigo-100 shadow-sm">
+          <div className="h-10 w-10 rounded-xl bg-power-red/10 flex items-center justify-center text-power-red border border-power-red/20 shadow-sm">
             <ShieldCheck size={20} />
           </div>
           <div>
-            <p className="font-black text-slate-800 uppercase tracking-tight text-sm">
+            <p className="font-black text-white uppercase tracking-tight text-sm">
               {user.full_name || user.username}
             </p>
-            <div className="flex items-center gap-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">
+            <div className="flex items-center gap-1.5 text-[10px] font-bold text-zinc-500 uppercase tracking-widest mt-0.5">
               <Fingerprint size={10} /> {user.employee_id || "No ID"} • @
               {user.username}
             </div>
@@ -108,18 +108,18 @@ const ManageAdmins = () => {
       </td>
       <td className="px-6 py-5">
         <div className="space-y-1">
-          <div className="flex items-center gap-2 text-xs font-bold text-slate-600">
-            <Mail size={12} className="text-slate-400" /> {user.email}
+          <div className="flex items-center gap-2 text-xs font-bold text-zinc-500">
+            <Mail size={12} className="text-zinc-500" /> {user.email}
           </div>
-          <div className="flex items-center gap-2 text-[11px] font-medium text-slate-400">
-            <Phone size={12} className="text-slate-400" /> {user.phone || "N/A"}
+          <div className="flex items-center gap-2 text-[11px] font-medium text-zinc-500">
+            <Phone size={12} className="text-zinc-500" /> {user.phone || "N/A"}
           </div>
         </div>
       </td>
       <td className="px-6 py-5 text-center">
         <button
           onClick={() => handleToggleStatus(user._id)}
-          className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.1em] bg-emerald-50 text-emerald-600 border border-emerald-100 hover:bg-emerald-600 hover:text-white transition-all shadow-sm shadow-emerald-100"
+          className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.1em] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500 hover:text-white transition-all shadow-sm"
         >
           Enabled
         </button>
@@ -128,7 +128,7 @@ const ManageAdmins = () => {
         <button
           onClick={() => handleDelete(user)}
           disabled={deleteMutation.isPending}
-          className="p-2.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-all border border-transparent hover:border-rose-100"
+          className="p-2.5 text-zinc-500 hover:text-power-red hover:bg-power-red/10 rounded-xl transition-all border border-transparent hover:border-power-red/20"
         >
           <Trash2 size={18} />
         </button>
@@ -156,20 +156,20 @@ const ManageAdmins = () => {
       />
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in">
-          <div className="bg-white rounded-[2.5rem] w-full max-w-md p-8 shadow-2xl border border-white/20 relative overflow-hidden">
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
+          <div className="bg-[#0B0B0D] rounded-[2.5rem] w-full max-w-md p-8 shadow-2xl border border-white/10 relative overflow-hidden">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-6 right-6 p-2 text-slate-400 hover:text-rose-500 hover:bg-rose-50 rounded-full transition-all"
+              className="absolute top-6 right-6 p-2 text-zinc-500 hover:text-power-red hover:bg-power-red/10 rounded-full transition-all"
             >
               <X size={20} />
             </button>
 
             <div className="mb-8">
-              <h2 className="text-2xl font-black text-slate-800 tracking-tight">
+              <h2 className="text-2xl font-black text-white tracking-tight">
                 Access Provisioning
               </h2>
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
+              <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mt-1">
                 Register new administrative staff
               </p>
             </div>
@@ -183,7 +183,7 @@ const ManageAdmins = () => {
                     setForm({ ...form, full_name: e.target.value })
                   }
                   required
-                  className="w-full bg-slate-50 border-2 border-slate-100 px-5 py-4 rounded-2xl font-bold focus:bg-white outline-none focus:border-indigo-500 transition-all"
+                  className="w-full bg-white/5 border-2 border-white/10 text-zinc-100 px-5 py-4 rounded-2xl font-bold placeholder:text-zinc-500 focus:bg-white/10 outline-none focus:border-power-red/60 transition-all"
                 />
 
                 <div className="grid grid-cols-2 gap-4">
@@ -194,7 +194,7 @@ const ManageAdmins = () => {
                       setForm({ ...form, username: e.target.value })
                     }
                     required
-                    className="w-full bg-slate-50 border-2 border-slate-100 px-5 py-4 rounded-2xl font-bold focus:bg-white outline-none focus:border-indigo-500 transition-all"
+                    className="w-full bg-white/5 border-2 border-white/10 text-zinc-100 px-5 py-4 rounded-2xl font-bold placeholder:text-zinc-500 focus:bg-white/10 outline-none focus:border-power-red/60 transition-all"
                   />
                   <input
                     placeholder="Staff ID"
@@ -203,7 +203,7 @@ const ManageAdmins = () => {
                       setForm({ ...form, employee_id: e.target.value })
                     }
                     required
-                    className="w-full bg-slate-50 border-2 border-slate-100 px-5 py-4 rounded-2xl font-bold focus:bg-white outline-none focus:border-indigo-500 transition-all"
+                    className="w-full bg-white/5 border-2 border-white/10 text-zinc-100 px-5 py-4 rounded-2xl font-bold placeholder:text-zinc-500 focus:bg-white/10 outline-none focus:border-power-red/60 transition-all"
                   />
                 </div>
 
@@ -213,25 +213,25 @@ const ManageAdmins = () => {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
-                  className="w-full bg-slate-50 border-2 border-slate-100 px-5 py-4 rounded-2xl font-bold focus:bg-white outline-none focus:border-indigo-500 transition-all"
+                  className="w-full bg-white/5 border-2 border-white/10 text-zinc-100 px-5 py-4 rounded-2xl font-bold placeholder:text-zinc-500 focus:bg-white/10 outline-none focus:border-power-red/60 transition-all"
                 />
                 <input
                   placeholder="Primary Phone"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   required
-                  className="w-full bg-slate-50 border-2 border-slate-100 px-5 py-4 rounded-2xl font-bold focus:bg-white outline-none focus:border-indigo-500 transition-all"
+                  className="w-full bg-white/5 border-2 border-white/10 text-zinc-100 px-5 py-4 rounded-2xl font-bold placeholder:text-zinc-500 focus:bg-white/10 outline-none focus:border-power-red/60 transition-all"
                 />
               </div>
 
-              <div className="p-4 bg-amber-50 rounded-[1.5rem] border border-amber-100 flex items-start gap-4">
-                <div className="p-2 bg-white rounded-lg text-amber-600 shadow-sm">
+              <div className="p-4 bg-amber-500/10 rounded-[1.5rem] border border-amber-500/20 flex items-start gap-4">
+                <div className="p-2 bg-black/40 rounded-lg text-amber-400 shadow-sm">
                   <UserCog size={18} />
                 </div>
-                <p className="text-[11px] text-amber-700 font-bold leading-relaxed">
+                <p className="text-[11px] text-amber-300/90 font-bold leading-relaxed">
                   SECURITY NOTICE: This identity will be generated with the
                   default system password:{" "}
-                  <span className="underline decoration-amber-300 px-1">
+                  <span className="underline decoration-amber-400/40 px-1">
                     123456
                   </span>
                 </p>
@@ -240,7 +240,7 @@ const ManageAdmins = () => {
               <button
                 type="submit"
                 disabled={createMutation.isPending}
-                className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 shadow-xl shadow-slate-200 transition-all disabled:opacity-50 mt-4 active:scale-95"
+                className="w-full bg-power-red text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-power-red/90 shadow-xl shadow-power-red/20 transition-all disabled:opacity-50 mt-4 active:scale-95"
               >
                 {createMutation.isPending
                   ? "Syncing Server..."

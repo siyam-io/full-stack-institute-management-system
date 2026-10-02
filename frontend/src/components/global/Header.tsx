@@ -37,8 +37,6 @@ interface NavData {
 const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -73,59 +71,29 @@ const Header = ({ navData, locale }: { navData: NavData; locale: string }) => {
               {navData.home}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
-            
-            {/* Dropdown */}
-            <div 
-              className="relative group/about"
-              onMouseEnter={() => setIsAboutOpen(true)}
-              onMouseLeave={() => setIsAboutOpen(false)}
-            >
-              <Link href="/about" className="text-sm font-medium text-zinc-400 group-hover/about:text-white flex items-center gap-2 transition-colors">
-                {navData.about}
-                <svg className={`w-3 h-3 transition-transform duration-500 ${isAboutOpen ? 'rotate-180 text-accent-red' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-                </svg>
-              </Link>
-              
-              {/* Dropdown Menu */}
-              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 w-64 glass-card p-2 rounded-2xl overflow-hidden transition-all duration-500 origin-top shadow-[0_30px_70px_rgba(0,0,0,0.8)] border border-white/5 ${
-                isAboutOpen ? 'opacity-100 scale-100 visible translate-y-0' : 'opacity-0 scale-95 invisible -translate-y-4'
-              }`}>
-                <Link href="/about" className="flex items-center justify-between px-6 py-4 text-white hover:bg-white/5 rounded-xl transition-all duration-500 font-bold tracking-widest text-[10px] group/item uppercase">
-                  {navData.ourStory}
-                  <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-prestige-gold" />
-                </Link>
-                <Link href="/expert-culinary-mentors" className="flex items-center justify-between px-6 py-4 text-white hover:bg-white/5 rounded-xl transition-all duration-500 font-bold tracking-widest text-[10px] group/item uppercase">
-                  {navData.meetMentors}
-                  <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-prestige-gold" />
-                </Link>
-                <Link href="/gallery" className="flex items-center justify-between px-6 py-4 text-white hover:bg-white/5 rounded-xl transition-all duration-500 font-bold tracking-widest text-[10px] group/item uppercase">
-                  {navData.gallery}
-                  <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-prestige-gold" />
-                </Link>
-                <Link href="/faq" className="flex items-center justify-between px-6 py-4 text-white hover:bg-white/5 rounded-xl transition-all duration-500 font-bold tracking-widest text-[10px] group/item uppercase">
-                  {navData.faq}
-                  <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-prestige-gold" />
-                </Link>
-              </div>
-            </div>
 
             <Link href="/courses" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.courses}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
 
+            <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
+              {navData.about}
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
+            </Link>
 
-            <Link href="/admission" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
-              {navData.admission}
+            <Link href="/faq" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
+              {navData.faq}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
-            <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
-              {navData.contact}
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
-            </Link>
+
             <Link href="/blog" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
               {navData.blog}
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
+            </Link>
+
+            <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group">
+              {navData.contact}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-power-red transition-all duration-500 group-hover:w-full"></span>
             </Link>
           </nav>

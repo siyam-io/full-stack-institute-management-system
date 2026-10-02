@@ -103,13 +103,13 @@ const AllBlogs = () => {
         >
           <Star
             size={18}
-            className={blog.isFeatured ? "fill-amber-400 text-amber-500" : "text-zinc-600 hover:text-amber-400"}
+            className={blog.isFeatured ? "fill-amber-400 text-amber-500" : "text-zinc-500 hover:text-amber-400"}
           />
         </button>
       </td>
 
       <td className="px-5 py-4">
-        <span className="px-2 py-0.5 text-xs bg-white/10 text-zinc-300 rounded-md font-mono font-bold uppercase">
+        <span className="px-2 py-0.5 text-xs bg-white/10 text-zinc-400 rounded-md font-mono font-bold uppercase">
           {blog.titleBn ? "EN + BN" : "EN"}
         </span>
       </td>
@@ -117,7 +117,7 @@ const AllBlogs = () => {
       <td className="px-5 py-4">
         <span className={`text-[11px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full ${
           blog.status === "published" ? "bg-emerald-500/10 text-emerald-400" :
-          blog.status === "archived" ? "bg-amber-500/10 text-amber-400" : "bg-white/10 text-zinc-400"
+          blog.status === "archived" ? "bg-amber-500/10 text-amber-400" : "bg-white/10 text-zinc-500"
         }`}>
           {blog.status}
         </span>

@@ -107,7 +107,7 @@ export default function EditSyllabusModal({ batchId, classData, onClose }) {
           onCancel={onClose}
           isLoading={isUpdating}
           buttonText="Save Class Updates"
-          buttonColor="bg-teal-600 hover:bg-teal-700 shadow-teal-500/20"
+          buttonColor="bg-power-red hover:bg-[#C8102E] shadow-power-red/20"
         />
       </div>
     </div>

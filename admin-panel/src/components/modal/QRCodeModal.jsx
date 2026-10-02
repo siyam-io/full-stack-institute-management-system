@@ -37,12 +37,12 @@ const QRCodeModal = ({ student, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#000c1d]/70 backdrop-blur-md p-4 transition-all animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#050506]/70 backdrop-blur-md p-4 transition-all animate-in fade-in duration-300">
       
       {/* Modal Container */}
       <div 
         ref={modalRef}
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden relative animate-in zoom-in-95 duration-300"
+        className="bg-white/5 rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden relative animate-in zoom-in-95 duration-300"
       >
         {/* Header Ribbon */}
         <div className="bg-gradient-to-r from-[#EC1B23] to-[#FF3D3D] p-4 flex justify-between items-center">
@@ -61,7 +61,7 @@ const QRCodeModal = ({ student, onClose }) => {
         <div className="p-8 flex flex-col items-center">
           
           {/* QR Code Container */}
-          <div className="bg-white p-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 mb-6 group">
+          <div className="bg-white/5 p-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/5 mb-6 group">
             <QRCodeCanvas
               value={scanUrl}
               size={180}
@@ -72,33 +72,33 @@ const QRCodeModal = ({ student, onClose }) => {
           </div>
 
           {/* Student Quick Info */}
-          <div className="w-full space-y-4 bg-gray-50 p-4 rounded-2xl border border-gray-100">
+          <div className="w-full space-y-4 bg-white/5 p-4 rounded-2xl border border-white/5">
             <div className="flex items-center gap-3">
               {student.photo_url ? (
                 <img 
                   src={getImageUrl(student.photo_url)} 
                   alt={student.student_name}
-                  className="w-12 h-12 rounded-full object-cover border border-gray-200"
+                  className="w-12 h-12 rounded-full object-cover border border-white/10"
                 />
               ) : (
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                  <User size={20} className="text-blue-600" />
+                <div className="w-12 h-12 rounded-full bg-power-red/10 flex items-center justify-center">
+                  <User size={20} className="text-power-red" />
                 </div>
               )}
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-gray-900 truncate">
+                <p className="text-sm font-bold text-white truncate">
                   {student.student_name}
                 </p>
-                <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-0.5">
+                <div className="flex items-center gap-1.5 text-xs text-zinc-500 mt-0.5">
                   <Hash size={12} />
                   <span className="font-mono">{student.student_id}</span>
                 </div>
               </div>
             </div>
 
-            <div className="border-t border-gray-200 pt-3 flex items-start gap-2">
-              <BookOpen size={14} className="text-gray-400 mt-0.5 shrink-0" />
-              <p className="text-xs text-gray-600 font-medium leading-tight">
+            <div className="border-t border-white/10 pt-3 flex items-start gap-2">
+              <BookOpen size={14} className="text-zinc-500 mt-0.5 shrink-0" />
+              <p className="text-xs text-zinc-500 font-medium leading-tight">
                 {student.course_name}
               </p>
             </div>

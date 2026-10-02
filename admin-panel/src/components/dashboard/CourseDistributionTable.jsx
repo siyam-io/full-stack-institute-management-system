@@ -15,12 +15,12 @@ const CourseDistributionTable = ({ courseDistribution, totalStudents }) => {
           </thead>
           <tbody>
             {courseDistribution?.map((course, index) => (
-              <tr key={index} className="border-b hover:bg-gray-50">
+              <tr key={index} className="border-b hover:bg-white/5">
                 <td className="py-3 px-4">{course._id}</td>
                 <td className="py-3 px-4 font-medium">{course.students}</td>
                 <td className="py-3 px-4">
                   <div className="flex items-center">
-                    <div className="w-full bg-gray-200 rounded-full h-2 mr-2">
+                    <div className="w-full bg-white/10 rounded-full h-2 mr-2">
                       <div 
                         className="bg-prestige-gold h-2 rounded-full" 
                         style={{ 
@@ -28,7 +28,7 @@ const CourseDistributionTable = ({ courseDistribution, totalStudents }) => {
                         }}
                       ></div>
                     </div>
-                    <span className="text-sm text-gray-600">
+                    <span className="text-sm text-zinc-500">
                       {((course.students / totalStudents) * 100).toFixed(1)}%
                     </span>
                   </div>

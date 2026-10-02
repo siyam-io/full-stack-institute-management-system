@@ -214,14 +214,14 @@ const TestimonialsEditor = () => {
   return (
     <div className="space-y-6">
       {/* Mode Header */}
-      <div className="flex justify-between items-center bg-slate-50 px-6 py-4 rounded-[1.5rem] border border-slate-200">
-        <span className="text-sm font-bold text-slate-700">Editor Mode:</span>
-        <div className="flex space-x-1 bg-slate-200/60 p-1 rounded-xl">
+      <div className="flex justify-between items-center bg-white/5 px-6 py-4 rounded-[1.5rem] border border-white/10">
+        <span className="text-sm font-bold text-zinc-200">Editor Mode:</span>
+        <div className="flex space-x-1 bg-white/10 p-1 rounded-xl">
           <button
             type="button"
             onClick={() => handleModeChange("visual")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "visual" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "visual" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Visual Builder
@@ -230,7 +230,7 @@ const TestimonialsEditor = () => {
             type="button"
             onClick={() => handleModeChange("json")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "json" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "json" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Bulk JSON Editor
@@ -244,67 +244,67 @@ const TestimonialsEditor = () => {
           {editorMode === "visual" ? (
             <div className="space-y-8">
               {/* Add New Section */}
-              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6">
-                <h4 className="font-bold text-slate-700 uppercase text-xs tracking-wider border-b pb-2">Add New Testimonial</h4>
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-6">
+                <h4 className="font-bold text-zinc-200 uppercase text-xs tracking-wider border-b pb-2">Add New Testimonial</h4>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* English Form fields */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">🇬🇧 English Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">🇬🇧 English Translation</span>
                     <input
                       type="text"
                       placeholder="Student Name (English) *"
                       value={newForm.studentNameEn}
                       onChange={(e) => setNewForm((p) => ({ ...p, studentNameEn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Designation (English, e.g. Batch 8)"
                       value={newForm.designationEn}
                       onChange={(e) => setNewForm((p) => ({ ...p, designationEn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <textarea
                       placeholder="Message (English) *"
                       value={newForm.messageEn}
                       rows={3}
                       onChange={(e) => setNewForm((p) => ({ ...p, messageEn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                   </div>
 
                   {/* Bangla Form fields */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">🇧🇩 Bangla Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">🇧🇩 Bangla Translation</span>
                     <input
                       type="text"
                       placeholder="Student Name (Bangla)"
                       value={newForm.studentNameBn}
                       onChange={(e) => setNewForm((p) => ({ ...p, studentNameBn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Designation (Bangla, উদা: ব্যাচ ৮)"
                       value={newForm.designationBn}
                       onChange={(e) => setNewForm((p) => ({ ...p, designationBn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <textarea
                       placeholder="Message (Bangla)"
                       value={newForm.messageBn}
                       rows={3}
                       onChange={(e) => setNewForm((p) => ({ ...p, messageBn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                   </div>
                 </div>
 
                 {/* Shared Media / Sorting / Rating */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end bg-white p-5 rounded-xl border border-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end bg-white/5 p-5 rounded-xl border border-white/10">
                   <div className="md:col-span-2">
-                    <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Student Image</label>
+                    <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Student Image</label>
                     <div className="flex items-center space-x-4">
                       <div className="shrink-0">
                         {newForm.image_url ? (
@@ -314,7 +314,7 @@ const TestimonialsEditor = () => {
                             className="h-16 w-16 object-cover rounded-xl shadow border-2 border-white"
                           />
                         ) : (
-                          <div className="h-16 w-16 rounded-xl bg-slate-50 border border-slate-200 border-dashed flex items-center justify-center text-[8px] font-bold text-slate-400 uppercase">No Image</div>
+                          <div className="h-16 w-16 rounded-xl bg-white/5 border border-white/10 border-dashed flex items-center justify-center text-[8px] font-bold text-zinc-500 uppercase">No Image</div>
                         )}
                       </div>
                       <label className="block flex-1">
@@ -322,7 +322,7 @@ const TestimonialsEditor = () => {
                           type="file"
                           onChange={handleNewImageUpload}
                           accept="image/*"
-                          className="block w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer transition-all"
+                          className="block w-full text-xs text-zinc-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-power-red/10 file:text-power-red hover:file:bg-power-red/10 cursor-pointer transition-all"
                           disabled={isUploadingNew}
                         />
                       </label>
@@ -330,23 +330,23 @@ const TestimonialsEditor = () => {
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Rating</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Rating</label>
                       <input
                         type="number"
                         min={1}
                         max={5}
                         value={newForm.rating}
                         onChange={(e) => setNewForm((p) => ({ ...p, rating: parseInt(e.target.value) || 5 }))}
-                        className="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                        className="w-full px-4 py-2 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Sort Order</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Sort Order</label>
                       <input
                         type="number"
                         value={newForm.sort_order}
                         onChange={(e) => setNewForm((p) => ({ ...p, sort_order: parseInt(e.target.value) || 0 }))}
-                        className="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                        className="w-full px-4 py-2 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                       />
                     </div>
                   </div>
@@ -356,7 +356,7 @@ const TestimonialsEditor = () => {
                   <button
                     onClick={handleCreate}
                     disabled={createTM.isPending}
-                    className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-200 transition disabled:opacity-50"
+                    className="px-8 py-3 rounded-xl bg-power-red hover:bg-[#C8102E] text-white font-bold text-sm shadow-lg shadow-power-red/20 transition disabled:opacity-50"
                   >
                     {createTM.isPending ? "Adding..." : "Add Testimonial"}
                   </button>
@@ -366,13 +366,13 @@ const TestimonialsEditor = () => {
               {/* Testimonial List */}
               <div className="space-y-4">
                 {(testimonials || []).map((t) => (
-                  <div key={t.id} className="bg-slate-50 p-6 rounded-[1.8rem] border border-slate-200 shadow-sm">
+                  <div key={t.id} className="bg-white/5 p-6 rounded-[1.8rem] border border-white/10 shadow-sm">
                     {editId === t.id ? (
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {/* English Edit fields */}
-                          <div className="space-y-3 bg-white p-4 rounded-xl border border-slate-200">
-                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">🇬🇧 English translation</span>
+                          <div className="space-y-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block">🇬🇧 English translation</span>
                             <input
                               type="text"
                               value={editForm.studentNameEn || ""}
@@ -397,8 +397,8 @@ const TestimonialsEditor = () => {
                           </div>
 
                           {/* Bangla Edit fields */}
-                          <div className="space-y-3 bg-white p-4 rounded-xl border border-slate-200">
-                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">🇧🇩 Bangla translation</span>
+                          <div className="space-y-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block">🇧🇩 Bangla translation</span>
                             <input
                               type="text"
                               value={editForm.studentNameBn || ""}
@@ -424,29 +424,29 @@ const TestimonialsEditor = () => {
                         </div>
 
                         {/* Shared Image upload / parameters */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white p-4 rounded-xl border border-slate-200 items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white/5 p-4 rounded-xl border border-white/10 items-center">
                           <div>
-                            <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Student Image</label>
+                            <label className="block text-[10px] font-bold text-zinc-500 uppercase mb-1">Student Image</label>
                             <div className="flex items-center space-x-3">
                               {editForm.imageUrl && (
                                 <img
                                   src={editForm.imageUrl.startsWith("http") ? editForm.imageUrl : `${apiURL.image_url}${editForm.imageUrl}`}
                                   alt="Edit Preview"
-                                  className="h-10 w-10 object-cover rounded-lg border border-slate-200"
+                                  className="h-10 w-10 object-cover rounded-lg border border-white/10"
                                 />
                               )}
                               <input
                                 type="file"
                                 onChange={handleEditImageUpload}
                                 accept="image/*"
-                                className="block w-full text-xs text-gray-500"
+                                className="block w-full text-xs text-zinc-500"
                                 disabled={isUploadingEdit}
                               />
                             </div>
                           </div>
                           <div className="grid grid-cols-2 gap-3">
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Rating</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase mb-1">Rating</label>
                               <input
                                 type="number"
                                 min={1}
@@ -457,7 +457,7 @@ const TestimonialsEditor = () => {
                               />
                             </div>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Sort Order</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase mb-1">Sort Order</label>
                               <input
                                 type="number"
                                 value={editForm.sortOrder || 0}
@@ -472,38 +472,38 @@ const TestimonialsEditor = () => {
                                 type="checkbox"
                                 checked={editForm.isActive !== false}
                                 onChange={(e) => setEditForm((p) => ({ ...p, isActive: e.target.checked }))}
-                                className="rounded border-slate-300 text-indigo-600 h-4 w-4"
+                                className="rounded border-white/15 text-power-red h-4 w-4"
                               />
-                              <span className="text-xs font-bold text-slate-600">Active</span>
+                              <span className="text-xs font-bold text-zinc-500">Active</span>
                             </label>
                           </div>
                         </div>
 
                         <div className="flex gap-3 justify-end pt-2">
-                          <button onClick={cancelEdit} className="px-4 py-1.5 rounded-lg border border-slate-300 text-sm font-medium hover:bg-slate-50 transition">Cancel</button>
-                          <button onClick={handleUpdate} className="px-4 py-1.5 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition">Save</button>
+                          <button onClick={cancelEdit} className="px-4 py-1.5 rounded-lg border border-white/15 text-sm font-medium hover:bg-white/5 transition">Cancel</button>
+                          <button onClick={handleUpdate} className="px-4 py-1.5 rounded-lg bg-power-red text-white text-sm font-medium hover:bg-[#C8102E] transition">Save</button>
                         </div>
                       </div>
                     ) : (
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="font-black text-slate-800 text-sm uppercase tracking-tight">🇬🇧 {t.studentNameEn || t.studentName}</span>
-                            <span className="text-slate-300">/</span>
-                            <span className="font-bold text-slate-500 text-xs font-bangla">🇧🇩 {t.studentNameBn || t.studentName}</span>
+                            <span className="font-black text-zinc-100 text-sm uppercase tracking-tight">🇬🇧 {t.studentNameEn || t.studentName}</span>
+                            <span className="text-zinc-400">/</span>
+                            <span className="font-bold text-zinc-500 text-xs font-bangla">🇧🇩 {t.studentNameBn || t.studentName}</span>
                             {t.rating && <span className="text-yellow-500 text-xs">{'★'.repeat(t.rating)}</span>}
                             {!t.isActive && <span className="text-[10px] bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold ml-2">Inactive</span>}
                           </div>
-                          <p className="text-xs text-slate-400 uppercase tracking-widest font-black mb-2">
+                          <p className="text-xs text-zinc-500 uppercase tracking-widest font-black mb-2">
                             EN: {t.designationEn || "Graduate"} | BN: {t.designationBn || "গ্রাজুয়েট"}
                           </p>
-                          <div className="space-y-1 pl-3 border-l-2 border-indigo-600/30">
-                            <p className="text-xs text-slate-600 font-medium">EN: {t.messageEn || t.message}</p>
-                            <p className="text-xs text-slate-400 font-bangla font-medium">BN: {t.messageBn || t.message}</p>
+                          <div className="space-y-1 pl-3 border-l-2 border-power-red/30">
+                            <p className="text-xs text-zinc-500 font-medium">EN: {t.messageEn || t.message}</p>
+                            <p className="text-xs text-zinc-500 font-bangla font-medium">BN: {t.messageBn || t.message}</p>
                           </div>
                         </div>
                         <div className="flex gap-2 shrink-0">
-                          <button onClick={() => startEdit(t)} className="text-xs px-3 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold transition uppercase tracking-wider">Edit</button>
+                          <button onClick={() => startEdit(t)} className="text-xs px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 text-zinc-200 font-bold transition uppercase tracking-wider">Edit</button>
                           <button onClick={() => { if (confirm("Delete?")) deleteTM.mutate(t.id); }}
                             className="text-xs px-3 py-1.5 rounded-lg bg-red-50 hover:bg-red-100 text-red-600 font-bold transition uppercase tracking-wider">Delete</button>
                         </div>
@@ -514,10 +514,10 @@ const TestimonialsEditor = () => {
               </div>
             </div>
           ) : (
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+            <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
               <div className="flex justify-between items-center border-b pb-2">
-                <h3 className="font-bold text-slate-800 text-sm uppercase tracking-wide">Testimonials JSON Array Editor</h3>
-                <div className="flex items-center gap-2 text-slate-500 text-xs">
+                <h3 className="font-bold text-zinc-100 text-sm uppercase tracking-wide">Testimonials JSON Array Editor</h3>
+                <div className="flex items-center gap-2 text-zinc-500 text-xs">
                   <AlertCircle size={14} /> Paste JSON array of testimonial records
                   <button
                     type="button"
@@ -525,7 +525,7 @@ const TestimonialsEditor = () => {
                       navigator.clipboard.writeText(jsonInput);
                       toast.success("Testimonials JSON format copied!");
                     }}
-                    className="px-2.5 py-1 bg-indigo-55 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold text-[10px] uppercase rounded-lg transition"
+                    className="px-2.5 py-1 bg-indigo-55 hover:bg-power-red/10 border border-power-red/30 text-power-red font-bold text-[10px] uppercase rounded-lg transition"
                   >
                     📋 Copy Format
                   </button>
@@ -535,7 +535,7 @@ const TestimonialsEditor = () => {
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 rows={18}
-                className="w-full p-4 font-mono text-xs border border-slate-200 rounded-xl focus:outline-none bg-white focus:ring-2 focus:ring-indigo-500/20 transition"
+                className="w-full p-4 font-mono text-xs border border-white/10 rounded-xl focus:outline-none bg-white/5 focus:ring-2 focus:ring-power-red/40 transition"
                 placeholder="[ { ... }, { ... } ]"
               />
               <div className="flex justify-end pt-2">
@@ -543,7 +543,7 @@ const TestimonialsEditor = () => {
                   type="button"
                   onClick={handleApplyBulkJson}
                   disabled={!jsonInput.trim()}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black uppercase transition duration-300 disabled:opacity-50"
+                  className="px-5 py-2.5 bg-power-red hover:bg-[#C8102E] text-white rounded-xl text-xs font-black uppercase transition duration-300 disabled:opacity-50"
                 >
                   Apply JSON Changes
                 </button>
@@ -555,19 +555,19 @@ const TestimonialsEditor = () => {
         {/* Right Side: Interactive Showcase Device Mockup (Testimonials List) */}
         <div className="sticky top-6 space-y-6">
           <div className="flex justify-between items-center bg-slate-900 text-white px-5 py-3.5 rounded-2xl border border-white/5 shadow">
-            <span className="text-xs font-black uppercase tracking-widest text-slate-400">Student Reviews Preview</span>
+            <span className="text-xs font-black uppercase tracking-widest text-zinc-500">Student Reviews Preview</span>
             <div className="flex items-center bg-slate-800 p-1 rounded-xl border border-white/5">
               <button
                 type="button"
                 onClick={() => setPreviewLocale("en")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-zinc-500 hover:text-white"}`}
               >
                 🇬🇧 En
               </button>
               <button
                 type="button"
                 onClick={() => setPreviewLocale("bn")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-zinc-500 hover:text-white"}`}
               >
                 🇧🇩 Bn
               </button>
@@ -591,24 +591,24 @@ const TestimonialsEditor = () => {
                 const desig = previewLocale === "en" ? t.designationEn || "Graduate" : t.designationBn || "গ্রাজুয়েট";
                 const msg = previewLocale === "en" ? t.messageEn || t.message : t.messageBn || t.message;
                 return (
-                  <div key={idx} className="relative bg-white/[0.02] border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition duration-500 group overflow-hidden">
+                  <div key={idx} className="relative bg-white/5[0.02] border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition duration-500 group overflow-hidden">
                     <div className="relative mb-4">
                       <span className="text-amber-500/10 text-3xl font-serif absolute -top-4 -left-4">“</span>
-                      <p className="text-gray-300 text-xs leading-relaxed pl-2 relative z-10 pt-1 line-clamp-3">{msg || "Quote text here..."}</p>
+                      <p className="text-zinc-400 text-xs leading-relaxed pl-2 relative z-10 pt-1 line-clamp-3">{msg || "Quote text here..."}</p>
                     </div>
                     <div className="flex items-center gap-3 pt-3 border-t border-white/5">
                       <div className="w-9 h-9 rounded-xl overflow-hidden border border-white/5 shrink-0 bg-slate-900">
                         {t.imageUrl ? (
                           <img src={t.imageUrl.startsWith("http") ? t.imageUrl : `${apiURL.image_url}${t.imageUrl}`} alt={name} className="w-full h-full object-cover" />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center text-[7px] text-slate-500 font-bold">PIC</div>
+                          <div className="w-full h-full flex items-center justify-center text-[7px] text-zinc-500 font-bold">PIC</div>
                         )}
                       </div>
                       <div>
                         <h4 className="font-bold text-white text-xs">{name || "Student Name"}</h4>
                         <div className="flex items-center gap-1.5 mt-0.5">
                           <div className="w-1 h-1 rounded-full bg-red-600"></div>
-                          <span className="text-[7px] text-gray-500 uppercase tracking-widest font-black">{desig}</span>
+                          <span className="text-[7px] text-zinc-500 uppercase tracking-widest font-black">{desig}</span>
                         </div>
                       </div>
                     </div>

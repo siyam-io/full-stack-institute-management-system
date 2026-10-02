@@ -99,9 +99,9 @@ const AdminIndex = () => {
   }
 
   return (
-    <div className="p-12 text-center mt-20 bg-white rounded-[2.5rem] shadow-sm max-w-2xl mx-auto border border-slate-100">
-      <h2 className="text-2xl font-black text-slate-800 uppercase tracking-tighter">Access Denied</h2>
-      <p className="text-slate-500 font-bold mt-2">Please contact your Super Admin for access permissions.</p>
+    <div className="p-12 text-center mt-20 bg-white/5 rounded-[2.5rem] shadow-sm max-w-2xl mx-auto border border-white/5">
+      <h2 className="text-2xl font-black text-zinc-100 uppercase tracking-tighter">Access Denied</h2>
+      <p className="text-zinc-500 font-bold mt-2">Please contact your Super Admin for access permissions.</p>
     </div>
   );
 };

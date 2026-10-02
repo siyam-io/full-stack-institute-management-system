@@ -75,7 +75,7 @@ const StudentsTable = ({
 
         {/* 3. STUDENT ID */}
         <td className="px-6 py-4 hidden md:table-cell align-middle">
-          <span className="text-[13px] font-semibold text-zinc-400 tracking-wide">{student.student_id}</span>
+          <span className="text-[13px] font-semibold text-zinc-500 tracking-wide">{student.student_id}</span>
         </td>
 
         {/* 5. STATUS */}

@@ -17,8 +17,8 @@ const ActionIconButton = ({
     success: "hover:bg-emerald-500/10 text-emerald-400",
     danger: "hover:bg-power-red/10 text-power-red",
     warning: "hover:bg-amber-500/10 text-amber-400",
-    purple: "hover:bg-indigo-500/10 text-indigo-400",
-    neutral: "hover:bg-white/10 text-zinc-400",
+    purple: "hover:bg-power-red/10 text-power-red",
+    neutral: "hover:bg-white/10 text-zinc-500",
     activeToggle: "hover:bg-green-500/10 text-green-400", 
     inactiveToggle: "bg-white/10 text-zinc-500 hover:bg-green-500/10 hover:text-green-400"
   };

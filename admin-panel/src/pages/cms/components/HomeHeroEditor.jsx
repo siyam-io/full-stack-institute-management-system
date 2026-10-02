@@ -76,7 +76,7 @@ const HomeHeroEditor = () => {
   }, [section, initialized]);
 
   if (isLoading) return <Loader />;
-  if (!form) return <div className="p-8 text-center text-slate-500">No data found. Save once to create.</div>;
+  if (!form) return <div className="p-8 text-center text-zinc-500">No data found. Save once to create.</div>;
 
   const updateField = (path, value) => {
     setForm((prev) => {
@@ -249,14 +249,14 @@ const HomeHeroEditor = () => {
   return (
     <div className="space-y-8">
       {/* Editor Mode Header */}
-      <div className="flex justify-between items-center bg-slate-50 px-6 py-4 rounded-[1.5rem] border border-slate-200">
-        <span className="text-sm font-bold text-slate-700">Editor Mode:</span>
-        <div className="flex space-x-1 bg-slate-200/60 p-1 rounded-xl">
+      <div className="flex justify-between items-center bg-white/5 px-6 py-4 rounded-[1.5rem] border border-white/10">
+        <span className="text-sm font-bold text-zinc-200">Editor Mode:</span>
+        <div className="flex space-x-1 bg-white/10 p-1 rounded-xl">
           <button
             type="button"
             onClick={() => handleModeChange("visual")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "visual" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "visual" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Visual Builder
@@ -265,7 +265,7 @@ const HomeHeroEditor = () => {
             type="button"
             onClick={() => handleModeChange("json")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "json" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "json" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Bulk JSON Editor
@@ -280,36 +280,36 @@ const HomeHeroEditor = () => {
             <div className="space-y-8">
 
               {/* Hero Slides */}
-              <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-200 space-y-6">
+              <div className="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-6">
                 <div className="flex justify-between items-center border-b pb-3">
                   <div>
-                    <h3 className="font-bold text-slate-800 text-sm uppercase tracking-wide">Hero Slides / Banners</h3>
-                    <p className="text-xs text-slate-400 mt-1">Configure banner slides with English and Bangla content</p>
+                    <h3 className="font-bold text-zinc-100 text-sm uppercase tracking-wide">Hero Slides / Banners</h3>
+                    <p className="text-xs text-zinc-500 mt-1">Configure banner slides with English and Bangla content</p>
                   </div>
                   <button
                     type="button"
                     onClick={addSlide}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold uppercase transition"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-power-red hover:bg-[#C8102E] text-white rounded-xl text-xs font-bold uppercase transition"
                   >
                     + Add Slide
                   </button>
                 </div>
 
                 {form.slides.length === 0 ? (
-                  <div className="p-6 text-center text-xs text-slate-400 font-medium bg-white rounded-xl border border-dashed border-slate-300">
+                  <div className="p-6 text-center text-xs text-zinc-500 font-medium bg-white/5 rounded-xl border border-dashed border-white/15">
                     No slides defined.
                   </div>
                 ) : (
                   <div className="space-y-6">
                     {form.slides.map((slide, i) => (
-                      <div key={i} className={`p-6 bg-white border rounded-[1.5rem] relative space-y-6 shadow-sm ${activeSlideIndex === i ? "border-indigo-500 ring-2 ring-indigo-500/10" : "border-slate-200"}`}>
+                      <div key={i} className={`p-6 bg-white/5 border rounded-[1.5rem] relative space-y-6 shadow-sm ${activeSlideIndex === i ? "border-power-red/30 ring-2 ring-power-red/40" : "border-white/10"}`}>
                         <div className="flex justify-between items-center border-b pb-2">
                           <div className="flex items-center gap-2">
-                            <span className="text-xs bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full font-black">Slide #{i + 1}</span>
+                            <span className="text-xs bg-power-red/10 text-power-red px-3 py-1 rounded-full font-black">Slide #{i + 1}</span>
                             <button
                               type="button"
                               onClick={() => setActiveSlideIndex(i)}
-                              className={`text-[10px] font-bold px-2 py-0.5 rounded ${activeSlideIndex === i ? "bg-indigo-600 text-white" : "bg-slate-100 text-slate-600"}`}
+                              className={`text-[10px] font-bold px-2 py-0.5 rounded ${activeSlideIndex === i ? "bg-power-red text-white" : "bg-white/5 text-zinc-500"}`}
                             >
                               Viewing in Preview
                             </button>
@@ -317,7 +317,7 @@ const HomeHeroEditor = () => {
                           <button
                             type="button"
                             onClick={() => removeSlide(i)}
-                            className="text-slate-400 hover:text-red-500 transition"
+                            className="text-zinc-500 hover:text-red-500 transition"
                           >
                             <Trash2 size={16} />
                           </button>
@@ -325,65 +325,65 @@ const HomeHeroEditor = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           {/* Slide English */}
-                          <div className="space-y-4 bg-slate-50/50 p-4 rounded-xl border border-slate-100">
-                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">🇬🇧 English Translation</span>
+                          <div className="space-y-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">🇬🇧 English Translation</span>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Headline</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Headline</label>
                               <input
                                 type="text"
                                 value={slide.titleEn || ""}
                                 onChange={(e) => updateSlide(i, "titleEn", e.target.value)}
-                                className="w-full px-3 py-2 border border-slate-200 bg-white rounded-lg text-xs"
+                                className="w-full px-3 py-2 border border-white/10 bg-white/5 rounded-lg text-xs"
                               />
                             </div>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Subheadline</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Subheadline</label>
                               <input
                                 type="text"
                                 value={slide.subtitleEn || ""}
                                 onChange={(e) => updateSlide(i, "subtitleEn", e.target.value)}
-                                className="w-full px-3 py-2 border border-slate-200 bg-white rounded-lg text-xs"
+                                className="w-full px-3 py-2 border border-white/10 bg-white/5 rounded-lg text-xs"
                               />
                             </div>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">CTA Button Text</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">CTA Button Text</label>
                               <input
                                 type="text"
                                 value={slide.primaryButtonTextEn || ""}
                                 onChange={(e) => updateSlide(i, "primaryButtonTextEn", e.target.value)}
-                                className="w-full px-3 py-2 border border-slate-200 bg-white rounded-lg text-xs"
+                                className="w-full px-3 py-2 border border-white/10 bg-white/5 rounded-lg text-xs"
                               />
                             </div>
                           </div>
 
                           {/* Slide Bangla */}
-                          <div className="space-y-4 bg-slate-50/50 p-4 rounded-xl border border-slate-100">
-                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">🇧🇩 Bangla Translation</span>
+                          <div className="space-y-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">🇧🇩 Bangla Translation</span>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Headline (Bangla)</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Headline (Bangla)</label>
                               <input
                                 type="text"
                                 value={slide.titleBn || ""}
                                 onChange={(e) => updateSlide(i, "titleBn", e.target.value)}
-                                className="w-full px-3 py-2 border border-slate-200 bg-white rounded-lg text-xs"
+                                className="w-full px-3 py-2 border border-white/10 bg-white/5 rounded-lg text-xs"
                               />
                             </div>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Subheadline (Bangla)</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Subheadline (Bangla)</label>
                               <input
                                 type="text"
                                 value={slide.subtitleBn || ""}
                                 onChange={(e) => updateSlide(i, "subtitleBn", e.target.value)}
-                                className="w-full px-3 py-2 border border-slate-200 bg-white rounded-lg text-xs"
+                                className="w-full px-3 py-2 border border-white/10 bg-white/5 rounded-lg text-xs"
                               />
                             </div>
                             <div>
-                              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">CTA Button Text (Bangla)</label>
+                              <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">CTA Button Text (Bangla)</label>
                               <input
                                 type="text"
                                 value={slide.primaryButtonTextBn || ""}
                                 onChange={(e) => updateSlide(i, "primaryButtonTextBn", e.target.value)}
-                                className="w-full px-3 py-2 border border-slate-200 bg-white rounded-lg text-xs"
+                                className="w-full px-3 py-2 border border-white/10 bg-white/5 rounded-lg text-xs"
                               />
                             </div>
                           </div>
@@ -392,16 +392,16 @@ const HomeHeroEditor = () => {
                         {/* Shared Image / Href */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border-t pt-4">
                           <div>
-                            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Slide CTA Href</label>
+                            <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-1">Slide CTA Href</label>
                             <input
                               type="text"
                               value={slide.primaryButtonHref || ""}
                               onChange={(e) => updateSlide(i, "primaryButtonHref", e.target.value)}
-                              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-xs"
+                              className="w-full px-3 py-2 border border-white/10 rounded-lg text-xs"
                             />
                           </div>
                           <div>
-                            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">Slide Image</label>
+                            <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-2">Slide Image</label>
                             <div className="flex items-center space-x-4">
                               <div className="shrink-0">
                                 {slide.image ? (
@@ -411,7 +411,7 @@ const HomeHeroEditor = () => {
                                     className="h-12 w-20 object-cover rounded-lg border"
                                   />
                                 ) : (
-                                  <div className="h-12 w-20 rounded-lg bg-slate-50 border border-dashed flex items-center justify-center text-[8px] text-slate-300">No Image</div>
+                                  <div className="h-12 w-20 rounded-lg bg-white/5 border border-dashed flex items-center justify-center text-[8px] text-zinc-400">No Image</div>
                                 )}
                               </div>
                               <label className="block flex-1">
@@ -419,7 +419,7 @@ const HomeHeroEditor = () => {
                                   type="file"
                                   onChange={(e) => handleSlideImageUpload(i, e)}
                                   accept="image/*"
-                                  className="block w-full text-xs text-gray-500 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[9px] file:font-black file:uppercase file:bg-indigo-50 file:text-indigo-700 cursor-pointer"
+                                  className="block w-full text-xs text-zinc-500 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[9px] file:font-black file:uppercase file:bg-power-red/10 file:text-power-red cursor-pointer"
                                 />
                               </label>
                             </div>
@@ -432,60 +432,60 @@ const HomeHeroEditor = () => {
               </div>
 
               {/* Unified SEO settings */}
-              <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-200 space-y-4">
-                <h3 className="font-bold text-slate-800 text-sm border-b pb-2 uppercase tracking-wide">SEO Metadata</h3>
+              <div className="bg-white/5 p-6 rounded-[2rem] border border-white/10 space-y-4">
+                <h3 className="font-bold text-zinc-100 text-sm border-b pb-2 uppercase tracking-wide">SEO Metadata</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇬🇧 English SEO</span>
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇬🇧 English SEO</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-500 uppercase mb-2">SEO Title</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Title</label>
                       <input
                         type="text"
                         value={form.seoTitleEn || ""}
                         onChange={(e) => updateField("seoTitleEn", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-500 uppercase mb-2">SEO Description</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Description</label>
                       <textarea
                         value={form.seoDescriptionEn || ""}
                         onChange={(e) => updateField("seoDescriptionEn", e.target.value)}
                         rows={2}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-4">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">🇧🇩 Bangla SEO</span>
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">🇧🇩 Bangla SEO</span>
                     <div>
-                      <label className="block text-xs font-bold text-slate-500 uppercase mb-2">SEO Title (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Title (Bangla)</label>
                       <input
                         type="text"
                         value={form.seoTitleBn || ""}
                         onChange={(e) => updateField("seoTitleBn", e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-500 uppercase mb-2">SEO Description (Bangla)</label>
+                      <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">SEO Description (Bangla)</label>
                       <textarea
                         value={form.seoDescriptionBn || ""}
                         onChange={(e) => updateField("seoDescriptionBn", e.target.value)}
                         rows={2}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm"
+                        className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div className="border-t pt-4">
-                  <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Status</label>
+                  <label className="block text-xs font-bold text-zinc-500 uppercase mb-2">Status</label>
                   <select
                     value={form.status || "published"}
                     onChange={(e) => updateField("status", e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-sm"
+                    className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm"
                   >
                     <option value="draft">Draft</option>
                     <option value="published">Published</option>
@@ -500,26 +500,26 @@ const HomeHeroEditor = () => {
                   type="button"
                   onClick={handleSave}
                   disabled={updateSection.isPending}
-                  className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-200 transition disabled:opacity-50"
+                  className="px-8 py-3 rounded-xl bg-power-red hover:bg-[#C8102E] text-white font-bold text-sm shadow-lg shadow-power-red/20 transition disabled:opacity-50"
                 >
                   {updateSection.isPending ? "Saving..." : "Save Home Hero"}
                 </button>
               </div>
             </div>
           ) : (
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4 animate-fade-in">
+            <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4 animate-fade-in">
               <textarea
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 rows={15}
-                className="w-full p-4 font-mono text-xs border border-slate-200 rounded-xl bg-white focus:outline-none"
+                className="w-full p-4 font-mono text-xs border border-white/10 rounded-xl bg-white/5 focus:outline-none"
               />
               <div className="flex justify-end pt-2">
                 <button
                   type="button"
                   onClick={handleApplyBulkJson}
                   disabled={!jsonInput.trim()}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black uppercase"
+                  className="px-5 py-2.5 bg-power-red hover:bg-[#C8102E] text-white rounded-xl text-xs font-black uppercase"
                 >
                   Apply JSON Changes
                 </button>
@@ -531,19 +531,19 @@ const HomeHeroEditor = () => {
         {/* Right Column: Live Interactive Mockup Preview (Matches Web1 Hero Component) */}
         <div className="sticky top-6 space-y-6">
           <div className="flex justify-between items-center bg-slate-900 text-white px-5 py-3.5 rounded-2xl border border-white/5 shadow">
-            <span className="text-xs font-black uppercase tracking-widest text-slate-400">Live Device Mockup Preview</span>
+            <span className="text-xs font-black uppercase tracking-widest text-zinc-500">Live Device Mockup Preview</span>
             <div className="flex items-center bg-slate-800 p-1 rounded-xl border border-white/5">
               <button
                 type="button"
                 onClick={() => setPreviewLocale("en")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-zinc-500 hover:text-white"}`}
               >
                 🇬🇧 English
               </button>
               <button
                 type="button"
                 onClick={() => setPreviewLocale("bn")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-zinc-500 hover:text-white"}`}
               >
                 🇧🇩 বাংলা
               </button>
@@ -562,7 +562,7 @@ const HomeHeroEditor = () => {
                     className="w-full h-full object-cover transition-all duration-700"
                   />
                 ) : (
-                  <div className="w-full h-full bg-[#131722] flex items-center justify-center text-slate-700 text-xs font-bold uppercase">No Image Uploaded</div>
+                  <div className="w-full h-full bg-[#0b0b0d] flex items-center justify-center text-zinc-200 text-xs font-bold uppercase">No Image Uploaded</div>
                 )}
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-black/35"></div>
@@ -578,7 +578,7 @@ const HomeHeroEditor = () => {
                   {previewTitle || "No Title Loaded"}
                 </h1>
 
-                <p className="text-xs md:text-sm text-gray-300 mt-4 leading-relaxed line-clamp-3">
+                <p className="text-xs md:text-sm text-zinc-400 mt-4 leading-relaxed line-clamp-3">
                   {previewSubtitle || "No description subtitle text available."}
                 </p>
 
@@ -586,7 +586,7 @@ const HomeHeroEditor = () => {
                   <a
                     href="#explore"
                     onClick={(e) => e.preventDefault()}
-                    className="px-5 py-2.5 rounded-xl bg-[#ec1b23] hover:bg-red-700 hover:scale-105 transition-all text-white text-[10px] font-black uppercase tracking-wider shadow shadow-red-950/30"
+                    className="px-5 py-2.5 rounded-xl bg-[#EF233C] hover:bg-red-700 hover:scale-105 transition-all text-white text-[10px] font-black uppercase tracking-wider shadow shadow-red-950/30"
                   >
                     {previewPrimaryBtn}
                   </a>

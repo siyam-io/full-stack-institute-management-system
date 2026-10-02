@@ -32,16 +32,16 @@ const RecentActivities = ({ recentActivities, onRefresh }) => {
               <div className="flex items-center space-x-3">
                 <div className={`p-2 rounded ${
                   activity.status === 'active' ? 'bg-green-500/10' :
-                  activity.status === 'completed' ? 'bg-blue-500/10' : 'bg-white/10'
+                  activity.status === 'completed' ? 'bg-power-red/10' : 'bg-white/10'
                 }`}>
                   <Users size={16} className={
                     activity.status === 'active' ? 'text-green-400' :
-                    activity.status === 'completed' ? 'text-blue-400' : 'text-zinc-400'
+                    activity.status === 'completed' ? 'text-power-red' : 'text-zinc-500'
                   } />
                 </div>
                 <div>
                   <p className="font-medium">{activity.student_name}</p>
-                  <p className="text-sm text-zinc-400">ID: {activity.student_id}</p>
+                  <p className="text-sm text-zinc-500">ID: {activity.student_id}</p>
                 </div>
               </div>
               <div className="text-right">

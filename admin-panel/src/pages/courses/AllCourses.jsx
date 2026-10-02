@@ -83,7 +83,7 @@ const AllCourses = () => {
         {course.additional_info?.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-1.5 ml-6">
             {course.additional_info.map((info, idx) => (
-              <span key={idx} className="px-2 py-0.5 text-[10px] bg-white/10 text-zinc-300 rounded-md font-medium uppercase tracking-wider">
+              <span key={idx} className="px-2 py-0.5 text-[10px] bg-white/10 text-zinc-400 rounded-md font-medium uppercase tracking-wider">
                 {info}
               </span>
             ))}

@@ -60,24 +60,24 @@ const RoleModal = ({ isOpen, onClose, roleData = null }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden">
+      <div className="bg-white/5 rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden">
         
         {/* HEADER */}
-        <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+        <div className="p-6 border-b border-white/5 flex justify-between items-center bg-white/5">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-indigo-100 text-indigo-600 rounded-xl">
+            <div className="p-2 bg-power-red/10 text-power-red rounded-xl">
               <Shield size={24} />
             </div>
             <div>
-              <h2 className="text-xl font-black text-slate-800">
+              <h2 className="text-xl font-black text-zinc-100">
                 {isEditing ? "Edit Role Access" : "Create Custom Role"}
               </h2>
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+              <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">
                 Define what this role can do
               </p>
             </div>
           </div>
-          <button onClick={onClose} className="p-2 text-slate-400 hover:bg-slate-200 rounded-xl transition-colors">
+          <button onClick={onClose} className="p-2 text-zinc-500 hover:bg-white/10 rounded-xl transition-colors">
             <X size={20} />
           </button>
         </div>
@@ -89,13 +89,13 @@ const RoleModal = ({ isOpen, onClose, roleData = null }) => {
             {/* Basic Info */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-1.5">Role Name</label>
+                <label className="block text-xs font-black text-zinc-500 uppercase tracking-widest mb-1.5">Role Name</label>
                 <input 
                   type="text" 
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   disabled={isEditing && roleData?.is_system_role} // Protect system roles
-                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-700 outline-none focus:border-indigo-500 disabled:opacity-50"
+                  className="w-full p-3 bg-white/5 border border-white/10 rounded-xl font-bold text-zinc-200 outline-none focus:border-power-red/30 disabled:opacity-50"
                   placeholder="e.g. Junior Accountant"
                 />
                 {isEditing && roleData?.is_system_role && (
@@ -103,30 +103,30 @@ const RoleModal = ({ isOpen, onClose, roleData = null }) => {
                 )}
               </div>
               <div>
-                <label className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-1.5">Description</label>
+                <label className="block text-xs font-black text-zinc-500 uppercase tracking-widest mb-1.5">Description</label>
                 <input 
                   type="text" 
                   value={formData.description}
                   onChange={(e) => setFormData({...formData, description: e.target.value})}
-                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-700 outline-none focus:border-indigo-500"
+                  className="w-full p-3 bg-white/5 border border-white/10 rounded-xl font-bold text-zinc-200 outline-none focus:border-power-red/30"
                   placeholder="What does this role do?"
                 />
               </div>
             </div>
 
-            <div className="h-px w-full bg-slate-100 my-4"></div>
+            <div className="h-px w-full bg-white/5 my-4"></div>
 
             {/* Checkboxes Area */}
             <div>
-              <h3 className="text-sm font-black text-slate-800 mb-4 flex items-center gap-2">
-                <CheckSquare size={16} className="text-indigo-500"/> Assign Permissions
+              <h3 className="text-sm font-black text-zinc-100 mb-4 flex items-center gap-2">
+                <CheckSquare size={16} className="text-power-red"/> Assign Permissions
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* 🚀 FIXED: Mapping over the UI Array */}
                 {PERMISSION_MODULES.map((mod, idx) => (
-                  <div key={idx} className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                    <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3 pb-2 border-b border-slate-200">
+                  <div key={idx} className="bg-white/5 p-4 rounded-2xl border border-white/5">
+                    <h4 className="text-xs font-black text-zinc-500 uppercase tracking-widest mb-3 pb-2 border-b border-white/10">
                       {mod.module}
                     </h4>
                     <div className="space-y-2.5">
@@ -134,10 +134,10 @@ const RoleModal = ({ isOpen, onClose, roleData = null }) => {
                         const isChecked = formData.permissions.includes(p.id);
                         return (
                           <label key={p.id} className="flex items-center gap-3 cursor-pointer group">
-                            <div onClick={() => handleTogglePermission(p.id)} className={`flex items-center justify-center w-5 h-5 rounded border transition-colors ${isChecked ? 'bg-indigo-500 border-indigo-500 text-white' : 'bg-white border-slate-300 text-transparent group-hover:border-indigo-400'}`}>
+                            <div onClick={() => handleTogglePermission(p.id)} className={`flex items-center justify-center w-5 h-5 rounded border transition-colors ${isChecked ? 'bg-power-red border-power-red/30 text-white' : 'bg-white/5 border-white/15 text-transparent group-hover:border-power-red/30'}`}>
                               {isChecked ? <CheckSquare size={14} /> : <Square size={14} />}
                             </div>
-                            <span className={`text-sm font-bold transition-colors ${isChecked ? 'text-indigo-900' : 'text-slate-600'}`}>
+                            <span className={`text-sm font-bold transition-colors ${isChecked ? 'text-indigo-900' : 'text-zinc-500'}`}>
                               {p.label}
                             </span>
                           </label>
@@ -153,14 +153,14 @@ const RoleModal = ({ isOpen, onClose, roleData = null }) => {
         </div>
 
         {/* FOOTER */}
-        <div className="p-6 border-t border-slate-100 bg-white flex justify-end gap-3 shrink-0">
-          <button onClick={onClose} className="px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-black uppercase tracking-widest rounded-xl transition-colors">
+        <div className="p-6 border-t border-white/5 bg-white/5 flex justify-end gap-3 shrink-0">
+          <button onClick={onClose} className="px-6 py-2.5 bg-white/5 hover:bg-white/10 text-zinc-500 text-xs font-black uppercase tracking-widest rounded-xl transition-colors">
             Cancel
           </button>
           <button 
             onClick={handleSubmit} 
             disabled={isMutating || !formData.name}
-            className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-black uppercase tracking-widest rounded-xl transition-all disabled:opacity-50 flex items-center gap-2"
+            className="px-6 py-2.5 bg-power-red hover:bg-[#C8102E] text-white text-xs font-black uppercase tracking-widest rounded-xl transition-all disabled:opacity-50 flex items-center gap-2"
           >
             {isMutating ? <Loader size={16} color="white" /> : "Save Role Policy"}
           </button>

@@ -58,7 +58,7 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <a
                 href="tel:+8801338958997"
-                className="flex items-center space-x-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-sm text-zinc-500 hover:text-white transition-colors"
               >
                 <Phone className="w-3 h-3" />
                 <span>01338-958997 (WhatsApp)</span>
@@ -66,7 +66,7 @@ const Header = () => {
               <div className="h-4 w-px bg-white/20"></div>
               <a
                 href="mailto:cib.dhk@gmail.com"
-                className="flex items-center space-x-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-sm text-zinc-500 hover:text-white transition-colors"
               >
                 <LogIn className="w-3 h-3 rotate-180" />
                 <span>cib.dhk@gmail.com</span>
@@ -75,7 +75,7 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <a
                 href={`${baseUrl}/verification`}
-                className="flex items-center space-x-2 text-sm text-zinc-400 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-sm text-zinc-500 hover:text-white transition-colors"
               >
                 <UserCircle className="w-3 h-3" />
                 <span>Certificate Verification</span>
@@ -141,7 +141,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-3 rounded-lg bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors"
+            className="lg:hidden p-3 rounded-lg bg-white/5 hover:bg-white/10 text-zinc-500 hover:text-white transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -155,7 +155,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.path}
-                  className="flex items-center space-x-3 px-4 py-4 rounded-lg text-base font-medium text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
+                  className="flex items-center space-x-3 px-4 py-4 rounded-lg text-base font-medium text-zinc-500 hover:text-white hover:bg-white/5 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.icon}
@@ -178,7 +178,7 @@ const Header = () => {
                     navigate("/login");
                     setIsOpen(false);
                   }}
-                  className="w-full px-4 py-3 border border-white/20 text-zinc-400 rounded-lg hover:bg-white/5 transition-colors font-medium flex items-center justify-center space-x-2"
+                  className="w-full px-4 py-3 border border-white/20 text-zinc-500 rounded-lg hover:bg-white/5 transition-colors font-medium flex items-center justify-center space-x-2"
                 >
                   <LogIn className="w-4 h-4" />
                   <span>Student Portal</span>

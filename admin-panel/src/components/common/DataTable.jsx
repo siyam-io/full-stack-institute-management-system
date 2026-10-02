@@ -57,7 +57,7 @@ const DataTable = ({
                 <td colSpan={columns.length} className="px-6 py-20 text-center">
                   <div className="flex flex-col items-center justify-center">
                     <div className="h-16 w-16 bg-white/5 rounded-2xl flex items-center justify-center mb-4">
-                      <EmptyIcon size={28} className="text-zinc-600" />
+                      <EmptyIcon size={28} className="text-zinc-500" />
                     </div>
                     <h3 className="text-lg font-semibold text-white">{emptyStateTitle}</h3>
                     <p className="text-zinc-500 mt-1 max-w-sm mx-auto text-sm">{emptyStateSubtitle}</p>

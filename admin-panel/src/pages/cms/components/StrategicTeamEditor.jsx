@@ -238,14 +238,14 @@ const StrategicTeamEditor = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
       {/* Editor Mode Header */}
-      <div className="flex justify-between items-center bg-slate-50 px-6 py-4 rounded-[1.5rem] border border-slate-200">
-        <span className="text-sm font-bold text-slate-700">Editor Mode:</span>
-        <div className="flex space-x-1 bg-slate-200/60 p-1 rounded-xl">
+      <div className="flex justify-between items-center bg-white/5 px-6 py-4 rounded-[1.5rem] border border-white/10">
+        <span className="text-sm font-bold text-zinc-200">Editor Mode:</span>
+        <div className="flex space-x-1 bg-white/10 p-1 rounded-xl">
           <button
             type="button"
             onClick={() => handleModeChange("visual")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "visual" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "visual" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Visual Builder
@@ -254,7 +254,7 @@ const StrategicTeamEditor = () => {
             type="button"
             onClick={() => handleModeChange("json")}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition duration-200 ${
-              editorMode === "json" ? "bg-white text-indigo-600 shadow-sm" : "text-slate-500"
+              editorMode === "json" ? "bg-white/5 text-power-red shadow-sm" : "text-zinc-500"
             }`}
           >
             Bulk JSON Editor
@@ -268,12 +268,12 @@ const StrategicTeamEditor = () => {
           {editorMode === "visual" ? (
             <div className="space-y-8">
               {/* Add New Section */}
-              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6">
-                <h4 className="font-bold text-slate-700 uppercase text-xs tracking-wider border-b pb-2">Add Team Member</h4>
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-6">
+                <h4 className="font-bold text-zinc-200 uppercase text-xs tracking-wider border-b pb-2">Add Team Member</h4>
                 
                 {employees.length > 0 && (
-                  <div className="mb-4 bg-white p-4 rounded-xl border border-slate-200">
-                    <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">Link Employee Account (Optional)</label>
+                  <div className="mb-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                    <label className="block text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-2">Link Employee Account (Optional)</label>
                     <select
                       value={newForm.userId}
                       onChange={(e) => {
@@ -295,7 +295,7 @@ const StrategicTeamEditor = () => {
                           setNewForm(p => ({ ...p, userId: "" }));
                         }
                       }}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 bg-white/5 text-sm focus:outline-none"
                     >
                       <option value="">-- Standalone / Standalone profile (No Linked Account) --</option>
                       {employees.map(emp => (
@@ -309,61 +309,61 @@ const StrategicTeamEditor = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* English Form fields */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">🇬🇧 English Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">🇬🇧 English Translation</span>
                     <input
                       type="text"
                       placeholder="Name (English) *"
                       value={newForm.nameEn}
                       onChange={(e) => setNewForm((p) => ({ ...p, nameEn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Designation (English) *"
                       value={newForm.designationEn}
                       onChange={(e) => setNewForm((p) => ({ ...p, designationEn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <textarea
                       placeholder="Bio (English)"
                       value={newForm.bioEn}
                       rows={3}
                       onChange={(e) => setNewForm((p) => ({ ...p, bioEn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                   </div>
 
                   {/* Bangla Form fields */}
-                  <div className="space-y-4 bg-white p-5 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">🇧🇩 Bangla Translation</span>
+                  <div className="space-y-4 bg-white/5 p-5 rounded-xl border border-white/10">
+                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">🇧🇩 Bangla Translation</span>
                     <input
                       type="text"
                       placeholder="Name (Bangla)"
                       value={newForm.nameBn}
                       onChange={(e) => setNewForm((p) => ({ ...p, nameBn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Designation (Bangla)"
                       value={newForm.designationBn}
                       onChange={(e) => setNewForm((p) => ({ ...p, designationBn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <textarea
                       placeholder="Bio (Bangla)"
                       value={newForm.bioBn}
                       rows={3}
                       onChange={(e) => setNewForm((p) => ({ ...p, bioBn: e.target.value }))}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-white/10 text-sm focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                   </div>
                 </div>
 
                 {/* Shared Fields */}
-                <div className="bg-white p-5 rounded-xl border border-slate-200 space-y-4">
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider">Member Image</label>
+                <div className="bg-white/5 p-5 rounded-xl border border-white/10 space-y-4">
+                  <label className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">Member Image</label>
                   <div className="flex items-center space-x-4">
                     <div className="shrink-0">
                       {newForm.image_url ? (
@@ -373,7 +373,7 @@ const StrategicTeamEditor = () => {
                           className="h-16 w-16 object-cover rounded-xl shadow border-2 border-white"
                         />
                       ) : (
-                        <div className="h-16 w-16 rounded-xl bg-slate-50 border border-slate-200 border-dashed flex items-center justify-center text-[8px] font-bold text-slate-400 uppercase">No Image</div>
+                        <div className="h-16 w-16 rounded-xl bg-white/5 border border-white/10 border-dashed flex items-center justify-center text-[8px] font-bold text-zinc-500 uppercase">No Image</div>
                       )}
                     </div>
                     <label className="block flex-1">
@@ -381,7 +381,7 @@ const StrategicTeamEditor = () => {
                         type="file"
                         onChange={handleNewImageUpload}
                         accept="image/*"
-                        className="block w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-indigo-55 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer"
+                        className="block w-full text-xs text-zinc-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-[10px] file:font-black file:uppercase file:bg-indigo-55 file:text-power-red hover:file:bg-power-red/10 cursor-pointer"
                         disabled={isUploadingNew}
                       />
                     </label>
@@ -393,21 +393,21 @@ const StrategicTeamEditor = () => {
                       placeholder="Facebook Href"
                       value={newForm.facebook}
                       onChange={(e) => setNewForm((p) => ({ ...p, facebook: e.target.value }))}
-                      className="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2 rounded-xl border border-white/10 text-xs focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <input
                       type="text"
                       placeholder="LinkedIn Href"
                       value={newForm.linkedin}
                       onChange={(e) => setNewForm((p) => ({ ...p, linkedin: e.target.value }))}
-                      className="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2 rounded-xl border border-white/10 text-xs focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                     <input
                       type="number"
                       placeholder="Sort Order"
                       value={newForm.sort_order}
                       onChange={(e) => setNewForm((p) => ({ ...p, sort_order: parseInt(e.target.value) || 0 }))}
-                      className="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-indigo-500 outline-none"
+                      className="w-full px-4 py-2 rounded-xl border border-white/10 text-xs focus:ring-2 focus:ring-power-red/40 outline-none"
                     />
                   </div>
                 </div>
@@ -416,7 +416,7 @@ const StrategicTeamEditor = () => {
                   <button
                     onClick={handleCreate}
                     disabled={createTM.isPending}
-                    className="px-8 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-200 transition disabled:opacity-50"
+                    className="px-8 py-3 rounded-xl bg-power-red hover:bg-[#C8102E] text-white font-bold text-sm shadow-lg shadow-power-red/20 transition disabled:opacity-50"
                   >
                     {createTM.isPending ? "Adding..." : "Add Team Member"}
                   </button>
@@ -426,12 +426,12 @@ const StrategicTeamEditor = () => {
               {/* Members List */}
               <div className="grid grid-cols-1 gap-4">
                 {(members || []).map((m) => (
-                  <div key={m.id} className="bg-slate-50 p-6 rounded-[1.8rem] border border-slate-200 shadow-sm">
+                  <div key={m.id} className="bg-white/5 p-6 rounded-[1.8rem] border border-white/10 shadow-sm">
                     {editId === m.id ? (
                       <div className="space-y-4">
                         {employees.length > 0 && (
-                          <div className="mb-2 bg-white p-3 rounded-xl border border-slate-200">
-                            <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Linked Employee Account</label>
+                          <div className="mb-2 bg-white/5 p-3 rounded-xl border border-white/10">
+                            <label className="block text-[10px] font-bold text-zinc-500 uppercase mb-1">Linked Employee Account</label>
                             <select
                               value={editForm.userId || ""}
                               onChange={(e) => {
@@ -453,7 +453,7 @@ const StrategicTeamEditor = () => {
                                   setEditForm(p => ({ ...p, userId: "" }));
                                 }
                               }}
-                              className="w-full px-3 py-1.5 rounded-lg border border-slate-200 text-xs bg-slate-50 focus:outline-none"
+                              className="w-full px-3 py-1.5 rounded-lg border border-white/10 text-xs bg-white/5 focus:outline-none"
                             >
                               <option value="">-- Standalone / Unlinked Profile --</option>
                               {employees.map(emp => (
@@ -465,8 +465,8 @@ const StrategicTeamEditor = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {/* English Edit fields */}
-                          <div className="space-y-3 bg-white p-4 rounded-xl border border-slate-200">
-                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">🇬🇧 English Translation</span>
+                          <div className="space-y-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block">🇬🇧 English Translation</span>
                             <input
                               type="text"
                               value={editForm.nameEn || ""}
@@ -491,8 +491,8 @@ const StrategicTeamEditor = () => {
                           </div>
 
                           {/* Bangla Edit fields */}
-                          <div className="space-y-3 bg-white p-4 rounded-xl border border-slate-200">
-                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">🇧🇩 Bangla Translation</span>
+                          <div className="space-y-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block">🇧🇩 Bangla Translation</span>
                             <input
                               type="text"
                               value={editForm.nameBn || ""}
@@ -518,22 +518,22 @@ const StrategicTeamEditor = () => {
                         </div>
 
                         {/* Shared Edit fields */}
-                        <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-3">
+                        <div className="bg-white/5 p-4 rounded-xl border border-white/10 space-y-3">
                           <div>
-                            <label className="block text-[10px] font-bold text-slate-400 uppercase mb-1">Image</label>
+                            <label className="block text-[10px] font-bold text-zinc-500 uppercase mb-1">Image</label>
                             <div className="flex items-center space-x-3">
                               {editForm.imageUrl && (
                                 <img
                                   src={editForm.imageUrl.startsWith("http") ? editForm.imageUrl : `${apiURL.image_url}${editForm.imageUrl}`}
                                   alt="Edit Preview"
-                                  className="h-10 w-10 object-cover rounded-lg border border-slate-200"
+                                  className="h-10 w-10 object-cover rounded-lg border border-white/10"
                                 />
                               )}
                               <input
                                 type="file"
                                 onChange={handleEditImageUpload}
                                 accept="image/*"
-                                className="block w-full text-xs text-gray-500"
+                                className="block w-full text-xs text-zinc-500"
                                 disabled={isUploadingEdit}
                               />
                             </div>
@@ -569,22 +569,22 @@ const StrategicTeamEditor = () => {
                                 type="checkbox"
                                 checked={editForm.isActive !== false}
                                 onChange={(e) => setEditForm((p) => ({ ...p, isActive: e.target.checked }))}
-                                className="rounded border-slate-300 text-indigo-600 h-4 w-4"
+                                className="rounded border-white/15 text-power-red h-4 w-4"
                               />
-                              <span className="text-xs font-bold text-slate-600">Active</span>
+                              <span className="text-xs font-bold text-zinc-500">Active</span>
                             </label>
                           </div>
                         </div>
 
                         <div className="flex gap-3 justify-end pt-2">
-                          <button onClick={cancelEdit} className="px-4 py-1.5 rounded-lg border border-slate-300 text-sm font-medium hover:bg-slate-50 transition">Cancel</button>
-                          <button onClick={handleUpdate} className="px-4 py-1.5 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition">Save</button>
+                          <button onClick={cancelEdit} className="px-4 py-1.5 rounded-lg border border-white/15 text-sm font-medium hover:bg-white/5 transition">Cancel</button>
+                          <button onClick={handleUpdate} className="px-4 py-1.5 rounded-lg bg-power-red text-white text-sm font-medium hover:bg-[#C8102E] transition">Save</button>
                         </div>
                       </div>
                     ) : (
                       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-2">
                         {/* Profile Thumbnail */}
-                        <div className="w-16 h-16 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shrink-0 shadow-sm">
+                        <div className="w-16 h-16 rounded-2xl overflow-hidden border border-white/10 bg-white/5 shrink-0 shadow-sm">
                           {m.imageUrl ? (
                             <img
                               src={m.imageUrl.startsWith("http") ? m.imageUrl : `${apiURL.image_url}${m.imageUrl}`}
@@ -592,21 +592,21 @@ const StrategicTeamEditor = () => {
                               className="w-full h-full object-cover"
                             />
                           ) : (
-                            <div className="w-full h-full flex items-center justify-center text-[8px] font-black text-slate-400">NO PHOTO</div>
+                            <div className="w-full h-full flex items-center justify-center text-[8px] font-black text-zinc-500">NO PHOTO</div>
                           )}
                         </div>
 
                         {/* Profile Details */}
                         <div className="flex-1 min-w-0 text-center sm:text-left">
                           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
-                            <span className="font-black text-slate-800 text-sm tracking-tight uppercase">🇬🇧 {m.nameEn || m.name}</span>
-                            <span className="text-slate-300 hidden sm:inline">|</span>
-                            <span className="font-bold text-slate-600 text-xs font-bangla">🇧🇩 {m.nameBn || m.name}</span>
+                            <span className="font-black text-zinc-100 text-sm tracking-tight uppercase">🇬🇧 {m.nameEn || m.name}</span>
+                            <span className="text-zinc-400 hidden sm:inline">|</span>
+                            <span className="font-bold text-zinc-500 text-xs font-bangla">🇧🇩 {m.nameBn || m.name}</span>
                             
                             <span className={`text-[9px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider ${m.isActive !== false ? "bg-green-100 text-green-700" : "bg-red-100 text-red-600"}`}>
                               {m.isActive !== false ? "Active" : "Inactive"}
                             </span>
-                            <span className="text-[9px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full font-bold">
+                            <span className="text-[9px] bg-power-red/10 text-power-red px-2 py-0.5 rounded-full font-bold">
                               Order: {m.sortOrder || 0}
                             </span>
                             {m.userId && (
@@ -620,18 +620,18 @@ const StrategicTeamEditor = () => {
                             EN: {m.designationEn || "Instructor"} • BN: {m.designationBn || "প্রশিক্ষক"}
                           </p>
 
-                          <div className="space-y-1 pl-0 sm:pl-3 sm:border-l-2 border-slate-200">
-                            <p className="text-xs text-slate-500 font-medium line-clamp-2">EN: {m.bioEn || m.bio || "No biography provided."}</p>
-                            <p className="text-xs text-slate-400 font-bangla font-medium line-clamp-2">BN: {m.bioBn || m.bio || "কোনো জীবনী নেই।"}</p>
+                          <div className="space-y-1 pl-0 sm:pl-3 sm:border-l-2 border-white/10">
+                            <p className="text-xs text-zinc-500 font-medium line-clamp-2">EN: {m.bioEn || m.bio || "No biography provided."}</p>
+                            <p className="text-xs text-zinc-500 font-bangla font-medium line-clamp-2">BN: {m.bioBn || m.bio || "কোনো জীবনী নেই।"}</p>
                           </div>
                         </div>
 
                         {/* Actions */}
-                        <div className="flex sm:flex-col gap-2 shrink-0 justify-center w-full sm:w-auto mt-3 sm:mt-0 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-100">
+                        <div className="flex sm:flex-col gap-2 shrink-0 justify-center w-full sm:w-auto mt-3 sm:mt-0 pt-3 sm:pt-0 border-t sm:border-t-0 border-white/5">
                           <button
                             type="button"
                             onClick={() => startEdit(m)}
-                            className="flex-1 sm:flex-initial text-center text-[10px] font-black uppercase tracking-wider px-3.5 py-2 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 transition"
+                            className="flex-1 sm:flex-initial text-center text-[10px] font-black uppercase tracking-wider px-3.5 py-2 rounded-xl bg-power-red/10 hover:bg-power-red/10 text-power-red transition"
                           >
                             Edit Profile
                           </button>
@@ -650,10 +650,10 @@ const StrategicTeamEditor = () => {
               </div>
             </div>
           ) : (
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+            <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
               <div className="flex justify-between items-center border-b pb-2">
-                <h3 className="font-bold text-slate-800 text-sm uppercase tracking-wide">Strategic Team JSON Array Editor</h3>
-                <div className="flex items-center gap-2 text-slate-500 text-xs">
+                <h3 className="font-bold text-zinc-100 text-sm uppercase tracking-wide">Strategic Team JSON Array Editor</h3>
+                <div className="flex items-center gap-2 text-zinc-500 text-xs">
                   <AlertCircle size={14} /> Paste JSON array of team member records
                   <button
                     type="button"
@@ -661,7 +661,7 @@ const StrategicTeamEditor = () => {
                       navigator.clipboard.writeText(jsonInput);
                       toast.success("Strategic Team JSON format copied!");
                     }}
-                    className="px-2.5 py-1 bg-indigo-55 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold text-[10px] uppercase rounded-lg transition"
+                    className="px-2.5 py-1 bg-indigo-55 hover:bg-power-red/10 border border-power-red/30 text-power-red font-bold text-[10px] uppercase rounded-lg transition"
                   >
                     📋 Copy Format
                   </button>
@@ -671,7 +671,7 @@ const StrategicTeamEditor = () => {
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 rows={18}
-                className="w-full p-4 font-mono text-xs border border-slate-200 rounded-xl focus:outline-none bg-white focus:ring-2 focus:ring-indigo-500/20 transition"
+                className="w-full p-4 font-mono text-xs border border-white/10 rounded-xl focus:outline-none bg-white/5 focus:ring-2 focus:ring-power-red/40 transition"
                 placeholder="[ { ... }, { ... } ]"
               />
               <div className="flex justify-end pt-2">
@@ -679,7 +679,7 @@ const StrategicTeamEditor = () => {
                   type="button"
                   onClick={handleApplyBulkJson}
                   disabled={!jsonInput.trim()}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-black uppercase transition duration-300 disabled:opacity-50"
+                  className="px-5 py-2.5 bg-power-red hover:bg-[#C8102E] text-white rounded-xl text-xs font-black uppercase transition duration-300 disabled:opacity-50"
                 >
                   Apply JSON Changes
                 </button>
@@ -691,19 +691,19 @@ const StrategicTeamEditor = () => {
         {/* Right Side: Interactive Showcase Device Mockup (Strategic Team Grid) */}
         <div className="sticky top-6 space-y-6">
           <div className="flex justify-between items-center bg-slate-900 text-white px-5 py-3.5 rounded-2xl border border-white/5 shadow">
-            <span className="text-xs font-black uppercase tracking-widest text-slate-400">Team Profiles Preview</span>
+            <span className="text-xs font-black uppercase tracking-widest text-zinc-500">Team Profiles Preview</span>
             <div className="flex items-center bg-slate-800 p-1 rounded-xl border border-white/5">
               <button
                 type="button"
                 onClick={() => setPreviewLocale("en")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "en" ? "bg-red-600 text-white shadow" : "text-zinc-500 hover:text-white"}`}
               >
                 🇬🇧 En
               </button>
               <button
                 type="button"
                 onClick={() => setPreviewLocale("bn")}
-                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-slate-400 hover:text-white"}`}
+                className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase transition ${previewLocale === "bn" ? "bg-red-600 text-white shadow font-bangla" : "text-zinc-500 hover:text-white"}`}
               >
                 🇧🇩 Bn
               </button>
@@ -727,17 +727,17 @@ const StrategicTeamEditor = () => {
                 const desig = previewLocale === "en" ? m.designationEn || "Instructor" : m.designationBn || "প্রশিক্ষক";
                 const bio = previewLocale === "en" ? m.bioEn || m.bio : m.bioBn || m.bio;
                 return (
-                  <div key={idx} className="relative bg-white/[0.02] border border-white/5 p-4 rounded-2xl flex flex-col items-center hover:bg-white/10 transition duration-500 group overflow-hidden text-center">
+                  <div key={idx} className="relative bg-white/5[0.02] border border-white/5 p-4 rounded-2xl flex flex-col items-center hover:bg-white/10 transition duration-500 group overflow-hidden text-center">
                     <div className="w-16 h-16 rounded-xl overflow-hidden border border-white/5 mx-auto mb-3 shrink-0 bg-slate-900 shadow">
                       {m.imageUrl ? (
                         <img src={m.imageUrl.startsWith("http") ? m.imageUrl : `${apiURL.image_url}${m.imageUrl}`} alt={name} className="w-full h-full object-cover" />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-[8px] text-slate-500 font-bold">PHOTO</div>
+                        <div className="w-full h-full flex items-center justify-center text-[8px] text-zinc-500 font-bold">PHOTO</div>
                       )}
                     </div>
                     <h3 className="text-xs font-bold text-white tracking-tight mb-1 truncate w-full">{name || "Member Name"}</h3>
                     <p className="text-amber-500 font-bold text-[7px] tracking-widest uppercase mb-2 truncate w-full">{desig}</p>
-                    <p className="text-gray-400 text-[8px] leading-relaxed line-clamp-2">{bio || "Bio description..."}</p>
+                    <p className="text-zinc-500 text-[8px] leading-relaxed line-clamp-2">{bio || "Bio description..."}</p>
                   </div>
                 );
               })}

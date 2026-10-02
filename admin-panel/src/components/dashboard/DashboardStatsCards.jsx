@@ -18,17 +18,17 @@ const DashboardStatsCards = ({ stats }) => {
               {stats?.totals.students.total.toLocaleString()}
             </p>
           </div>
-          <div className="bg-blue-500/10 p-3 rounded-lg">
-            <Users className="text-blue-400" size={24} />
+          <div className="bg-power-red/10 p-3 rounded-lg">
+            <Users className="text-power-red" size={24} />
           </div>
         </div>
         <div className="mt-4 pt-4 border-t border-white/10">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-zinc-500">
             <span className="text-green-400 font-semibold">
               {stats?.totals.students.active} active
             </span>
             {" • "}
-            <span className="text-blue-400 font-semibold">
+            <span className="text-power-red font-semibold">
               {stats?.totals.students.completed} completed
             </span>
           </p>
@@ -55,12 +55,12 @@ const DashboardStatsCards = ({ stats }) => {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-zinc-500">Completed</p>
-            <p className="text-3xl font-bold mt-2 text-blue-400">
+            <p className="text-3xl font-bold mt-2 text-power-red">
               {stats?.totals.students.completed.toLocaleString()}
             </p>
           </div>
-          <div className="bg-blue-500/10 p-3 rounded-lg">
-            <CheckCircle className="text-blue-400" size={24} />
+          <div className="bg-power-red/10 p-3 rounded-lg">
+            <CheckCircle className="text-power-red" size={24} />
           </div>
         </div>
       </div>
@@ -74,12 +74,12 @@ const DashboardStatsCards = ({ stats }) => {
               {stats?.totals.courses.total.toLocaleString()}
             </p>
           </div>
-          <div className="bg-purple-500/10 p-3 rounded-lg">
-            <BookOpen className="text-purple-400" size={24} />
+          <div className="bg-power-red/10 p-3 rounded-lg">
+            <BookOpen className="text-power-red" size={24} />
           </div>
         </div>
         <div className="mt-4 pt-4 border-t border-white/10">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-zinc-500">
             <span className="font-semibold">{stats?.totals.courses.active} active</span>
           </p>
         </div>

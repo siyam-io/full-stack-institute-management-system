@@ -166,7 +166,7 @@ const AddBatch = () => {
         isLoading={isPending}
         buttonText={isEditMode ? "Save Changes" : "Create Batch"}
         onCancel={() => navigate("/admin/manage-batches")}
-        buttonColor="bg-slate-900 hover:bg-teal-600 shadow-xl"
+        buttonColor="bg-slate-900 hover:bg-power-red shadow-xl"
       />
     </div>
   );

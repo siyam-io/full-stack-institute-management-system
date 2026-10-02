@@ -271,7 +271,7 @@ const AddStudentForm = ({ mode = "add", data = null }) => {
     );
 
   return (
-    <div className="min-h-screen bg-[#e8f0f2] py-8 px-4 animate-in fade-in duration-300">
+    <div className="min-h-screen py-8 px-4 animate-in fade-in duration-300">
       <EntityForm
         key={data?._id || "new"}
         title={mode === "edit" ? "Edit Student Profile" : "Register New Student"}

@@ -56,20 +56,20 @@ export default function AllBranches() {
     const phone = branch.contactPhone || branch.contact_phone || "";
     
     return (
-      <tr key={id} className={`group transition-colors border-b border-slate-50 last:border-none hover:bg-slate-50/50 ${!isActive ? "opacity-60" : ""}`}>
+      <tr key={id} className={`group transition-colors border-b border-white/5 last:border-none hover:bg-white/5 ${!isActive ? "opacity-60" : ""}`}>
         <td className="px-6 py-4">
           <div className="flex items-center gap-4">
-            <div className={`h-12 w-12 rounded-2xl flex items-center justify-center font-black text-sm ${isActive ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-100 text-slate-400'}`}>
+            <div className={`h-12 w-12 rounded-2xl flex items-center justify-center font-black text-sm ${isActive ? 'bg-power-red/10 text-power-red' : 'bg-white/5 text-zinc-500'}`}>
               {code}
             </div>
             <div className="flex flex-col">
-              <span className="text-[14px] font-bold text-slate-800">{name}</span>
-              <span className="text-[12px] text-slate-500 flex items-center gap-1.5"><MapPin size={12} /> {branch.address}</span>
+              <span className="text-[14px] font-bold text-zinc-100">{name}</span>
+              <span className="text-[12px] text-zinc-500 flex items-center gap-1.5"><MapPin size={12} /> {branch.address}</span>
             </div>
           </div>
         </td>
         <td className="px-6 py-4 hidden md:table-cell">
-          <div className="flex flex-col space-y-1 text-[12px] text-slate-500 font-medium">
+          <div className="flex flex-col space-y-1 text-[12px] text-zinc-500 font-medium">
             {email && <span className="flex items-center gap-1.5"><Mail size={11} /> {email}</span>}
             {phone && <span className="flex items-center gap-1.5"><Phone size={11} /> {phone}</span>}
           </div>
@@ -121,18 +121,18 @@ export default function AllBranches() {
     <div className="p-4 md:p-8 max-w-[1600px] mx-auto min-h-screen">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
         <div>
-          <h1 className="text-3xl font-black text-slate-800 tracking-tight flex items-center gap-3">
-            <Building2 className="text-indigo-600" size={32} /> Branch Directory
+          <h1 className="text-3xl font-black text-zinc-100 tracking-tight flex items-center gap-3">
+            <Building2 className="text-power-red" size={32} /> Branch Directory
           </h1>
         </div>
         <div className="flex items-center gap-4 w-full md:w-auto">
           <div className="relative flex-1 md:w-72">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <input type="text" placeholder="Search branches..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 w-5 h-5" />
+            <input type="text" placeholder="Search branches..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm focus:ring-2 focus:ring-power-red/40 outline-none" />
           </div>
           {/* 🚀 নতুন ব্রাঞ্চ তৈরি করা এডিট পারমিশনের আন্ডারে */}
           {canEdit && (
-            <button onClick={() => navigate("/admin/add-branch")} className="px-5 py-2.5 bg-slate-900 hover:bg-indigo-600 text-white font-bold rounded-xl transition-all flex items-center gap-2">
+            <button onClick={() => navigate("/admin/add-branch")} className="px-5 py-2.5 bg-[#EF233C] hover:bg-[#C8102E] text-white font-bold rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-power-red/20">
               <Plus size={18} /> New Branch
             </button>
           )}

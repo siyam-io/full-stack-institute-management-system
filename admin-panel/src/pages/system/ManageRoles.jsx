@@ -126,22 +126,22 @@ export default function ManageRoles() {
     const isSuper = role.name?.toLowerCase() === "superadmin";
     
     return (
-      <tr key={role._id} className="hover:bg-slate-50/50 transition-colors group border-b border-slate-50 last:border-0">
+      <tr key={role._id} className="hover:bg-white/5 transition-colors group border-b border-white/5 last:border-0">
         <td className="px-6 py-5">
           <div className="flex items-center gap-3">
             <div className={`w-2 h-8 rounded-full ${isSuper ? "bg-amber-400" : role.is_system_role ? "bg-rose-400" : "bg-indigo-400"}`} />
-            <span className="text-[14px] font-black text-slate-800 uppercase tracking-tight">
+            <span className="text-[14px] font-black text-white uppercase tracking-tight">
               {role.name}
             </span>
           </div>
         </td>
-        <td className="px-6 py-5 text-xs text-slate-500 font-medium max-w-xs truncate">
+        <td className="px-6 py-5 text-xs text-zinc-500 font-medium max-w-xs truncate">
           {role.description || "Administrative Access Control"}
         </td>
         <td className="px-6 py-5 text-center">
           <span className={`px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-widest border ${
-            isSuper ? "bg-amber-50 text-amber-600 border-amber-100" :
-            role.is_system_role ? "bg-rose-50 text-rose-600 border-rose-100" : "bg-indigo-50 text-indigo-600 border-indigo-100"
+            isSuper ? "bg-amber-500/10 text-amber-400 border-amber-500/20" :
+            role.is_system_role ? "bg-power-red/10 text-power-red border-power-red/20" : "bg-power-red/10 text-power-red border-power-red/30"
           }`}>
             {isSuper ? "Master" : role.is_system_role ? "System" : "Custom"}
           </span>
@@ -150,7 +150,7 @@ export default function ManageRoles() {
           <div className="flex justify-end gap-2">
             <button
               onClick={() => openPermissionManager(role)}
-              className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-teal-600 hover:border-teal-200 rounded-xl transition-all font-black text-[10px] uppercase tracking-widest flex items-center gap-2 shadow-sm"
+              className="px-4 py-2 bg-white/5 border border-white/10 text-zinc-400 hover:text-power-red hover:border-power-red/30 rounded-xl transition-all font-black text-[10px] uppercase tracking-widest flex items-center gap-2 shadow-sm"
             >
               {isSuper ? <Lock size={14} /> : <Settings2 size={14} />} 
               {isSuper ? "View Matrix" : "Set Access"}
@@ -158,7 +158,7 @@ export default function ManageRoles() {
             {!role.is_system_role && !isSuper && (
               <button
                 onClick={() => handleDeleteClick(role)}
-                className="p-2 text-slate-300 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-all"
+                className="p-2 text-zinc-500 hover:text-power-red hover:bg-power-red/10 rounded-xl transition-all"
                 title="Delete Role"
               >
                 <Trash2 size={16} />
@@ -189,33 +189,33 @@ export default function ManageRoles() {
 
       {/* MODAL: ADD ROLE */}
       {isAddModalOpen && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
-          <div className="bg-white rounded-[2.5rem] w-full max-w-md p-8 shadow-2xl border border-slate-200">
-            <h2 className="text-2xl font-black text-slate-800 mb-6 uppercase tracking-tighter">New Identity</h2>
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="bg-[#0B0B0D] rounded-[2.5rem] w-full max-w-md p-8 shadow-2xl border border-white/10">
+            <h2 className="text-2xl font-black text-white mb-6 uppercase tracking-tighter">New Identity</h2>
             <form onSubmit={handleAddRole} className="space-y-6">
               <div>
-                <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Role Title</label>
+                <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 ml-1">Role Title</label>
                 <input
                   type="text" required placeholder="e.g. Finance Head"
                   value={newRoleForm.name}
                   onChange={(e) => setNewRoleForm({ ...newRoleForm, name: e.target.value })}
-                  className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl font-bold focus:bg-white focus:border-indigo-500 outline-none transition-all shadow-inner"
+                  className="w-full px-5 py-4 bg-white/5 border-2 border-white/10 text-zinc-100 rounded-2xl font-bold placeholder:text-zinc-500 focus:bg-white/10 focus:border-power-red/60 outline-none transition-all shadow-inner"
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Job Description</label>
+                <label className="block text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2 ml-1">Job Description</label>
                 <textarea
                   rows="2" placeholder="Briefly describe what this role does..."
                   value={newRoleForm.description}
                   onChange={(e) => setNewRoleForm({ ...newRoleForm, description: e.target.value })}
-                  className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl font-medium text-sm focus:bg-white focus:border-indigo-500 outline-none transition-all resize-none shadow-inner"
+                  className="w-full px-5 py-4 bg-white/5 border-2 border-white/10 text-zinc-100 rounded-2xl font-medium text-sm placeholder:text-zinc-500 focus:bg-white/10 focus:border-power-red/60 outline-none transition-all resize-none shadow-inner"
                 />
               </div>
               <div className="flex gap-3 pt-2">
-                <button type="button" onClick={() => setIsAddModalOpen(false)} className="flex-1 py-4 text-[11px] font-black uppercase text-slate-400 hover:text-slate-800">Cancel</button>
+                <button type="button" onClick={() => setIsAddModalOpen(false)} className="flex-1 py-4 text-[11px] font-black uppercase text-zinc-500 hover:text-white">Cancel</button>
                 <button
                   type="submit" disabled={createMutation.isPending}
-                  className="flex-[2] py-4 bg-slate-900 text-white font-black rounded-2xl hover:bg-indigo-600 disabled:opacity-50 transition-all shadow-xl shadow-indigo-100"
+                  className="flex-[2] py-4 bg-power-red text-white font-black rounded-2xl hover:bg-power-red/90 disabled:opacity-50 transition-all shadow-xl shadow-power-red/20"
                 >
                   {createMutation.isPending ? <Loader2 className="animate-spin mx-auto" size={20} /> : "Create Identity"}
                 </button>
@@ -227,26 +227,26 @@ export default function ManageRoles() {
 
       {/* MODAL: PERMISSION MATRIX */}
       {isPermissionModalOpen && selectedRole && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md animate-in zoom-in duration-300">
-          <div className="bg-[#f8fafc] rounded-[3rem] w-full max-w-7xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-white/20">
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in zoom-in duration-300">
+          <div className="bg-[#0B0B0D] rounded-[3rem] w-full max-w-7xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-white/10">
             {/* Header */}
-            <div className="px-10 py-8 border-b border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-white">
+            <div className="px-10 py-8 border-b border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-white/5">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-indigo-600 text-white rounded-2xl shadow-lg shadow-indigo-100">
+                <div className="p-3 bg-power-red text-white rounded-2xl shadow-lg shadow-power-red/20">
                   <ShieldCheck size={28} />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-black text-slate-800 tracking-tighter uppercase">Access Matrix: {selectedRole.name}</h2>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Configure granular system capabilities</p>
+                  <h2 className="text-2xl font-black text-white tracking-tighter uppercase">Access Matrix: {selectedRole.name}</h2>
+                  <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mt-1">Configure granular system capabilities</p>
                 </div>
               </div>
               <div className="relative w-full md:w-80 group">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-indigo-500 transition-colors" size={18} />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 group-focus-within:text-power-red transition-colors" size={18} />
                 <input
                   type="text" placeholder="Search a capability..."
                   value={permSearch}
                   onChange={(e) => setPermSearch(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl text-sm font-bold outline-none focus:bg-white focus:border-indigo-500 shadow-inner transition-all"
+                  className="w-full pl-12 pr-4 py-4 bg-white/5 border-2 border-white/10 text-zinc-100 rounded-2xl text-sm font-bold placeholder:text-zinc-500 outline-none focus:bg-white/10 focus:border-power-red/60 shadow-inner transition-all"
                 />
               </div>
             </div>
@@ -266,22 +266,22 @@ export default function ManageRoles() {
                 const isSuperAdmin = selectedRole.name?.toLowerCase() === "superadmin";
 
                 return (
-                  <div key={idx} className="group bg-white border border-slate-200 rounded-[2.5rem] overflow-hidden hover:border-indigo-200 transition-all shadow-sm hover:shadow-xl">
-                    <div className="px-8 py-5 bg-slate-50/50 border-b border-slate-100 flex items-center justify-between group-hover:bg-indigo-50/30 transition-colors">
+                  <div key={idx} className="group bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden hover:border-power-red/30 transition-all shadow-sm hover:shadow-xl">
+                    <div className="px-8 py-5 bg-white/5 border-b border-white/10 flex items-center justify-between group-hover:bg-power-red/5 transition-colors">
                       <div className="flex items-center gap-4">
-                        <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
+                        <div className="w-1.5 h-6 bg-power-red rounded-full" />
                         <div>
-                           <h3 className="font-black text-slate-800 text-sm uppercase tracking-widest">{module.moduleName}</h3>
-                           <p className="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">{module.page}</p>
+                           <h3 className="font-black text-white text-sm uppercase tracking-widest">{module.moduleName}</h3>
+                           <p className="text-[9px] font-bold text-zinc-500 uppercase tracking-tighter">{module.page}</p>
                         </div>
-                        <span className="text-[9px] font-black bg-white border border-slate-200 px-3 py-1 rounded-full text-indigo-500">
+                        <span className="text-[9px] font-black bg-white/5 border border-white/10 px-3 py-1 rounded-full text-power-red">
                           {selectedCount} / {module.features.length} ACTIVE
                         </span>
                       </div>
                       {!isSuperAdmin && (
                         <button
                           onClick={() => handleToggleModule(module.features, isAllSelected)}
-                          className={`text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all ${isAllSelected ? "bg-rose-50 text-rose-500 border border-rose-100" : "bg-teal-50 text-teal-600 border border-teal-100"}`}
+                          className={`text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all ${isAllSelected ? "bg-power-red/10 text-power-red border border-power-red/20" : "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"}`}
                         >
                           {isAllSelected ? "Deactivate All" : "Authorize Module"}
                         </button>
@@ -293,17 +293,17 @@ export default function ManageRoles() {
                         return (
                           <label
                             key={feature.value}
-                            className={`flex items-center gap-3 cursor-pointer border-2 px-5 py-4 rounded-[1.5rem] transition-all select-none ${isActive ? "bg-white border-indigo-500 shadow-lg shadow-indigo-50" : "bg-slate-50 border-slate-50 hover:border-slate-200 opacity-60 hover:opacity-100"}`}
+                            className={`flex items-center gap-3 cursor-pointer border-2 px-5 py-4 rounded-[1.5rem] transition-all select-none ${isActive ? "bg-power-red/10 border-power-red/50 shadow-lg shadow-power-red/10" : "bg-white/5 border-white/5 hover:border-white/20 opacity-60 hover:opacity-100"}`}
                           >
                             <div className="relative flex items-center">
                               <input
                                 type="checkbox" disabled={isSuperAdmin}
-                                className="w-5 h-5 text-indigo-600 rounded-lg border-slate-300 focus:ring-indigo-500 cursor-pointer disabled:opacity-50"
+                                className="w-5 h-5 text-power-red rounded-lg border-white/20 focus:ring-power-red cursor-pointer disabled:opacity-50"
                                 checked={isActive}
                                 onChange={() => handleTogglePermission(feature.value)}
                               />
                             </div>
-                            <span className={`text-[11px] font-black uppercase tracking-tight ${isActive ? "text-slate-800" : "text-slate-400"}`}>
+                            <span className={`text-[11px] font-black uppercase tracking-tight ${isActive ? "text-white" : "text-zinc-500"}`}>
                               {feature.label}
                             </span>
                           </label>
@@ -316,9 +316,9 @@ export default function ManageRoles() {
             </div>
 
             {/* Footer */}
-            <div className="px-10 py-8 border-t border-slate-200 flex items-center justify-between bg-white">
-              <div className="flex items-center gap-3 text-slate-400 bg-slate-50 px-5 py-2.5 rounded-2xl border border-slate-100">
-                <Info size={18} className="text-indigo-400" />
+            <div className="px-10 py-8 border-t border-white/10 flex items-center justify-between bg-white/5">
+              <div className="flex items-center gap-3 text-zinc-500 bg-white/5 px-5 py-2.5 rounded-2xl border border-white/10">
+                <Info size={18} className="text-power-red" />
                 <span className="text-[10px] font-black uppercase tracking-widest leading-none">
                   Authorization changes will take effect upon next authentication sync.
                 </span>
@@ -326,14 +326,14 @@ export default function ManageRoles() {
               <div className="flex gap-4">
                 <button
                   onClick={() => setIsPermissionModalOpen(false)}
-                  className="px-8 py-4 text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-800 transition-colors"
+                  className="px-8 py-4 text-[11px] font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors"
                 >
                   Discard Changes
                 </button>
                 <button
                   onClick={handleSavePermissions}
                   disabled={updateMutation.isPending || selectedRole?.name?.toLowerCase() === "superadmin"}
-                  className="px-10 py-4 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-indigo-600 shadow-2xl shadow-indigo-100 flex items-center gap-3 transition-all active:scale-95 disabled:opacity-50"
+                  className="px-10 py-4 bg-power-red text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-power-red/90 shadow-2xl shadow-power-red/20 flex items-center gap-3 transition-all active:scale-95 disabled:opacity-50"
                 >
                   {updateMutation.isPending ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
                   Deploy Matrix

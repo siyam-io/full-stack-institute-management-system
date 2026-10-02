@@ -7,7 +7,7 @@ export default function DayAgendaPanel({ classes = [], selectedClass, onSelectCl
     return (
       <div className="p-10 text-center flex flex-col items-center">
         <BookOpen size={32} className="text-slate-200 mb-2" />
-        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">No classes scheduled</p>
+        <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">No classes scheduled</p>
       </div>
     );
   }
@@ -27,17 +27,17 @@ export default function DayAgendaPanel({ classes = [], selectedClass, onSelectCl
           <button
             key={cls._id} onClick={() => onSelectClass(cls)}
             className={`w-full text-left p-4 rounded-[1.5rem] transition-all flex items-center justify-between border-2 ${
-              isSelected ? "bg-white border-teal-500 shadow-md" : "bg-transparent border-transparent hover:bg-white/50"
+              isSelected ? "bg-white/5 border-power-red/30 shadow-md" : "bg-transparent border-transparent hover:bg-white/50"
             }`}
           >
             <div className="flex items-center gap-3">
-              <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[10px] font-black ${isSelected ? "bg-teal-500 text-white" : "bg-slate-200 text-slate-500"}`}>{cls.class_number}</div>
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[10px] font-black ${isSelected ? "bg-power-red text-white" : "bg-white/10 text-zinc-500"}`}>{cls.class_number}</div>
               <div>
-                <h4 className="text-sm font-bold text-slate-800 leading-none">{cls.topic}</h4>
-                <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1">{cls.class_type}</p>
+                <h4 className="text-sm font-bold text-zinc-100 leading-none">{cls.topic}</h4>
+                <p className="text-[9px] font-black text-zinc-500 uppercase tracking-widest mt-1">{cls.class_type}</p>
               </div>
             </div>
-            {cls.is_completed ? <CheckCircle size={18} className="text-emerald-500" /> : <ChevronRight size={16} className={isSelected ? "text-teal-500" : "text-slate-300"} />}
+            {cls.is_completed ? <CheckCircle size={18} className="text-emerald-500" /> : <ChevronRight size={16} className={isSelected ? "text-power-red" : "text-zinc-400"} />}
           </button>
         );
       })}

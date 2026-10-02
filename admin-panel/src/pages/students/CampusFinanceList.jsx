@@ -130,7 +130,7 @@ export default function CampusFinanceList() {
         <PermissionGuard requiredPermission={PERMISSIONS.VIEW_BRANCHES}>
           {isSuper && (
             <div className="flex justify-end">
-              <div className="w-full md:w-64 bg-white rounded-xl shadow-sm border border-slate-200">
+              <div className="w-full md:w-64 bg-white/5 rounded-xl shadow-sm border border-white/10">
                 <BranchDropdown
                   isMaster={isSuper}
                   branches={branches}
@@ -173,10 +173,10 @@ export default function CampusFinanceList() {
                   <th className="text-center">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-white/5">
                 {paginatedFees.length === 0 ? (
                   <tr>
-                    <td colSpan="4" className="p-10 text-center text-slate-400 font-bold">No financial records found.</td>
+                    <td colSpan="4" className="p-10 text-center text-zinc-500 font-bold">No financial records found.</td>
                   </tr>
                 ) : (
                   paginatedFees.map((fee) => {
@@ -185,7 +185,7 @@ export default function CampusFinanceList() {
                     const isFullyPaid = fee.status === "Paid" || dueAmount <= 0;
 
                     return (
-                      <tr key={fee._id} className="hover:bg-slate-50/50 transition-colors group">
+                      <tr key={fee._id} className="hover:bg-white/5 transition-colors group">
                         
                         {/* 1. STUDENT INFO */}
                         <td className="p-5">
@@ -197,9 +197,9 @@ export default function CampusFinanceList() {
                               sizeClass="w-12 h-12 rounded-xl" 
                             />
                             <div>
-                              <h4 className="text-sm font-black text-slate-800">{fee.student?.student_name}</h4>
-                              <p className="text-[10px] font-bold text-slate-400 uppercase mt-0.5">{fee.student?.student_id}</p>
-                              <span className="inline-block mt-1 px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded">
+                              <h4 className="text-sm font-black text-zinc-100">{fee.student?.student_name}</h4>
+                              <p className="text-[10px] font-bold text-zinc-500 uppercase mt-0.5">{fee.student?.student_id}</p>
+                              <span className="inline-block mt-1 px-2 py-0.5 bg-white/5 text-zinc-500 text-[9px] font-black uppercase tracking-widest rounded">
                                 {fee.course?.course_name}
                               </span>
                             </div>
@@ -210,8 +210,8 @@ export default function CampusFinanceList() {
                         <td className="p-5">
                           <div className="space-y-1">
                             <div className="flex items-center gap-2">
-                              <span className="text-[10px] font-black text-slate-400 uppercase w-12">Total:</span>
-                              <span className="text-sm font-bold text-slate-700">৳{fee.total_amount.toLocaleString()}</span>
+                              <span className="text-[10px] font-black text-zinc-500 uppercase w-12">Total:</span>
+                              <span className="text-sm font-bold text-zinc-200">৳{fee.total_amount.toLocaleString()}</span>
                             </div>
                             {fee.discount > 0 && (
                               <div className="flex items-center gap-2">
@@ -219,9 +219,9 @@ export default function CampusFinanceList() {
                                 <span className="text-xs font-black text-rose-500">- ৳{fee.discount.toLocaleString()}</span>
                               </div>
                             )}
-                            <div className="flex items-center gap-2 pt-1 mt-1 border-t border-slate-100">
-                              <span className="text-[10px] font-black text-slate-600 uppercase w-12">Net:</span>
-                              <span className="text-sm font-black text-slate-900">৳{fee.net_payable.toLocaleString()}</span>
+                            <div className="flex items-center gap-2 pt-1 mt-1 border-t border-white/5">
+                              <span className="text-[10px] font-black text-zinc-500 uppercase w-12">Net:</span>
+                              <span className="text-sm font-black text-white">৳{fee.net_payable.toLocaleString()}</span>
                             </div>
                           </div>
                         </td>
@@ -240,13 +240,13 @@ export default function CampusFinanceList() {
                             
                             <div className="h-2 w-full bg-rose-100 rounded-full overflow-hidden flex shadow-inner">
                               <div 
-                                className={`h-full ${isFullyPaid ? 'bg-emerald-500' : 'bg-teal-500'} transition-all duration-1000 ease-out`}
+                                className={`h-full ${isFullyPaid ? 'bg-emerald-500' : 'bg-power-red'} transition-all duration-1000 ease-out`}
                                 style={{ width: `${paidPercentage}%` }}
                               />
                             </div>
                             
                             <div className="flex justify-between items-center mt-1">
-                              <span className="text-[9px] font-black text-slate-400 uppercase">{paidPercentage.toFixed(0)}% Completed</span>
+                              <span className="text-[9px] font-black text-zinc-500 uppercase">{paidPercentage.toFixed(0)}% Completed</span>
                               {fee.status === "Partial" && <span className="flex items-center gap-1 text-[9px] font-black text-amber-500 uppercase"><AlertCircle size={10}/> Active</span>}
                             </div>
                           </div>

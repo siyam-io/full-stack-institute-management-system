@@ -11,7 +11,7 @@ import {
 
 const BatchDistributionChart = ({ batchDistribution, height = 256 }) => {
   return (
-    <div className="bg-white rounded-xl shadow p-6">
+    <div className="bg-white/5 rounded-xl shadow p-6">
       <h2 className="text-lg font-semibold mb-4">
         Students per Batch (Top 10)
       </h2>
@@ -46,7 +46,7 @@ const BatchDistributionChart = ({ batchDistribution, height = 256 }) => {
           </ResponsiveContainer>
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-gray-500">No batch data available</p>
+            <p className="text-zinc-500">No batch data available</p>
           </div>
         )}
       </div>

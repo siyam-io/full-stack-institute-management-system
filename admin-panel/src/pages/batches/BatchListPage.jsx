@@ -67,30 +67,30 @@ export default function BatchListPage() {
   ];
 
   const renderBatchRow = (batch) => (
-    <tr key={batch._id} className="group hover:bg-slate-50/50 transition-colors border-b border-slate-50 last:border-none">
+    <tr key={batch._id} className="group hover:bg-white/5 transition-colors border-b border-white/5 last:border-none">
       <td className="px-6 py-4">
         <div className="flex items-center gap-4">
-          <div className="h-10 w-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center">
+          <div className="h-10 w-10 rounded-xl bg-power-red/10 text-power-red flex items-center justify-center">
             <LayoutGrid size={18} />
           </div>
           <div>
-            <p className="font-bold text-slate-800 text-sm">{batch.batch_name}</p>
-            <p className="text-[10px] font-black text-teal-600 uppercase">{batch.course?.course_name}</p>
+            <p className="font-bold text-white text-sm">{batch.batch_name}</p>
+            <p className="text-[10px] font-black text-power-red uppercase">{batch.course?.course_name}</p>
           </div>
         </div>
       </td>
       <td className="hidden md:table-cell px-6 py-4">
-        <div className="flex flex-col gap-1 text-[11px] font-bold text-slate-600">
+        <div className="flex flex-col gap-1 text-[11px] font-bold text-zinc-500">
           <span className="flex items-center gap-1"><Clock size={12} /> {batch.classTimeEn || batch.class_time_en}</span>
           <div className="flex gap-1">
             {batch.schedule_days?.map((d) => (
-              <span key={d} className="bg-slate-100 px-1 rounded uppercase text-[9px]">{d.slice(0, 3)}</span>
+              <span key={d} className="bg-white/10 px-1 rounded uppercase text-[9px]">{d.slice(0, 3)}</span>
             ))}
           </div>
         </div>
       </td>
       <td className="px-6 py-4">
-        <span className={`px-2.5 py-1 rounded-lg text-[10px] font-black uppercase ${batch.status === "Active" ? "bg-emerald-50 text-emerald-600" : "bg-amber-50 text-amber-600"}`}>
+        <span className={`px-2.5 py-1 rounded-lg text-[10px] font-black uppercase ${batch.status === "Active" ? "bg-emerald-500/10 text-emerald-400" : "bg-amber-500/10 text-amber-400"}`}>
           {batch.status}
         </span>
       </td>
@@ -98,21 +98,21 @@ export default function BatchListPage() {
         <div className="flex justify-end gap-1 opacity-60 group-hover:opacity-100 transition-opacity">
           {/* 🚀 ওয়ার্কস্পেস পারমিশন */}
           {canViewWorkspace && (
-            <button onClick={() => navigate(`/admin/batches/${batch._id}`)} className="p-2 text-slate-400 hover:text-teal-600" title="Open Workspace">
+            <button onClick={() => navigate(`/admin/batches/${batch._id}`)} className="p-2 text-zinc-500 hover:text-power-red" title="Open Workspace">
               <BookOpen size={16} />
             </button>
           )}
           
           {/* 🚀 এডিট পারমিশন */}
           {canEditBatch && (
-            <button onClick={() => navigate(`/admin/edit-batch/${batch._id}`)} className="p-2 text-slate-400 hover:text-blue-600" title="Edit Batch">
+            <button onClick={() => navigate(`/admin/edit-batch/${batch._id}`)} className="p-2 text-zinc-500 hover:text-power-red" title="Edit Batch">
               <Edit3 size={16} />
             </button>
           )}
 
           {/* 🚀 ডিলিট পারমিশন */}
           {canDeleteBatch && (
-            <button onClick={() => handleDelete(batch._id, batch.batch_name)} className="p-2 text-slate-400 hover:text-rose-600" title="Delete Batch">
+            <button onClick={() => handleDelete(batch._id, batch.batch_name)} className="p-2 text-zinc-500 hover:text-power-red" title="Delete Batch">
               <Trash2 size={16} />
             </button>
           )}
@@ -125,7 +125,7 @@ export default function BatchListPage() {
     <div className="p-4 md:p-8 lg:p-10 min-h-screen">
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <h1 className="text-3xl font-black text-slate-900 tracking-tight">Batch Inventory</h1>
+          <h1 className="text-3xl font-black text-white tracking-tight">Batch Inventory</h1>
           <div className="flex flex-wrap items-center gap-3">
             <PermissionGuard requiredPermission={PERMISSIONS.VIEW_BRANCHES}>
               {isSuper && (
@@ -140,12 +140,12 @@ export default function BatchListPage() {
               )}
             </PermissionGuard>
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-              <input type="text" placeholder="Search..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10 pr-4 py-2 bg-white rounded-xl text-sm border-none outline-none shadow-sm" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
+              <input type="text" placeholder="Search..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10 pr-4 py-2 bg-white/5 text-zinc-100 rounded-xl text-sm border border-white/10 outline-none shadow-sm placeholder:text-zinc-500" />
             </div>
             {/* 🚀 নতুন ব্যাচ অ্যাড করা এডিটের আন্ডারে */}
             {canEditBatch && (
-              <button onClick={() => navigate("/admin/add-batch")} className="bg-slate-900 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 shadow-lg hover:bg-teal-600 transition-all">
+              <button onClick={() => navigate("/admin/add-batch")} className="bg-power-red text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-power-red/20 hover:bg-power-red/90 transition-all">
                 <Plus size={18} /> New Batch
               </button>
             )}

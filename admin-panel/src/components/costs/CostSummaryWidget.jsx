@@ -27,31 +27,31 @@ export default function CostSummaryWidget({ entityId, entityType }) {
 
   if (isLoading) {
     return (
-      <div className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col h-full items-center justify-center min-h-[250px]">
-        <Loader2 className="animate-spin text-teal-500 mb-2" size={24} />
-        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Loading Ledger...</span>
+      <div className="bg-white/5 rounded-[2rem] shadow-sm border border-white/5 p-6 flex flex-col h-full items-center justify-center min-h-[250px]">
+        <Loader2 className="animate-spin text-power-red mb-2" size={24} />
+        <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Loading Ledger...</span>
       </div>
     );
   }
 
   if (isError) {
     return (
-      <div className="bg-white rounded-[2rem] shadow-sm border border-rose-100 p-6 flex flex-col h-full items-center justify-center min-h-[250px]">
+      <div className="bg-white/5 rounded-[2rem] shadow-sm border border-rose-100 p-6 flex flex-col h-full items-center justify-center min-h-[250px]">
         <span className="text-xs font-bold text-rose-400 uppercase tracking-widest">Failed to load costs</span>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col h-full min-h-[250px]">
+    <div className="bg-white/5 rounded-[2rem] shadow-sm border border-white/5 p-6 flex flex-col h-full min-h-[250px]">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="p-2.5 bg-rose-50 text-rose-500 rounded-xl">
             <Wallet size={20} />
           </div>
           <div>
-            <h3 className="text-lg font-black text-slate-800 tracking-tight">Cost Overview</h3>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            <h3 className="text-lg font-black text-zinc-100 tracking-tight">Cost Overview</h3>
+            <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
               {entityType === 'branch' ? 'Campus' : entityType === 'batch' ? 'Batch' : 'Class'} Ledger
             </p>
           </div>
@@ -59,13 +59,13 @@ export default function CostSummaryWidget({ entityId, entityType }) {
       </div>
 
       <div className="mb-6">
-        <span className="text-4xl font-black text-slate-800 tracking-tighter">
+        <span className="text-4xl font-black text-zinc-100 tracking-tighter">
           ৳{totalCost.toLocaleString()}
         </span>
       </div>
 
       <div className="flex-1">
-        <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2 mb-3">
+        <h4 className="text-[10px] font-black text-zinc-500 uppercase tracking-widest border-b border-white/5 pb-2 mb-3">
           Recent Transactions
         </h4>
         
@@ -76,22 +76,22 @@ export default function CostSummaryWidget({ entityId, entityType }) {
                 <div className="flex items-center gap-3">
                   <ArrowDownRight size={16} className="text-rose-400 shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-sm font-bold text-slate-700 truncate pr-2">{cost.title}</p>
-                    <p className="text-[10px] font-medium text-slate-400">
+                    <p className="text-sm font-bold text-zinc-200 truncate pr-2">{cost.title}</p>
+                    <p className="text-[10px] font-medium text-zinc-500">
                       {new Date(cost.date_incurred).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
                       {/* Optional: Show which class this was for if looking at the Branch or Batch view */}
                       {cost.class_content?.class_number && ` • Class ${cost.class_content.class_number}`}
                     </p>
                   </div>
                 </div>
-                <span className="text-sm font-black text-slate-800 shrink-0">৳{cost.amount?.toLocaleString()}</span>
+                <span className="text-sm font-black text-zinc-100 shrink-0">৳{cost.amount?.toLocaleString()}</span>
               </div>
             ))}
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center py-6 opacity-50">
-            <ReceiptText className="w-8 h-8 text-slate-400 mb-2" />
-            <span className="text-xs font-bold text-slate-500">No costs recorded.</span>
+            <ReceiptText className="w-8 h-8 text-zinc-500 mb-2" />
+            <span className="text-xs font-bold text-zinc-500">No costs recorded.</span>
           </div>
         )}
       </div>
