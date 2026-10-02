@@ -17,7 +17,7 @@ const AboutHero = ({ data }: AboutHeroProps) => {
     <section className="relative h-[80vh] min-h-[700px] flex items-center justify-center overflow-hidden bg-obsidian">
       <div className="absolute inset-0 z-0">
         <Image
-          src={data.image || '/images/practical_class_1-1920w.webp'}
+          src={data.image || '/images/hero-culinary-academy.jpg'}
           alt="Culinary Academy Professional Environment"
           fill
           priority

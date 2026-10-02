@@ -288,7 +288,7 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
           <div className="glass-card overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 shadow-2xl relative group">
             <div className="aspect-[21/9] relative">
               <Image
-                src="/images/practical_class_1-1920w.webp"
+                src="/images/kitchen-flame-saute.jpg"
                 alt="Students practicing hands-on culinary skills at Culinary Academy commercial kitchen lab"
                 fill
                 loading="lazy"

@@ -15,8 +15,6 @@ import QuickAnswers from "@/components/global/QuickAnswers";
 import TalkToCounselor from "@/components/global/TalkToCounselor";
 import CourseQuiz from "@/components/global/CourseQuiz";
 import AuthorBox from "@/components/global/AuthorBox";
-import VideoWithTranscript from "@/components/global/VideoWithTranscript";
-import { getBtvVideoData } from "@/lib/videoData";
 import { getCmsSection, getPublicTestimonials } from "@/lib/cmsApi";
 import { resolveImageUrl } from "@/lib/backendApi";
 import { fetchAllCoursePages } from "@/lib/courseApi";
@@ -250,8 +248,6 @@ export default async function HomePage({ params: { locale } }: { params: { local
     }))
   );
 
-  const btvVideo = getBtvVideoData(locale);
-
   return (
     <>
       <SchemaInjector
@@ -403,25 +399,6 @@ export default async function HomePage({ params: { locale } }: { params: { local
         </div>
       </section>
 
-      {/* Video Embed + Transcript Section */}
-      <section className="py-20 bg-black/10 relative z-10 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <span className="text-[10px] bg-power-red/10 border border-power-red/20 px-3 py-1 rounded-full text-prestige-gold font-bold tracking-[0.25em] uppercase inline-block mb-4">
-            {locale === 'bn' ? 'ভিডিও গাইড' : 'Featured Video'}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6">
-            {locale === 'bn' ? 'আমাদের কিচেন ও ল্যাব কভারেজ' : 'Watch Culinary Academy in Action'}
-          </h2>
-          <VideoWithTranscript
-            videoId={btvVideo.videoId}
-            title={btvVideo.title}
-            summary={btvVideo.summary}
-            transcript={btvVideo.transcript}
-            locale={locale}
-            platform={btvVideo.platform}
-          />
-        </div>
-      </section>
 
       <QuickAnswers
         items={quickAnswersData}

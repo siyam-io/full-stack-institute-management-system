@@ -110,7 +110,7 @@ async function main() {
       feeText: scEn.price || "৳44,000",
       ctaText: scEn.cta || "Start Your Professional Journey",
       ctaHref: scEn.ctaLink || "/courses",
-      imageUrl: scEn.image || "/images/student_practice_session_1-1920w.webp",
+      imageUrl: scEn.image || "/images/kitchen-prep-knifework.jpg",
       highlights: scEn.features || [],
     };
 
@@ -120,7 +120,7 @@ async function main() {
       feeText: scBn.price || "৳৪৪,০০০",
       ctaText: scBn.cta || "আপনার প্রফেশনাল যাত্রা শুরু করুন",
       ctaHref: scBn.ctaLink || "/courses",
-      imageUrl: scBn.image || "/images/student_practice_session_1-1920w.webp",
+      imageUrl: scBn.image || "/images/kitchen-prep-knifework.jpg",
       highlights: scBn.features || [],
     };
 

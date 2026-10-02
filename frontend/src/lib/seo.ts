@@ -59,7 +59,7 @@ export const generateLocalBusinessSchema = () => ({
   "name": BRAND_NAME,
   "url": SITE_URL,
   "logo": `${SITE_URL}/images/logo.svg`,
-  "image": `${SITE_URL}/images/practical_class_1-1920w.webp`,
+  "image": `${SITE_URL}/images/kitchen-flame-saute.jpg`,
   "telephone": "+8801700000000",
   "email": "contact@culinaryacademy.com",
   "priceRange": "BDT 3999 - BDT 110000",

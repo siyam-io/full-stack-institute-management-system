@@ -21,10 +21,10 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
       {/* Background Decor */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/practical_class_1-1920w.webp"
+          src="/images/hero-culinary-academy.jpg"
           alt="Culinary Academy Professional Kitchen"
           fill
-          className="object-cover opacity-5 grayscale"
+          className="object-cover opacity-10"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
       </div>

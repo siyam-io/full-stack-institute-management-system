@@ -3,7 +3,7 @@
   "hero": {
     "slides": [
       {
-        "image": "/images/practical_class_1-1920w.webp",
+        "image": "/images/kitchen-flame-saute.jpg",
         "headline": "ঢাকায় শুরু হোক আপনার শেফ হওয়ার স্বপ্ন",
         "subheadline": "কীভাবে একজন প্রফেশনাল শেফ হবেন? ঢাকার ধানমন্ডিতে বাংলাদেশের সেরা শেফ কোর্সে যোগ দিন। ১২০+ রেসিপি শিখুন, এনএসডিএ স্বীকৃতি অর্জন করুন এবং বিশ্বের শীর্ষ হোটেলে কাজ শুরু করুন।",
         "ctaText": "কোর্সগুলো দেখুন",
@@ -96,7 +96,7 @@
     },
     "cta": "আপনার প্রফেশনাল যাত্রা শুরু করুন",
     "ctaLink": "/courses",
-    "image": "/images/student_practice_session_1-1920w.webp"
+    "image": "/images/kitchen-prep-knifework.jpg"
   },
   "socialProof": {
     "heading": "কালিনারি একাডেমির কিচেনের এক ঝলক",
