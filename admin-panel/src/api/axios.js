@@ -9,5 +9,14 @@ export const API = axios.create({
   withCredentials: true,
 });
 
+// Attach Authorization header if token exists in localStorage (cross-site resilience)
+API.interceptors.request.use((config) => {
+  const token = localStorage.getItem("authToken");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 // Install global error interceptor (handles 401 logout automatically)
 installErrorInterceptor(API);

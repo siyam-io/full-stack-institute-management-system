@@ -46,6 +46,7 @@ const useAuth = create((set, get) => ({
     } catch (error) {
       const status = error?.response?.status;
       if (status === 401 || status === 403 || error?.response) {
+        localStorage.removeItem("authToken");
         set({ authUser: null });
       } else {
         console.warn("Network error during checkAuth. Retaining session:", error.message);
@@ -59,7 +60,12 @@ const useAuth = create((set, get) => ({
     set({ isSigningUp: true });
     try {
       const res = await API.post("/auth/register", data);
-      set({ authUser: res.data.data || res.data.user });
+      const user = res.data.data || res.data.user;
+      const token = res.data.token || res.data.data?.token;
+      if (token) {
+        localStorage.setItem("authToken", token);
+      }
+      set({ authUser: user });
       toast.success("Account created successfully!");
     } catch (error) {
       toast.error(error.response?.data?.message || "Failed to create account");
@@ -72,7 +78,12 @@ const useAuth = create((set, get) => ({
     set({ isLoggingIn: true });
     try {
       const res = await API.post("/auth/login", data);
-      set({ authUser: res.data.data || res.data.user });
+      const user = res.data.data || res.data.user;
+      const token = res.data.token || res.data.data?.token;
+      if (token) {
+        localStorage.setItem("authToken", token);
+      }
+      set({ authUser: user });
       toast.success("Logged in successfully");
     } catch (error) {
       toast.error(error.response?.data?.message || "Invalid credentials");
@@ -84,11 +95,13 @@ const useAuth = create((set, get) => ({
   logout: async () => {
     try {
       await API.post("/auth/logout");
+    } catch (error) {
+      console.warn("Error during logout request:", error?.message);
+    } finally {
+      localStorage.removeItem("authToken");
       set({ authUser: null });
       toast.success("Logged out successfully");
       window.location.href = "/login";
-    } catch (error) {
-      toast.error(error.response?.data?.message || "Error logging out");
     }
   },
 

@@ -133,8 +133,9 @@ export const installErrorInterceptor = (axiosInstance) => {
     (response) => response,
     (error) => {
       if (error?.response?.status === 401) {
-        const isLogoutRequest = error.config?.url?.endsWith("/auth/logout");
-        if (!isLogoutRequest) {
+        const url = error.config?.url || "";
+        const isAuthRequest = url.includes("/auth/logout") || url.includes("/auth/login") || url.includes("/auth/check");
+        if (!isAuthRequest) {
           doLogout();
         }
       }

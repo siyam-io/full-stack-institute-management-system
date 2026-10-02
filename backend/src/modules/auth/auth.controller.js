@@ -14,14 +14,22 @@ export const login = catchAsync(async (req, res) => {
   const user = await service.authenticateUser(email, password);
   const token = generateToken(user._id || user.id);
 
+  const isProd = Boolean(process.env.VERCEL) || process.env.NODE_ENV === "production";
+
   res.cookie("jwt", token, {
     httpOnly: true,
-    secure: ENV.NODE_ENV === "production",
-    sameSite: ENV.NODE_ENV === "production" ? "none" : "lax",
-    maxAge: ENV.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000,
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
+    partitioned: true,
+    maxAge: (ENV.JWT_COOKIE_EXPIRES_IN || 7) * 24 * 60 * 60 * 1000,
   });
 
-  res.status(200).json(new ApiResponse(200, "Login successful", service.formatUserResponse(user)));
+  const formattedUser = service.formatUserResponse(user);
+
+  res.status(200).json(new ApiResponse(200, "Login successful", {
+    ...formattedUser,
+    token,
+  }));
 });
 
 export const checkAuth = catchAsync(async (req, res) => {
@@ -30,7 +38,14 @@ export const checkAuth = catchAsync(async (req, res) => {
 });
 
 export const logout = catchAsync(async (req, res) => {
-  res.cookie("jwt", "", { httpOnly: true, expires: new Date(0) });
+  const isProd = Boolean(process.env.VERCEL) || process.env.NODE_ENV === "production";
+  res.cookie("jwt", "", {
+    httpOnly: true,
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
+    partitioned: true,
+    expires: new Date(0),
+  });
   res.status(200).json(new ApiResponse(200, "Logged out successfully"));
 });
 
