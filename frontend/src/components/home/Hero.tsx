@@ -67,19 +67,28 @@ const Hero = ({ data }: HeroProps) => {
             <div key={index} className="relative flex-[0_0_100%] min-w-0 h-full">
               {/* Background Image with optimized overlay */}
               <div className="absolute inset-0 z-0">
-                <picture>
-                  <source media="(max-width: 480px)" srcSet={slide.image.replace('-1920w.webp', '-480w.webp')} />
-                  <source media="(max-width: 768px)" srcSet={slide.image.replace('-1920w.webp', '-768w.webp')} />
-                  <source media="(max-width: 1280px)" srcSet={slide.image.replace('-1920w.webp', '-1280w.webp')} />
+                {slide.image?.includes('-1920w.webp') ? (
+                  <picture>
+                    <source media="(max-width: 480px)" srcSet={slide.image.replace('-1920w.webp', '-480w.webp')} />
+                    <source media="(max-width: 768px)" srcSet={slide.image.replace('-1920w.webp', '-768w.webp')} />
+                    <source media="(max-width: 1280px)" srcSet={slide.image.replace('-1920w.webp', '-1280w.webp')} />
+                    <img
+                      src={slide.image}
+                      alt={slide.headline || 'CIB Hero'}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </picture>
+                ) : (
                   <img
-                    src={slide.image}
-                    alt={slide.headline}
+                    src={slide.image || '/images/practical_class_1-1920w.webp'}
+                    alt={slide.headline || 'CIB Hero'}
                     loading={index === 0 ? "eager" : "lazy"}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
-                </picture>
-                <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-black/40"></div>
+                )}
+                <div className="absolute inset-0 bg-black/45"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-black/20 to-black/50"></div>
               </div>
 
               {/* Content - Responsive Padding & Font Sizes */}

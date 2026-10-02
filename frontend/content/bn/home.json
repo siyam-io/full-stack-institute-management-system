@@ -3,8 +3,8 @@
   "hero": {
     "slides": [
       {
-        "image": "/images/principal-dewan-ismail-preparing-fish-for-turkish-cuisine-2-1920w.webp",
-        "headline": "ঢাকায় প্রফেশনাল শেফ হতে চান? সেরা শেফ কোর্স কোথায় পাবেন?",
+        "image": "/images/practical_class_1-1920w.webp",
+        "headline": "ঢাকায় শুরু হোক আপনার শেফ হওয়ার স্বপ্ন",
         "subheadline": "কীভাবে একজন প্রফেশনাল শেফ হবেন? ঢাকার ধানমন্ডিতে বাংলাদেশের সেরা শেফ কোর্সে যোগ দিন। ১২০+ রেসিপি শিখুন, এনএসডিএ স্বীকৃতি অর্জন করুন এবং বিশ্বের শীর্ষ হোটেলে কাজ শুরু করুন।",
         "ctaText": "কোর্সগুলো দেখুন",
         "ctaLink": "/courses"
@@ -13,15 +13,15 @@
         "image": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp",
         "headline": "সাধারণ কাজ ছেড়ে সার্টিফাইড শেফ হিসেবে নিজের পরিচয় গড়ুন",
         "subheadline": "বিদেশে কম বেতনের সাধারণ কাজ না করে, আমাদের ৩ মাসের ইনটেনসিভ কোর্সের মাধ্যমে গ্লোবাল ৫-স্টার হসপিটালিটি সেক্টরে প্রফেশনাল শেফ হিসেবে কাজ শুরু করুন।",
-        "ctaText": "এখনই আবেদন করুন",
-        "ctaLink": "/admission"
+        "ctaText": "কোর্সসমূহ দেখুন",
+        "ctaLink": "/courses"
       },
       {
-        "image": "/images/student-practice-5-1920w.webp",
+        "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
         "headline": "৫-স্টার মেন্টরদের কাছ থেকে শিখুন",
         "subheadline": "গ্লোবাল ৫-স্টার হোটেল চেইনের অভিজ্ঞ শেফ দেওয়ান ইসমাইল এবং শেফ রাফেয়া চৌধুরীর সরাসরি তত্ত্বাবধানে প্রশিক্ষণ নিন।",
         "ctaText": "আপনার ক্যারিয়ার শুরু করুন",
-        "ctaLink": "/admission"
+        "ctaLink": "/courses"
       }
     ]
   },

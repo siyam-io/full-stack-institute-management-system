@@ -3,7 +3,7 @@
   "hero": {
     "slides": [
       {
-        "image": "/images/principal-dewan-ismail-preparing-fish-for-turkish-cuisine-2-1920w.webp",
+        "image": "/images/practical_class_1-1920w.webp",
         "headline": "Your Dream Chef Career Starts in Dhaka",
         "subheadline": "Bangladesh's #1 Professional Chef Course in Dhanmondi, Dhaka. Learn 120+ recipes, earn NSDA accreditation, and work in top hotels globally.",
         "ctaText": "View Courses",
@@ -13,15 +13,15 @@
         "image": "/images/chef-rafeya-chowdhury-conducting-practical-class-1920w.webp",
         "headline": "Skip Labor Jobs. Become a Certified Chef.",
         "subheadline": "Stop surviving on low-wage odd jobs abroad. Our 3-month intensive course gives you the skills and passport to work in the global 5-star hospitality market.",
-        "ctaText": "Apply Now",
-        "ctaLink": "/admission"
+        "ctaText": "Explore Courses",
+        "ctaLink": "/courses"
       },
       {
-        "image": "/images/student-practice-5-1920w.webp",
+        "image": "/images/principal-dewan-ismail-inspecting-student-practice-session-1920w.webp",
         "headline": "Learn from 5-Star Mentors",
         "subheadline": "Train directly under Chef Dewan Ismail and Chef Rafeya Chowdhury, veterans of global 5-star hotel chains.",
         "ctaText": "Start Your Career",
-        "ctaLink": "/admission"
+        "ctaLink": "/courses"
       }
     ]
   },

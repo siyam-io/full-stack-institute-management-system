@@ -41,6 +41,10 @@ export function resolveImageUrl(url: string | null | undefined): string {
   if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("data:")) {
     return url;
   }
+  // Local frontend static assets in /public
+  if (url.startsWith("/images/") || url.startsWith("/icons/") || url.startsWith("/fonts/") || url.startsWith("/favicon")) {
+    return url;
+  }
   const basePath = BACKEND_URL.replace(/\/api\/?$/, "");
   const cleanUrl = url.startsWith("/") ? url : `/${url}`;
   return `${basePath}${cleanUrl}`;
